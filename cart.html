@@ -29,11 +29,15 @@
 <p class="big">Всього: <strong id="cartTotal">0 грн</strong></p>
 <h2>Оформити замовлення</h2>
 <form id="checkoutForm" class="form">
-<label>Ім'я <input type="text" id="name" required></label>
-<label>Телефон <input type="tel" id="phone" required></label>
-<label>Адреса (Нова Пошта) <input type="text" id="address"></label>
-<button type="submit" class="btn btn-order">Відправити</button>
+<label>Імʼя та прізвище <input type="text" id="fullName" required></label>
+<label>Номер телефону <input type="tel" id="phone" required></label>
+<label>Місто <input type="text" id="city" required></label>
+<label>Відділення нової пошти <input type="text" id="postOffice" required></label>
 </form>
+<div class="button-group">
+<button type="submit" form="checkoutForm" class="btn btn-order">Відправити</button>
+<a href="https://t.me/Skyron_ua" target="_blank" class="btn btn-primary">Консультація</a>
+</div>
 <div class="badges-grid">
 <div class="badge">💳 Оплата при отриманні</div>
 <div class="badge">🔄 Повернення 14 днів</div>
@@ -47,7 +51,7 @@
 <div class="container footer-grid">
 <div>
 <h4>Skyron.ua</h4>
-<p>Теплий костюм — швидко, акуратно, надійно. © <span id="year"></span></p>
+<p>Теплий костюм — швидко, якісно, надійно. © <span id="year"></span></p>
 </div>
 <div>
 <h4>Контакти</h4>
