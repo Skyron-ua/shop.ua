@@ -28,6 +28,7 @@
 <section class="hero fade-in">
 <div class="container">
 <h1 class="hero-title">Теплий флісовий костюм</h1>
+<h2 class="sale-title">Зимовий розпродаж до -50%</h2>
 <p class="hero-lead">Преміальний крій, комфорт для дому та вулиці. Доставка 1-3 дні.</p>
 <div class="product-frame">
 <div class="img-wrap">
@@ -105,12 +106,18 @@
 <label>Зріст (см) <input type="number" id="height" placeholder="175" required></label>
 <label>Вага (кг) <input type="number" id="weight" placeholder="78" required></label>
 </div>
-<button type="button" id="sizeChartBtn" class="btn btn-outline">Таблиця розмірів</button>
+<label>Імʼя та прізвище <input type="text" id="fullName" required></label>
+<label>Номер телефону <input type="tel" id="phone" required></label>
+<label>Місто <input type="text" id="city" required></label>
+<label>Відділення нової пошти <input type="text" id="postOffice" required></label>
 <label>Товар <select id="productSelect" required></select></label>
 <label>Колір <select id="colorSelect" required disabled></select></label>
 <label>Кількість <input type="number" id="qty" min="1" value="1" required></label>
-<button type="submit" class="btn btn-order">Відправити замовлення</button>
 </form>
+<div class="button-group">
+<button type="submit" form="orderForm" class="btn btn-order">Відправити замовлення</button>
+<a href="https://t.me/Skyron_ua" target="_blank" class="btn btn-primary">Консультація</a>
+</div>
 </div>
 <div class="order-right">
 <div class="summary-card">
@@ -130,30 +137,13 @@
 </div>
 </section>
 
-<!-- Size Modal -->
-<div id="sizeModal" class="modal">
-<div class="modal-content">
-<h3>Таблиця розмірів</h3>
-<table class="size-table">
-<thead><tr><th>Розмір</th><th>Зріст (см)</th><th>Вага (кг)</th></tr></thead>
-<tbody>
-<tr><td>S</td><td>160-170</td><td>50-60</td></tr>
-<tr><td>M</td><td>170-180</td><td>60-70</td></tr>
-<tr><td>L</td><td>180-190</td><td>70-80</td></tr>
-<tr><td>XL</td><td>190-200</td><td>80-90</td></tr>
-<tr><td>XXL</td><td>200+</td><td>90+</td></tr>
-</tbody>
-</table>
-<button id="closeModal" class="btn btn-outline">Закрити</button>
-</div>
-</div>
 </main>
 
 <footer class="site-footer fade-in">
 <div class="container footer-grid">
 <div>
 <h4>Skyron.ua</h4>
-<p>Теплий костюм — швидко, акуратно, надійно. © <span id="year"></span></p>
+<p>Теплий костюм — швидко, якісно, надійно. © <span id="year"></span></p>
 </div>
 <div>
 <h4>Контакти</h4>
