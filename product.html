@@ -43,37 +43,28 @@
 <label>Зріст (см) <input type="number" id="height" placeholder="175" required></label>
 <label>Вага (кг) <input type="number" id="weight" placeholder="78" required></label>
 </div>
-<button type="button" id="sizeChartBtn" class="btn btn-outline">Таблиця розмірів</button>
 <ul class="features-list" id="productFeatures"></ul>
 <button id="addToCartBtn" class="btn btn-primary">Додати до корзини</button>
 </div>
 </div>
 </section>
 
-<!-- Size Modal -->
-<div id="sizeModal" class="modal">
+<!-- Add to Cart Modal -->
+<div id="addModal" class="modal">
 <div class="modal-content">
-<h3>Таблиця розмірів</h3>
-<table class="size-table">
-<thead><tr><th>Розмір</th><th>Зріст (см)</th><th>Вага (кг)</th></tr></thead>
-<tbody>
-<tr><td>S</td><td>160-170</td><td>50-60</td></tr>
-<tr><td>M</td><td>170-180</td><td>60-70</td></tr>
-<tr><td>L</td><td>180-190</td><td>70-80</td></tr>
-<tr><td>XL</td><td>190-200</td><td>80-90</td></tr>
-<tr><td>XXL</td><td>200+</td><td>90+</td></tr>
-</tbody>
-</table>
-<button id="closeModal" class="btn btn-outline">Закрити</button>
+<p>Ваш товар додано до корзини. Бажаєте оформити замовлення?</p>
+<button id="continueBtn" class="btn btn-outline">Продовжити обирати товар</button>
+<button id="cartBtn" class="btn btn-primary">Перейти до корзини</button>
 </div>
 </div>
+
 </main>
 
 <footer class="site-footer fade-in">
 <div class="container footer-grid">
 <div>
 <h4>Skyron.ua</h4>
-<p>Теплий костюм — швидко, акуратно, надійно. © <span id="year"></span></p>
+<p>Теплий костюм — швидко, якісно, надійно. © <span id="year"></span></p>
 </div>
 <div>
 <h4>Контакти</h4>
