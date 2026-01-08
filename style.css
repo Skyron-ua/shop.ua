@@ -32,31 +32,35 @@ body.dark-mode {
 html, body { min-height: 100%; font-family: var(--font-main); color: var(--text); background: var(--bg); line-height: 1.6; scroll-behavior: smooth; hyphens: auto; word-wrap: break-word; }
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 16px; }
 @media (min-width: 1200px) { .container { padding: 0 40px; } }
-@media (max-width: 480px) { .container { padding: 0 20px; } }
+@media (max-width: 480px) { .container { padding: 0 16px; } }
 
 a { color: inherit; text-decoration: none; transition: var(--transition); }
 
 /* Header */
 .site-header {
 position: sticky; top: 0; background: rgba(var(--bg-rgb), 0.95); backdrop-filter: blur(10px);
-border-bottom: 1px solid #eee; z-index: 100; padding: 16px 0;
+border-bottom: 1px solid #eee; z-index: 100; padding: 12px 0;
+hyphens: none;
+word-break: normal;
+white-space: nowrap;
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; }
-.logo { font-weight: 900; font-size: 24px; }
-.nav { display: flex; gap: 24px; }
-.nav a { font-weight: 500; }
-.cart-link { position: relative; font-size: 24px; } /* Іконка корзини */
+.header-inner { display: flex; align-items: center; justify-content: space-between; overflow: hidden; }
+.logo { font-weight: 900; font-size: 24px; hyphens: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav { display: flex; gap: 24px; flex-wrap: nowrap; overflow: hidden; }
+.nav a { font-weight: 500; hyphens: none; word-break: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex-shrink: 1; }
+.cart-link { position: relative; font-size: 24px; }
 .cart-badge {
 position: absolute; top: -6px; right: -10px; background: var(--price); color: #fff;
 font-size: 12px; padding: 4px 8px; border-radius: 20px; font-weight: bold;
 }
-.theme-toggle { cursor: pointer; font-size: 20px; background: none; border: none; } /* Сонце/місяць */
+.theme-toggle { cursor: pointer; font-size: 20px; background: none; border: none; }
 
 /* Hero */
-.hero { padding: 60px 0; text-align: center; }
-.hero-title { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
-@media (max-width: 480px) { .hero-title { font-size: 32px; } }
-.hero-lead { font-size: 20px; color: var(--muted); margin-bottom: 32px; }
+.hero { padding: 60px 0; text-align: center; max-width: 100%; overflow: hidden; }
+.hero-title { font-size: 48px; font-weight: 800; margin-bottom: 16px; hyphens: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+@media (max-width: 480px) { .hero-title { font-size: 24px; } }
+.hero-lead { font-size: 20px; color: var(--muted); margin-bottom: 32px; hyphens: none; word-break: normal; white-space: normal; overflow: hidden; text-overflow: ellipsis; max-width: 90%; line-height: 1.4; margin-left: auto; margin-right: auto; }
+@media (max-width: 480px) { .hero-lead { font-size: 16px; } }
 .product-frame { max-width: 600px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
 .img-wrap { position: relative; }
 .img-wrap img { width: 100%; height: auto; transition: transform 0.4s ease; }
@@ -86,18 +90,19 @@ font-size: 12px; padding: 4px 8px; border-radius: 20px; font-weight: bold;
 .stars { color: #ffd700; font-size: 24px; margin-bottom: 8px; }
 
 /* Trust Badges */
-.badges-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 32px 0; }
-.badge { display: flex; align-items: center; gap: 12px; background: var(--card-bg); padding: 16px 24px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); }
+.badges-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 32px 0; padding-left: 24px; } /* Додав padding для бейджів у футері/контактах */
+.badge { display: flex; align-items: center; gap: 12px; background: var(--card-bg); padding: 16px 24px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); margin-left: 12px; } /* Додав margin-left для кожного бейджа */
 
 /* Order Section */
 .order-section { padding: 60px 0; }
 .order-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 @media (max-width: 980px) { .order-grid { grid-template-columns: 1fr; } }
-.form { display: flex; flex-direction: column; gap: 16px; }
-.form input, .form select { padding: 16px; border-radius: var(--radius-sm); border: 1px solid #ddd; background: #fff; text-align: left; word-wrap: break-word; hyphens: auto; }
+.order-left { padding-left: 20px; }
+.form { display: flex; flex-direction: column; gap: 16px; padding-left: 20px; }
+.form input, .form select { padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid #ddd; background: #fff; text-align: left; word-wrap: break-word; hyphens: auto; }
 .form-row { display: flex; gap: 16px; }
 @media (max-width: 480px) { .form-row { flex-direction: column; } }
-.summary-card { background: var(--card-bg); padding: 24px; border-radius: var(--radius); box-shadow: var(--shadow-md); }
+.summary-card { background: var(--card-bg); padding: 24px 24px 24px 28px; border-radius: var(--radius); box-shadow: var(--shadow-md); }
 
 /* Button Group */
 .button-group {
@@ -129,7 +134,7 @@ width: 48%;
 .card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
 .meta { padding: 16px; }
 .name { font-weight: 700; }
-.price { display: flex; align-items: baseline; justify-content: flex-start; gap: 8px; } /* Для цен в ряд */
+.price { display: flex; align-items: baseline; justify-content: flex-start; gap: 8px; }
 .old-price {
   text-decoration: line-through;
   color: #000;
@@ -141,9 +146,9 @@ width: 48%;
 }
 
 /* Cart */
-.cart-items { margin: 30px 0; }
-.cart-item { background: #fff; padding: 20px; border-radius: var(--radius); margin-bottom: 16px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-@media (max-width: 480px) { .cart-item { padding: 20px 16px; } }
+.cart-items { margin: 30px 0; padding-left: 20px; }
+.cart-item { background: #fff; padding: 20px 20px 20px 24px; border-radius: var(--radius); margin-bottom: 16px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+@media (max-width: 480px) { .cart-item { padding: 20px 16px 20px 24px; } }
 
 /* Modal */
 .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 200; }
@@ -151,8 +156,8 @@ width: 48%;
 .modal-content { background: #fff; padding: 32px; border-radius: var(--radius); max-width: 600px; width: 90%; text-align: center; }
 
 /* Footer */
-.site-footer { padding: 60px 0 40px; background: var(--card-bg); }
-.footer-grid { display: flex; gap: 32px; justify-content: space-between; flex-wrap: wrap; }
+.site-footer { padding: 60px 24px 40px; background: var(--card-bg); } /* Збільшив padding зліва/праворуч */
+.footer-grid { display: flex; gap: 32px; justify-content: space-between; flex-wrap: wrap; padding-left: 24px; } /* Збільшив padding зліва */
 
 /* Анімації */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -185,43 +190,72 @@ border: none;
 }
 .sale-title {
   color: red;
-  font-size: 32px; /* или другой размер */
+  font-size: 32px;
   margin-top: 0;
   margin-bottom: 16px;
+  hyphens: auto; /* Дозволив перенос для довгих слів */
+  white-space: normal; /* Дозволив перенос рядків */
+  word-wrap: break-word; /* Розбиває слова, якщо потрібно */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 /* Отключаем переносы в формах и заголовках */
 .form label, h1, h2, h3 {
-  hyphens: none; /* Отключаем автоматические переносы */
-  word-break: normal; /* Не разбиваем слова */
-  white-space: nowrap; /* Текст в одну строку, без переносов */
-  overflow: hidden; /* Если текст слишком длинный, скрываем переполнение */
-  text-overflow: ellipsis; /* Добавляем "..." если текст не помещается */
+  hyphens: none;
+  word-break: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 4px;
 }
 
 /* Мобильная адаптация (шрифт чуть меньше, чтобы избежать сжатия) */
 @media (max-width: 480px) {
   .form label {
-    font-size: 14px; /* Уменьшаем шрифт, но не слишком (было ~16px) */
-    white-space: nowrap; /* Подтверждаем: без переносов */
+    font-size: 14px;
+    white-space: nowrap;
   }
 
   .hero-title {
-    font-size: 28px; /* Чуть меньше, чтобы "Теплий флісовий костюм" не переносился */
+    font-size: 24px;
   }
 
   .order-left h2 {
-    font-size: 24px; /* Для "Оформити замовлення" */
+    font-size: 24px;
   }
 
-  /* Кнопки уже рядом, но добавим flex для лучшего размещения */
   .button-group {
-    flex-wrap: nowrap; /* Кнопки в ряд без переноса */
-    gap: 10px; /* Меньше пространства между ними */
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 
   .button-group .btn {
-    font-size: 14px; /* Шрифт кнопок поменьше */
-    padding: 12px 16px; /* Уменьшаем отступы, чтобы кнопки были компактнее */
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+
+  .nav {
+    gap: 8px;
+  }
+
+  .nav a {
+    font-size: 10px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .sale-title {
+    font-size: 24px; /* Зменшив для мобільних, щоб влізало з переносом */
+  }
+
+  .site-footer {
+    padding: 60px 20px 40px; /* Адаптація для мобільних */
+  }
+
+  .footer-grid {
+    padding-left: 20px;
   }
 }
 /* Исправление переноса заголовка */
@@ -233,7 +267,7 @@ border: none;
 
 /* Увеличение расстояния между цветами, ценой и кнопкой */
 .meta > * {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 .meta > *:last-child {
   margin-bottom: 0;
@@ -241,7 +275,7 @@ border: none;
 
 /* Увеличение размера новой цены */
 .new-price {
-  font-size: 1.4em;
+  font-size: 1.6em;
   color: var(--price);
   font-weight: 700;
 }
@@ -249,17 +283,17 @@ border: none;
 /* Мобильная адаптация: не переносить заголовок */
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 28px;
+    font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .meta > * {
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   .new-price {
-    font-size: 1.6em;
+    font-size: 1.8em;
   }
 }
