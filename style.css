@@ -224,3 +224,42 @@ border: none;
     padding: 12px 16px; /* Уменьшаем отступы, чтобы кнопки были компактнее */
   }
 }
+/* Исправление переноса заголовка */
+.hero-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Увеличение расстояния между цветами, ценой и кнопкой */
+.meta > * {
+  margin-bottom: 16px;
+}
+.meta > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Увеличение размера новой цены */
+.new-price {
+  font-size: 1.4em;
+  color: var(--price);
+  font-weight: 700;
+}
+
+/* Мобильная адаптация: не переносить заголовок */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .meta > * {
+    margin-bottom: 12px;
+  }
+
+  .new-price {
+    font-size: 1.6em;
+  }
+}
