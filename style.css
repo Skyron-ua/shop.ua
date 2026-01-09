@@ -90,8 +90,8 @@ font-size: 12px; padding: 4px 8px; border-radius: 20px; font-weight: bold;
 .stars { color: #ffd700; font-size: 24px; margin-bottom: 8px; }
 
 /* Trust Badges */
-.badges-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 32px 0; padding-left: 24px; } /* Додав padding для бейджів у футері/контактах */
-.badge { display: flex; align-items: center; gap: 12px; background: var(--card-bg); padding: 16px 24px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); margin-left: 12px; } /* Додав margin-left для кожного бейджа */
+.badges-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin: 32px 0; padding-left: 24px; }
+.badge { display: flex; align-items: center; gap: 12px; background: var(--card-bg); padding: 16px 24px; border-radius: var(--radius-sm); box-shadow: var(--shadow-sm); margin-left: 12px; }
 
 /* Order Section */
 .order-section { padding: 60px 0; }
@@ -99,7 +99,7 @@ font-size: 12px; padding: 4px 8px; border-radius: 20px; font-weight: bold;
 @media (max-width: 980px) { .order-grid { grid-template-columns: 1fr; } }
 .order-left { padding-left: 20px; }
 .form { display: flex; flex-direction: column; gap: 16px; padding-left: 20px; }
-.form input, .form select { padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid #ddd; background: #fff; text-align: left; word-wrap: break-word; hyphens: auto; }
+.form input, .form select { padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid #ddd; background: #fff; text-align: left; word-wrap: break-word; hyphens: auto; width: 100%; } /* Підтвердив повну ширину */
 .form-row { display: flex; gap: 16px; }
 @media (max-width: 480px) { .form-row { flex-direction: column; } }
 .summary-card { background: var(--card-bg); padding: 24px 24px 24px 28px; border-radius: var(--radius); box-shadow: var(--shadow-md); }
@@ -156,8 +156,8 @@ width: 48%;
 .modal-content { background: #fff; padding: 32px; border-radius: var(--radius); max-width: 600px; width: 90%; text-align: center; }
 
 /* Footer */
-.site-footer { padding: 60px 24px 40px; background: var(--card-bg); } /* Збільшив padding зліва/праворуч */
-.footer-grid { display: flex; gap: 32px; justify-content: space-between; flex-wrap: wrap; padding-left: 24px; } /* Збільшив padding зліва */
+.site-footer { padding: 60px 24px 40px; background: var(--card-bg); }
+.footer-grid { display: flex; gap: 32px; justify-content: space-between; flex-wrap: wrap; padding-left: 24px; }
 
 /* Анімації */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -193,9 +193,9 @@ border: none;
   font-size: 32px;
   margin-top: 0;
   margin-bottom: 16px;
-  hyphens: auto; /* Дозволив перенос для довгих слів */
-  white-space: normal; /* Дозволив перенос рядків */
-  word-wrap: break-word; /* Розбиває слова, якщо потрібно */
+  hyphens: auto;
+  white-space: normal;
+  word-wrap: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -213,7 +213,15 @@ border: none;
 @media (max-width: 480px) {
   .form label {
     font-size: 14px;
-    white-space: nowrap;
+    white-space: normal; /* Дозволяємо перенос для довгих лейблів */
+    overflow: visible;
+    text-overflow: clip;
+    hyphens: auto;
+    word-break: break-word;
+  }
+
+  .form {
+    padding: 0 20px; /* Більше простору з боків на мобільних */
   }
 
   .hero-title {
@@ -247,11 +255,11 @@ border: none;
   }
 
   .sale-title {
-    font-size: 24px; /* Зменшив для мобільних, щоб влізало з переносом */
+    font-size: 24px;
   }
 
   .site-footer {
-    padding: 60px 20px 40px; /* Адаптація для мобільних */
+    padding: 60px 20px 40px;
   }
 
   .footer-grid {
@@ -297,3 +305,4 @@ border: none;
     font-size: 1.8em;
   }
 }
+
