@@ -29,7 +29,7 @@ body.dark-mode {
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; font-family: var(--font-main); color: var(--text); background: var(--bg); line-height: 1.6; scroll-behavior: smooth; hyphens: auto; word-wrap: break-word; }
+html, body { min-height: 100%; font-family: var(--font-main); color: var(--text); background: var(--bg); line-height: 1.6; scroll-behavior: smooth; hyphens: none; word-wrap: break-word; } /* Изменено hyphens: none; глобально */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 16px; }
 @media (min-width: 1200px) { .container { padding: 0 40px; } }
 @media (max-width: 480px) { .container { padding: 0 16px; } }
@@ -57,10 +57,8 @@ font-size: 12px; padding: 4px 8px; border-radius: 20px; font-weight: bold;
 
 /* Hero */
 .hero { padding: 60px 0; text-align: center; max-width: 100%; overflow: hidden; }
-.hero-title { font-size: 48px; font-weight: 800; margin-bottom: 16px; hyphens: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-@media (max-width: 480px) { .hero-title { font-size: 24px; } }
-.hero-lead { font-size: 20px; color: var(--muted); margin-bottom: 32px; hyphens: none; word-break: normal; white-space: normal; overflow: hidden; text-overflow: ellipsis; max-width: 90%; line-height: 1.4; margin-left: auto; margin-right: auto; }
-@media (max-width: 480px) { .hero-lead { font-size: 16px; } }
+.hero-title { font-size: 48px; font-weight: 800; margin-bottom: 16px; hyphens: none; white-space: normal; word-break: normal; overflow: visible; text-overflow: clip; max-width: 100%; line-height: 1.2; }
+.hero-lead { font-size: 20px; color: var(--muted); margin-bottom: 32px; hyphens: none; word-break: normal; white-space: normal; overflow: visible; text-overflow: clip; max-width: 90%; line-height: 1.4; margin-left: auto; margin-right: auto; }
 .product-frame { max-width: 600px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); }
 .img-wrap { position: relative; }
 .img-wrap img { width: 100%; height: auto; transition: transform 0.4s ease; }
@@ -99,7 +97,7 @@ font-size: 12px; padding: 4px 8px; border-radius: 20px; font-weight: bold;
 @media (max-width: 980px) { .order-grid { grid-template-columns: 1fr; } }
 .order-left { padding-left: 20px; }
 .form { display: flex; flex-direction: column; gap: 16px; padding-left: 20px; }
-.form input, .form select { padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid #ddd; background: #fff; text-align: left; word-wrap: break-word; hyphens: auto; width: 100%; } /* Підтвердив повну ширину */
+.form input, .form select { padding: 16px 20px; border-radius: var(--radius-sm); border: 1px solid #ddd; background: #fff; text-align: left; word-wrap: break-word; hyphens: auto; width: 100%; }
 .form-row { display: flex; gap: 16px; }
 @media (max-width: 480px) { .form-row { flex-direction: column; } }
 .summary-card { background: var(--card-bg); padding: 24px 24px 24px 28px; border-radius: var(--radius); box-shadow: var(--shadow-md); }
@@ -129,11 +127,11 @@ width: 48%;
 
 /* Catalog & Product */
 .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
-.card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); cursor: pointer; }
+.card { background: #fff; border-radius: var(--radius); overflow: visible; box-shadow: var(--shadow-sm); transition: var(--transition); cursor: pointer; }
 .card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
 .card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
-.meta { padding: 16px; }
-.name { font-weight: 700; }
+.meta { padding: 16px; overflow: visible; }
+.name { font-weight: 700; hyphens: none; white-space: normal; word-break: normal; overflow: visible; text-overflow: clip; line-height: 1.2; }
 .price { display: flex; align-items: baseline; justify-content: flex-start; gap: 8px; }
 .old-price {
   text-decoration: line-through;
@@ -193,7 +191,7 @@ border: none;
   font-size: 32px;
   margin-top: 0;
   margin-bottom: 16px;
-  hyphens: auto;
+  hyphens: none;
   white-space: normal;
   word-wrap: break-word;
   overflow: hidden;
@@ -213,19 +211,30 @@ border: none;
 @media (max-width: 480px) {
   .form label {
     font-size: 14px;
-    white-space: normal; /* Дозволяємо перенос для довгих лейблів */
+    white-space: normal;
     overflow: visible;
     text-overflow: clip;
-    hyphens: auto;
-    word-break: break-word;
+    hyphens: none !important;
+    word-break: normal;
   }
 
   .form {
-    padding: 0 20px; /* Більше простору з боків на мобільних */
+    padding: 0 20px;
   }
 
   .hero-title {
-    font-size: 24px;
+    font-size: 22px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    hyphens: none !important;
+    word-break: normal;
+    line-height: 1.3;
+  }
+
+  .hero-lead {
+    hyphens: none !important;
+    word-break: normal;
   }
 
   .order-left h2 {
@@ -265,14 +274,34 @@ border: none;
   .footer-grid {
     padding-left: 20px;
   }
-}
-/* Исправление переноса заголовка */
-.hero-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
+  .name {
+    font-size: 18px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    hyphens: none !important;
+    word-break: normal;
+    line-height: 1.3;
+  }
+
+  .meta {
+    padding: 20px;
+  }
+
+  .card {
+    overflow: visible;
+  }
+
+  h1, h2, h3 {
+    hyphens: none !important;
+    word-break: normal;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.3;
+  }
+}
 /* Увеличение расстояния между цветами, ценой и кнопкой */
 .meta > * {
   margin-bottom: 24px;
@@ -287,22 +316,3 @@ border: none;
   color: var(--price);
   font-weight: 700;
 }
-
-/* Мобильная адаптация: не переносить заголовок */
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .meta > * {
-    margin-bottom: 20px;
-  }
-
-  .new-price {
-    font-size: 1.8em;
-  }
-}
-
