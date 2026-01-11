@@ -62,7 +62,7 @@ PRODUCTS: [
     "name": "Светр Oslo Spirit",
     "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
     "features": [
-      "Якісний матеріал перевірений часом",
+      "Якісний матеріал: перевірений часом",
       "Анатомічна посадка — розміри S–XXL",
       "Швидка відправка Новою Поштою (1–3 дні)"
     ],
@@ -774,7 +774,7 @@ PRODUCTS: [
         ]
       },
       {
-        "id": "biege",
+        "id": "beige",
         "name": "Беж",
         "hex": "#d6c7b1",
         "images": [
@@ -1106,6 +1106,14 @@ featuresList.appendChild(li);
 
 selectProduct(product.id);
 
+// Трекінг ViewContent
+ttq.track('ViewContent', {
+  content_id: product.id,
+  content_name: product.name,
+  value: product.price,
+  currency: 'UAH'
+});
+
 $("#addToCartBtn").addEventListener("click", () => {
 const colorId = $(".swatch.active")?.dataset.id;
 const height = $("#height").value;
@@ -1114,6 +1122,14 @@ const weight = $("#weight").value;
 if (colorId && height && weight) {
 addToCart({ productId, colorId, height, weight });
 showAddToCartModal();
+
+// Трекінг AddToCart
+ttq.track('AddToCart', {
+  content_id: product.id,
+  content_name: product.name,
+  value: product.price,
+  currency: 'UAH'
+});
 
 const cartIcon = $(".cart-link");
 const img = $("#mainImage");
@@ -1220,6 +1236,14 @@ const data = gatherForm();
 if (!data) return;
 const text = `Замовлення: ${data.productName} (${data.colorName}), Зріст: ${data.height} см, Вага: ${data.weight} кг, Кількість: ${data.qty}, Імʼя та прізвище: ${data.fullName}, Номер телефону: ${data.phone}, Місто: ${data.city}, Відділення нової пошти: ${data.postOffice}`;
 await sendToTelegram(text);
+
+// Трекінг Purchase
+ttq.track('Purchase', {
+  content_name: data.productName,
+  value: data.price * data.qty,
+  currency: 'UAH'
+});
+
 alert("Дякуємо за замовлення, менеджер звʼяжеться з вами найближчим часом");
 form.reset();
 updateOrderSummary();
@@ -1342,6 +1366,13 @@ return p && c ? `${p.name} (${c.name}, Зріст: ${i.height} см, Вага: $
 }).filter(Boolean).join("\n");
 const text = `Замовлення від ${fullName} (${phone})\nМісто: ${city}\nВідділення нової пошти: ${postOffice}\nТовари:\n${lines}`;
 await sendToTelegram(text);
+
+// Трекінг Purchase
+ttq.track('Purchase', {
+  value: total,
+  currency: 'UAH'
+});
+
 alert("Дякуємо за замовлення, менеджер звʼяжеться з вами найближчим часом");
 cart = [];
 localStorage.setItem('cart', JSON.stringify(cart));
