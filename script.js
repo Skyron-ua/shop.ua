@@ -671,16 +671,6 @@ PRODUCTS: [
         ]
       },
       {
-        "id": "biege",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img.balaklava/11.png",
-          "images/img.balaklava/12.png",
-          "images/img.balaklava/10.png"
-        ]
-      },
-      {
         "id": "camouflage biege",
         "name": "Камуфляж Беж",
         "hex": "#e4e3beff",
@@ -1425,3 +1415,4 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
+
