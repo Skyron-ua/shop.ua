@@ -927,32 +927,33 @@ display: flex;
 }
 .modal-content {
 background: var(--bg, #fff);
-padding: 30px;
-border-radius: 16px;
+padding: 20px; /* Уменьшил padding для компактности */
+border-radius: 12px; /* Меньше радиус для аккуратности */
 text-align: center;
-max-width: 90%;
-box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+max-width: 400px; /* Уменьшил max-width */
+width: 90%;
+box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Легче тень */
 }
 .modal-content h3 {
-margin: 0 0 20px 0;
-font-size: 1.4em;
+margin: 0 0 15px 0; /* Меньше отступ */
+font-size: 1.2em; /* Меньше шрифт */
 }
 .modal-buttons {
 display: flex;
-gap: 15px;
+gap: 10px; /* Меньше gap */
 justify-content: center;
-margin-top: 20px;
+margin-top: 15px; /* Меньше отступ */
 }
 .modal-buttons button {
-padding: 12px 24px;
+padding: 10px 20px; /* Уменьшил padding кнопок */
 border: none;
-border-radius: 8px;
-font-size: 1em;
+border-radius: 6px; /* Меньше радиус */
+font-size: 0.9em; /* Меньше шрифт */
 cursor: pointer;
 }
 .modal-buttons .continue {
-background: #ccc;
-color: #000;
+background: #e0e0e0; /* Светлее фон */
+color: #333;
 }
 .modal-buttons .go-cart {
 background: var(--accent, #007bff);
@@ -964,6 +965,17 @@ color: white;
 @media (max-width: 768px) {
 #cartItems { padding: 0 15px; }
 .cart-item { padding: 15px 0; }
+.modal-content {
+padding: 15px;
+max-width: 300px;
+}
+.modal-content h3 {
+font-size: 1.1em;
+}
+.modal-buttons button {
+padding: 8px 16px;
+font-size: 0.85em;
+}
 }
 `;
 document.head.appendChild(style);
@@ -973,10 +985,10 @@ const addToCartModal = document.createElement('div');
 addToCartModal.id = 'addToCartModal';
 addToCartModal.innerHTML = `
 <div class="modal-content">
-<h3>Ваш товар додано до кошика</h3>
+<h3>Товар додано до кошика</h3>
 <div class="modal-buttons">
-<button class="continue">Продовжити покупки</button>
-<button class="go-cart">Перейти до кошика</button>
+<button class="continue">Продовжити</button>
+<button class="go-cart">До кошика</button>
 </div>
 </div>
 `;
@@ -1103,13 +1115,21 @@ ttq.track('ViewContent', {
   currency: 'UAH'
 });
 
+// Ховаємо поля росту і ваги для шапок
+const hatIds = ['balaklava', 'shapka-baf'];
+if (hatIds.includes(productId)) {
+  const formRow = document.querySelector('.form-row');
+  if (formRow) formRow.style.display = 'none';
+}
+
 $("#addToCartBtn").addEventListener("click", () => {
 const colorId = $(".swatch.active")?.dataset.id;
 const height = $("#height").value;
 const weight = $("#weight").value;
 
-if (colorId && height && weight) {
-addToCart({ productId, colorId, height, weight });
+const isHat = hatIds.includes(productId);
+if (colorId && (isHat || (height && weight))) {
+addToCart({ productId, colorId, height: isHat ? 'N/A' : height, weight: isHat ? 'N/A' : weight });
 showAddToCartModal();
 
 // Трекінг AddToCart
@@ -1127,7 +1147,7 @@ flyToCartEffect(img, cartIcon);
 updateCartBadge();
 updateOrderSummary();
 } else {
-alert("Оберіть колір, зріст та вагу!");
+alert("Оберіть колір" + (isHat ? "" : ", зріст та вагу!"));
 }
 });
 }
@@ -1414,5 +1434,3 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
-
-
