@@ -677,8 +677,7 @@ PRODUCTS: [
         "images": [
           "images/img.balaklava/13.png",
           "images/img.balaklava/14.png",
-          "images/img.balaklava/15.png",
-          "images/img.balaklava/16.png"
+          "images/img.balaklava/15.png"
         ]
       }
     ],
@@ -1415,4 +1414,5 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
+
 
