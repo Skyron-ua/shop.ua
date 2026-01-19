@@ -10,7 +10,7 @@ CHAT_ID: "7864653279",
 PRODUCTS: [
   {
     "id": "polar",
-    "name": "PolarFleece — флісовий костюм",
+    "name": "PolarFleece — тепллий флісовий костюм",
     "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
     "features": [
       "Плотний фліс — тепло до −10°C",
@@ -1434,4 +1434,5 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
+
 
