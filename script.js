@@ -17,7 +17,7 @@ PRODUCTS: [
       "Анатомічна посадка — розміри S–XXL",
       "Швидка відправка Новою Поштою (1–3 дні)"
     ],
-    "price": 999,
+    "price": 1099,
     "colors": [
       {
         "id": "black",
@@ -55,7 +55,7 @@ PRODUCTS: [
         ]
       }
     ],
-    "old_price": 1599
+    "old_price": 1799
   },
   {
     "id": "sweater",
@@ -1434,3 +1434,4 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
+
