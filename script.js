@@ -146,7 +146,7 @@ PRODUCTS: [
   },
   {
     "id": "plush",
-    "name": "Теплий флісовий костюм Loft Spirit",
+    "name": "Теплий флісовий костюм Royal",
     "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
     "features": [
       "Якісний матеріал перевірений часом",
@@ -256,7 +256,7 @@ PRODUCTS: [
         ]
       }
     ],
-    "old_price": 1599
+    "old_price": 1899
   },
   {
     "id": "bayer",
@@ -1434,5 +1434,6 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
+
 
 
