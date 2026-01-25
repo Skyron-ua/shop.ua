@@ -146,14 +146,14 @@ PRODUCTS: [
   },
   {
     "id": "plush",
-    "name": "Преміальний костюм Royal",
-    "description": "Теплий флісовий костюм Royal — комфорт, стиль та тепло щодня",
+    "name": "Преміальний костюм Royal Prime",
+    "description": "Теплий флісовий костюм Royal Prime — тепло до -15°C без зайвого обʼєму",
     "features": [
-      "🔥Ідеальний вибір для прогулянок у холодну пору року",
-      "🧶Преміальний фліс щільної текстури зберігає тепло",
-      "🧵Анатомічний крій забезпечує свободу рухів і стильний вигляд",
-      "✅Сідає ідеально - анатомічна посадка",
-      "📦Швидка відправка новою поштою"
+      "🔥 Реально теплий — комфорт навіть у холод до -15°C",
+      "🧸 Мʼякий преміальний фліс — приємний до тіла, не колеться",
+      "🧍 Анатомічний крій — не сковує рухи, зручно цілий день",
+      "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
+      "📦 Швидка відправка Новою Поштою"
     ],
     "price": 1249,
     "colors": [
@@ -1124,6 +1124,28 @@ if (hatIds.includes(productId)) {
   if (formRow) formRow.style.display = 'none';
 }
 
+// Update sticky price
+const stickyPrice = document.getElementById("stickyPrice");
+if (stickyPrice) {
+  stickyPrice.textContent = `${product.price} грн`;
+}
+
+// Sticky add to cart functionality
+const stickyBtn = document.getElementById("stickyAddToCart");
+if (stickyBtn) {
+  stickyBtn.querySelector("button").addEventListener("click", () => {
+    document.getElementById("addToCartBtn").click();
+  });
+}
+
+const sellingBlock = document.getElementById("sellingBlock");
+const sizeTable = document.getElementById("sizeTable");
+if (productId === "plush") {
+  if (sellingBlock) sellingBlock.style.display = "block";
+  if (sizeTable) sizeTable.style.display = "block";
+  // Optional: Add more images or dynamic content
+}
+
 $("#addToCartBtn").addEventListener("click", () => {
 const colorId = $(".swatch.active")?.dataset.id;
 const height = $("#height").value;
@@ -1149,7 +1171,7 @@ flyToCartEffect(img, cartIcon);
 updateCartBadge();
 updateOrderSummary();
 } else {
-alert("Оберіть колір" + (isHat ? "" : ", зріст та вагу!"));
+alert("Вкажіть, будь ласка, зріст та вагу 🙏");
 }
 });
 }
@@ -1297,7 +1319,12 @@ const colorId = $("#colorSelect")?.value;
 
 if (!height || !weight || !fullName || !phone || !city || !postOffice || !productId || !colorId) {
 alert("Заповніть усі поля.");
-return null;
+  document.getElementById("height")?.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+  return null;
 }
 
 const product = CONFIG.PRODUCTS.find(p => p.id === productId);
@@ -1436,7 +1463,3 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
-
-
-
-
