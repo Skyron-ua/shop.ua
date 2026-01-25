@@ -63,8 +63,9 @@ font-size: 12px; padding: 4px 8px; border-radius: 20px; font-weight: bold;
 .img-wrap { position: relative; }
 .img-wrap img { width: 100%; height: auto; transition: transform 0.4s ease; }
 .img-wrap img:hover { transform: scale(1.05); }
-.swatches { display: flex; gap: 12px; justify-content: center; margin-top: 16px; }
-.swatch { width: 40px; height: 40px; border-radius: 50%; cursor: pointer; box-shadow: var(--shadow-sm); }
+.swatches { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 16px; max-width: 300px; margin: 16px auto; }
+.swatch { width: 40px; height: 40px; border-radius: 50%; cursor: pointer; box-shadow: var(--shadow-sm); transition: transform 0.2s; }
+.swatch:hover { transform: scale(1.1); }
 .swatch.active { border: 3px solid var(--accent); }
 
 /* Carousel */
@@ -287,6 +288,7 @@ border: none;
 
   .meta {
     padding: 20px;
+    text-align: center;
   }
 
   .card {
@@ -332,4 +334,79 @@ border: none;
 .form label input, .form label select {
   margin-top: 4px;
   width: 100%;
+}
+
+.consult-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+.btn-telegram { background: #0088cc; color: #fff; }
+.btn-telegram:hover { background: #006699; }
+.btn-viber { background: #7c529e; color: #fff; }
+.btn-viber:hover { background: #5d3a7a; }
+
+.sticky-btn {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 99;
+  text-align: center;
+}
+.sticky-btn button {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .sticky-btn { display: block; }
+}
+
+#sizingBlock h3 { margin-top: 24px; }
+#sizingBlock ul { list-style: none; padding: 0; }
+#sizingBlock li { margin-bottom: 8px; }
+.urgency-badge {
+  background: var(--price);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  margin-top: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#sizeTable table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+#sizeTable th, #sizeTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+#sizeTable th { background: var(--card-bg); }
+
+@media (max-width: 480px) {
+  .consult-buttons {
+    gap: 12px;
+  }
+  .product-detail {
+    padding: 20px 0;
+  }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-right {
+    padding: 16px;
+  }
+  #addToCartBtn {
+    width: 100%;
+  }
 }
