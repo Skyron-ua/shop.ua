@@ -167,6 +167,7 @@ width: 48%;
 padding: 14px 24px; border-radius: var(--radius-sm); font-weight: 600; cursor: pointer;
 transition: var(--transition); display: inline-flex; align-items: center; justify-content: center;
 border: none;
+width: 100%;
 }
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
@@ -340,7 +341,7 @@ border: none;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 24px;
 }
 .btn-telegram { background: #0088cc; color: #fff; }
 .btn-telegram:hover { background: #006699; }
@@ -368,9 +369,9 @@ border: none;
   .sticky-btn { display: block; }
 }
 
-#sizingBlock h3 { margin-top: 24px; }
-#sizingBlock ul { list-style: none; padding: 0; }
-#sizingBlock li { margin-bottom: 8px; }
+#sellingBlock h3 { margin-top: 24px; }
+#sellingBlock ul { list-style: none; padding: 0; }
+#sellingBlock li { margin-bottom: 8px; }
 .urgency-badge {
   background: var(--price);
   color: #fff;
@@ -409,4 +410,17 @@ border: none;
   #addToCartBtn {
     width: 100%;
   }
+}
+
+.product-right > * {
+  margin-bottom: 32px;
+}
+.product-right > *:last-child {
+  margin-bottom: 0;
+}
+.price-note {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #d32f2f;
+  font-weight: 500;
 }
