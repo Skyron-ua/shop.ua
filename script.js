@@ -428,7 +428,7 @@ PRODUCTS: [
       "👕 Універсальний стиль — для свят та повсякдення",
       "📦 Швидка відправка Новою Поштою"
     ],
-    "price": 1549,
+    "price": 1649,
     "colors": [
       {
         "id": "graphite",
@@ -461,7 +461,7 @@ PRODUCTS: [
         ]
       }
     ],
-    "old_price": 2320
+    "old_price": 2460
   },
   {
     "id": "chelsi",
@@ -1535,3 +1535,4 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
+
