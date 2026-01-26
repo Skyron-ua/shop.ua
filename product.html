@@ -8,9 +8,9 @@
 <!-- TikTok Pixel Code -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=n,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-  ttq.load('D4OBCO3C77U7MI8IQKIG');
-  ttq.page();
+w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=n,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+ttq.load('D4OBCO3C77U7MI8IQKIG');
+ttq.page();
 }(window, document, 'ttq');
 </script>
 <!-- End TikTok Pixel Code -->
@@ -49,34 +49,16 @@
 <p id="productDescription">Опис.</p>
 <div class="price" id="productPrice">0 грн</div>
 <div class="price-note">
-  Ціна зі знижкою • Акція обмежена
+Ціна зі знижкою • Акція обмежена
 </div>
 <ul class="features-list" id="productFeatures"></ul>
-<div id="sellingBlock" style="display: none;">
-<h3>Чому обирають Royal Prime?</h3>
-<ul>
-<li>🔥 Щільний фліс преміум-класу — зберігає тепло</li>
-<li>💎 Не кошлатиться після прання</li>
-<li>🎨 Колір не вицвітає з часом</li>
-<li>🚀 Швидка доставка + гарантія повернення</li>
-<li>🏆 Понад 500 задоволених клієнтів — хіт сезону</li>
-</ul>
-<div class="urgency-badge">🔥 Акція: −34% • Кількість обмежена</div>
-</div>
-<div id="sizeTable" style="display: none; margin-top: 24px;">
-<h3>Таблиця розмірів</h3>
-<table>
-<tr><th>Розмір</th><th>Груди (см)</th><th>Довжина спини (см)</th><th>Довжина штанів (см)</th><th>Стегна (см)</th></tr>
-<tr><td>S</td><td>107</td><td>71</td><td>100</td><td>100</td></tr>
-<tr><td>M</td><td>112</td><td>71</td><td>102</td><td>104</td></tr>
-<tr><td>L</td><td>117</td><td>73</td><td>104</td><td>108</td></tr>
-<tr><td>XL</td><td>122</td><td>74</td><td>106</td><td>112</td></tr>
-<tr><td>XXL</td><td>130</td><td>76</td><td>108</td><td>118</td></tr>
-<tr><td>3XL</td><td>138</td><td>78</td><td>110</td><td>124</td></tr>
-</table>
-<li>📏 Не знаєте, який розмір обрати?  
-Вкажіть зріст і вагу — ми підберемо ідеальну посадку саме для вас</li>
-</div>
+
+<!-- Блок переваг — буде заповнюватися через JS -->
+<div id="sellingBlock" style="display: none;"></div>
+
+<!-- Таблиця розмірів — буде заповнюватися через JS -->
+<div id="sizeTable" style="display: none; margin-top: 24px;"></div>
+
 <div class="form-row">
 <label>Зріст (см) <input type="number" id="height" placeholder="175" required></label>
 <label>Вага (кг) <input type="number" id="weight" placeholder="78" required></label>
@@ -86,15 +68,17 @@
 <a href="https://t.me/Skyron_ua" target="_blank" class="btn btn-telegram">Консультація в Telegram</a>
 <a href="https://invite.viber.com/?g2=AQBeex4BIEUJJlW4bdj1yeAO7w846m1dQ6AzkdYO2N%2Bt6FAv7rl5TWDkjrKKKt7t" target="_blank" class="btn btn-viber">Консультація в Viber</a>
 </div>
-<!-- Sticky button for mobile 
-<div id="stickyAddToCart" class="sticky-btn">
-<button class="btn btn-primary">Придбати за знижкою — <span id="stickyPrice">0 грн</span></button>
-</div>
-</div>
-</div>
-</section>-->
 
-<!-- Add to Cart Modal -->
+<!-- Липка кнопка -->
+<div id="stickyAddToCart" class="sticky-btn">
+<button class="btn btn-primary">Придбати зі знижкою — <span id="stickyPrice">0 грн</span></button>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Модальне вікно додавання в кошик -->
 <div id="addModal" class="modal">
 <div class="modal-content">
 <p>Ваш товар додано до кошику. Бажаєте оформити замовлення?</p>
@@ -127,4 +111,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
