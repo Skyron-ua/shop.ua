@@ -419,12 +419,14 @@ PRODUCTS: [
   },
   {
     "id": "zamsh-na-zmiyci",
-    "name": "Костюм Velvet",
-    "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
+    "name": "Замшевий костюм Velvet — стиль, комфорт і бездоганний вигляд",
+    "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
     "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
+      "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
+      "👌 Мʼякий та приємний до тіла",
+      "✂️ Анатомічний крій — гарно сідає по фігурі",
+      "👕 Універсальний стиль — для свят та повсякдення",
+      "📦 Швидка відправка Новою Поштою"
     ],
     "price": 1549,
     "colors": [
@@ -459,7 +461,7 @@ PRODUCTS: [
         ]
       }
     ],
-    "old_price": 1899
+    "old_price": 2320
   },
   {
     "id": "chelsi",
@@ -912,7 +914,7 @@ const encode = s => encodeURIComponent(s);
 /* Cart */
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-/* Стилі */
+/* Стилі для модалки */
 const style = document.createElement('style');
 style.textContent = `
 #addToCartModal {
@@ -929,32 +931,32 @@ display: flex;
 }
 .modal-content {
 background: var(--bg, #fff);
-padding: 20px; /* Уменьшил padding для компактности */
-border-radius: 12px; /* Меньше радиус для аккуратности */
+padding: 20px;
+border-radius: 12px;
 text-align: center;
-max-width: 400px; /* Уменьшил max-width */
+max-width: 400px;
 width: 90%;
-box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Легче тень */
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 .modal-content h3 {
-margin: 0 0 15px 0; /* Меньше отступ */
-font-size: 1.2em; /* Меньше шрифт */
+margin: 0 0 15px 0;
+font-size: 1.2em;
 }
 .modal-buttons {
 display: flex;
-gap: 10px; /* Меньше gap */
+gap: 10px;
 justify-content: center;
-margin-top: 15px; /* Меньше отступ */
+margin-top: 15px;
 }
 .modal-buttons button {
-padding: 10px 20px; /* Уменьшил padding кнопок */
+padding: 10px 20px;
 border: none;
-border-radius: 6px; /* Меньше радиус */
-font-size: 0.9em; /* Меньше шрифт */
+border-radius: 6px;
+font-size: 0.9em;
 cursor: pointer;
 }
 .modal-buttons .continue {
-background: #e0e0e0; /* Светлее фон */
+background: #e0e0e0;
 color: #333;
 }
 .modal-buttons .go-cart {
@@ -982,7 +984,7 @@ font-size: 0.85em;
 `;
 document.head.appendChild(style);
 
-/* Модалка */
+/* Модалка додавання в кошик */
 const addToCartModal = document.createElement('div');
 addToCartModal.id = 'addToCartModal';
 addToCartModal.innerHTML = `
@@ -1100,51 +1102,123 @@ if (!product) return;
 $("#productTitle").textContent = product.name;
 $("#productDescription").textContent = product.description;
 $("#productPrice").innerHTML = `${product.old_price ? `<span class="old-price">${product.old_price} грн</span>` : ''} <span class="new-price">${product.price} грн</span>`;
+
 const featuresList = $("#productFeatures");
+featuresList.innerHTML = '';
 product.features.forEach(f => {
 const li = document.createElement("li");
 li.textContent = f;
 featuresList.appendChild(li);
 });
 
-selectProduct(product.id);
-
 // Трекінг ViewContent
 ttq.track('ViewContent', {
-  content_id: product.id,
-  content_name: product.name,
-  value: product.price,
-  currency: 'UAH'
+content_id: product.id,
+content_name: product.name,
+value: product.price,
+currency: 'UAH'
 });
 
 // Ховаємо поля росту і ваги для шапок
 const hatIds = ['balaklava', 'shapka-baf'];
 if (hatIds.includes(productId)) {
-  const formRow = document.querySelector('.form-row');
-  if (formRow) formRow.style.display = 'none';
+const formRow = document.querySelector('.form-row');
+if (formRow) formRow.style.display = 'none';
 }
 
 // Update sticky price
 const stickyPrice = document.getElementById("stickyPrice");
 if (stickyPrice) {
-  stickyPrice.textContent = `${product.price} грн`;
+stickyPrice.textContent = `${product.price} грн`;
 }
 
 // Sticky add to cart functionality
 const stickyBtn = document.getElementById("stickyAddToCart");
 if (stickyBtn) {
-  stickyBtn.querySelector("button").addEventListener("click", () => {
-    document.getElementById("addToCartBtn").click();
-  });
+stickyBtn.querySelector("button").addEventListener("click", () => {
+document.getElementById("addToCartBtn").click();
+});
 }
 
+// Блоки переваг і розмірної сітки
 const sellingBlock = document.getElementById("sellingBlock");
 const sizeTable = document.getElementById("sizeTable");
+
+if (sellingBlock) sellingBlock.style.display = "none";
+if (sizeTable) sizeTable.style.display = "none";
+
 if (productId === "plush") {
-  if (sellingBlock) sellingBlock.style.display = "block";
-  if (sizeTable) sizeTable.style.display = "block";
-  // Optional: Add more images or dynamic content
+if (sellingBlock) {
+sellingBlock.innerHTML = `
+<h3>Чому обирають Royal Prime?</h3>
+<ul>
+<li>🔥 Щільний фліс преміум-класу — зберігає тепло</li>
+<li>💎 Не кошлатиться після прання</li>
+<li>🎨 Колір не вицвітає з часом</li>
+<li>🚀 Швидка доставка + гарантія повернення</li>
+<li>🏆 Понад 500 задоволених клієнтів — хіт сезону</li>
+</ul>
+<div class="urgency-badge">🔥 Акція: −34% • Кількість обмежена</div>
+`;
+sellingBlock.style.display = "block";
 }
+if (sizeTable) {
+sizeTable.innerHTML = `
+<h3>Таблиця розмірів</h3>
+<table>
+<tr><th>Розмір</th><th>Груди (см)</th><th>Довжина спини (см)</th><th>Довжина штанів (см)</th><th>Стегна (см)</th></tr>
+<tr><td>S</td><td>107</td><td>71</td><td>100</td><td>100</td></tr>
+<tr><td>M</td><td>112</td><td>71</td><td>102</td><td>104</td></tr>
+<tr><td>L</td><td>117</td><td>73</td><td>104</td><td>108</td></tr>
+<tr><td>XL</td><td>122</td><td>74</td><td>106</td><td>112</td></tr>
+<tr><td>XXL</td><td>130</td><td>76</td><td>108</td><td>118</td></tr>
+<tr><td>3XL</td><td>138</td><td>78</td><td>110</td><td>124</td></tr>
+</table>
+<p style="margin-top:16px; font-size:0.95em;">
+📏 Не знаєте, який розмір обрати?<br>
+Вкажіть зріст і вагу — ми підберемо ідеальну посадку саме для вас
+</p>
+`;
+sizeTable.style.display = "block";
+}
+}
+else if (productId === "zamsh-na-zmiyci") {
+if (sellingBlock) {
+sellingBlock.innerHTML = `
+<h3>Чому обирають Velvet?</h3>
+<ul>
+<li>💎 Сучасний замшевий текстиль з гарною текстурою</li>
+<li>🧺 Легкий у догляді, зберігає форму</li>
+<li>❤️ Комфортний при тривалому носінні</li>
+<li>🚀 Швидка доставка + гарантія повернення</li>
+<li>🏆 Понад 500 задоволених клієнтів — хіт сезону</li>
+</ul>
+<div class="urgency-badge">🔥 Акція: −33% • Кількість обмежена</div>
+`;
+sellingBlock.style.display = "block";
+}
+if (sizeTable) {
+sizeTable.innerHTML = `
+<h3>Таблиця розмірів</h3>
+<p style="font-weight:500; margin:8px 0 16px 0;">Костюм «Velvet»</p>
+<table>
+<tr><th>Розмір</th><th>5 (S)</th><th>M</th><th>L</th><th>XL</th><th>2XL</th></tr>
+<tr><td>Довжина кофти</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td></tr>
+<tr><td>Довжина рукава</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td></tr>
+<tr><td>Обхват грудей</td><td>112</td><td>116</td><td>120</td><td>124</td><td>128</td></tr>
+<tr><td>Ширина пояса</td><td>70</td><td>72</td><td>74</td><td>76</td><td>78</td></tr>
+<tr><td>Довжина брюк</td><td>100</td><td>102</td><td>104</td><td>106</td><td>108</td></tr>
+</table>
+<p style="margin-top:16px; font-size:0.95em;">
+📏 Не знаєте, який розмір обрати?<br>
+Вкажіть зріст і вагу — ми підберемо ідеальну посадку саме для вас
+</p>
+`;
+sizeTable.style.display = "block";
+}
+}
+
+selectProduct(product.id);
 
 $("#addToCartBtn").addEventListener("click", () => {
 const colorId = $(".swatch.active")?.dataset.id;
@@ -1158,10 +1232,10 @@ showAddToCartModal();
 
 // Трекінг AddToCart
 ttq.track('AddToCart', {
-  content_id: product.id,
-  content_name: product.name,
-  value: product.price,
-  currency: 'UAH'
+content_id: product.id,
+content_name: product.name,
+value: product.price,
+currency: 'UAH'
 });
 
 const cartIcon = $(".cart-link");
@@ -1169,7 +1243,6 @@ const img = $("#mainImage");
 flyToCartEffect(img, cartIcon);
 
 updateCartBadge();
-updateOrderSummary();
 } else {
 alert("Вкажіть, будь ласка, зріст та вагу 🙏");
 }
@@ -1221,7 +1294,7 @@ sw.addEventListener("click", () => selectColor(c.id));
 }
 selectColor(activeProduct.colors[0].id);
 if ($("#heroPrice")) {
-  $("#heroPrice").innerHTML = `${activeProduct.old_price ? `<span class="old-price">${activeProduct.old_price} грн</span>` : ''} <span class="new-price">${activeProduct.price} грн</span>`;
+$("#heroPrice").innerHTML = `${activeProduct.old_price ? `<span class="old-price">${activeProduct.old_price} грн</span>` : ''} <span class="new-price">${activeProduct.price} грн</span>`;
 }
 }
 
@@ -1272,9 +1345,9 @@ await sendToTelegram(text);
 
 // Трекінг Purchase
 ttq.track('Purchase', {
-  content_name: data.productName,
-  value: data.price * data.qty,
-  currency: 'UAH'
+content_name: data.productName,
+value: data.price * data.qty,
+currency: 'UAH'
 });
 
 alert("Дякуємо за замовлення, менеджер звʼяжеться з вами найближчим часом");
@@ -1319,12 +1392,11 @@ const colorId = $("#colorSelect")?.value;
 
 if (!height || !weight || !fullName || !phone || !city || !postOffice || !productId || !colorId) {
 alert("Заповніть усі поля.");
-  document.getElementById("height")?.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-
-  return null;
+document.getElementById("height")?.scrollIntoView({
+behavior: "smooth",
+block: "center"
+});
+return null;
 }
 
 const product = CONFIG.PRODUCTS.find(p => p.id === productId);
@@ -1407,8 +1479,8 @@ await sendToTelegram(text);
 
 // Трекінг Purchase
 ttq.track('Purchase', {
-  value: total,
-  currency: 'UAH'
+value: total,
+currency: 'UAH'
 });
 
 alert("Дякуємо за замовлення, менеджер звʼяжеться з вами найближчим часом");
