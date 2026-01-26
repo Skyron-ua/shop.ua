@@ -424,3 +424,76 @@ width: 100%;
   color: #d32f2f;
   font-weight: 500;
 }
+.sticky-btn {
+display: none; /* за замовчуванням ховаємо */
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 12px 16px;
+background: rgba(255, 255, 255, 0.96);
+backdrop-filter: blur(10px);
+box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
+z-index: 999;
+border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.sticky-btn button {
+width: 100%;
+max-width: 420px;
+margin: 0 auto;
+font-size: 1.05rem;
+padding: 14px;
+}
+
+@media (max-width: 768px) {
+.sticky-btn {
+display: block;
+}
+}
+
+/* Темна тема */
+body.dark-mode .sticky-btn {
+background: rgba(18,18,18,0.96);
+border-top-color: rgba(255,255,255,0.08);
+}
+/* Покращення відступів у блоці "Чому обирають..." */
+#sellingBlock {
+padding: 24px 0; /* загальний відступ зверху/знизу блоку */
+}
+
+#sellingBlock h3 {
+margin-bottom: 28px; /* більше місця під заголовком */
+font-size: 1.35em; /* трохи більший заголовок для акценту */
+}
+
+#sellingBlock ul {
+padding-left: 0;
+margin: 0;
+}
+
+#sellingBlock li {
+margin-bottom: 14px; /* головне — збільшений відступ між пунктами */
+padding-left: 32px; /* відступ для іконок/тексту */
+position: relative;
+line-height: 1.5; /* комфортніший міжрядковий інтервал */
+}
+
+#sellingBlock li::before {
+content: ""; /* якщо хочеш зберегти іконки — можна залишити */
+position: absolute;
+left: 0;
+top: 4px;
+width: 20px;
+height: 20px;
+/* background: url(шлях_до_іконки); — якщо потрібно */
+/* або просто крапка/тире */
+content: "• ";
+color: var(--accent);
+font-size: 1.4em;
+}
+
+.urgency-badge {
+margin-top: 24px; /* більше місця перед бейджем акції */
+padding: 12px 20px; /* трохи більший бейдж */
+}
