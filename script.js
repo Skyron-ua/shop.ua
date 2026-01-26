@@ -1202,7 +1202,7 @@ sizeTable.innerHTML = `
 <h3>Таблиця розмірів</h3>
 <p style="font-weight:500; margin:8px 0 16px 0;">Костюм «Velvet»</p>
 <table>
-<tr><th>Розмір</th><th>5 (S)</th><th>M</th><th>L</th><th>XL</th><th>2XL</th></tr>
+<tr><th>Розмір</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>2XL</th></tr>
 <tr><td>Довжина кофти</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td></tr>
 <tr><td>Довжина рукава</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td></tr>
 <tr><td>Обхват грудей</td><td>112</td><td>116</td><td>120</td><td>124</td><td>128</td></tr>
@@ -1535,4 +1535,5 @@ currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
 updateMainImage();
 }, { passive: true });
 })();
+
 
