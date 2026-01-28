@@ -882,3 +882,43 @@ function createTimerBanner() {
 setTimeout(() => {
   createTimerBanner();
 }, 4000);
+// Липка кнопка — додає в кошик або скролить до форми (без конфліктів)
+document.addEventListener('DOMContentLoaded', () => {
+  const stickyBtn = document.getElementById('stickyAddToCart');
+  if (!stickyBtn) return;
+
+  const button = stickyBtn.querySelector('button');
+  if (!button) return;
+
+  button.addEventListener('click', () => {
+    // Беремо ID з URL (завжди доступний на product.html)
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    // Беремо дані з форми (якщо є)
+    const height = document.getElementById('height')?.value || '';
+    const weight = document.getElementById('weight')?.value || '';
+    const colorId = document.querySelector('.swatch.active')?.dataset.id || '';
+
+    if (productId && colorId && height && weight) {
+      // Все заповнено — додаємо в кошик
+      addToCart({
+        productId,
+        colorId,
+        height,
+        weight
+      });
+      showAddToCartModal();
+      const mainImg = document.getElementById('mainImage');
+      const cartLink = document.querySelector('.cart-link');
+      if (mainImg && cartLink) flyToCartEffect(mainImg, cartLink);
+      updateCartBadge();
+    } else {
+      // Щось не заповнено — скролимо до форми
+      const target = document.getElementById('size-selection') || document.getElementById('order');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  });
+});
