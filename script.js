@@ -1,910 +1,5 @@
-/* CONFIG */
-const CONFIG = {
-CONTACT: {
-TG_USERNAME: "Skyron_ua",
-VIBER_INVITE: "https://invite.viber.com/?g2=AQBeex4BIEUJJlW4bdj1yeAO7w846m1dQ6AzkdYO2N%2Bt6FAv7rl5TWDkjrKKKt7t",
-SUPPORT_PHONE: "+380733337278"
-},
-BOT_TOKEN: "8524397744:AAFwG7nIJdIYwCXgU8B_AhhE_X6Xnm3xGOY",
-CHAT_ID: "7864653279",
-PRODUCTS: [
-  {
-    "id": "polar",
-    "name": "PolarFleece — тепллий флісовий костюм",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Плотний фліс — тепло до −10°C",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1099,
-    "colors": [
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#0b0b0b",
-        "images": [
-          "images/fleece/1.png",
-          "images/fleece/2.png"
-        ]
-      },
-      {
-        "id": "anthracite",
-        "name": "Антрацит",
-        "hex": "#616267",
-        "images": [
-          "images/fleece/10.png",
-          "images/fleece/11.png"
-        ]
-      },
-      {
-        "id": "beige",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/fleece/20.png",
-          "images/fleece/21.png"
-        ]
-      },
-      {
-        "id": "emerald",
-        "name": "Смарагд",
-        "hex": "#00a86b",
-        "images": [
-          "images/fleece/50.png"
-        ]
-      }
-    ],
-    "old_price": 1799
-  },
-  {
-    "id": "sweater",
-    "name": "Светр Oslo Spirit",
-    "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
-    "features": [
-      "Якісний матеріал: перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1049,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img/3.png",
-          "images/img/4.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img/1.png",
-          "images/img/2.png"
-        ]
-      },
-      {
-        "id": "beige",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img/5.png",
-          "images/img/6.png"
-        ]
-      },
-      {
-        "id": "gray",
-        "name": "Сірий",
-        "hex": "#a5aaa1dc",
-        "images": [
-          "images/img/7.png",
-          "images/img/8.png"
-        ]
-      }
-    ],
-    "old_price": 1349
-  },
-  {
-    "id": "gudzik",
-    "name": "Теплий флісовий костюм Urban Winter",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1349,
-    "colors": [
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.gudzik/4.png",
-          "images/img.gudzik/3.png",
-          "images/img.gudzik/2.png",
-          "images/img.gudzik/1.png"
-        ]
-      },
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.gudzik/5.png",
-          "images/img.gudzik/6.png",
-          "images/img.gudzik/7.png",
-          "images/img.gudzik/8.png",
-          "images/img.gudzik/9.png"
-        ]
-      }
-    ],
-    "old_price": 1749
-  },
-  {
-    "id": "plush",
-    "name": "Преміальний костюм Royal Prime",
-    "description": "Теплий флісовий костюм Royal Prime — тепло до -15°C без зайвого обʼєму",
-    "features": [
-      "🔥 Реально теплий — комфорт навіть у холод до -15°C",
-      "🧸 Мʼякий преміальний фліс — приємний до тіла, не колеться",
-      "🧍 Анатомічний крій — не сковує рухи, зручно цілий день",
-      "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
-      "📦 Швидка відправка Новою Поштою"
-    ],
-    "price": 1249,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.plush/1.png",
-          "images/img.plush/2.png",
-          "images/img.plush/3.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.plush/6.png",
-          "images/img.plush/5.png",
-          "images/img.plush/4.png"
-        ]
-      },
-      {
-        "id": "white",
-        "name": "Білий",
-        "hex": "#f6f6f8ff",
-        "images": [
-          "images/img.plush/7.png",
-          "images/img.plush/8.png",
-          "images/img.plush/9.png"
-        ]
-      },
-      {
-        "id": "khaki",
-        "name": "Хакі",
-        "hex": "#78866b",
-        "images": [
-          "images/img.plush/10.png",
-          "images/img.plush/11.png",
-          "images/img.plush/12.png"
-        ]
-      },
-      {
-        "id": "grey",
-        "name": "Сірий",
-        "hex": "#bbbbbb",
-        "images": [
-          "images/img.plush/13.png",
-          "images/img.plush/14.png",
-          "images/img.plush/15.png"
-        ]
-      },
-      {
-        "id": "beige",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img.plush/16.png",
-          "images/img.plush/17.png",
-          "images/img.plush/18.png"
-        ]
-      },
-      {
-        "id": "burgundy",
-        "name": "Бордо",
-        "hex": "#790604",
-        "images": [
-          "images/img.plush/19.png",
-          "images/img.plush/20.png",
-          "images/img.plush/21.png"
-        ]
-      },
-      {
-        "id": "brown",
-        "name": "Коричневий",
-        "hex": "#654321",
-        "images": [
-          "images/img.plush/22.png",
-          "images/img.plush/23.png",
-          "images/img.plush/24.png"
-        ]
-      },
-      {
-        "id": "emerald",
-        "name": "Смарагд",
-        "hex": "#00a86b",
-        "images": [
-          "images/img.plush/25.png",
-          "images/img.plush/26.png",
-          "images/img.plush/27.png"
-        ]
-      },
-      {
-        "id": "blue",
-        "name": "Синій",
-        "hex": "#000080",
-        "images": [
-          "images/img.plush/28.png",
-          "images/img.plush/29.png",
-          "images/img.plush/30.png"
-        ]
-      }
-    ],
-    "old_price": 1899
-  },
-  {
-    "id": "bayer",
-    "name": "Теплий зимовий костюм Nordic",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1149,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.bayer/1.png",
-          "images/img.bayer/2.png",
-          "images/img.bayer/3.png",
-          "images/img.bayer/4.png",
-          "images/img.bayer/5.png",
-          "images/img.bayer/6.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.bayer/7.png",
-          "images/img.bayer/8.png",
-          "images/img.bayer/9.png"
-        ]
-      },
-      {
-        "id": "biege",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img.bayer/10.png",
-          "images/img.bayer/11.png",
-          "images/img.bayer/12.png"
-        ]
-      }
-    ],
-    "old_price": 1549
-  },
-  {
-    "id": "zefir",
-    "name": "Зимовий костюм Shift",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1349,
-    "colors": [
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.zefir/1.png",
-          "images/img.zefir/2.png",
-          "images/img.zefir/3.png",
-          "images/img.zefir/4.png",
-          "images/img.zefir/5.png"
-        ]
-      },
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.zefir/6.png",
-          "images/img.zefir/7.png",
-          "images/img.zefir/8.png",
-          "images/img.zefir/9.png",
-          "images/img.zefir/10.png"
-        ]
-      },
-      {
-        "id": "emerald",
-        "name": "Смарагд",
-        "hex": "#00a86b",
-        "images": [
-          "images/img.zefir/11.png",
-          "images/img.zefir/12.png",
-          "images/img.zefir/13.png",
-          "images/img.zefir/14.png",
-          "images/img.zefir/15.png"
-        ]
-      }
-    ],
-    "old_price": 1749
-  },
-  {
-    "id": "plashovka",
-    "name": "Костюм Nowind",
-    "description": "Не продуває, преміальний крій — підходить для носіння в непогоду.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1249,
-    "colors": [
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.plashovka/1.png",
-          "images/img.plashovka/2.png",
-          "images/img.plashovka/3.png",
-          "images/img.plashovka/4.png",
-          "images/img.plashovka/5.png",
-          "images/img.plashovka/6.png"
-        ]
-      },
-      {
-        "id": "khaki",
-        "name": "Хакі",
-        "hex": "#78866b",
-        "images": [
-          "images/img.plashovka/7.png",
-          "images/img.plashovka/8.png",
-          "images/img.plashovka/9.png",
-          "images/img.plashovka/10.png",
-          "images/img.plashovka/11.png",
-          "images/img.plashovka/12.png"
-        ]
-      },
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.plashovka/13.png",
-          "images/img.plashovka/14.png",
-          "images/img.plashovka/15.png",
-          "images/img.plashovka/16.png"
-        ]
-      },
-      {
-        "id": "grey",
-        "name": "Сірий",
-        "hex": "#bbbbbb",
-        "images": [
-          "images/img.plashovka/17.png",
-          "images/img.plashovka/18.png"
-        ]
-      }
-    ],
-    "old_price": 1599
-  },
-  {
-    "id": "zamsh-na-zmiyci",
-    "name": "Замшевий костюм Velvet — стиль, комфорт і бездоганний вигляд",
-    "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
-    "features": [
-      "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
-      "👌 Мʼякий та приємний до тіла",
-      "✂️ Анатомічний крій — гарно сідає по фігурі",
-      "👕 Універсальний стиль — для свят та повсякдення",
-      "📦 Швидка відправка Новою Поштою"
-    ],
-    "price": 1649,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.zamsh/3.png",
-          "images/img.zamsh/4.png",
-          "images/img.zamsh/5.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.zamsh/1.png",
-          "images/img.zamsh/9.png",
-          "images/img.zamsh/2.png"
-        ]
-      },
-      {
-        "id": "blue",
-        "name": "Синій",
-        "hex": "#000080",
-        "images": [
-          "images/img.zamsh/6.png",
-          "images/img.zamsh/7.png",
-          "images/img.zamsh/8.png"
-        ]
-      }
-    ],
-    "old_price": 2460
-  },
-  {
-    "id": "chelsi",
-    "name": "Теплий костюм Apex",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1529,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.chelsi/6.png",
-          "images/img.chelsi/7.png",
-          "images/img.chelsi/8.png",
-          "images/img.chelsi/9.png",
-          "images/img.chelsi/10.png"
-        ]
-      },
-      {
-        "id": "biege",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img.chelsi/11.png",
-          "images/img.chelsi/12.png",
-          "images/img.chelsi/13.png",
-          "images/img.chelsi/14.png",
-          "images/img.chelsi/15.png"
-        ]
-      },
-      {
-        "id": "pistachio",
-        "name": "Фісташковий",
-        "hex": "#84B067",
-        "images": [
-          "images/img.chelsi/1.png",
-          "images/img.chelsi/2.png",
-          "images/img.chelsi/3.png",
-          "images/img.chelsi/4.png",
-          "images/img.chelsi/5.png"
-        ]
-      },
-      {
-        "id": "khaki",
-        "name": "Хакі",
-        "hex": "#78866b",
-        "images": [
-          "images/img.chelsi/16.png",
-          "images/img.chelsi/17.png",
-          "images/img.chelsi/18.png",
-          "images/img.chelsi/19.png",
-          "images/img.chelsi/20.png"
-        ]
-      }
-    ],
-    "old_price": 1829
-  },
-  {
-    "id": "polar-premium",
-    "name": "Теплий костюм Fortress",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1729,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.polarpremium/7.png",
-          "images/img.polarpremium/5.png",
-          "images/img.polarpremium/6.png",
-          "images/img.polarpremium/4.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.polarpremium/2.png",
-          "images/img.polarpremium/1.png",
-          "images/img.polarpremium/3.png"
-        ]
-      }
-    ],
-    "old_price": 2129
-  },
-  {
-    "id": "puhovik",
-    "name": "Зимовий пуховик Puff",
-    "description": "Теплий, легкий та універсальний.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1849,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.puhovik/9.png",
-          "images/img.puhovik/11.png",
-          "images/img.puhovik/12.png",
-          "images/img.puhovik/7.png",
-          "images/img.puhovik/8.png",
-          "images/img.puhovik/16.png",
-          "images/img.puhovik/14.png",
-          "images/img.puhovik/15.png",
-          "images/img.puhovik/10.png",
-          "images/img.puhovik/13.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.puhovik/1.png",
-          "images/img.puhovik/3.png",
-          "images/img.puhovik/4.png",
-          "images/img.puhovik/2.png",
-          "images/img.puhovik/5.png",
-          "images/img.puhovik/6.png"
-        ]
-      },
-      {
-        "id": "blue",
-        "name": "Синій",
-        "hex": "#000080",
-        "images": [
-          "images/img.puhovik/17.png",
-          "images/img.puhovik/18.png",
-          "images/img.puhovik/19.png",
-          "images/img.puhovik/20.png",
-          "images/img.puhovik/21.png",
-          "images/img.puhovik/22.png",
-          "images/img.puhovik/23.png",
-          "images/img.puhovik/24.png",
-          "images/img.puhovik/25.png",
-          "images/img.puhovik/26.png",
-          "images/img.puhovik/27.png"
-        ]
-      },
-      {
-        "id": "emerald",
-        "name": "Смарагд",
-        "hex": "#00a86b",
-        "images": [
-          "images/img.puhovik/28.png",
-          "images/img.puhovik/29.png",
-          "images/img.puhovik/30.png",
-          "images/img.puhovik/31.png",
-          "images/img.puhovik/32.png",
-          "images/img.puhovik/33.png"
-        ]
-      }
-    ],
-    "old_price": 2199
-  },
-  {
-    "id": "balaklava",
-    "name": "Зимова шапка Ghost",
-    "description": "Легка, тепла та універсальна.",
-    "features": [
-      "Якісний матеріал",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 549,
-    "colors": [
-      {
-        "id": "khaki",
-        "name": "Хакі",
-        "hex": "#4B5320",
-        "images": [
-          "images/img.balaklava/4.png",
-          "images/img.balaklava/3.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.balaklava/1.png",
-          "images/img.balaklava/2.png"
-        ]
-      },
-      {
-        "id": "camouflage",
-        "name": "Камуфляж",
-        "hex": "#78866b",
-        "images": [
-          "images/img.balaklava/7.png",
-          "images/img.balaklava/8.png",
-          "images/img.balaklava/5.png",
-          "images/img.balaklava/6.png"
-        ]
-      },
-      {
-        "id": "camouflage biege",
-        "name": "Камуфляж Беж",
-        "hex": "#e4e3beff",
-        "images": [
-          "images/img.balaklava/13.png",
-          "images/img.balaklava/14.png",
-          "images/img.balaklava/15.png"
-        ]
-      }
-    ],
-    "old_price": 649
-  },
-  {
-    "id": "shapka-baf",
-    "name": "Зимова шапка+баф Duo",
-    "description": "Зимовий комлект.",
-    "features": [
-      "Якісний матеріал",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 499,
-    "colors": [
-      {
-        "id": "biege",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img.baf/4.png",
-          "images/img.baf/3.png",
-          "images/img.baf/5.png"
-        ]
-      },
-      {
-        "id": "khaki",
-        "name": "Хакі",
-        "hex": "#4B5320",
-        "images": [
-          "images/img.baf/10.png",
-          "images/img.baf/9.png",
-          "images/img.baf/12.png"
-        ]
-      }
-    ],
-    "old_price": 649
-  },
-  {
-    "id": "plush-kapyshon",
-    "name": "Зимовий костюм Titan",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1349,
-    "colors": [
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.plush.kapyshon/10.png",
-          "images/img.plush.kapyshon/11.png",
-          "images/img.plush.kapyshon/12.png",
-          "images/img.plush.kapyshon/9.png",
-          "images/img.plush.kapyshon/8.png",
-          "images/img.plush.kapyshon/7.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.plush.kapyshon/1.png",
-          "images/img.plush.kapyshon/2.png",
-          "images/img.plush.kapyshon/3.png",
-          "images/img.plush.kapyshon/4.png",
-          "images/img.plush.kapyshon/5.png",
-          "images/img.plush.kapyshon/6.png"
-        ]
-      },
-      {
-        "id": "khaki",
-        "name": "Хакі",
-        "hex": "#4B5320",
-        "images": [
-          "images/img.plush.kapyshon/19.png",
-          "images/img.plush.kapyshon/21.png",
-          "images/img.plush.kapyshon/20.png"
-        ]
-      },
-      {
-        "id": "beige",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img.plush.kapyshon/13.png",
-          "images/img.plush.kapyshon/14.png",
-          "images/img.plush.kapyshon/15.png",
-          "images/img.plush.kapyshon/16.png",
-          "images/img.plush.kapyshon/17.png",
-          "images/img.plush.kapyshon/18.png"
-        ]
-      }
-    ],
-    "old_price": 1699
-  },
-  {
-    "id": "zmeyka",
-    "name": "Зимовий костюм Vortex",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1129,
-    "colors": [
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.zmeyka/1.png",
-          "images/img.zmeyka/2.png",
-          "images/img.zmeyka/3.png",
-          "images/img.zmeyka/4.png"
-        ]
-      },
-      {
-        "id": "khaki",
-        "name": "Хакі",
-        "hex": "#4B5320",
-        "images": [
-          "images/img.zmeyka/9.png",
-          "images/img.zmeyka/10.png",
-          "images/img.zmeyka/11.png"
-        ]
-      },
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#616267",
-        "images": [
-          "images/img.zmeyka/5.png",
-          "images/img.zmeyka/7.png",
-          "images/img.zmeyka/6.png",
-          "images/img.zmeyka/8.png"
-        ]
-      }
-    ],
-    "old_price": 1479
-  },
-  {
-    "id": "oversize-premium",
-    "name": "Теплий костюм OverSize Premium",
-    "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-    "features": [
-      "Якісний матеріал перевірений часом",
-      "Анатомічна посадка — розміри S–XXL",
-      "Швидка відправка Новою Поштою (1–3 дні)"
-    ],
-    "price": 1849,
-    "colors": [
-      {
-        "id": "biege",
-        "name": "Беж",
-        "hex": "#d6c7b1",
-        "images": [
-          "images/img.oversize/20.png",
-          "images/img.oversize/18.png",
-          "images/img.oversize/19.png",
-          "images/img.oversize/21.png"
-        ]
-      },
-      {
-        "id": "black",
-        "name": "Чорний",
-        "hex": "#111113ff",
-        "images": [
-          "images/img.oversize/1.png",
-          "images/img.oversize/2.png",
-          "images/img.oversize/3.png",
-          "images/img.oversize/4.png",
-          "images/img.oversize/5.png",
-          "images/img.oversize/6.png"
-        ]
-      },
-      {
-        "id": "graphite",
-        "name": "Графіт",
-        "hex": "#5b7194",
-        "images": [
-          "images/img.oversize/7.png",
-          "images/img.oversize/8.png",
-          "images/img.oversize/9.png",
-          "images/img.oversize/10.png",
-          "images/img.oversize/11.png",
-          "images/img.oversize/12.png",
-          "images/img.oversize/13.png"
-        ]
-      },
-      {
-        "id": "anyhracite",
-        "name": "Антрацит",
-        "hex": "#45464c",
-        "images": [
-          "images/img.oversize/14.png",
-          "images/img.oversize/15.png",
-          "images/img.oversize/16.png",
-          "images/img.oversize/17.png"
-        ]
-      },
-      {
-        "id": "brown",
-        "name": "Коричневий",
-        "hex": "#654321",
-        "images": [
-          "images/img.oversize/22.png",
-          "images/img.oversize/23.png",
-          "images/img.oversize/24.png",
-          "images/img.oversize/25.png",
-          "images/img.oversize/26.png"
-        ]
-      }
-    ],
-    "old_price": 2149
-  }
-]
-};
+// script.js
+// config.js вже підключений в HTML, тому CONFIG доступний глобально
 
 /* Helpers */
 const $ = sel => document.querySelector(sel);
@@ -1012,72 +107,250 @@ addToCartModal.classList.remove('active');
 window.location.href = 'cart.html';
 });
 
+/* ──────────────── ФУНКЦІЇ ──────────────── (визначені ВИЩЕ виклику) */
+
+function updateColorSelect() {
+  const productId = $("#productSelect")?.value;
+  const colorSelect = $("#colorSelect");
+  if (!colorSelect) return;
+
+  colorSelect.innerHTML = '<option value="">Оберіть колір</option>';
+  colorSelect.disabled = !productId;
+
+  if (productId) {
+    const product = CONFIG.PRODUCTS.find(p => p.id === productId);
+    product?.colors.forEach(c => {
+      const opt = document.createElement("option");
+      opt.value = c.id;
+      opt.textContent = c.name;
+      colorSelect.appendChild(opt);
+    });
+  }
+  updateOrderSummary();
+}
+
+function updateOrderSummary() {
+  const qty = Number($("#qty")?.value) || 1;
+  const productId = $("#productSelect")?.value;
+  const product = CONFIG.PRODUCTS.find(p => p.id === productId);
+
+  if ($("#summaryTotal")) {
+    const total = (product ? product.price : 0) * qty;
+    $("#summaryTotal").textContent = `${total} грн`;
+  }
+}
+
+function setupForm() {
+  const form = $("#orderForm");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = gatherForm();
+    if (!data) return;
+
+    const text = `🚀 НОВЕ ЗАМОВЛЕННЯ (ФОРМА):\nТовар: ${data.productName}\nКолір: ${data.colorName}\nЗріст: ${data.height} см\nВага: ${data.weight} кг\nКількість: ${data.qty}\n----\nКлієнт: ${data.fullName}\nТел: ${data.phone}\nМісто: ${data.city}\nВідділення: ${data.postOffice}`;
+
+    await sendToTelegram(text);
+    alert("Дякуємо! Менеджер звʼяжеться з вами.");
+    form.reset();
+    updateOrderSummary();
+  });
+
+  ["#height", "#weight", "#qty", "#colorSelect", "#productSelect", "#fullName", "#phone", "#city", "#postOffice"].forEach(sel => {
+    const el = $(sel);
+    if (el) el.addEventListener("input", updateOrderSummary);
+  });
+}
+
+function gatherForm() {
+  const fields = {
+    height: $("#height")?.value,
+    weight: $("#weight")?.value,
+    qty: Number($("#qty")?.value) || 1,
+    fullName: $("#fullName")?.value,
+    phone: $("#phone")?.value,
+    city: $("#city")?.value,
+    postOffice: $("#postOffice")?.value,
+    productId: $("#productSelect")?.value,
+    colorId: $("#colorSelect")?.value
+  };
+
+  if (Object.values(fields).some(v => !v)) {
+    alert("Заповніть усі поля.");
+    return null;
+  }
+
+  const product = CONFIG.PRODUCTS.find(p => p.id === fields.productId);
+  const color = product?.colors.find(c => c.id === fields.colorId);
+  return { ...fields, productName: product.name, colorName: color.name, price: product.price };
+}
+
+async function sendToTelegram(message) {
+  const url = `https://api.telegram.org/bot${CONFIG.BOT_TOKEN}/sendMessage`;
+  try {
+    await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: CONFIG.CHAT_ID, text: message })
+    });
+  } catch (error) {
+    console.error("Telegram Error:", error);
+  }
+}
+
+function addToCart(item) {
+  item.uniqueId = Date.now();
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartBadge();
+}
+
+function removeFromCart(uniqueId) {
+  cart = cart.filter(i => i.uniqueId !== parseInt(uniqueId));
+  localStorage.setItem('cart', JSON.stringify(cart));
+  initCart();
+  updateCartBadge();
+}
+
+function updateCartBadge() {
+  const badge = $("#cartBadge");
+  if (badge) {
+    const count = cart.length;
+    badge.textContent = count;
+    badge.style.display = count > 0 ? "inline-flex" : "none";
+  }
+}
+
+function flyToCartEffect(imgElement, cartIcon) {
+  if (!imgElement || !cartIcon) return;
+  const flyingImg = imgElement.cloneNode();
+  const rect = imgElement.getBoundingClientRect();
+  const cartRect = cartIcon.getBoundingClientRect();
+
+  Object.assign(flyingImg.style, {
+    position: 'fixed',
+    left: rect.left + 'px',
+    top: rect.top + 'px',
+    width: rect.width + 'px',
+    height: rect.height + 'px',
+    zIndex: '2000',
+    transition: 'all 0.8s ease-in-out',
+    borderRadius: '50%',
+    opacity: '0.8'
+  });
+
+  document.body.appendChild(flyingImg);
+
+  requestAnimationFrame(() => {
+    Object.assign(flyingImg.style, {
+      left: cartRect.left + 'px',
+      top: cartRect.top + 'px',
+      width: '20px',
+      height: '20px',
+      opacity: '0'
+    });
+  });
+
+  setTimeout(() => flyingImg.remove(), 800);
+}
+
 /* Init */
 document.addEventListener("DOMContentLoaded", () => {
-$$('#year').forEach(el => el.textContent = new Date().getFullYear());
+  $$('#year').forEach(el => el.textContent = new Date().getFullYear());
 
-$$('.btn-telegram').forEach(btn => btn.addEventListener("click", () => window.open(`https://t.me/${CONFIG.CONTACT.TG_USERNAME}`, "_blank")));
-$$('.btn-viber').forEach(btn => btn.addEventListener("click", () => window.open(CONFIG.CONTACT.VIBER_INVITE, "_blank")));
+  $$('.btn-telegram').forEach(btn => {
+    if (btn) btn.addEventListener("click", () => window.open(`https://t.me/${CONFIG.CONTACT.TG_USERNAME}`, "_blank"));
+  });
+  $$('.btn-viber').forEach(btn => {
+    if (btn) btn.addEventListener("click", () => window.open(CONFIG.CONTACT.VIBER_INVITE, "_blank"));
+  });
 
-const menuToggle = $("#menuToggle");
-const navMenu = $("#navMenu");
-if (menuToggle && navMenu) {
-menuToggle.addEventListener("click", () => navMenu.classList.toggle("active"));
-}
+  const page = window.location.pathname.split('/').pop() || 'index.html';
 
-const page = window.location.pathname.split('/').pop() || 'index.html';
-if (page === 'index.html') initHome();
-else if (page === 'catalog.html') initCatalog();
-else if (page === 'product.html') initProduct();
-else if (page === 'cart.html') initCart();
+  if (page === 'index.html') {
+    if (typeof initHome === 'function') initHome();
+  }
+  else if (page === 'catalog.html') {
+    if (typeof initCatalog === 'function') initCatalog();
+  }
+  else if (page === 'product.html') {
+    if (typeof initProduct === 'function') initProduct();
+  }
+  else if (page === 'cart.html') {
+    if (typeof initCart === 'function') initCart();
+  }
 
-const themeToggle = $("#themeToggle");
-if (themeToggle) {
-themeToggle.addEventListener("click", () => {
-document.body.classList.toggle("dark-mode");
-themeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
-});
-}
+  const themeToggle = $("#themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      themeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
+    });
+  }
 
-updateCartBadge();
+  updateCartBadge();
 
-const observer = new IntersectionObserver((entries) => {
-entries.forEach(entry => {
-if (entry.isIntersecting) entry.target.classList.add("visible");
-});
-});
-$$(".fade-in").forEach(el => observer.observe(el));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("visible");
+    });
+  });
+  $$(".fade-in").forEach(el => observer.observe(el));
+
+  // ЯКОРНА КНОПКА — скрол на #size-selection або #order
+  $$(".anchor-btn").forEach(btn => {
+    if (btn) {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const target = $("#size-selection") || $("#order");
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    }
+  });
+
+  // ЛИПКА КНОПКА — тільки на product.html
+  const stickyBtn = $("#stickyAddToCart");
+  if (stickyBtn) {
+    const stickyButton = stickyBtn.querySelector("button");
+    if (stickyButton) {
+      stickyButton.addEventListener("click", () => {
+        const target = $("#size-selection") || $("#order");
+        if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    }
+  }
 });
 
 /* Home */
 function initHome() {
-buildCatalog(CONFIG.PRODUCTS.slice(0, 3), $("#featuredGrid"), true);
-const productSelect = $("#productSelect");
-productSelect.innerHTML = '<option value="">Оберіть товар</option>';
-CONFIG.PRODUCTS.forEach(p => {
-const opt = document.createElement("option");
-opt.value = p.id;
-opt.textContent = p.name;
-productSelect.appendChild(opt);
-});
-productSelect.addEventListener("change", updateColorSelect);
-updateColorSelect();
-selectProduct(CONFIG.PRODUCTS[0].id); // hero image
-setupForm();
-updateOrderSummary();
+  buildCatalog(CONFIG.PRODUCTS.slice(0, 3), $("#featuredGrid"), true);
+  const productSelect = $("#productSelect");
+  productSelect.innerHTML = '<option value="">Оберіть товар</option>';
+  CONFIG.PRODUCTS.forEach(p => {
+    const opt = document.createElement("option");
+    opt.value = p.id;
+    opt.textContent = p.name;
+    productSelect.appendChild(opt);
+  });
+  productSelect.addEventListener("change", updateColorSelect);
+  updateColorSelect();
+  selectProduct(CONFIG.PRODUCTS[0].id); // hero image
+  setupForm();
+  updateOrderSummary();
 }
 
 /* Catalog */
 function initCatalog() {
-buildCatalog(CONFIG.PRODUCTS, $("#catalogGrid"));
+  buildCatalog(CONFIG.PRODUCTS, $("#catalogGrid"));
 }
 
 function buildCatalog(products, grid) {
-products.forEach(p => {
-const firstColor = p.colors[0] || { name: "Стандарт", images: ["images/placeholder.jpg"] };
-const card = document.createElement("div");
-card.className = "card";
-card.innerHTML = `
+  products.forEach(p => {
+    const firstColor = p.colors[0] || { name: "Стандарт", images: ["images/placeholder.jpg"] };
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
 <img src="${firstColor.images[0]}" alt="${p.name}">
 <div class="meta">
 <div class="name">${p.name}</div>
@@ -1087,453 +360,525 @@ ${p.old_price ? `<span class="old-price">${p.old_price} грн</span>` : ''}
 </div>
 </div>
 `;
-grid.appendChild(card);
-card.addEventListener("click", () => window.location.href = `product.html?id=${p.id}`);
-});
+    grid.appendChild(card);
+    card.addEventListener("click", () => window.location.href = `product.html?id=${p.id}`);
+  });
 }
 
 /* Product */
 function initProduct() {
-const urlParams = new URLSearchParams(window.location.search);
-const productId = urlParams.get('id');
-const product = CONFIG.PRODUCTS.find(p => p.id === productId);
-if (!product) return;
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
+  const product = CONFIG.PRODUCTS.find(p => p.id === productId);
+  if (!product) return;
 
-$("#productTitle").textContent = product.name;
-$("#productDescription").textContent = product.description;
-$("#productPrice").innerHTML = `${product.old_price ? `<span class="old-price">${product.old_price} грн</span>` : ''} <span class="new-price">${product.price} грн</span>`;
+  $("#productTitle").textContent = product.name;
+  $("#productDescription").textContent = product.description;
+  $("#productPrice").innerHTML = `${product.old_price ? `<span class="old-price">${product.old_price} грн</span>` : ''} <span class="new-price">${product.price} грн</span>`;
 
-const featuresList = $("#productFeatures");
-featuresList.innerHTML = '';
-product.features.forEach(f => {
-const li = document.createElement("li");
-li.textContent = f;
-featuresList.appendChild(li);
-});
+  const featuresList = $("#productFeatures");
+  featuresList.innerHTML = '';
+  product.features.forEach(f => {
+    const li = document.createElement("li");
+    li.textContent = f;
+    featuresList.appendChild(li);
+  });
 
-// Трекінг ViewContent
-ttq.track('ViewContent', {
-content_id: product.id,
-content_name: product.name,
-value: product.price,
-currency: 'UAH'
-});
+  const hatIds = ['balaklava', 'shapka-baf'];
+  const isHat = hatIds.includes(productId);
+  if (isHat) {
+    const formRow = document.querySelector('.form-row');
+    if (formRow) formRow.style.display = 'none';
+  }
 
-// Ховаємо поля росту і ваги для шапок
-const hatIds = ['balaklava', 'shapka-baf'];
-if (hatIds.includes(productId)) {
-const formRow = document.querySelector('.form-row');
-if (formRow) formRow.style.display = 'none';
-}
+  const sellingBlock = document.getElementById("sellingBlock");
+  const sizeTable = document.getElementById("sizeTable");
+  const anchorBlock = document.getElementById("anchorBlock");
 
-// Update sticky price
-const stickyPrice = document.getElementById("stickyPrice");
-if (stickyPrice) {
-stickyPrice.textContent = `${product.price} грн`;
-}
+  if (sellingBlock) sellingBlock.style.display = "none";
+  if (sizeTable) sizeTable.style.display = "none";
+  if (anchorBlock) anchorBlock.style.display = "block";
 
-// Sticky add to cart functionality
-const stickyBtn = document.getElementById("stickyAddToCart");
-if (stickyBtn) {
-stickyBtn.querySelector("button").addEventListener("click", () => {
-document.getElementById("addToCartBtn").click();
-});
-}
+  if (productId === "plush") {
+    if (sellingBlock) {
+      sellingBlock.innerHTML = `
+        <h3>Чому обирають Royal Prime?</h3>
+        <ul>
+          <li>🔥 Щільний фліс преміум-класу — зберігає тепло</li>
+          <li>💎 Не кошлатиться після прання</li>
+          <li>🎨 Колір не вицвітає з часом</li>
+          <li>🚀 Швидка доставка + гарантія повернення</li>
+          <li>🏆 Понад 500 задоволених клієнтів — хіт сезону</li>
+        </ul>
+        <div class="urgency-badge">🔥 Акція: −34% • Кількість обмежена</div>
+      `;
+      sellingBlock.style.display = "block";
+    }
 
-// Блоки переваг і розмірної сітки
-const sellingBlock = document.getElementById("sellingBlock");
-const sizeTable = document.getElementById("sizeTable");
+    if (sizeTable) {
+      sizeTable.innerHTML = `
+        <h3>Таблиця розмірів</h3>
+        <table>
+          <tr><th>Розмір</th><th>Груди (см)</th><th>Довжина спини (см)</th><th>Довжина штанів (см)</th><th>Стегна (см)</th></tr>
+          <tr><td>S</td><td>107</td><td>71</td><td>100</td><td>100</td></tr>
+          <tr><td>M</td><td>112</td><td>71</td><td>102</td><td>104</td></tr>
+          <tr><td>L</td><td>117</td><td>73</td><td>104</td><td>108</td></tr>
+          <tr><td>XL</td><td>122</td><td>74</td><td>106</td><td>112</td></tr>
+          <tr><td>XXL</td><td>130</td><td>76</td><td>108</td><td>118</td></tr>
+          <tr><td>3XL</td><td>138</td><td>78</td><td>110</td><td>124</td></tr>
+        </table>
+        <p style="margin-top:16px; font-size:0.95em;">📏 Не знаєте, який розмір обрати?<br>Вкажіть зріст і вагу — ми підберемо ідеальну посадку саме для вас</p>
+      `;
+      sizeTable.style.display = "block";
+    }
+  } 
+  else if (productId === "zamsh-na-zmiyci") {
+    if (sellingBlock) {
+      sellingBlock.innerHTML = `
+        <h3>Чому обирають Velvet?</h3>
+        <ul>
+          <li>💎 Сучасний замшевий текстиль з гарною текстурою</li>
+          <li>🧺 Легкий у догляді, зберігає форму</li>
+          <li>❤️ Комфортний при тривалому носінні</li>
+          <li>🚀 Швидка доставка + гарантія повернення</li>
+          <li>🏆 Понад 500 задоволених клієнтів — хіт сезону</li>
+        </ul>
+        <div class="urgency-badge">🔥 Акція: −33% • Кількість обмежена</div>
+      `;
+      sellingBlock.style.display = "block";
+    }
+    if (sizeTable) {
+      sizeTable.innerHTML = `
+        <h3>Таблиця розмірів</h3>
+        <p style="font-weight:500; margin:8px 0 16px 0;">Костюм «Velvet»</p>
+        <table>
+          <tr><th>Розмір</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>2XL</th></tr>
+          <tr><td>Довжина кофти</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td></tr>
+          <tr><td>Довжина рукава</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td></tr>
+          <tr><td>Обхват грудей</td><td>112</td><td>116</td><td>120</td><td>124</td><td>128</td></tr>
+          <tr><td>Ширина пояса</td><td>70</td><td>72</td><td>74</td><td>76</td><td>78</td></tr>
+          <tr><td>Довжина брюк</td><td>100</td><td>102</td><td>104</td><td>106</td><td>108</td></tr>
+        </table>
+      `;
+      sizeTable.style.display = "block";
+    }
+  }
 
-if (sellingBlock) sellingBlock.style.display = "none";
-if (sizeTable) sizeTable.style.display = "none";
+  selectProduct(product.id);
 
-if (productId === "plush") {
-if (sellingBlock) {
-sellingBlock.innerHTML = `
-<h3>Чому обирають Royal Prime?</h3>
-<ul>
-<li>🔥 Щільний фліс преміум-класу — зберігає тепло</li>
-<li>💎 Не кошлатиться після прання</li>
-<li>🎨 Колір не вицвітає з часом</li>
-<li>🚀 Швидка доставка + гарантія повернення</li>
-<li>🏆 Понад 500 задоволених клієнтів — хіт сезону</li>
-</ul>
-<div class="urgency-badge">🔥 Акція: −34% • Кількість обмежена</div>
-`;
-sellingBlock.style.display = "block";
-}
-if (sizeTable) {
-sizeTable.innerHTML = `
-<h3>Таблиця розмірів</h3>
-<table>
-<tr><th>Розмір</th><th>Груди (см)</th><th>Довжина спини (см)</th><th>Довжина штанів (см)</th><th>Стегна (см)</th></tr>
-<tr><td>S</td><td>107</td><td>71</td><td>100</td><td>100</td></tr>
-<tr><td>M</td><td>112</td><td>71</td><td>102</td><td>104</td></tr>
-<tr><td>L</td><td>117</td><td>73</td><td>104</td><td>108</td></tr>
-<tr><td>XL</td><td>122</td><td>74</td><td>106</td><td>112</td></tr>
-<tr><td>XXL</td><td>130</td><td>76</td><td>108</td><td>118</td></tr>
-<tr><td>3XL</td><td>138</td><td>78</td><td>110</td><td>124</td></tr>
-</table>
-<p style="margin-top:16px; font-size:0.95em;">
-📏 Не знаєте, який розмір обрати?<br>
-Вкажіть зріст і вагу — ми підберемо ідеальну посадку саме для вас
-</p>
-`;
-sizeTable.style.display = "block";
-}
-}
-else if (productId === "zamsh-na-zmiyci") {
-if (sellingBlock) {
-sellingBlock.innerHTML = `
-<h3>Чому обирають Velvet?</h3>
-<ul>
-<li>💎 Сучасний замшевий текстиль з гарною текстурою</li>
-<li>🧺 Легкий у догляді, зберігає форму</li>
-<li>❤️ Комфортний при тривалому носінні</li>
-<li>🚀 Швидка доставка + гарантія повернення</li>
-<li>🏆 Понад 500 задоволених клієнтів — хіт сезону</li>
-</ul>
-<div class="urgency-badge">🔥 Акція: −33% • Кількість обмежена</div>
-`;
-sellingBlock.style.display = "block";
-}
-if (sizeTable) {
-sizeTable.innerHTML = `
-<h3>Таблиця розмірів</h3>
-<p style="font-weight:500; margin:8px 0 16px 0;">Костюм «Velvet»</p>
-<table>
-<tr><th>Розмір</th><th>S</th><th>M</th><th>L</th><th>XL</th><th>2XL</th></tr>
-<tr><td>Довжина кофти</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td></tr>
-<tr><td>Довжина рукава</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td></tr>
-<tr><td>Обхват грудей</td><td>112</td><td>116</td><td>120</td><td>124</td><td>128</td></tr>
-<tr><td>Ширина пояса</td><td>70</td><td>72</td><td>74</td><td>76</td><td>78</td></tr>
-<tr><td>Довжина брюк</td><td>100</td><td>102</td><td>104</td><td>106</td><td>108</td></tr>
-</table>
-<p style="margin-top:16px; font-size:0.95em;">
-📏 Не знаєте, який розмір обрати?<br>
-Вкажіть зріст і вагу — ми підберемо ідеальну посадку саме для вас
-</p>
-`;
-sizeTable.style.display = "block";
-}
-}
+  const addBtn = $("#addToCartBtn");
+  if (addBtn) {
+    addBtn.textContent = "Підібрати розмір";
+    addBtn.addEventListener("click", () => {
+      const colorId = $(".swatch.active")?.dataset.id;
+      const height = $("#height")?.value;
+      const weight = $("#weight")?.value;
 
-selectProduct(product.id);
-
-$("#addToCartBtn").addEventListener("click", () => {
-const colorId = $(".swatch.active")?.dataset.id;
-const height = $("#height").value;
-const weight = $("#weight").value;
-
-const isHat = hatIds.includes(productId);
-if (colorId && (isHat || (height && weight))) {
-addToCart({ productId, colorId, height: isHat ? 'N/A' : height, weight: isHat ? 'N/A' : weight });
-showAddToCartModal();
-
-// Трекінг AddToCart
-ttq.track('AddToCart', {
-content_id: product.id,
-content_name: product.name,
-value: product.price,
-currency: 'UAH'
-});
-
-const cartIcon = $(".cart-link");
-const img = $("#mainImage");
-flyToCartEffect(img, cartIcon);
-
-updateCartBadge();
-} else {
-alert("Вкажіть, будь ласка, зріст та вагу 🙏");
-}
-});
-}
-
-/* Ефект польоту */
-function flyToCartEffect(img, cartIcon) {
-if (!img || !cartIcon) return;
-const clone = img.cloneNode();
-clone.style.position = "fixed";
-clone.style.zIndex = "9999";
-clone.style.width = img.offsetWidth + "px";
-clone.style.height = img.offsetHeight + "px";
-clone.style.top = img.getBoundingClientRect().top + "px";
-clone.style.left = img.getBoundingClientRect().left + "px";
-clone.style.transition = "all 0.6s ease-in-out";
-clone.style.borderRadius = "8px";
-document.body.appendChild(clone);
-
-setTimeout(() => {
-clone.style.width = "30px";
-clone.style.height = "30px";
-clone.style.top = cartIcon.getBoundingClientRect().top + "px";
-clone.style.left = cartIcon.getBoundingClientRect().left + "px";
-clone.style.opacity = "0.6";
-}, 50);
-
-setTimeout(() => clone.remove(), 800);
+      if (colorId && (isHat || (height && weight))) {
+        addToCart({ productId, colorId, height: isHat ? 'N/A' : height, weight: isHat ? 'N/A' : weight });
+        showAddToCartModal();
+        flyToCartEffect($("#mainImage"), $(".cart-link"));
+        updateCartBadge();
+      } else {
+        alert("Вкажіть, будь ласка, зріст та вагу 🙏");
+        $("#size-selection")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+  }
 }
 
 /* Color & Carousel */
 let activeProduct, activeImages = [], currentIndex = 0;
 
 function selectProduct(id) {
-activeProduct = CONFIG.PRODUCTS.find(p => p.id === id);
-const swatches = $("#swatches");
-if (swatches) {
-swatches.innerHTML = "";
-activeProduct.colors.forEach((c, i) => {
-const sw = document.createElement("button");
-sw.className = "swatch";
-sw.style.background = c.hex;
-sw.dataset.id = c.id;
-if (i === 0) sw.classList.add("active");
-swatches.appendChild(sw);
-sw.addEventListener("click", () => selectColor(c.id));
-});
-}
-selectColor(activeProduct.colors[0].id);
-if ($("#heroPrice")) {
-$("#heroPrice").innerHTML = `${activeProduct.old_price ? `<span class="old-price">${activeProduct.old_price} грн</span>` : ''} <span class="new-price">${activeProduct.price} грн</span>`;
-}
+  activeProduct = CONFIG.PRODUCTS.find(p => p.id === id);
+  if (!activeProduct) return;
+
+  const swatches = $("#swatches");
+  if (swatches) {
+    swatches.innerHTML = "";
+    activeProduct.colors.forEach((c, i) => {
+      const sw = document.createElement("button");
+      sw.className = "swatch";
+      sw.style.background = c.hex;
+      sw.dataset.id = c.id;
+      if (i === 0) sw.classList.add("active");
+      swatches.appendChild(sw);
+      sw.addEventListener("click", () => selectColor(c.id));
+    });
+  }
+
+  if (activeProduct.colors.length > 0) {
+    selectColor(activeProduct.colors[0].id);
+  }
+
+  if ($("#heroPrice")) {
+    $("#heroPrice").innerHTML = `
+      ${activeProduct.old_price ? `<span class="old-price">${activeProduct.old_price} грн</span>` : ''} 
+      <span class="new-price">${activeProduct.price} грн</span>
+    `;
+  }
 }
 
 function selectColor(id) {
-const color = activeProduct.colors.find(c => c.id === id);
-$$(".swatch").forEach(s => s.classList.toggle("active", s.dataset.id === id));
-activeImages = color.images || ["images/placeholder.jpg"];
-currentIndex = 0;
-activeImages.forEach(src => { const img = new Image(); img.src = src; });
-updateMainImage();
+  const color = activeProduct.colors.find(c => c.id === id);
+  if (!color) return;
 
-const prevBtn = $("#prevBtn");
-const nextBtn = $("#nextBtn");
-if (prevBtn && nextBtn) {
-prevBtn.onclick = () => {
-currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
-updateMainImage();
-};
-nextBtn.onclick = () => {
-currentIndex = (currentIndex + 1) % activeImages.length;
-updateMainImage();
-};
-}
+  $$(".swatch").forEach(s => s.classList.toggle("active", s.dataset.id === id));
+  activeImages = color.images || ["images/placeholder.jpg"];
+  currentIndex = 0;
+
+  activeImages.forEach(src => { const img = new Image(); img.src = src; });
+  updateMainImage();
+
+  const prevBtn = $("#prevBtn");
+  const nextBtn = $("#nextBtn");
+  if (prevBtn && nextBtn) {
+    prevBtn.onclick = () => {
+      currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
+      updateMainImage();
+    };
+    nextBtn.onclick = () => {
+      currentIndex = (currentIndex + 1) % activeImages.length;
+      updateMainImage();
+    };
+  }
 }
 
 function updateMainImage() {
-const main = $("#mainImage");
-if (!main) return;
-main.style.opacity = "0";
-const img = new Image();
-img.src = activeImages[currentIndex];
-img.onload = () => {
-main.src = img.src;
-requestAnimationFrame(() => { main.style.opacity = "1"; });
-};
+  const main = $("#mainImage");
+  if (!main || activeImages.length === 0) return;
+
+  main.style.opacity = "0.5";
+  const img = new Image();
+  img.src = activeImages[currentIndex];
+  img.onload = () => {
+    main.src = img.src;
+    main.style.opacity = "1";
+  };
 }
 
 /* Form на головній */
 function setupForm() {
-const form = $("#orderForm");
-if (!form) return;
-form.addEventListener("submit", async (e) => {
-e.preventDefault();
-const data = gatherForm();
-if (!data) return;
-const text = `Замовлення: ${data.productName} (${data.colorName}), Зріст: ${data.height} см, Вага: ${data.weight} кг, Кількість: ${data.qty}, Імʼя та прізвище: ${data.fullName}, Номер телефону: ${data.phone}, Місто: ${data.city}, Відділення нової пошти: ${data.postOffice}`;
-await sendToTelegram(text);
+  const form = $("#orderForm");
+  if (!form) return;
 
-// Трекінг Purchase
-ttq.track('Purchase', {
-content_name: data.productName,
-value: data.price * data.qty,
-currency: 'UAH'
-});
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = gatherForm();
+    if (!data) return;
 
-alert("Дякуємо за замовлення, менеджер звʼяжеться з вами найближчим часом");
-form.reset();
-updateOrderSummary();
-});
+    const text = `🚀 НОВЕ ЗАМОВЛЕННЯ (ФОРМА):\nТовар: ${data.productName}\nКолір: ${data.colorName}\nЗріст: ${data.height} см\nВага: ${data.weight} кг\nКількість: ${data.qty}\n----\nКлієнт: ${data.fullName}\nТел: ${data.phone}\nМісто: ${data.city}\nВідділення: ${data.postOffice}`;
 
-$("#productSelect").addEventListener("change", updateColorSelect);
-["#height", "#weight", "#qty", "#colorSelect", "#fullName", "#phone", "#city", "#postOffice"].forEach(sel => {
-$(sel)?.addEventListener("input", updateOrderSummary);
-});
-}
+    await sendToTelegram(text);
+    alert("Дякуємо! Менеджер звʼяжеться з вами.");
+    form.reset();
+    updateOrderSummary();
+  });
 
-function updateColorSelect() {
-const productId = $("#productSelect")?.value;
-const product = CONFIG.PRODUCTS.find(p => p.id === productId);
-const colorSelect = $("#colorSelect");
-if (!colorSelect) return;
-colorSelect.innerHTML = '<option value="">Оберіть колір</option>';
-colorSelect.disabled = !product;
-if (product) {
-product.colors.forEach(c => {
-const opt = document.createElement("option");
-opt.value = c.id;
-opt.textContent = c.name;
-colorSelect.appendChild(opt);
-});
-}
-updateOrderSummary();
+  ["#height", "#weight", "#qty", "#colorSelect", "#productSelect", "#fullName", "#phone", "#city", "#postOffice"].forEach(sel => {
+    const el = $(sel);
+    if (el) el.addEventListener("input", updateOrderSummary);
+  });
 }
 
 function gatherForm() {
-const height = $("#height")?.value;
-const weight = $("#weight")?.value;
-const qty = Number($("#qty")?.value) || 1;
-const fullName = $("#fullName")?.value;
-const phone = $("#phone")?.value;
-const city = $("#city")?.value;
-const postOffice = $("#postOffice")?.value;
-const productId = $("#productSelect")?.value;
-const colorId = $("#colorSelect")?.value;
+  const fields = {
+    height: $("#height")?.value,
+    weight: $("#weight")?.value,
+    qty: Number($("#qty")?.value) || 1,
+    fullName: $("#fullName")?.value,
+    phone: $("#phone")?.value,
+    city: $("#city")?.value,
+    postOffice: $("#postOffice")?.value,
+    productId: $("#productSelect")?.value,
+    colorId: $("#colorSelect")?.value
+  };
 
-if (!height || !weight || !fullName || !phone || !city || !postOffice || !productId || !colorId) {
-alert("Заповніть усі поля.");
-document.getElementById("height")?.scrollIntoView({
-behavior: "smooth",
-block: "center"
-});
-return null;
-}
+  if (Object.values(fields).some(v => !v)) {
+    alert("Заповніть усі поля.");
+    return null;
+  }
 
-const product = CONFIG.PRODUCTS.find(p => p.id === productId);
-const color = product?.colors.find(c => c.id === colorId);
-return { height, weight, qty, fullName, phone, city, postOffice, productName: product.name, colorName: color.name, price: product.price };
+  const product = CONFIG.PRODUCTS.find(p => p.id === fields.productId);
+  const color = product?.colors.find(c => c.id === fields.colorId);
+  return { ...fields, productName: product.name, colorName: color.name, price: product.price };
 }
 
 function updateOrderSummary() {
-const qty = Number($("#qty")?.value) || 1;
-const height = $("#height")?.value || "—";
-const weight = $("#weight")?.value || "—";
-const productName = $("#productSelect")?.options[$("#productSelect")?.selectedIndex]?.text || "—";
-const colorName = $("#colorSelect")?.options[$("#colorSelect")?.selectedIndex]?.text || "—";
-const product = CONFIG.PRODUCTS.find(p => p.id === $("#productSelect")?.value);
+  const qty = Number($("#qty")?.value) || 1;
+  const productId = $("#productSelect")?.value;
+  const product = CONFIG.PRODUCTS.find(p => p.id === productId);
 
-$("#summaryProduct") && ($("#summaryProduct").textContent = `${productName} — ${colorName}`);
-$("#summaryHeight") && ($("#summaryHeight").textContent = height);
-$("#summaryWeight") && ($("#summaryWeight").textContent = weight);
-$("#summaryTotal") && ($("#summaryTotal").innerHTML = `${product?.old_price ? `<span class="old-price">${product.old_price * qty} грн</span>` : ''} <span class="new-price">${(product ? product.price : 0) * qty} грн</span>`);
+  if ($("#summaryTotal")) {
+    const total = (product ? product.price : 0) * qty;
+    $("#summaryTotal").textContent = `${total} грн`;
+  }
 }
 
-/* Cart */
+/* Cart Logic */
 function addToCart(item) {
-item.uniqueId = Date.now();
-cart.push(item);
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartBadge();
-updateOrderSummary();
+  item.uniqueId = Date.now();
+  cart.push(item);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  updateCartBadge();
 }
 
-function removeFromCart(key) {
-cart = cart.filter(i => i.uniqueId !== parseInt(key));
-localStorage.setItem('cart', JSON.stringify(cart));
-initCart();
-updateCartBadge();
-updateOrderSummary();
+function removeFromCart(uniqueId) {
+  cart = cart.filter(i => i.uniqueId !== parseInt(uniqueId));
+  localStorage.setItem('cart', JSON.stringify(cart));
+  initCart();
+  updateCartBadge();
 }
 
 function initCart() {
-const cartItems = $("#cartItems");
-let total = 0;
-let old_total = 0;
-cart = cart.filter(item => CONFIG.PRODUCTS.find(p => p.id === item.productId)?.colors.find(c => c.id === item.colorId));
-localStorage.setItem('cart', JSON.stringify(cart));
-cartItems.innerHTML = "";
-cart.forEach((i) => {
-const product = CONFIG.PRODUCTS.find(p => p.id === i.productId);
-const color = product?.colors.find(c => c.id === i.colorId);
-if (product && color) {
-total += product.price;
-old_total += product.old_price || product.price;
-cartItems.innerHTML += `
-<div class="cart-item" data-key="${i.uniqueId}">
-<p>${product.name} (${color.name}, Зріст: ${i.height} см, Вага: ${i.weight} кг)</p>
-<p>${product.old_price ? `<span class="old-price">${product.old_price} грн</span>` : ''} <span class="new-price">${product.price} грн</span></p>
-<button class="btn btn-danger remove-btn">Видалити</button>
-</div>
-`;
-}
-});
-$("#cartTotal").innerHTML = `${old_total > total ? `<span class="old-price">${old_total} грн</span>` : ''} <span class="new-price">${total} грн</span>`;
-$$(".remove-btn").forEach(btn => btn.addEventListener("click", () => removeFromCart(btn.parentElement.dataset.key)));
+  const cartItems = $("#cartItems");
+  if (!cartItems) return;
 
-const checkoutForm = $("#checkoutForm");
-if (checkoutForm) {
-checkoutForm.addEventListener("submit", async (e) => {
-e.preventDefault();
-const fullName = $("#fullName").value;
-const phone = $("#phone").value;
-const city = $("#city").value;
-const postOffice = $("#postOffice").value;
-if (!fullName || !phone || !city || !postOffice) return alert("Заповніть усі поля");
-const lines = cart.map(i => {
-const p = CONFIG.PRODUCTS.find(pr => pr.id === i.productId);
-const c = p?.colors.find(cl => cl.id === i.colorId);
-return p && c ? `${p.name} (${c.name}, Зріст: ${i.height} см, Вага: ${i.weight} кг)` : '';
-}).filter(Boolean).join("\n");
-const text = `Замовлення від ${fullName} (${phone})\nМісто: ${city}\nВідділення нової пошти: ${postOffice}\nТовари:\n${lines}`;
-await sendToTelegram(text);
+  let total = 0;
+  cartItems.innerHTML = "";
 
-// Трекінг Purchase
-ttq.track('Purchase', {
-value: total,
-currency: 'UAH'
-});
+  cart.forEach((item) => {
+    const product = CONFIG.PRODUCTS.find(p => p.id === item.productId);
+    const color = product?.colors.find(c => c.id === item.colorId);
 
-alert("Дякуємо за замовлення, менеджер звʼяжеться з вами найближчим часом");
-cart = [];
-localStorage.setItem('cart', JSON.stringify(cart));
-initCart();
-updateCartBadge();
-updateOrderSummary();
-});
-}
+    if (product && color) {
+      total += product.price;
+      cartItems.innerHTML += `
+        <div class="cart-item" style="border-bottom:1px solid #eee; padding:10px 0; margin-bottom:10px;">
+          <div style="font-weight:600;">${product.name}</div>
+          <div style="font-size:0.9em; color:#666;">Колір: ${color.name} | Розмір: ${item.height}/${item.weight}</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:5px;">
+            <span class="new-price">${product.price} грн</span>
+            <button class="remove-btn" onclick="removeFromCart(${item.uniqueId})" style="color:red; background:none; border:none; cursor:pointer;">Видалити</button>
+          </div>
+        </div>
+      `;
+    }
+  });
+
+  const totalEl = $("#cartTotal");
+  if (totalEl) totalEl.textContent = `${total} грн`;
+
+  const checkoutForm = $("#checkoutForm");
+  if (checkoutForm && cart.length > 0) {
+    checkoutForm.onsubmit = async (e) => {
+      e.preventDefault();
+      const fullName = $("#fullName").value;
+      const phone = $("#phone").value;
+      const city = $("#city").value;
+      const postOffice = $("#postOffice").value;
+
+      if (!fullName || !phone) return alert("Заповніть контактні дані");
+
+      const itemsText = cart.map(i => {
+        const p = CONFIG.PRODUCTS.find(pr => pr.id === i.productId);
+        return `- ${p.name} (${i.height}см, ${i.weight}кг)`;
+      }).join("\n");
+
+      const message = `🛒 ЗАМОВЛЕННЯ З КОШИКА:\nКлієнт: ${fullName}\nТел: ${phone}\nМісто: ${city}\nПошта: ${postOffice}\n\nТовари:\n${itemsText}\n\nРазом: ${total} грн`;
+
+      await sendToTelegram(message);
+      alert("Замовлення прийнято!");
+      cart = [];
+      localStorage.setItem('cart', JSON.stringify(cart));
+      window.location.href = "index.html";
+    };
+  }
 }
 
 function updateCartBadge() {
-const badge = $("#cartBadge");
-if (badge) {
-const count = cart.length;
-badge.textContent = count;
-badge.style.display = count > 0 ? "inline-flex" : "none";
-}
+  const badge = $("#cartBadge") || $(".cart-count");
+  if (badge) {
+    const count = cart.length;
+    badge.textContent = count;
+    badge.style.display = count > 0 ? "inline-flex" : "none";
+  }
 }
 
 async function sendToTelegram(message) {
-const url = `https://api.telegram.org/bot${CONFIG.BOT_TOKEN}/sendMessage?chat_id=${CONFIG.CHAT_ID}&text=${encodeURIComponent(message)}`;
-try {
-await fetch(url);
-} catch (error) {
-console.error("Error sending to Telegram:", error);
+  const url = `https://api.telegram.org/bot${CONFIG.BOT_TOKEN}/sendMessage`;
+  try {
+    await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: CONFIG.CHAT_ID, text: message })
+    });
+  } catch (error) {
+    console.error("Telegram Error:", error);
+  }
 }
+
+/* Swipe & Events */
+document.addEventListener("DOMContentLoaded", () => {
+  const mainImg = document.getElementById("mainImage");
+  if (mainImg) {
+    let startX = 0;
+    mainImg.addEventListener("touchstart", (e) => startX = e.touches[0].clientX, { passive: true });
+    mainImg.addEventListener("touchend", (e) => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        currentIndex = diff > 0 ? (currentIndex + 1) % activeImages.length : (currentIndex - 1 + activeImages.length) % activeImages.length;
+        updateMainImage();
+      }
+    }, { passive: true });
+  }
+});
+function selectColor(id) {
+  const color = activeProduct.colors.find(c => c.id === id);
+  if (!color) return;
+
+  // Снимаем active со всех, ставим на выбранный
+  $$(".swatch").forEach(s => s.classList.toggle("active", s.dataset.id === id));
+
+  // Меняем картинки
+  activeImages = color.images || ["images/placeholder.jpg"];
+  currentIndex = 0;
+  activeImages.forEach(src => { const img = new Image(); img.src = src; });
+  updateMainImage();
+
+  // Обновляем название цвета под палитрой
+  const nameEl = document.getElementById("selectedColorName");
+  if (nameEl) {
+    nameEl.textContent = `Обраний колір: ${color.name}`;
+  }
+
+  // Обновляем кнопки навигации (если они есть)
+  const prevBtn = $("#prevBtn");
+  const nextBtn = $("#nextBtn");
+  if (prevBtn && nextBtn) {
+    prevBtn.onclick = () => {
+      currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
+      updateMainImage();
+    };
+    nextBtn.onclick = () => {
+      currentIndex = (currentIndex + 1) % activeImages.length;
+      updateMainImage();
+    };
+  }
+}
+// ────────────────────────────────────────────────
+// Таймер акции — до 00:00 следующего дня
+// Показывается каждые 3 посещения (1-е, 4-е, 7-е, 10-е и т.д.)
+// ────────────────────────────────────────────────
+
+function getTimeUntilMidnight() {
+  const now = new Date();
+  const midnight = new Date(now);
+  midnight.setHours(24, 0, 0, 0);
+
+  let diff = midnight - now;
+  if (diff < 0) diff = 0;
+
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  return { hours, minutes, seconds, totalMs: diff };
 }
 
-/* Swipe */
-(function enableSwipe() {
-const img = document.getElementById("mainImage");
-if (!img) return;
-
-let startX = 0;
-
-img.addEventListener("touchstart", (e) => {
-startX = e.touches[0].clientX;
-}, { passive: true });
-
-img.addEventListener("touchend", (e) => {
-const endX = e.changedTouches[0].clientX;
-const diff = startX - endX;
-if (Math.abs(diff) < 50) return;
-
-if (diff > 0) {
-currentIndex = (currentIndex + 1) % activeImages.length;
-} else {
-currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
+function formatTimer({ hours, minutes, seconds }) {
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
-updateMainImage();
-}, { passive: true });
-})();
 
+function createTimerBanner() {
+  // Считаем количество посещений
+  let visitCount = parseInt(localStorage.getItem('timerVisitCount') || '0', 10);
+  visitCount += 1;
+  localStorage.setItem('timerVisitCount', visitCount);
 
+  // Показываем только если (visitCount - 1) делится на 3 без остатка
+  // То есть: 1, 4, 7, 10, 13...
+  if ((visitCount - 1) % 3 !== 0) return;
+
+  // На product.html не показываем, если корзина не пустая
+  const isProductPage = window.location.pathname.includes('product.html');
+  if (isProductPage && cart.length > 0) return;
+
+  // Создаём баннер
+  const banner = document.createElement('div');
+  banner.id = 'timer-banner';
+  banner.innerHTML = `
+    <div style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(135deg, #ff3b30, #ff6b6b);
+      color: white;
+      padding: 12px 16px;
+      font-size: 15px;
+      font-weight: 600;
+      z-index: 9999;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    ">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span>🔥 Обмежена кількість • Без передоплати • Акція діє до кінця доби • Залишилось:</span>
+        <strong id="timer-display" style="font-size:17px; background:rgba(0,0,0,0.25); padding:6px 12px; border-radius:8px;">
+          00:00:00
+        </strong>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button id="action-timer-btn" style="
+          background: white;
+          color: #ff3b30;
+          border: none;
+          padding: 8px 16px;
+          border-radius: 24px;
+          font-weight: bold;
+          cursor: pointer;
+          font-size: 14px;
+        ">Знайти мій розмір</button>
+
+        <button id="close-timer-btn" style="
+          background: transparent;
+          color: white;
+          border: 1px solid white;
+          padding: 6px 12px;
+          border-radius: 20px;
+          cursor: pointer;
+          font-size: 14px;
+        ">× Закрити</button>
+      </div>
+    </div>
+  `;
+
+  document.body.prepend(banner);
+
+  // Кнопка действия — скролл к форме
+  document.getElementById('action-timer-btn').onclick = () => {
+    const target = document.getElementById('size-selection') || document.querySelector('#order') || document.querySelector('#orderForm');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    banner.remove();
+  };
+
+  // Кнопка закрытия
+  document.getElementById('close-timer-btn').onclick = () => {
+    banner.remove();
+  };
+
+  // Обратный отсчёт
+  const timerDisplay = document.getElementById('timer-display');
+  const interval = setInterval(() => {
+    const time = getTimeUntilMidnight();
+    timerDisplay.textContent = formatTimer(time);
+
+    if (time.totalMs <= 0) {
+      clearInterval(interval);
+      banner.remove();
+    }
+  }, 1000);
+}
+
+// Запускаем через 4 секунды после загрузки страницы
+setTimeout(() => {
+  createTimerBanner();
+}, 4000);
