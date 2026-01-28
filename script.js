@@ -204,6 +204,21 @@ function addToCart(item) {
   cart.push(item);
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartBadge();
+  // ===============================
+  // TikTok Pixel — AddToCart
+  // ===============================
+  if (window.ttq) {
+    const product = CONFIG.PRODUCTS.find(p => p.id === item.productId);
+
+    ttq.track('AddToCart', {
+      content_id: item.productId,
+      content_name: product ? product.name : 'Товар',
+      content_type: 'product',
+      quantity: 1,
+      value: product ? Number(product.price) : 0,
+      currency: 'UAH'
+    });
+  }
 }
 
 function removeFromCart(uniqueId) {
@@ -848,3 +863,20 @@ function createTimerBanner() {
 setTimeout(() => {
   createTimerBanner();
 }, 4000);
+// ===============================
+// TikTok Pixel — ViewContent
+// ===============================
+if (window.ttq && window.location.pathname.includes('product.html')) {
+  const urlParams = new URLSearchParams(window.location.search);
+  const productId = urlParams.get('id');
+
+  if (productId === 'plush') {
+    ttq.track('ViewContent', {
+      content_id: 'plush',
+      content_name: 'Royal Prime',
+      content_type: 'product',
+      value: 1249,
+      currency: 'UAH'
+    });
+  }
+}
