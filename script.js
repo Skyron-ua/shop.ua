@@ -315,8 +315,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const stickyButton = stickyBtn.querySelector("button");
     if (stickyButton) {
       stickyButton.addEventListener("click", () => {
-        const target = $("#size-selection") || $("#order");
-        if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        const height = document.getElementById('height')?.value || '';
+        const weight = document.getElementById('weight')?.value || '';
+        const colorId = document.querySelector('.swatch.active')?.dataset.id || '';
+
+        if (productId && colorId && (height || weight)) {
+          addToCart({
+            productId,
+            colorId,
+            height: height || 'N/A',
+            weight: weight || 'N/A'
+          });
+          showAddToCartModal();
+          const mainImg = document.getElementById('mainImage');
+          const cartLink = document.querySelector('.cart-link');
+          if (mainImg && cartLink) flyToCartEffect(mainImg, cartLink);
+          updateCartBadge();
+        } else {
+          const target = $("#size-selection") || $("#order");
+          if (target) target.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
       });
     }
   }
@@ -431,7 +452,7 @@ function initProduct() {
       `;
       sizeTable.style.display = "block";
     }
-  } 
+  }
   else if (productId === "zamsh-na-zmiyci") {
     if (sellingBlock) {
       sellingBlock.innerHTML = `
@@ -514,7 +535,7 @@ function selectProduct(id) {
 
   if ($("#heroPrice")) {
     $("#heroPrice").innerHTML = `
-      ${activeProduct.old_price ? `<span class="old-price">${activeProduct.old_price} грн</span>` : ''} 
+      ${activeProduct.old_price ? `<span class="old-price">${activeProduct.old_price} грн</span>` : ''}
       <span class="new-price">${activeProduct.price} грн</span>
     `;
   }
@@ -530,6 +551,20 @@ function selectColor(id) {
 
   activeImages.forEach(src => { const img = new Image(); img.src = src; });
   updateMainImage();
+
+  // Відображення назви кольору під палітрою (в карточці товару)
+  let colorNameEl = document.getElementById("selectedColorName");
+  if (!colorNameEl) {
+    colorNameEl = document.createElement('p');
+    colorNameEl.id = 'selectedColorName';
+    colorNameEl.style.marginTop = '12px';
+    colorNameEl.style.fontSize = '1.1em';
+    colorNameEl.style.fontWeight = '600';
+    colorNameEl.style.color = '#333';
+    const swatchesParent = $('#swatches')?.parentNode;
+    if (swatchesParent) swatchesParent.appendChild(colorNameEl);
+  }
+  colorNameEl.textContent = `Обраний колір: ${color.name}`;
 
   const prevBtn = $("#prevBtn");
   const nextBtn = $("#nextBtn");
@@ -605,32 +640,7 @@ function gatherForm() {
   return { ...fields, productName: product.name, colorName: color.name, price: product.price };
 }
 
-function updateOrderSummary() {
-  const qty = Number($("#qty")?.value) || 1;
-  const productId = $("#productSelect")?.value;
-  const product = CONFIG.PRODUCTS.find(p => p.id === productId);
-
-  if ($("#summaryTotal")) {
-    const total = (product ? product.price : 0) * qty;
-    $("#summaryTotal").textContent = `${total} грн`;
-  }
-}
-
 /* Cart Logic */
-function addToCart(item) {
-  item.uniqueId = Date.now();
-  cart.push(item);
-  localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartBadge();
-}
-
-function removeFromCart(uniqueId) {
-  cart = cart.filter(i => i.uniqueId !== parseInt(uniqueId));
-  localStorage.setItem('cart', JSON.stringify(cart));
-  initCart();
-  updateCartBadge();
-}
-
 function initCart() {
   const cartItems = $("#cartItems");
   if (!cartItems) return;
@@ -642,12 +652,12 @@ function initCart() {
     const product = CONFIG.PRODUCTS.find(p => p.id === item.productId);
     const color = product?.colors.find(c => c.id === item.colorId);
 
-    if (product && color) {
+    if (product) {
       total += product.price;
       cartItems.innerHTML += `
         <div class="cart-item" style="border-bottom:1px solid #eee; padding:10px 0; margin-bottom:10px;">
           <div style="font-weight:600;">${product.name}</div>
-          <div style="font-size:0.9em; color:#666;">Колір: ${color.name} | Розмір: ${item.height}/${item.weight}</div>
+          <div style="font-size:0.9em; color:#666;">Колір: ${color ? color.name : 'Не вказано'} | Розмір: ${item.height}/${item.weight}</div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-top:5px;">
             <span class="new-price">${product.price} грн</span>
             <button class="remove-btn" onclick="removeFromCart(${item.uniqueId})" style="color:red; background:none; border:none; cursor:pointer;">Видалити</button>
@@ -673,7 +683,8 @@ function initCart() {
 
       const itemsText = cart.map(i => {
         const p = CONFIG.PRODUCTS.find(pr => pr.id === i.productId);
-        return `- ${p.name} (${i.height}см, ${i.weight}кг)`;
+        const col = p?.colors.find(c => c.id === i.colorId);
+        return `- ${p.name} (Колір: ${col ? col.name : 'Не вказано'}, ${i.height}см, ${i.weight}кг)`;
       }).join("\n");
 
       const message = `🛒 ЗАМОВЛЕННЯ З КОШИКА:\nКлієнт: ${fullName}\nТел: ${phone}\nМісто: ${city}\nПошта: ${postOffice}\n\nТовари:\n${itemsText}\n\nРазом: ${total} грн`;
@@ -696,19 +707,6 @@ function updateCartBadge() {
   }
 }
 
-async function sendToTelegram(message) {
-  const url = `https://api.telegram.org/bot${CONFIG.BOT_TOKEN}/sendMessage`;
-  try {
-    await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: CONFIG.CHAT_ID, text: message })
-    });
-  } catch (error) {
-    console.error("Telegram Error:", error);
-  }
-}
-
 /* Swipe & Events */
 document.addEventListener("DOMContentLoaded", () => {
   const mainImg = document.getElementById("mainImage");
@@ -724,39 +722,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: true });
   }
 });
-function selectColor(id) {
-  const color = activeProduct.colors.find(c => c.id === id);
-  if (!color) return;
 
-  // Снимаем active со всех, ставим на выбранный
-  $$(".swatch").forEach(s => s.classList.toggle("active", s.dataset.id === id));
-
-  // Меняем картинки
-  activeImages = color.images || ["images/placeholder.jpg"];
-  currentIndex = 0;
-  activeImages.forEach(src => { const img = new Image(); img.src = src; });
-  updateMainImage();
-
-  // Обновляем название цвета под палитрой
-  const nameEl = document.getElementById("selectedColorName");
-  if (nameEl) {
-    nameEl.textContent = `Обраний колір: ${color.name}`;
-  }
-
-  // Обновляем кнопки навигации (если они есть)
-  const prevBtn = $("#prevBtn");
-  const nextBtn = $("#nextBtn");
-  if (prevBtn && nextBtn) {
-    prevBtn.onclick = () => {
-      currentIndex = (currentIndex - 1 + activeImages.length) % activeImages.length;
-      updateMainImage();
-    };
-    nextBtn.onclick = () => {
-      currentIndex = (currentIndex + 1) % activeImages.length;
-      updateMainImage();
-    };
-  }
-}
 // ────────────────────────────────────────────────
 // Таймер акции — до 00:00 следующего дня
 // Показывается каждые 3 посещения (1-е, 4-е, 7-е, 10-е и т.д.)
@@ -882,43 +848,3 @@ function createTimerBanner() {
 setTimeout(() => {
   createTimerBanner();
 }, 4000);
-// Липка кнопка — додає в кошик або скролить до форми (без конфліктів)
-document.addEventListener('DOMContentLoaded', () => {
-  const stickyBtn = document.getElementById('stickyAddToCart');
-  if (!stickyBtn) return;
-
-  const button = stickyBtn.querySelector('button');
-  if (!button) return;
-
-  button.addEventListener('click', () => {
-    // Беремо ID з URL (завжди доступний на product.html)
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-
-    // Беремо дані з форми (якщо є)
-    const height = document.getElementById('height')?.value || '';
-    const weight = document.getElementById('weight')?.value || '';
-    const colorId = document.querySelector('.swatch.active')?.dataset.id || '';
-
-    if (productId && colorId && height && weight) {
-      // Все заповнено — додаємо в кошик
-      addToCart({
-        productId,
-        colorId,
-        height,
-        weight
-      });
-      showAddToCartModal();
-      const mainImg = document.getElementById('mainImage');
-      const cartLink = document.querySelector('.cart-link');
-      if (mainImg && cartLink) flyToCartEffect(mainImg, cartLink);
-      updateCartBadge();
-    } else {
-      // Щось не заповнено — скролимо до форми
-      const target = document.getElementById('size-selection') || document.getElementById('order');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  });
-});
