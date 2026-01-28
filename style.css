@@ -29,7 +29,7 @@ body.dark-mode {
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { min-height: 100%; font-family: var(--font-main); color: var(--text); background: var(--bg); line-height: 1.6; scroll-behavior: smooth; hyphens: none; word-wrap: break-word; } /* Изменено hyphens: none; глобально */
+html, body { min-height: 100%; font-family: var(--font-main); color: var(--text); background: var(--bg); line-height: 1.6; scroll-behavior: smooth; hyphens: none; word-wrap: break-word; }
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 16px; }
 @media (min-width: 1200px) { .container { padding: 0 40px; } }
 @media (max-width: 480px) { .container { padding: 0 16px; } }
@@ -209,7 +209,7 @@ width: 100%;
   padding-left: 4px;
 }
 
-/* Мобильная адаптация (шрифт чуть меньше, чтобы избежать сжатия) */
+/* Мобильная адаптация */
 @media (max-width: 480px) {
   .form label {
     font-size: 14px;
@@ -219,11 +219,9 @@ width: 100%;
     hyphens: none !important;
     word-break: normal;
   }
-
   .form {
     padding: 0 20px;
   }
-
   .hero-title {
     font-size: 22px;
     white-space: normal;
@@ -233,50 +231,39 @@ width: 100%;
     word-break: normal;
     line-height: 1.3;
   }
-
   .hero-lead {
     hyphens: none !important;
     word-break: normal;
   }
-
   .order-left h2 {
     font-size: 24px;
   }
-
   .button-group {
     flex-wrap: nowrap;
     gap: 10px;
   }
-
   .button-group .btn {
     font-size: 14px;
     padding: 12px 16px;
   }
-
   .nav {
     gap: 8px;
   }
-
   .nav a {
     font-size: 10px;
   }
-
   .logo {
     font-size: 16px;
   }
-
   .sale-title {
     font-size: 24px;
   }
-
   .site-footer {
     padding: 60px 20px 40px;
   }
-
   .footer-grid {
     padding-left: 20px;
   }
-
   .name {
     font-size: 18px;
     white-space: normal;
@@ -286,16 +273,13 @@ width: 100%;
     word-break: normal;
     line-height: 1.3;
   }
-
   .meta {
     padding: 20px;
     text-align: center;
   }
-
   .card {
     overflow: visible;
   }
-
   h1, h2, h3 {
     hyphens: none !important;
     word-break: normal;
@@ -305,6 +289,7 @@ width: 100%;
     line-height: 1.3;
   }
 }
+
 /* Увеличение расстояния между цветами, ценой и кнопкой */
 .meta > * {
   margin-bottom: 24px;
@@ -347,27 +332,6 @@ width: 100%;
 .btn-telegram:hover { background: #006699; }
 .btn-viber { background: #7c529e; color: #fff; }
 .btn-viber:hover { background: #5d3a7a; }
-
-.sticky-btn {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-  z-index: 99;
-  text-align: center;
-}
-.sticky-btn button {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-@media (max-width: 768px) {
-  .sticky-btn { display: block; }
-}
 
 #sellingBlock h3 { margin-top: 24px; }
 #sellingBlock ul { list-style: none; padding: 0; }
@@ -424,76 +388,157 @@ width: 100%;
   color: #d32f2f;
   font-weight: 500;
 }
-.sticky-btn {
-display: none; /* за замовчуванням ховаємо */
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-padding: 12px 16px;
-background: rgba(255, 255, 255, 0.96);
-backdrop-filter: blur(10px);
-box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
-z-index: 999;
-border-top: 1px solid rgba(0,0,0,0.08);
+
+/* ЯКОРНА КНОПКА — по центру, ближче до ціни */
+.anchor-btn {
+  display: block;
+  margin: 12px auto 32px; /* зменшили верхній відступ — тепер ближче до ціни */
+  padding: 14px 32px;
+  font-size: 1rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(11,107,255,0.3);
+  text-align: center;
+  max-width: 280px;
+  transition: all 0.3s;
+}
+.anchor-btn:hover {
+  transform: translateY(-3px);
 }
 
-.sticky-btn button {
-width: 100%;
-max-width: 420px;
-margin: 0 auto;
-font-size: 1.05rem;
-padding: 14px;
+/* ЛИПКА КНОПКА — тепер дійсно липне знизу */
+#stickyAddToCart {
+  display: none; /* за замовчуванням ховаємо */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(var(--bg-rgb), 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.12);
+  z-index: 9999;
+  padding: 12px 16px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#stickyAddToCart button {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  background: var(--success);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(40,167,69,0.3);
+}
+
+body.dark-mode #stickyAddToCart {
+  background: rgba(18,18,18,0.96);
+  border-top-color: rgba(255,255,255,0.08);
 }
 
 @media (max-width: 768px) {
-.sticky-btn {
-display: block;
+  #stickyAddToCart {
+    display: flex;
+  }
 }
-}
-
-/* Темна тема */
-body.dark-mode .sticky-btn {
-background: rgba(18,18,18,0.96);
-border-top-color: rgba(255,255,255,0.08);
-}
-/* Покращення відступів у блоці "Чому обирають..." */
-#sellingBlock {
-padding: 24px 0; /* загальний відступ зверху/знизу блоку */
-}
-
-#sellingBlock h3 {
-margin-bottom: 28px; /* більше місця під заголовком */
-font-size: 1.35em; /* трохи більший заголовок для акценту */
-}
-
-#sellingBlock ul {
-padding-left: 0;
-margin: 0;
+/* Липка кнопка — завжди видна на мобілках */
+#stickyAddToCart {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(var(--bg-rgb), 0.96);
+  backdrop-filter: blur(12px);
+  padding: 12px 16px;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.15);
+  z-index: 9999;
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
 
-#sellingBlock li {
-margin-bottom: 14px; /* головне — збільшений відступ між пунктами */
-padding-left: 32px; /* відступ для іконок/тексту */
-position: relative;
-line-height: 1.5; /* комфортніший міжрядковий інтервал */
+#stickyAddToCart button {
+  width: 100%;
+  max-width: 380px;
+  padding: 16px 24px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 50px;
+  background: var(--success);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 24px rgba(40,167,69,0.35);
+  cursor: pointer;
 }
 
-#sellingBlock li::before {
-content: ""; /* якщо хочеш зберегти іконки — можна залишити */
-position: absolute;
-left: 0;
-top: 4px;
-width: 20px;
-height: 20px;
-/* background: url(шлях_до_іконки); — якщо потрібно */
-/* або просто крапка/тире */
-content: "• ";
-color: var(--accent);
-font-size: 1.4em;
+@media (max-width: 768px) {
+  #stickyAddToCart {
+    display: flex !important; /* завжди видно на телефонах */
+  }
 }
 
-.urgency-badge {
-margin-top: 24px; /* більше місця перед бейджем акції */
-padding: 12px 20px; /* трохи більший бейдж */
+/* Якорна кнопка — крупніше, ближче до ціни */
+.anchor-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 17px;
+  font-weight: 700;
+  background: var(--accent);
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(11,107,255,0.35);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.anchor-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(11,107,255,0.45);
+}
+
+/* Назва кольору під палітрою */
+#selectedColorName {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  margin: 12px 0;
+}
+
+/* Форма розміру — зручніше на мобілках */
+#size-selection {
+  scroll-margin-top: 80px;
+  padding: 24px;
+  background: var(--card-bg);
+  border-radius: 16px;
+  margin: 32px 0;
+}
+
+.form-row {
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .form-row {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+/* Таймер-баннер (если захочешь кастомизировать) */
+#timer-banner strong {
+  font-size: 18px;
+  color: #fff;
+  background: rgba(0,0,0,0.2);
+  padding: 4px 12px;
+  border-radius: 8px;
 }
