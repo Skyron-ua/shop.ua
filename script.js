@@ -418,26 +418,33 @@ function initProduct() {
   if (titleEl) titleEl.textContent = product.name;
   if (descEl)  descEl.textContent  = product.description;
   if (priceEl) {
-    priceEl.innerHTML = `
-      ${product.old_price ? `<span class="old-price">${product.old_price} грн</span>` : ""}
-      <span class="new-price">${product.price} грн</span>
-    `;
+priceEl.innerHTML = `
+  ${product.old_price ? `<span class="old-price">${product.old_price}</span>` : ""}
+  <span class="new-price">${product.price}</span>
+`;
   }
 
   /* =========================
      Переваги товару
   ========================= */
-  const featuresList = document.getElementById("productFeatures");
-  if (featuresList) {
-    featuresList.innerHTML = "";
-    featuresList.className = "advantages-card"; // однакова ширина / стиль
+const featuresList = document.getElementById("productFeatures");
+if (featuresList) {
+  featuresList.innerHTML = "";
+  featuresList.className = "advantages-card";
 
-    (product.features || []).forEach(text => {
-      const li = document.createElement("li");
-      li.textContent = text;
-      featuresList.appendChild(li);
-    });
-  }
+  // Додаємо виділену строчку "Опис"
+  const descTitle = document.createElement("div");
+  descTitle.className = "features-title";
+  descTitle.textContent = "Опис";
+  featuresList.appendChild(descTitle);
+
+  // Потім додаємо список переваг
+  (product.features || []).forEach(text => {
+    const li = document.createElement("li");
+    li.textContent = text;
+    featuresList.appendChild(li);
+  });
+}
 
   /* =========================
      Ховаємо зріст / вагу для шапок
