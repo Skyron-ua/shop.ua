@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
   <title>Деталі товару — Skyron.ua</title>
   <link rel="stylesheet" href="style.css" />
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <!-- TikTok Pixel -->
   <script>
     !function (w, d, t) {
@@ -141,9 +141,17 @@
 
           <div class="swatches" id="swatches"></div>
 
-<div class="selected-color-display">
-  <div class="color-preview" id="colorPreview"></div>
-  <span id="selectedColorName">Обраний колір: ...</span>
+<div class="color-rating-row">
+  <!-- ліворуч — вибір кольору -->
+  <div class="selected-color-display">
+    <div class="color-preview" id="colorPreview"></div>
+    <span id="selectedColorName">Обраний колір: ...</span>
+  </div>
+
+  <!-- праворуч — рейтинг -->
+  <div class="rating-block">
+    🏆 Рейтинг 4.9 ★ від реальних покупців
+  </div>
 </div>
         </div>
       </div>
@@ -156,9 +164,6 @@
 
           <div class="price-block">
             <div class="price" id="productPrice">0 грн</div>
-            <li class="rating-extra-space">
-  🏆 Рейтинг 4.9 ★ від реальних покупців
-</li>
             <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
           </div>
 
