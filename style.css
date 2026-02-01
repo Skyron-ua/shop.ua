@@ -718,38 +718,91 @@ body.dark-mode #stickyAddToCart {
   line-height: 1.6;
 }
 
-/* Ціна — виправлено дублювання, акція виділена */
+/* Підключення сучасного шрифту для цін (додай в <head>, якщо ще немає) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@600;700;800&display=swap');
+
+/* Ціна на сторінці товару — велика нова, маленька стара */
 .price-main-block {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 16px 24px;
-  margin: 0 0 32px 0;
+  gap: 12px 20px;
+  margin: 0 0 32px;
 }
 
 .price-old {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: var(--muted);
   text-decoration: line-through;
-  font-weight: 400;
+  font-weight: 500;
+  opacity: 0.75;
 }
 
 .price-new {
-  font-size: 3rem;
+  font-size: 3.3rem;
   font-weight: 900;
   color: var(--price);
   line-height: 1;
+  letter-spacing: -1.2px;
+  font-family: 'Montserrat', 'Poppins', sans-serif;
 }
 
 .price-promo {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--price);
-  background: rgba(255,0,0,0.1);
-  padding: 8px 16px;
-  border-radius: 12px;
+  background: rgba(255,0,0,0.08);
+  padding: 6px 14px;
+  border-radius: 10px;
   align-self: center;
-  border: 1px solid rgba(255,0,0,0.3);
+  border: 1px solid rgba(255,0,0,0.25);
+}
+
+/* Ціна ТІЛЬКИ в карточках каталогу — менша, сучасна, приваблива */
+.catalog-grid .card .meta .price,
+.catalog-grid .card .price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 10px 0 4px;
+  font-family: 'Montserrat', 'Poppins', system-ui, sans-serif;
+}
+
+.catalog-grid .card .old-price {
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
+  color: var(--muted) !important;
+  text-decoration: line-through !important;
+  opacity: 0.75 !important;
+}
+
+.catalog-grid .card .new-price {
+  font-size: 1.95rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.8px !important;
+  color: var(--price) !important;
+  font-family: 'Montserrat', 'Poppins', sans-serif !important;
+}
+
+.catalog-grid .card .new-price::after {
+  content: " грн" !important;
+  font-size: 0.95rem !important;
+  opacity: 0.85 !important;
+  margin-left: 4px !important;
+}
+
+/* Мобільна адаптація цін */
+@media (max-width: 768px) {
+  .price-new {
+    font-size: 2.7rem;
+  }
+  .catalog-grid .card .new-price {
+    font-size: 1.75rem !important;
+  }
+  .catalog-grid .card .old-price {
+    font-size: 0.98rem !important;
+  }
 }
 
 /* Кнопки дій */
@@ -760,17 +813,21 @@ body.dark-mode #stickyAddToCart {
   margin-bottom: 40px;
 }
 
-.btn-quick-order {
-  background: var(--accent);
-  color: white;
-  padding: 18px 36px;
+.btn-quick-order,
+.btn-cod {
+  flex: 1;
+  min-width: 220px;
+  padding: 18px 32px;
   font-size: 1.15rem;
   font-weight: 700;
   border-radius: 50px;
-  flex: 1;
-  min-width: 240px;
-  box-shadow: 0 6px 20px rgba(11,107,255,0.25);
   transition: all 0.3s;
+}
+
+.btn-quick-order {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 6px 20px rgba(11,107,255,0.25);
 }
 
 .btn-quick-order:hover {
@@ -783,13 +840,6 @@ body.dark-mode #stickyAddToCart {
   background: white;
   color: var(--accent);
   border: 2px solid var(--accent);
-  padding: 18px 36px;
-  font-size: 1.15rem;
-  font-weight: 700;
-  border-radius: 50px;
-  flex: 1;
-  min-width: 240px;
-  transition: all 0.3s;
 }
 
 .btn-cod:hover {
@@ -798,9 +848,7 @@ body.dark-mode #stickyAddToCart {
   transform: translateY(-3px);
 }
 
-/* Форма розміру — відступ зверху, щоб кнопка не наїжджала */
-
-
+/* Форма розміру */
 .form-row label {
   flex: 1;
 }
@@ -813,7 +861,7 @@ body.dark-mode #stickyAddToCart {
   border-radius: 50px;
 }
 
-/* Консультації — тільки одна пара */
+/* Консультації */
 .consult-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -821,12 +869,10 @@ body.dark-mode #stickyAddToCart {
   margin-top: 40px;
 }
 
+/* Мобільна адаптація */
 @media (max-width: 768px) {
   .product-main-title {
     font-size: 2rem;
-  }
-  .price-new {
-    font-size: 2.4rem;
   }
   .action-buttons {
     flex-direction: column;
@@ -839,34 +885,6 @@ body.dark-mode #stickyAddToCart {
     gap: 16px;
   }
 }
-.card .new-price,
-.price-new,
-#productPrice {
-  font-size: 3.1rem !important;
-  font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -1.5px;
-}
-
-.card .new-price + .price-uah,
-.price-uah {
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-
-.price-note,
-.price-promo {
-  font-size: 1.22rem !important;
-  font-weight: 800;
-  color: #c62828;
-  background: rgba(198, 40, 40, 0.08);
-  padding: 6px 14px;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-
 
 /* Тільки одна пара Telegram/Viber */
 .consult-buttons {
@@ -1769,8 +1787,142 @@ body.dark-mode #stickyAddToCart {
   color: #e63946;          /* або твій var(--accent) / #d00000 / #c1121f */
   font-weight: 800;
 }
-/* в style.css */
-.rating-extra-space {
-  margin-top: 28px;
-  margin-bottom: 10px;
+.color-rating-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* головне — розносить по краях */
+  gap: 16px;
+  margin: 16px 0 28px 0;            /* відступи зверху/знизу від рядка */
+  flex-wrap: wrap;                  /* на вузьких екранах опуститься один під одного */
+  max-width: 100%;
+}
+
+.selected-color-display {
+  flex: 0 1 auto;                   /* не розтягується */
+  background: var(--card-bg);
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 !important;             /* прибираємо старі відступи, якщо були */
+}
+
+.rating-block {
+  flex: 0 1 auto;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #2c3e50;
+  padding: 8px 16px;
+  background: rgba(46, 204, 113, 0.08);   /* легкий зелений фон */
+  border-radius: 10px;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+/* ФІКС: Нова ціна завжди більша за стару — на сторінці товару та в карточках */
+
+/* На сторінці товару (product.html) */
+#productPrice .new-price,
+.price-new,
+.price-main-block .price-new {
+  font-size: 3.4rem !important;          /* ще більша нова ціна */
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -1px !important;
+  color: var(--price) !important;
+}
+
+/* Стара ціна на сторінці товару — менша */
+#productPrice .old-price,
+.price-old {
+  font-size: 1.8rem !important;          /* менша за нову */
+  font-weight: 500 !important;
+  color: var(--muted) !important;
+  text-decoration: line-through !important;
+  opacity: 0.75 !important;
+}
+
+/* У карточках каталогу — нова більша, стара маленька */
+.catalog-grid .card .new-price,
+.catalog-grid .card .meta .new-price {
+  font-size: 2.1rem !important;          /* помітна в карточці */
+  font-weight: 900 !important;
+  color: var(--price) !important;
+  line-height: 1 !important;
+}
+
+.catalog-grid .card .old-price {
+  font-size: 1.15rem !important;         /* дуже маленька */
+  opacity: 0.7 !important;
+}
+
+/* "грн" маленька після нової ціни */
+.new-price::after,
+.catalog-grid .card .new-price::after {
+  content: " грн" !important;
+  font-size: 1.1rem !important;
+  opacity: 0.85 !important;
+  margin-left: 5px !important;
+}
+
+/* Мобілка — нова все одно домінує */
+@media (max-width: 768px) {
+  #productPrice .new-price,
+  .price-new {
+    font-size: 2.8rem !important;
+  }
+  .catalog-grid .card .new-price {
+    font-size: 1.9rem !important;
+  }
+  .price-old,
+  .catalog-grid .card .old-price {
+    font-size: 1.4rem !important;
+  }
+}
+/* 1. Головний блок ціни — центруємо вміст */
+.price-block,
+.price-main-block,
+#productPrice {
+  display: flex !important;
+  justify-content: center !important;     /* головне — по центру */
+  align-items: baseline !important;
+  gap: 12px !important;                   /* відстань між старою і новою */
+  flex-wrap: wrap !important;
+  text-align: center !important;
+}
+
+/* 2. Контейнер самої ціни (щоб стара + нова стояли по центру) */
+.price,
+#productPrice {
+  justify-content: center !important;
+  gap: 10px !important;                   /* відстань між old-price і new-price */
+}
+
+/* 3. Мобільна версія — теж по центру */
+@media (max-width: 768px) {
+  .price-block,
+  .price-main-block,
+  #productPrice {
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+}
+/* Заголовок "Опис" перед перевагами */
+.features-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);          /* чорний колір з :root */
+  text-align: left;            /* або center — як хочеш */
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+
+
+/* На мобілці трохи компактніше */
+@media (max-width: 768px) {
+  .features-title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
 }
