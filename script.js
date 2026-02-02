@@ -471,40 +471,20 @@ if (featuresList) {
   }
 
 /* =========================
-   PLUSH — Royal Prime (покращена версія)
+   PLUSH — Royal Prime
 ========================= */
 if (productId === "plush") {
+
+  // sellingBlock повністю закоментовано / видалено
+  /*
   if (sellingBlock) {
-    sellingBlock.innerHTML = `
-      <h3 style="font-size: 1.8rem; margin: 0 0 16px; color: #e74c3c; text-align: center;">
-        🔥 Royal Prime — твій зимовий комфорт на максимум 🔥
-      </h3>
-      
-      <p style="font-size: 1.15rem; color: #333; text-align: center; margin: 0 0 24px; line-height: 1.5;">
-        Найтепліший костюм цієї зими вже зігрів понад <strong>700 клієнтів</strong>.<br>
-        Щільний фліс преміум-класу, який не кошлатиться і не втрачає форму.
-      </p>
-
-      <ul class="advantages-card" style="max-width: 500px; margin: 0 auto 24px;">
-        <li>🔥 Зберігає тепло навіть при -20°C</li>
-        <li>💎 Не скочується прання</li>
-        <li>🎨 Колір залишається яскравим роками</li>
-        <li>🚀 Доставка 1–3 дні + обмін 14 днів</li>
-        <li>🏆 Рейтинг 4.9 ★ від реальних покупців</li>
-      </ul>
-
-      <div class="urgency-badge" style="background: #e74c3c; color: white; padding: 12px 24px; font-size: 1.2rem; border-radius: 50px; text-align: center; margin: 0 auto 24px; max-width: 380px;">
-        Акція -33% • Залишилось менше 50 шт • Діє до кінця доби!
-      </div>
-
-      <div style="text-align: center; font-size: 1.1rem; color: #555; margin-bottom: 16px;">
-        Встигни зігрітися цієї зими без переплат!
-      </div>
-    `;
+    sellingBlock.innerHTML = `...весь попередній великий блок...`;
     sellingBlock.style.display = "block";
-    sellingBlock.style.marginBottom = "80px";  // зменшили, щоб не було великого зазор
+    sellingBlock.style.marginBottom = "80px";
   }
+  */
 
+  // Залишаємо ТІЛЬКИ таблицю розмірів
   if (sizeTable) {
     sizeTable.innerHTML = `
       <h3 style="text-align:center; margin-bottom:16px;">Таблиця розмірів Royal Prime</h3>
