@@ -2041,3 +2041,7 @@ body.dark-mode .consult-support .hint {
 body.dark-mode .consult-mini:hover {
   background: rgba(255, 255, 255, 0.06);
 }
+#sizeTable {
+  margin: 48px 0 48px -12px !important;   /* зсув вліво на 12 px */
+  width: calc(100% + 24px) !important;    /* компенсуємо зсув, щоб не вилізло справа */
+}
