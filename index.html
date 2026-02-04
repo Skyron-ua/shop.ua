@@ -31,83 +31,84 @@
 
 <main>
 
-  <!-- Hero — зробили потужнішим, з більшим акцентом на емоцію та CTA -->
-<section class="hero fade-in">
-  <div class="container">
-    <div class="hero-wrapper">
+  <section class="hero fade-in">
+    <div class="container">
+      <div class="hero-wrapper">
 
-      <!-- Ліва частина – текст + ціна + кнопка (десктоп) -->
-      <div class="hero-left">
-        <h1 class="hero-title">Найтепліший флісовий костюм<br>для суворої Української зими</h1>
-        
-        <p class="hero-subtitle">
-          Щільний фліс — гріє навіть при -20°C<br>
-          Не скочується після десятків прань • Стильний та сучасний вигляд за акційною ціною
-        </p>
+        <!-- Ліва частина – текст + ціна + кнопка (десктоп) -->
+        <div class="hero-left">
+          <h1 class="hero-title">Найтепліший флісовий костюм<br>для суворої Української зими</h1>
+          
+          <p class="hero-subtitle">
+            Щільний фліс — гріє навіть при -20°C<br>
+            Не скочується після десятків прань • Стильний та сучасний вигляд за акційною ціною
+          </p>
 
-        <div class="price-cta-desktop">
-          <div class="price-block">
-            <div class="price-wrapper">
-              <div class="old-price">1990 грн</div>
-              <div id="heroPrice" class="price current-price">1099 грн</div>
+          <div class="price-cta-desktop">
+            <div class="price-block">
+              <div class="price-wrapper">
+                <div class="old-price">1990 грн</div>
+                <div id="heroPrice" class="price current-price">1099 грн</div>
+              </div>
+              <div class="social-proof">⭐ 4.9 / 5 • Понад 700 замовлень</div>
+              <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
             </div>
-            <div class="social-proof">⭐ 4.9 / 5 • Понад 700 замовлень</div>
-            <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
-          </div>
 
-          <div class="hero-cta-group">
-            <a href="#order-form" class="btn btn-primary btn-large pulse-animation">
-              Замовити зі знижкою -50% ↓
-            </a>
-            <div class="trust-badges">
-              <span>🚚 Доставка 1–3 дні</span>
-              <span>💳 Оплата після огляду</span>
-              <span>🔄  Обмін та повернення 14 днів</span>
+            <!-- ВИПРАВЛЕНИЙ БЛОК ДЛЯ ДЕСКТОПУ -->
+            <div class="hero-cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 38px; margin-top: 10px;">
+              <a href="#order-form" class="btn btn-primary btn-large pulse-animation" style="width: fit-content; min-width: 280px;">
+                Замовити зі знижкою -50% ↓
+              </a>
+              <div class="trust-badges" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 16px; max-width: 360px; font-size: 0.92em; line-height: 1.4; text-align: center; padding: 0 10px;">
+                <span>🚚 Доставка 1–3 дні</span>
+                <span>💳 Оплата після огляду</span>
+                <span>🔄 Обмін та повернення 14 днів</span>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Права частина – фото + мобільна ціна/кнопка -->
+        <div class="hero-right">
+          <div class="product-frame">
+            <div class="img-wrap">
+              <img src="images/1.png" alt="Skyron флісовий костюм" id="mainImage" loading="eager">
+              <button id="prevBtn" class="carousel-btn prev">‹</button>
+              <button id="nextBtn" class="carousel-btn next">›</button>
+            </div>
+            <div class="swatches" id="swatches"></div>
+          </div>
+
+          <!-- Мобільний блок -->
+          <div class="price-cta-mobile">
+            <div class="price-block">
+              <div class="price-wrapper">
+                <div class="old-price">1990 грн</div>
+                <div id="heroPriceMobile" class="price current-price">1099 грн</div>
+              </div>
+              <div class="social-proof">⭐ 4.9 / 5 • Понад 700 замовлень</div>
+              <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
+            </div>
+
+            <!-- ВИПРАВЛЕНИЙ БЛОК ДЛЯ МОБІЛКИ -->
+            <div class="hero-cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 38px; margin-top: 16px;">
+              <a href="#order-form" class="btn btn-primary btn-large pulse-animation" style="width: fit-content; min-width: 260px;">
+                Замовити зі знижкою ↓
+              </a>
+              <div class="trust-badges" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 14px; max-width: 300px; font-size: 0.89em; line-height: 1.35; text-align: center; padding: 0 8px;">
+                <span>🚚 Доставка 1–3 дні</span>
+                <span>💳 Оплата після огляду</span>
+                <span>🔄 Обмін та повернення 14 днів</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <!-- Права частина – фото + мобільна ціна/кнопка -->
-      <div class="hero-right">
-        <div class="product-frame">
-          <div class="img-wrap">
-            <img src="images/1.png" alt="Skyron флісовий костюм" id="mainImage" loading="eager">
-            <button id="prevBtn" class="carousel-btn prev">‹</button>
-            <button id="nextBtn" class="carousel-btn next">›</button>
-          </div>
-          <div class="swatches" id="swatches"></div>
-        </div>
-
-        <!-- Мобільний блок – видно тільки на екранах < 992px -->
-        <div class="price-cta-mobile">
-          <div class="price-block">
-            <div class="price-wrapper">
-              <div class="old-price">1990 грн</div>
-              <div id="heroPriceMobile" class="price current-price">1099 грн</div>
-            </div>
-            <div class="social-proof">⭐ 4.9 / 5 • Понад 700 замовлень</div>
-            <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
-          </div>
-
-          <div class="hero-cta-group">
-            <a href="#order-form" class="btn btn-primary btn-large pulse-animation">
-              Замовити зі знижкою ↓
-            </a>
-            <div class="trust-badges">
-              <span>🚚 Доставка 1–3 дні</span>
-              <span>💳 Оплата після огляду</span>
-              <span>🔄 14 днів на примірку</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Переваги — картки стали живішими, з hover -->
+  <!-- Переваги -->
   <section id="advantages" class="section fade-in">
     <div class="container">
       <h2 class="section-title">Чому обирають Skyron</h2>
@@ -131,7 +132,7 @@
     </div>
   </section>
 
-  <!-- Форма — трохи компактніша, з кращою групою кнопок -->
+  <!-- Форма -->
   <section id="order-form" class="order-section fade-in">
     <div class="container">
       <h2 class="section-title">Швидко оформити замовлення</h2>
@@ -345,4 +346,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
 
