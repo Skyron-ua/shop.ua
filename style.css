@@ -845,27 +845,80 @@ body.dark-mode #stickyAddToCart {
   background: #0b6bff !important;
   box-shadow: 0 5px 16px rgba(11,107,255,0.25) !important;
 }
+.consult-support,
+.consult-row {
+  text-align: center;
+  margin: 20px 0;
+}
+
 .consult-row {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 16px;
   justify-content: center;
-  margin-top: 8px;
+  /* Важливо: не обмежуємо ширину рядка */
 }
-.btn-consult.small {
-  flex: 1;
-  max-width: 220px;
-  padding: 10px 16px !important;
-  font-size: 0.92rem !important;
-  font-weight: 500;
-  border: 1px solid;
-  background: transparent !important;
-  color: var(--text) !important;
+
+.consult-btn {
+  /* Головне — робимо кнопку максимально широкою в межах контейнера */
+  flex: 1 1 220px;                /* росте, але не менше 220px */
+  min-width: 220px;               /* мінімальна комфортна ширина */
+  max-width: 320px;               /* не розтягуємо безкінечно на десктопі */
+  display: flex !important;       /* перемагаємо inline-flex якщо є конфлікт */
+  align-items: center;
+  justify-content: center;        /* текст + іконка по центру */
+  gap: 10px;
+  padding: 14px 24px;             /* великий клікабельний padding */
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: 2px solid;              /* товстіший бордер — легше бачити */
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+  /* Забезпечуємо, щоб вся площа реагувала на клік */
+  position: relative;
+  overflow: hidden;
 }
-.btn-consult.telegram.small { border-color: #0088cc; color: #0088cc !important; }
-.btn-consult.viber.small { border-color: #7c529e; color: #7c529e !important; }
-@media (max-width: 480px) {
-  .consult-row { flex-direction: column; gap: 10px; }
-  .btn-consult.small { max-width: none; }
+
+.consult-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;                       /* покриває всю кнопку */
+  z-index: 1;
+  /* pointer-events: none; */     /* розкоментувати тільки якщо потрібно */
+}
+
+.consult-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.consult-btn.telegram {
+  color: #0088cc;
+  border-color: #0088cc;
+  background: rgba(0, 136, 204, 0.07);
+}
+
+.consult-btn.viber {
+  color: #7c529e;
+  border-color: #7c529e;
+  background: rgba(124, 82, 158, 0.07);
+}
+
+/* Мобільна версія — кнопки на всю ширину */
+@media (max-width: 520px) {
+  .consult-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .consult-btn {
+    flex: 1 1 auto;
+    min-width: unset;
+    max-width: none;
+    width: 100%;                  /* 100% на мобілках — найнадійніше */
+  }
 }
 
 /*#size-selection input {
