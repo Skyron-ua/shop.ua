@@ -296,7 +296,7 @@ PRODUCTS: [
         ]
       }
           ],
-    "old_price": 2400
+    "old_price": 2700
   },
   {
     "id": "bayer",
@@ -943,3 +943,4 @@ PRODUCTS: [
   }
 ]
 };
+
