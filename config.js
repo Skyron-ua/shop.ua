@@ -218,7 +218,7 @@ const CONFIG = {
           "images": [
             "images/img.zamsh-baza/1.png",
             "images/img.zamsh-baza/2.png",
-            "images/img.zamsh-baza/2.png"
+            "images/img.zamsh-baza/3.png"
           ]
         },
         {
@@ -1243,4 +1243,5 @@ const CONFIG = {
     }
   ]
 };
+
 
