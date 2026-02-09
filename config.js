@@ -56,7 +56,7 @@ const CONFIG = {
       "old_price": 1799
     },
     {
-      "id": "A",
+      "id": "Casual Business",
       "name": "Костюм Casual Business",
       /*"description": "Преміальний флісовий костюм без зайвого об’єму • Уже зігрів понад 700 чоловіків цієї зими",*/
       "features": [
@@ -1243,3 +1243,4 @@ const CONFIG = {
     }
   ]
 };
+
