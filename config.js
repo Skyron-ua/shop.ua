@@ -485,6 +485,17 @@ const CONFIG = {
       "price": 1649,
       "colors": [
         {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.north/gr1.png",
+            "images/img.north/gr2.png",
+            "images/img.north/gr3.png",
+            "images/img.north/gr4.png"
+          ]
+        },
+        {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
@@ -494,18 +505,6 @@ const CONFIG = {
             "images/img.north/ch3.png",
             "images/img.north/ch4.png",
             "images/img.north/ch5.png"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.north/gr1.png",
-            "images/img.north/gr2.png",
-            "images/img.north/gr3.png",
-            "images/img.north/gr4.png",
-            "images/img.north/gr5.png"
           ]
         }
       ],
@@ -1243,5 +1242,6 @@ const CONFIG = {
     }
   ]
 };
+
 
 
