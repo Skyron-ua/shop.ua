@@ -1128,4 +1128,4 @@ function updateHeroPrice(price) {
 }
 
 // Викликати, наприклад:
-updateHeroPrice(1099);
+updateHeroPrice(1690);
