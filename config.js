@@ -459,7 +459,7 @@ const CONFIG = {
           ]
         }
       ],
-      "old_price": 2700
+      "old_price": 3300
     },
     {
       "id": "polar",
@@ -1242,3 +1242,4 @@ const CONFIG = {
     }
   ]
 };
+
