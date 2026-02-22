@@ -7,6 +7,8 @@
   <title>Skyron — Комплект Classic Style | -50%</title>
 
   <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- TikTok Pixel Code -->
 <script>
 !function (w, d, t) {
@@ -16,6 +18,171 @@
 }(window, document, 'ttq');
 </script>
 <!-- End TikTok Pixel Code -->
+  <style>
+    /* Improved typography */
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+    p {
+      line-height: 1.6;
+    }
+
+    /* Fix for text hugging edges: add padding to key text containers */
+    .container {
+      padding: 0 15px;
+    }
+    .hero-subtitle,
+    .advantage-card p,
+    .price-note,
+    .social-proof,
+    .trust-badges span {
+      padding: 0 10px;
+    }
+
+    /* Carousel button fixes: positioning and centering vertically */
+    .img-wrap {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 2em;
+      cursor: pointer;
+      padding: 0 10px;
+      border-radius: 50%;
+      display: block; /* Ensure both are visible by default */
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+
+    /* Media query for mobile adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 10px;
+      }
+      .hero-subtitle {
+        padding: 0 5px;
+      }
+    }
+
+    /* New styles for improvements */
+    .btn-primary {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3; /* Darker shade for hover */
+      transform: scale(1.05);
+    }
+
+    .hero-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-wrapper {
+        flex-direction: column;
+      }
+    }
+
+    /* Hero section enhancements */
+    .hero {
+      background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Subtle gradient background */
+      padding: 60px 0;
+    }
+
+    .hero-title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    /* Advantages section enhancements */
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .advantage-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .advantage-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Mobile-specific fix for advantages grid */
+    @media (max-width: 768px) {
+      .advantages-grid {
+        grid-template-columns: 1fr; /* Single column on mobile for symmetry */
+        gap: 15px;
+      }
+      .advantage-card {
+        margin: 0 auto;
+        max-width: 300px; /* Center and limit width */
+      }
+    }
+
+    /* Order form enhancements */
+    .order-section {
+      background-color: #f8f9fa;
+      padding: 40px 0;
+    }
+    .form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ced4da;
+    }
+    .btn-submit-order {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-submit-order:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer enhancements */
+    .site-footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -345,6 +512,50 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  // Carousel logic: assuming multiple images for the product (add your actual image paths here)
+  const images = [
+    'images/1.png',
+    'images/2.png', // Add more images as needed, e.g., 'images/3.png'
+    // 'images/3.png',
+  ];
+  let currentIndex = 0;
+  const mainImage = document.getElementById('mainImage');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function updateImage() {
+    if (mainImage) {
+      mainImage.src = images[currentIndex];
+    }
+    if (prevBtn) {
+      prevBtn.style.display = currentIndex > 0 ? 'block' : 'none';
+    }
+    if (nextBtn) {
+      nextBtn.style.display = currentIndex < images.length - 1 ? 'block' : 'none';
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateImage();
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        updateImage();
+      }
+    });
+  }
+
+  // Initial update
+  updateImage();
 });
 </script>
 
