@@ -922,7 +922,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const payload = {
           type: "quick",
-          phone: "+38" + phoneRaw,
+          phone: "+" + phoneRaw,
           product: document.getElementById("productTitle")?.textContent?.trim() || "Товар",
           color: document.getElementById("selectedColorName")?.textContent?.replace("Обраний колір: ", "").trim() || "—",
           height: heightInput?.value?.trim() || "—",
@@ -1092,3 +1092,4 @@ function updateHeroPrice(price) {
 }
 // Викликати, наприклад:
 updateHeroPrice(1690); 
+
