@@ -1,582 +1,612 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <title>Деталі товару — Skyron.ua</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- TikTok Pixel -->
-    <script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+<title>Деталі товару — Skyron.ua</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css" />
+<!-- TikTok Pixel -->
+<script>
         !function (w, d, t) {
-            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
-            ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
-            ttq.setAndDefer = function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-            for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-            ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},
-            ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._t=ttq._t||{},ttq._t[e]=+new Date;ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-            ttq.load('D4OBCO3C77U7MI8IQKIG');
-            ttq.page();
+w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
+ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
+ttq.setAndDefer = function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
+for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},
+ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._t=ttq._t||{},ttq._t[e]=+new Date;ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+ttq.load('D4OBCO3C77U7MI8IQKIG');
+ttq.page();
         }(window, document, 'ttq');
-    </script>
-
-    <style>
-        body { overflow-x: hidden; }
-
-        /* Плаваючі месенджери */
-        .floating-messengers {
-            position: fixed;
-            right: 16px;
-            bottom: 80px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            z-index: 9999;
+</script>
+<style>
+body { overflow-x: hidden; }
+/* Плаваючі месенджери */
+.floating-messengers {
+position: fixed;
+right: 16px;
+bottom: 80px;
+display: flex;
+flex-direction: column;
+gap: 16px;
+z-index: 9999;
         }
-        .messenger-btn {
-            width: 60px; height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: white;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
+.messenger-btn {
+width: 60px; height: 60px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 28px;
+color: white;
+box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+transition: all 0.3s ease;
         }
-        .messenger-btn:hover {
-            transform: scale(1.15);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.45);
+.messenger-btn:hover {
+transform: scale(1.15);
+box-shadow: 0 12px 32px rgba(0,0,0,0.45);
         }
-        .telegram-btn { background: #0088cc; }
-        .viber-btn   { background: #7c529e; }
-
-        /* Основна сітка товару */
-        .product-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
+.telegram-btn { background: #0088cc; }
+.viber-btn { background: #7c529e; }
+/* Основна сітка товару */
+.product-container {
+display: grid;
+grid-template-columns: 1fr;
+gap: 40px;
         }
-
-        @media (min-width: 992px) {
-            .product-container {
-                grid-template-columns: 1fr 1fr;
-                gap: 60px;
-                align-items: start;
+@media (min-width: 992px) {
+.product-container {
+grid-template-columns: 1fr 1fr;
+gap: 60px;
+align-items: start;
             }
-            .product-left  { max-width: 540px; }
-            .product-right { padding-left: 32px; }
+.product-left { max-width: 540px; }
+.product-right { padding-left: 32px; }
         }
-
-        /* Фото */
-        .img-wrap {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            background: #f9f9fa;
+/* Фото */
+.img-wrap {
+position: relative;
+border-radius: 24px;
+overflow: hidden;
+background: #f9f9fa;
             aspect-ratio: 3 / 4;
-            max-height: 720px;
-            margin: 0 auto;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+max-height: 720px;
+margin: 0 auto;
+box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
-        #mainImage {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
+#mainImage {
+width: 100%;
+height: 100%;
+object-fit: contain;
+object-position: center;
         }
-        @media (max-width: 991px) {
-            .img-wrap {
-                max-height: 560px;
+@media (max-width: 991px) {
+.img-wrap {
+max-height: 560px;
                 aspect-ratio: 4 / 5;
             }
         }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0,0,0,0.45);
-            color: white;
-            border: none;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.4rem;
+.carousel-btn {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: rgba(0,0,0,0.45);
+color: white;
+border: none;
+width: 48px;
+height: 48px;
+border-radius: 50%;
+cursor: pointer;
+font-size: 1.4rem;
         }
-        .prev { left: 16px; }
-        .next { right: 16px; }
-
-        /* Кнопка швидкого замовлення */
-        #quickOrderBtn {
-            width: 100%;
-            max-width: 480px;
-            margin: 28px auto 40px;
-            padding: 22px 40px;
-            font-size: 1.32rem;
-            font-weight: 800;
-            background: #000;
-            color: #fff;
-            border: none;
-            border-radius: 999px;
-            box-shadow: 0 12px 36px rgba(0,0,0,0.55);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
+.prev { left: 16px; }
+.next { right: 16px; }
+/* Кнопка швидкого замовлення */
+#quickOrderBtn {
+width: 100%;
+max-width: 480px;
+margin: 28px auto 40px;
+padding: 22px 40px;
+font-size: 1.32rem;
+font-weight: 800;
+background: #000;
+color: #fff;
+border: none;
+border-radius: 999px;
+box-shadow: 0 12px 36px rgba(0,0,0,0.55);
+cursor: pointer;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 14px;
         }
-        #quickOrderBtn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 52px rgba(0,0,0,0.65);
-            background: #111;
+#quickOrderBtn:hover {
+transform: translateY(-4px);
+box-shadow: 0 20px 52px rgba(0,0,0,0.65);
+background: #111;
         }
-
-        /* Кнопка забронювати розмір */
-        #reserveBtn {
-            width: 100%;
-            max-width: 480px;
-            margin: 32px auto 48px;
-            padding: 22px 40px;
-            font-size: 1.32rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #28a745, #1e7e34);
-            color: white;
-            border: none;
-            border-radius: 999px;
-            box-shadow: 0 12px 36px rgba(40,167,69,0.5);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 14px;
+/* Кнопка забронювати розмір */
+#reserveBtn {
+width: 100%;
+max-width: 480px;
+margin: 32px auto 48px;
+padding: 22px 40px;
+font-size: 1.32rem;
+font-weight: 800;
+background: linear-gradient(135deg, #28a745, #1e7e34);
+color: white;
+border: none;
+border-radius: 999px;
+box-shadow: 0 12px 36px rgba(40,167,69,0.5);
+cursor: pointer;
+transition: all 0.3s ease;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 14px;
         }
-        #reserveBtn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 52px rgba(40,167,69,0.65);
+#reserveBtn:hover {
+transform: translateY(-4px);
+box-shadow: 0 20px 52px rgba(40,167,69,0.65);
         }
-
-        /* Форма розміру */
-        .size-form-row {
-            display: flex;
-            gap: 24px;
-            margin-top: 20px;
+/* Форма розміру */
+.size-form-row {
+display: flex;
+gap: 24px;
+margin-top: 20px;
         }
-        .size-input-group {
-            flex: 1;
+.size-input-group {
+flex: 1;
         }
-        .size-input-group input {
-            width: 100%;
-            padding: 16px 20px;
-            font-size: 1.18rem;
-            border: 1px solid #ddd;
-            border-radius: 16px;
-            text-align: center;
-            transition: border-color 0.2s;
+.size-input-group input {
+width: 100%;
+padding: 16px 20px;
+font-size: 1.18rem;
+border: 1px solid #ddd;
+border-radius: 16px;
+text-align: center;
+transition: border-color 0.2s;
         }
-        .size-input-group input:focus {
-            border-color: #28a745;
-            outline: none;
+.size-input-group input:focus {
+border-color: #28a745;
+outline: none;
         }
-
-        @media (max-width: 991px) {
-            .size-form-row {
-                flex-direction: column;
-                gap: 20px;
+@media (max-width: 991px) {
+.size-form-row {
+flex-direction: column;
+gap: 20px;
             }
-            .size-input-group input {
-                padding: 18px 24px;
-                font-size: 1.2rem;
+.size-input-group input {
+padding: 18px 24px;
+font-size: 1.2rem;
             }
         }
-
-        /* Модалки */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.6);
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-            overflow: hidden; /* Убрать любой скролл */
+/* Модалки */
+.modal {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.6);
+align-items: center;
+justify-content: center;
+z-index: 10000;
+overflow: hidden; /* Убрать любой скролл */
         }
-        .modal-content {
-            position: relative;
-            max-width: 90vw;
-            width: 100%;
-            max-width: 460px;
-            padding: 40px 32px;
-            border-radius: 32px; /* Увеличено скругление */
-            box-shadow: 0 20px 70px rgba(0,0,0,0.5);
-            overflow: hidden; /* Убрать скролл внутри */
+.modal-content {
+position: relative;
+max-width: 90vw;
+width: 100%;
+max-width: 460px;
+padding: 40px 32px;
+border-radius: 32px; /* Увеличено скругление */
+box-shadow: 0 20px 70px rgba(0,0,0,0.5);
+overflow: hidden; /* Убрать скролл внутри */
         }
-
-        #quickOrderModal .modal-content {
-            background: white; /* Изменено на белый фон */
-            color: #222; /* Изменено на темный текст */
+#quickOrderModal .modal-content {
+background: white; /* Изменено на белый фон */
+color: #222; /* Изменено на темный текст */
         }
-        #quickOrderModal input[type="tel"] {
-            width: 100%;
-            padding: 24px; /* Увеличено для крупности */
-            font-size: 1.5rem; /* Увеличенный шрифт */
-            background: #f0f0f0; /* Светло-серый фон для лучшей читаемости */
-            color: #000; /* Черные цифры */
-            border: 1px solid #000; /* Черная рамка */
-            border-radius: 20px;
-            text-align: center;
-            margin: 24px 0;
-            transition: border-color 0.2s;
+#quickOrderModal input[type="tel"] {
+width: 100%;
+padding: 24px; /* Увеличено для крупности */
+font-size: 1.5rem; /* Увеличенный шрифт */
+background: #f0f0f0; /* Светло-серый фон для лучшей читаемости */
+color: #000; /* Черные цифры */
+border: 1px solid #000; /* Черная рамка */
+border-radius: 20px;
+text-align: center;
+margin: 24px 0;
+transition: border-color 0.2s;
         }
-        #quickOrderModal input[type="tel"]:focus {
-            border-color: #0b6bff; /* Подсветка синим при фокусе */
-            outline: none;
+#quickOrderModal input[type="tel"]:focus {
+border-color: #0b6bff; /* Подсветка синим при фокусе */
+outline: none;
         }
-        #quickOrderModal .send-btn {
-            width: 100%;
-            padding: 20px;
-            font-size: 1.22rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #0b6bff, #0056d2); /* Синий градиент */
-            color: white;
-            border: none;
-            border-radius: 999px; /* Скругленные углы */
+#quickOrderModal .send-btn {
+width: 100%;
+padding: 20px;
+font-size: 1.22rem;
+font-weight: 700;
+background: linear-gradient(135deg, #0b6bff, #0056d2); /* Синий градиент */
+color: white;
+border: none;
+border-radius: 999px; /* Скругленные углы */
         }
-
-        /* Новый блок для триггеров доверия */
-        .trust-triggers {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 16px;
-            margin-bottom: 24px;
-            font-size: 0.95rem;
-            color: #666;
+/* Новый блок для триггеров доверия */
+.trust-triggers {
+display: flex;
+justify-content: space-between;
+margin-top: 16px;
+margin-bottom: 24px;
+font-size: 0.95rem;
+color: #666;
         }
-        .trust-triggers div {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+.trust-triggers div {
+display: flex;
+align-items: center;
+gap: 8px;
         }
-        /* Для десктопов (ПК) — чуть больше высоты */
+/* Для десктопов (ПК) — чуть больше высоты */
 @media (min-width: 992px) {
-    #quickOrderModal .modal-content {
-        max-height: 95vh;           /* ← было бы хорошо 85–90vh, но ты хочешь чуть больше → 92vh */
-        overflow-y: auto;           /* ← если вдруг не поместится — скролл только внутри модалки */
-        padding: 40px 32px;         /* можно оставить как есть, или уменьшить до 32px 28px */
+#quickOrderModal .modal-content {
+max-height: 95vh; /* ← было бы хорошо 85–90vh, но ты хочешь чуть больше → 92vh */
+overflow-y: auto; /* ← если вдруг не поместится — скролл только внутри модалки */
+padding: 40px 32px; /* можно оставить как есть, или уменьшить до 32px 28px */
     }
 }
-
 /* Для мобильных — оставляем строже, чтобы не вылезало */
 @media (max-width: 991px) {
-    #quickOrderModal .modal-content {
-        max-height: 88vh;           /* ← меньше, чем на ПК */
-        padding: 28px 20px;         /* компактнее на телефоне */
-        overflow-y: auto;
+#quickOrderModal .modal-content {
+max-height: 88vh; /* ← меньше, чем на ПК */
+padding: 28px 20px; /* компактнее на телефоне */
+overflow-y: auto;
     }
 }
+/* Новый блок для превью товара */
+.product-preview {
+display: flex;
+align-items: center;
+gap: 16px;
+margin-bottom: 32px;
+padding: 16px;
+background: #f8f9fa;
+border-radius: 20px;
+        }
+.product-preview img {
+width: 80px;
+height: 120px;
+object-fit: contain;
+border-radius: 12px;
+        }
+.product-preview .info {
+flex: 1;
+        }
+.product-preview h4 {
+margin: 0;
+font-size: 1.1rem;
+        }
+.product-preview .price {
+font-size: 1.2rem;
+font-weight: bold;
+color: #000;
+        }
+#choiceModal .modal-content {
+background: white;
+color: #222;
+        }
+#choiceModal .btn-choice {
+width: 100%;
+padding: 18px;
+margin: 12px 0;
+font-size: 1.18rem;
+font-weight: 700;
+border-radius: 999px;
+cursor: pointer;
+        }
+#choiceModal .quick { background: #000; color: white; }
+#choiceModal .to-cart { background: #28a745; color: white; }
+.close {
+position: absolute;
+top: 20px;
+right: 28px;
+font-size: 42px;
+color: #888;
+cursor: pointer;
+        }
+.close:hover { color: #000; }
+/* Інші стилі з оригіналу */
+.product-main-card > * { margin-bottom: 32px; }
+.product-main-card > *:last-child { margin-bottom: 0; }
+.price-note, .hint { color: #666; font-size: 0.98rem; }
+.trust-badges {
+background: #f8f9fa;
+padding: 20px;
+border-radius: 20px;
+text-align: center;
+font-size: 1.05rem;
+line-height: 1.6;
+        }
+/* Для мобильных - уменьшить отступы, чтобы форма помещалась без скролла */
+@media (max-width: 768px) {
+.modal-content {
+padding: 20px 16px; /* Уменьшить padding */
+max-height: 90vh; /* Ограничить высоту */
+overflow: hidden; /* Без скролла */
+            }
+.product-preview {
+margin-bottom: 16px; /* Уменьшить маржины */
+padding: 8px;
+            }
+#quickOrderModal input[type="tel"] {
+margin: 12px 0; /* Уменьшить маржины */
+padding: 16px;
+font-size: 1.3rem;
+            }
+.trust-triggers {
+margin-top: 8px;
+margin-bottom: 12px;
+font-size: 0.85rem;
+flex-wrap: wrap; /* Чтобы не было горизонтального скролла */
+justify-content: center;
+gap: 8px;
+            }
+.trust-triggers div {
+flex-basis: 45%; /* Распределить на две строки если нужно */
+            }
+#quickOrderModal p {
+margin-top: 12px;
+font-size: 0.9rem;
+            }
+.close {
+top: 10px;
+right: 16px;
+font-size: 32px;
+            }
+body {
+overflow-x: hidden !important; /* Усилить запрет горизонтального скролла */
+            }
+.modal {
+overflow: hidden !important;
+            }
+        }
+/* Карусель фотоотзивів */
+.photos-carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 16px;
+}
 
-        /* Новый блок для превью товара */
-        .product-preview {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 32px;
-            padding: 16px;
-            background: #f8f9fa;
-            border-radius: 20px;
-        }
-        .product-preview img {
-            width: 80px;
-            height: 120px;
-            object-fit: contain;
-            border-radius: 12px;
-        }
-        .product-preview .info {
-            flex: 1;
-        }
-        .product-preview h4 {
-            margin: 0;
-            font-size: 1.1rem;
-        }
-        .product-preview .price {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #000;
-        }
+.photos-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
 
-        #choiceModal .modal-content {
-            background: white;
-            color: #222;
-        }
-        #choiceModal .btn-choice {
-            width: 100%;
-            padding: 18px;
-            margin: 12px 0;
-            font-size: 1.18rem;
-            font-weight: 700;
-            border-radius: 999px;
-            cursor: pointer;
-        }
-        #choiceModal .quick  { background: #000; color: white; }
-        #choiceModal .to-cart { background: #28a745; color: white; }
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+}
 
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 28px;
-            font-size: 42px;
-            color: #888;
-            cursor: pointer;
-        }
-        .close:hover { color: #000; }
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3 / 4; /* вертикальні фото, можеш змінити на 1/1 */
+    object-fit: cover;
+    border-radius: 12px;
+}
 
-        /* Інші стилі з оригіналу */
-        .product-main-card > * { margin-bottom: 32px; }
-        .product-main-card > *:last-child { margin-bottom: 0; }
-        .price-note, .hint { color: #666; font-size: 0.98rem; }
-        .trust-badges {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 20px;
-            text-align: center;
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
+/* Кнопки (не конфліктують з основними prev/next) */
+.reviews-prev,
+.reviews-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 2;
+}
 
-        /* Для мобильных - уменьшить отступы, чтобы форма помещалась без скролла */
-        @media (max-width: 768px) {
-            .modal-content {
-                padding: 20px 16px; /* Уменьшить padding */
-                max-height: 90vh; /* Ограничить высоту */
-                overflow: hidden; /* Без скролла */
-            }
-            .product-preview {
-                margin-bottom: 16px; /* Уменьшить маржины */
-                padding: 8px;
-            }
-            #quickOrderModal input[type="tel"] {
-                margin: 12px 0; /* Уменьшить маржины */
-                padding: 16px;
-                font-size: 1.3rem;
-            }
-            .trust-triggers {
-                margin-top: 8px;
-                margin-bottom: 12px;
-                font-size: 0.85rem;
-                flex-wrap: wrap; /* Чтобы не было горизонтального скролла */
-                justify-content: center;
-                gap: 8px;
-            }
-            .trust-triggers div {
-                flex-basis: 45%; /* Распределить на две строки если нужно */
-            }
-            #quickOrderModal p {
-                margin-top: 12px;
-                font-size: 0.9rem;
-            }
-            .close {
-                top: 10px;
-                right: 16px;
-                font-size: 32px;
-            }
-            body {
-                overflow-x: hidden !important; /* Усилить запрет горизонтального скролла */
-            }
-            .modal {
-                overflow: hidden !important;
-            }
-        }
-    </style>
+.reviews-prev { left: 10px; }
+.reviews-next { right: 10px; }
+
+.reviews-prev:hover,
+.reviews-next:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* Точки */
+.carousel-dots {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.carousel-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-dot.active {
+    background: #333;
+}
+</style>
 </head>
 <body>
-
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="logo" href="index.html">Skyron</a>
-            <nav class="nav">
-                <a href="index.html#advantages">Переваги</a>
-                <a href="catalog.html">Каталог</a>
-                <a href="contacts.html">Контакти</a>
-            </nav>
-            <div class="header-actions">
-                <a href="cart.html" class="cart-link">🛒 <span id="cartBadge" class="cart-badge" hidden>0</span></a>
-                <button id="themeToggle" class="theme-toggle" aria-label="Перемкнути тему">☀️</button>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-
-        <div class="product-container">
-
-            <!-- Ліва частина – фото, свайпери, кольори, рейтинг -->
-            <div class="product-left">
-                <div class="product-frame">
-                    <div class="img-wrap">
-                        <img src="https://placehold.co/600x800?text=Product" alt="Фото товару" id="mainImage">
-                        <button id="prevBtn" class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                        <button id="nextBtn" class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-
-                    <div class="swatches" id="swatches"></div>
-
-                    <div class="color-rating-row">
-                        <div class="selected-color-display">
-                            <div class="color-preview" id="colorPreview"></div>
-                            <span id="selectedColorName">Обраний колір: ...</span>
-                        </div>
-                        <div class="rating-block">
-                            <div>🏆 4.9 ★</div>
-                            <div>Понад 700 замовлень</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Права частина – інформація про товар -->
-            <div class="product-right">
-                <div class="product-main-card">
-
-                    <h1 id="productTitle" class="product-main-title">Назва товару</h1>
-                    <p id="productDescription">Опис товару...</p>
-
-                    <div class="price-block">
-                        <div id="productPrice" class="price">0 грн</div>
-                        <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
-                    </div>
-
-                    <button id="quickOrderBtn">
-                        <i class="fas fa-bolt"></i> Швидке замовлення
-                    </button>
-
-                    <div id="product-size-selection">
-                        <h3><i class="fas fa-ruler-combined"></i> Підбір розміру</h3>
-                        <p class="hint">Введіть зріст і вагу — менеджер підбере ідеальний варіант</p>
-                        <div class="size-form-row">
-                            <div class="size-input-group">
-                                <label for="product-height">Зріст (см)</label>
-                                <input type="number" id="product-height" placeholder="178" min="140" max="220">
-                            </div>
-                            <div class="size-input-group">
-                                <label for="product-weight">Вага (кг)</label>
-                                <input type="number" id="product-weight" placeholder="80" min="35" max="150">
-                            </div>
-                        </div>
-                    </div>
-
-                    <button id="reserveBtn">
-                        <i class="fas fa-check-circle"></i> ЗАБРОНЮВАТИ РОЗМІР
-                    </button>
-
-                    <ul id="productFeatures" class="advantages-card"></ul>
-                    <div id="sellingBlock"></div>
-                    <div id="sizeTable" style="display:none;"></div>
-
-                    <div class="trust-badges">
+<header class="site-header">
+<div class="container header-inner">
+<a class="logo" href="index.html">Skyron</a>
+<nav class="nav">
+<a href="index.html#advantages">Переваги</a>
+<a href="catalog.html">Каталог</a>
+<a href="contacts.html">Контакти</a>
+</nav>
+<div class="header-actions">
+<a href="cart.html" class="cart-link">🛒 <span id="cartBadge" class="cart-badge" hidden>0</span></a>
+<button id="themeToggle" class="theme-toggle" aria-label="Перемкнути тему">☀️</button>
+</div>
+</div>
+</header>
+<main class="container">
+<div class="product-container">
+<!-- Ліва частина – фото, свайпери, кольори, рейтинг -->
+<div class="product-left">
+<div class="product-frame">
+<div class="img-wrap">
+<img src="https://placehold.co/600x800?text=Product" alt="Фото товару" id="mainImage">
+<button id="prevBtn" class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+<button id="nextBtn" class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+</div>
+<div class="swatches" id="swatches"></div>
+<div class="color-rating-row">
+<div class="selected-color-display">
+<div class="color-preview" id="colorPreview"></div>
+<span id="selectedColorName">Обраний колір: ...</span>
+</div>
+<div class="rating-block">
+<div>🏆 4.9 ★</div>
+<div>Понад 700 замовлень</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Права частина – інформація про товар -->
+<div class="product-right">
+<div class="product-main-card">
+<h1 id="productTitle" class="product-main-title">Назва товару</h1>
+<p id="productDescription">Опис товару...</p>
+<div class="price-block">
+<div id="productPrice" class="price">0 грн</div>
+<div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
+</div>
+<button id="quickOrderBtn">
+<i class="fas fa-bolt"></i> Швидке замовлення
+</button>
+<div id="product-size-selection">
+<h3><i class="fas fa-ruler-combined"></i> Підбір розміру</h3>
+<p class="hint">Введіть зріст і вагу — менеджер підбере ідеальний варіант</p>
+<div class="size-form-row">
+<div class="size-input-group">
+<label for="product-height">Зріст (см)</label>
+<input type="number" id="product-height" placeholder="178" min="140" max="220">
+</div>
+<div class="size-input-group">
+<label for="product-weight">Вага (кг)</label>
+<input type="number" id="product-weight" placeholder="80" min="35" max="150">
+</div>
+</div>
+</div>
+<button id="reserveBtn">
+<i class="fas fa-check-circle"></i> ЗАБРОНЮВАТИ РОЗМІР
+</button>
+<ul id="productFeatures" class="advantages-card"></ul>
+<div id="clientPhotosBlock"></div>
+<div id="sellingBlock"></div>
+<div id="sizeTable" style="display:none;"></div>
+<div class="trust-badges">
                         🚚 Доставка 1–3 дні • 🔁 Обмін/повернення 14 днів • 🛡️ Гарантія якості
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- Модальні вікна -->
-    <div id="addToCartModal" class="modal">
-        <div class="modal-content">
-            <h3>Товар додано до кошика!</h3>
-            <div class="modal-buttons">
-                <button class="continue">Продовжити покупки</button>
-                <button class="go-cart">До кошика</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="choiceModal" class="modal" style="display:none;">
-        <div class="modal-content">
-            <button id="choiceClose" class="close">×</button>
-            <h3>Розмір заброньовано!</h3>
-            <!-- Новый блок превью товара для choiceModal -->
-            <div class="product-preview">
-                <img id="previewImageChoice" src="https://placehold.co/80x120?text=Product" alt="Прев'ю товару">
-                <div class="info">
-                    <h4 id="previewTitleChoice">Назва товару</h4>
-                    <div class="price" id="previewPriceChoice">0 грн</div>
-                </div>
-            </div>
-            <p>Що робимо далі?</p>
-            <button id="choiceQuickBtn" class="btn-choice quick">Швидке замовлення</button>
-            <button id="choiceCartBtn" class="btn-choice to-cart">Оформити замовлення</button>
-        </div>
-    </div>
-
-    <div id="quickOrderModal" class="modal">
-        <div class="modal-content">
-            <button id="closeQuickModal" class="close">×</button>
-            <h3>Швидке замовлення</h3>
-            <!-- Новый блок превью товара -->
-            <div class="product-preview">
-                <img id="previewImage" src="https://placehold.co/80x120?text=Product" alt="Прев'ю товару">
-                <div class="info">
-                    <h4 id="previewTitle">Назва товару</h4>
-                    <div class="price" id="previewPrice">0 грн</div>
-                </div>
-            </div>
-            <p>Введіть номер телефону</p>
-            <input type="tel" id="quickPhone" placeholder="+38 (___) ___-__-__" maxlength="19" />
-            <p style="font-size:0.95rem; color:#aaa; margin-top:24px; line-height:1.5;">
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Модальні вікна -->
+<div id="addToCartModal" class="modal">
+<div class="modal-content">
+<h3>Товар додано до кошика!</h3>
+<div class="modal-buttons">
+<button class="continue">Продовжити покупки</button>
+<button class="go-cart">До кошика</button>
+</div>
+</div>
+</div>
+<div id="choiceModal" class="modal" style="display:none;">
+<div class="modal-content">
+<button id="choiceClose" class="close">×</button>
+<h3>Розмір заброньовано!</h3>
+<!-- Новый блок превью товара для choiceModal -->
+<div class="product-preview">
+<img id="previewImageChoice" src="https://placehold.co/80x120?text=Product" alt="Прев'ю товару">
+<div class="info">
+<h4 id="previewTitleChoice">Назва товару</h4>
+<div class="price" id="previewPriceChoice">0 грн</div>
+</div>
+</div>
+<p>Що робимо далі?</p>
+<button id="choiceQuickBtn" class="btn-choice quick">Швидке замовлення</button>
+<button id="choiceCartBtn" class="btn-choice to-cart">Оформити замовлення</button>
+</div>
+</div>
+<div id="quickOrderModal" class="modal">
+<div class="modal-content">
+<button id="closeQuickModal" class="close">×</button>
+<h3>Швидке замовлення</h3>
+<!-- Новый блок превью товара -->
+<div class="product-preview">
+<img id="previewImage" src="https://placehold.co/80x120?text=Product" alt="Прев'ю товару">
+<div class="info">
+<h4 id="previewTitle">Назва товару</h4>
+<div class="price" id="previewPrice">0 грн</div>
+</div>
+</div>
+<p>Введіть номер телефону</p>
+<input type="tel" id="quickPhone" placeholder="+38 (___) ___-__-__" maxlength="19" />
+<p style="font-size:0.95rem; color:#aaa; margin-top:24px; line-height:1.5;">
                 Зв’яжемося з вами в Telegram або Viber протягом 5 хвилин.<br>
                 Якщо месенджерів немає — зателефонуємо.
-            </p>
-            <!-- Новый блок триггеров доверия -->
-            <div class="trust-triggers">
-                <div><i class="fas fa-shield-alt"></i> Конфіденційно</div>
-                <div><i class="fas fa-truck"></i> Швидка відправка</div>
-            </div>
-            <button id="sendQuickOrder" class="send-btn">Надіслати   <i class="fas fa-shopping-cart"></i></button>
-        </div>
-    </div>
-
-    <!-- Плаваючі кнопки месенджерів -->
-    <div class="floating-messengers">
-        <a href="https://t.me/Skyron_ua" target="_blank" class="messenger-btn telegram-btn">
-            <i class="fab fa-telegram-plane"></i>
-        </a>
-        <a href="https://invite.viber.com/?g2=..." target="_blank" class="messenger-btn viber-btn">
-            <i class="fab fa-viber"></i>
-        </a>
-    </div>
-
-    <footer class="site-footer fade-in">
-        <div class="container footer-grid">
-            <div>
-                <h4>Skyron.ua</h4>
-                <p>Теплий костюм — швидко, якісно, надійно. © <span id="year"></span></p>
-            </div>
-            <div>
-                <h4>Контакти</h4>
-                <p>Telegram: <a href="https://t.me/Skyron_ua" target="_blank">@Skyron_ua</a></p>
-                <p>Viber: <a href="https://invite.viber.com/?g2=..." target="_blank">Viber спільнота</a></p>
-                <p>Телефон: <a href="tel:+380733337278">+380 73 333 72 78</a></p>
-            </div>
-            <div>
-                <h4>Доставка</h4>
-                <p>Нова Пошта — 1–3 дні.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="config.js"></script>
-    <script src="script.js"></script>
-    <script>
-
-    </script>
+</p>
+<!-- Новый блок триггеров доверия -->
+<div class="trust-triggers">
+<div><i class="fas fa-shield-alt"></i> Конфіденційно</div>
+<div><i class="fas fa-truck"></i> Швидка відправка</div>
+</div>
+<button id="sendQuickOrder" class="send-btn">Надіслати <i class="fas fa-shopping-cart"></i></button>
+</div>
+</div>
+<!-- Плаваючі кнопки месенджерів -->
+<div class="floating-messengers">
+<a href="https://t.me/Skyron_ua" target="_blank" class="messenger-btn telegram-btn">
+<i class="fab fa-telegram-plane"></i>
+</a>
+<a href="https://invite.viber.com/?g2=..." target="_blank" class="messenger-btn viber-btn">
+<i class="fab fa-viber"></i>
+</a>
+</div>
+<footer class="site-footer fade-in">
+<div class="container footer-grid">
+<div>
+<h4>Skyron.ua</h4>
+<p>Теплий костюм — швидко, якісно, надійно. © <span id="year"></span></p>
+</div>
+<div>
+<h4>Контакти</h4>
+<p>Telegram: <a href="https://t.me/Skyron_ua" target="_blank">@Skyron_ua</a></p>
+<p>Viber: <a href="https://invite.viber.com/?g2=..." target="_blank">Viber спільнота</a></p>
+<p>Телефон: <a href="tel:+380733337278">+380 73 333 72 78</a></p>
+</div>
+<div>
+<h4>Доставка</h4>
+<p>Нова Пошта — 1–3 дні.</p>
+</div>
+</div>
+</footer>
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+</script>
 </body>
 </html>
