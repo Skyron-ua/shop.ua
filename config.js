@@ -1271,3 +1271,21 @@ const CONFIG = {
     }
   ]
 };
+
+// Фото клієнтів для окремих товарів
+const CLIENT_PHOTOS = {
+  "Forge": [
+      "images/reviews.bomber/1.png",
+      "images/reviews.bomber/2.png",
+      "images/reviews.bomber/3.png",
+      "images/reviews.bomber/4.png",
+      "images/reviews.bomber/5.png"
+  ],
+  // Додавай нові товари сюди, коли потрібно
+  // "Classic Style": [
+  //     "images/reviews/classic-1.jpg",
+  //     "images/reviews/classic-2.jpg",
+  //     ...
+  // ],
+  // "Royal Prime": [ ... ],
+};
