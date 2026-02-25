@@ -480,6 +480,77 @@ if (productId === "plush") {
     Кольори та фото
   ========================= */
   selectProduct(productId);
+// ───────────────────────────────────────────────────────────────
+// Фото від клієнтів — карусель (на основі твого робочого коду)
+// ───────────────────────────────────────────────────────────────
+const photosBlock = document.getElementById('clientPhotosBlock');
+if (photosBlock) {
+    photosBlock.innerHTML = ''; // завжди очищаємо спочатку
+
+    if (product && CLIENT_PHOTOS && product.id in CLIENT_PHOTOS) {
+        const photos = CLIENT_PHOTOS[product.id];
+
+        if (photos && photos.length > 0) {
+            // Створюємо слайди
+            let slidesHTML = photos.map(src => `
+                <div class="carousel-slide">
+                    <img src="${src}" alt="Фото клієнта" loading="lazy">
+                </div>
+            `).join('');
+
+            // Точки (індикатори)
+            let dotsHTML = photos.map((_, i) => `
+                <span class="carousel-dot ${i === 0 ? 'active' : ''}" data-index="${i}"></span>
+            `).join('');
+
+            photosBlock.innerHTML = `
+                <div class="client-photos-block">
+                    <h3>Дякуємо за ваші відгуки!</h3>
+                    <div class="photos-carousel">
+                        <div class="photos-carousel-inner">
+                            ${slidesHTML}
+                        </div>
+                        <button class="reviews-prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="reviews-next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="carousel-dots">
+                            ${dotsHTML}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Управління каруселлю
+            const inner = photosBlock.querySelector('.photos-carousel-inner');
+            const prevBtn = photosBlock.querySelector('.reviews-prev');
+            const nextBtn = photosBlock.querySelector('.reviews-next');
+            const dots = photosBlock.querySelectorAll('.carousel-dot');
+
+            let currentIndex = 0;
+
+            function showSlide(index) {
+                inner.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+                currentIndex = index;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                let idx = currentIndex - 1;
+                if (idx < 0) idx = photos.length - 1;
+                showSlide(idx);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                let idx = currentIndex + 1;
+                if (idx >= photos.length) idx = 0;
+                showSlide(idx);
+            });
+
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => showSlide(i));
+            });
+        }
+    }
+}
 }
 // selectProduct & selectColor (единственная версия)
 let activeProduct, activeImages = [], currentIndex = 0;
@@ -719,56 +790,94 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // ───────────────────────────────────────────────────────────────
-// CHECKOUT FORM (cart.html)
+// CHECKOUT FORM (cart.html) — готовий блок з ✅ і 😊
 // ───────────────────────────────────────────────────────────────
 const checkoutForm = document.getElementById('checkoutForm');
 if (checkoutForm) {
-  checkoutForm.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    const formData = new FormData(checkoutForm);
-    const clientData = Object.fromEntries(formData.entries());
-    // Деталі кошика
-    let cartDetails = '';
-    if (cart.length === 0) {
-      cartDetails = 'Кошик порожній';
-    } else {
-      cartDetails = cart.map(item => {
-        const product = CONFIG.PRODUCTS.find(p => p.id === item.productId);
-        const name = product?.name || 'Товар';
-        const color = product?.colors.find(c => c.id === item.colorId)?.name || '—';
-        return `
+    checkoutForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // 1. Отримуємо всі дані з форми
+        const formData = new FormData(checkoutForm);
+        const rawData = Object.fromEntries(formData.entries());
+
+        // 2. Деталі кошика (без змін)
+        let cartDetails = 'Кошик порожній';
+        if (Array.isArray(cart) && cart.length > 0) {
+            cartDetails = cart.map(item => {
+                const product = CONFIG.PRODUCTS.find(p => p.id === item.productId);
+                const name = product?.name || 'Товар';
+                const color = product?.colors.find(c => c.id === item.colorId)?.name || '—';
+                return `
 Товар: ${name}
 Колір: ${color}
 Зріст: ${item.height || '—'} см
 Вага: ${item.weight || '—'} кг
 Кількість: ${item.quantity || 1} шт
 ────────────────────
-        `.trim();
-      }).join('\n\n');
-    }
-    clientData.cart_details = cartDetails;
-    clientData.source = 'Кошик (cart.html)';
-    clientData.timestamp = new Date().toISOString();
-    console.log('Відправляємо з кошика:', JSON.stringify(clientData, null, 2));
-    try {
-      const res = await fetch('https://pleasework.skyron-ua.workers.dev', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(clientData)
-      });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      alert('Дякуємо за замовлення! Ми незабаром з вами звʼяжемось😊');
-      // Очищення кошика
-      cart = [];
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateCartBadge();
-      initCart();
-      checkoutForm.reset();
-    } catch (err) {
-      console.error('Помилка відправки кошика:', err);
-      alert('Не вдалося відправити.\nПеревірте інтернет або напишіть в Telegram.');
-    }
-  });
+                `.trim();
+            }).join('\n\n');
+        }
+
+        // 3. Коментар і галочка — повертаємо оригінальні ✅ і 😊
+        const commentText = (rawData.comment || '').trim();
+        const noContact = formData.get('noContact') === 'on';
+
+        let finalComment = '';
+
+        // Якщо галочка стоїть — додаємо ✅ на початку
+        if (noContact) {
+            finalComment += '✅ ';
+        }
+
+        // Якщо є текст коментаря — додаємо 😊 перед ним
+        if (commentText) {
+            finalComment += '😊 ' + commentText;
+        }
+
+        // Якщо нічого не було — залишаємо порожнім (або можеш додати дефолт)
+        // finalComment = finalComment.trim() || '';
+
+        // 4. Формуємо payload — ВСІ поля + наші доповнення
+        const payload = {
+            ...rawData,                     // усі поля форми (name, phone, city, postOffice, comment тощо)
+            noContact: noContact,           // галочка як true/false (для Worker)
+            comment: finalComment,          // готовий коментар з ✅ 😊
+            cart_details: cartDetails,
+            source: 'Кошик (cart.html)',
+            timestamp: new Date().toISOString()
+        };
+
+        // ЛОГ — ОБОВ'ЯЗКОВО подивись у консолі браузера (F12)
+        console.log('Відправляємо з кошика:', JSON.stringify(payload, null, 2));
+
+        try {
+            const res = await fetch('https://pleasework.skyron-ua.workers.dev', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            if (!res.ok) {
+                const errorText = await res.text();
+                console.error('Worker error:', errorText);
+                throw new Error(`HTTP ${res.status}: ${errorText}`);
+            }
+
+            alert('Дякуємо за замовлення! Ми незабаром з вами звʼяжемось😊');
+
+            // Очищення кошика
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartBadge();
+            initCart();
+            checkoutForm.reset();
+
+        } catch (err) {
+            console.error('Помилка відправки кошика:', err);
+            alert('Не вдалося відправити.\nПеревірте інтернет або напишіть в Telegram.');
+        }
+    });
 }
 // МОДАЛКИ: Швидке замовлення + Вибір після бронювання розміру (оновлено 2025)
 document.addEventListener("DOMContentLoaded", () => {
@@ -1092,4 +1201,3 @@ function updateHeroPrice(price) {
 }
 // Викликати, наприклад:
 updateHeroPrice(1690); 
-
