@@ -178,8 +178,8 @@ const CONFIG = {
       "old_price": 2600
     },
         {
-      "id": "Basic Prenium",
-      "name": "Костюм Basic Prenium",
+      "id": "Basic Premium",
+      "name": "Костюм Basic Premium",
       /*"description": "Преміальний флісовий костюм без зайвого об’єму • Уже зігрів понад 700 чоловіків цієї зими",*/
       "features": [
         "✨ Стильний та зручний костюм на кожен день",
@@ -1348,5 +1348,6 @@ const CLIENT_PHOTOS = {
   // ],
   // "Royal Prime": [ ... ],
 };
+
 
 
