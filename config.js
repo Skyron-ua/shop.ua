@@ -85,6 +85,72 @@ const CONFIG = {
       "old_price": 2400
     },
     {
+      "id": "Velvet Jet",
+      "name": "Бомбер Velvet Jet",
+      /*"description": "Преміальний флісовий костюм без зайвого об’єму • Уже зігрів понад 700 чоловіків цієї зими",*/
+      "features": [
+        "🔥 Замшевий бомбер - бомба сезону",
+        "☁️  М'яка турецька замша + бавовна та еластан — комфорт і стиль в одному",
+        "🚀 Приталений крій — виглядаєш струнко й круто",
+        "✔️ Ідеально на +5…+20",
+        "👌 Дорогий вигляд за адекватні гроші",
+        "✨ Легко комбінується з іншим одягом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1090,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber-zamsh/1.png",
+            "images/img.bomber-zamsh/2.png",
+            "images/img.bomber-zamsh/3.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.bomber-zamsh/4.png",
+            "images/img.bomber-zamsh/5.png",
+            "images/img.bomber-zamsh/6.png",
+            "images/img.bomber-zamsh/7.png",
+            "images/img.bomber-zamsh/8.png",
+            "images/img.bomber-zamsh/9.png"
+          ]
+        },
+        {
+          "id": "haki",
+          "name": "Хакі",
+          "hex": "#78866b",
+          "images": [
+            "images/img.bomber-zamsh/10.png",
+            "images/img.bomber-zamsh/11.png",
+            "images/img.bomber-zamsh/12.png",
+            "images/img.bomber-zamsh/13.png",
+            "images/img.bomber-zamsh/14.png",
+            "images/img.bomber-zamsh/15.png",
+            "images/img.bomber-zamsh/16.png"
+          ]
+        },
+        {
+          "id": "burgundy",
+          "name": "Бордо",
+          "hex": "#790604",
+          "images": [
+            "images/img.bomber-zamsh/17.png",
+            "images/img.bomber-zamsh/18.png",
+            "images/img.bomber-zamsh/19.png",
+            "images/img.bomber-zamsh/20.png"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
       "id": "A",
       "name": "Костюм Casual Business",
       /*"description": "Преміальний флісовий костюм без зайвого об’єму • Уже зігрів понад 700 чоловіків цієї зими",*/
@@ -1348,6 +1414,7 @@ const CLIENT_PHOTOS = {
   // ],
   // "Royal Prime": [ ... ],
 };
+
 
 
 
