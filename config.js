@@ -267,7 +267,18 @@ const CONFIG = {
             "images/img.major/1.png",
             "images/img.major/2.png",
             "images/img.major/3.png",
-            "images/img.major/5.png"
+            "images/img.major/4.png",
+            "images/img.major/5.png",
+            "images/img.major/6.png",
+            "images/img.major/7.png",
+            "images/img.major/8.png",
+            "images/img.major/9.png",
+            "images/img.major/10.png",
+            "images/img.major/11.png",
+            "images/img.major/12.png",
+            "images/img.major/13.png",
+            "images/img.major/14.png",
+            "images/img.major/15.png"
           ]
         }
       ],
@@ -1414,6 +1425,7 @@ const CLIENT_PHOTOS = {
   // ],
   // "Royal Prime": [ ... ],
 };
+
 
 
 
