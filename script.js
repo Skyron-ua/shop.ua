@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       themeToggle.textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
-    // === RESTORE HEIGHT & WEIGHT (GLOBAL) ===
+        // === RESTORE HEIGHT & WEIGHT (GLOBAL) ===
 const savedHeight = localStorage.getItem("userHeight");
 const savedWeight = localStorage.getItem("userWeight");
 if (savedHeight && document.getElementById("height")) {
@@ -747,38 +747,207 @@ if (currentPage === 'product.html') {
   }, 1000);
 }
 // ───────────────────────────────────────────────────────────────
-// QUICK ORDER (product.html) — швидке замовлення
+// МОДАЛКИ: Швидке замовлення + Вибір після бронювання розміру (оновлено 2025 + fix hide)
 // ───────────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
-  const quickBtn = document.getElementById("quickOrderBtn");
-  const codBtn = document.getElementById("codOrderBtn");
-  const quickModal = document.getElementById("quickOrderModal");
-  if (!quickBtn || !quickModal) return;
-  const closeBtn = document.getElementById("closeQuickModal");
-  const sendBtn = document.getElementById("sendQuickOrder");
-  const phoneInput = document.getElementById("quickPhone");
-  quickBtn.addEventListener("click", () => {
-    phoneInput.value = "";
-    quickModal.classList.add("active");
-  });
-  closeBtn.addEventListener("click", () => quickModal.classList.remove("active"));
-  sendBtn.addEventListener("click", async () => {
-    const phone = phoneInput.value.trim();
-    if (!phone) {
-      alert("Введіть номер телефону");
-      return;
-    }
-    const productName = document.getElementById("productTitle")?.textContent?.trim() || "Товар";
-    const colorName = document.getElementById("selectedColorName")?.textContent?.replace("Обраний колір: ", "")?.trim() || "—";
-    const payload = {
-      type: "quick",
-      phone,
-      product: productName,
-      color: colorName
-    };
+  const quickBtn       = document.getElementById("quickOrderBtn");
+  const reserveBtn     = document.getElementById("reserveBtn");
+  const codBtn         = document.getElementById("codOrderBtn");  // ← Додано з твого старого блоку
+  const quickModal     = document.getElementById("quickOrderModal");
+  const choiceModal    = document.getElementById("choiceModal");
+  const heightInput    = document.getElementById("product-height");
+  const weightInput    = document.getElementById("product-weight");
+  const phoneInput     = document.getElementById("quickPhone");
 
+  if (!quickBtn || !reserveBtn || !quickModal || !choiceModal) return;
+
+  // Збереження / відновлення зріст + вага
+  if (heightInput && weightInput) {
+      heightInput.value = localStorage.getItem("userHeight") || "";
+      weightInput.value = localStorage.getItem("userWeight") || "";
+
+      const saveSize = () => {
+          localStorage.setItem("userHeight", heightInput.value.trim());
+          localStorage.setItem("userWeight", weightInput.value.trim());
+      };
+
+      heightInput.addEventListener("input", saveSize);
+      weightInput.addEventListener("input", saveSize);
+  }
+
+  // Функція заповнення прев’ю в модалках
+  function fillPreview(modalType = "choice") {
+      const prefix = modalType === "quick" ? "" : "Choice";
+
+      const imgEl   = document.getElementById(`previewImage${prefix}`);
+      const titleEl = document.getElementById(`previewTitle${prefix}`);
+      const priceEl = document.getElementById(`previewPrice${prefix}`);
+
+      if (!imgEl || !titleEl || !priceEl) return;
+
+      const mainImgSrc = document.getElementById("mainImage")?.src 
+          || "https://placehold.co/80x120?text=Product";
+
+      const titleText = document.getElementById("productTitle")?.textContent?.trim() 
+          || "Товар";
+
+      let priceText = "0 грн";
+      const priceBlock = document.getElementById("productPrice");
+      if (priceBlock) {
+          const newPrice = priceBlock.querySelector(".new-price");
+          priceText = newPrice 
+              ? newPrice.textContent.trim() + " грн"
+              : priceBlock.textContent.trim().replace(/\s+/g, " ");
+      }
+
+      imgEl.src = mainImgSrc;
+      titleEl.textContent = titleText;
+      priceEl.textContent = priceText;
+  }
+
+  // Маска телефону +38 (___) ___-__-__
+  if (phoneInput) {
+      phoneInput.addEventListener("input", (e) => {
+          let value = e.target.value.replace(/\D/g, "");
+
+          if (value.startsWith("38")) value = value.substring(2);
+          value = value.substring(0, 10);
+
+          let formatted = "+38";
+
+          if (value.length > 0) formatted += " (" + value.substring(0, 3);
+          if (value.length > 3) formatted += ") " + value.substring(3, 6);
+          if (value.length > 6) formatted += "-" + value.substring(6, 8);
+          if (value.length > 8) formatted += "-" + value.substring(8, 10);
+
+          e.target.value = formatted;
+
+          const len = formatted.length;
+          e.target.setSelectionRange(len, len);
+      });
+
+      phoneInput.addEventListener("focus", (e) => {
+          if (!e.target.value.trim() || e.target.value === "+38") {
+              e.target.value = "+38 ";
+              e.target.setSelectionRange(5, 5);
+          }
+      });
+
+      phoneInput.addEventListener("blur", (e) => {
+          if (e.target.value === "+38 " || e.target.value === "+38") {
+              e.target.value = "";
+          }
+      });
+  }
+
+  // Швидке замовлення
+  quickBtn.addEventListener("click", () => {
+      fillPreview("quick");
+      if (phoneInput) phoneInput.value = phoneInput.value || "";
+      quickModal.style.display = "flex";
+      quickModal.classList.add("active");  // ← Для сумісності з CSS
+      if (phoneInput) phoneInput.focus();
   });
-  // Кнопка "Замовити накладеним платежем" → перехід на головну з параметром
+
+  document.getElementById("closeQuickModal")?.addEventListener("click", () => {
+      quickModal.style.display = "none";
+      quickModal.classList.remove("active");
+  });
+  quickModal.addEventListener("click", e => {
+      if (e.target === quickModal) {
+          quickModal.style.display = "none";
+          quickModal.classList.remove("active");
+      }
+  });
+
+  // Забронювати розмір
+  reserveBtn.addEventListener("click", () => {
+      const h = parseInt(heightInput?.value?.trim() || "0", 10);
+      const w = parseInt(weightInput?.value?.trim() || "0", 10);
+
+      if (isNaN(h) || isNaN(w) || h < 140 || h > 220 || w < 35 || w > 150) {
+          alert("Будь ласка, введіть коректний зріст (140–220 см) та вагу (35–150 кг)");
+          document.getElementById("product-size-selection")?.scrollIntoView({ behavior: "smooth", block: "center" });
+          return;
+      }
+
+      fillPreview("choice");
+      addToCartFromProductPage({ source: "reserve-btn" });
+      choiceModal.style.display = "flex";
+      choiceModal.classList.add("active");  // ← Якщо choiceModal теж на class-based
+  });
+
+  document.getElementById("choiceClose")?.addEventListener("click", () => {
+      choiceModal.style.display = "none";
+      choiceModal.classList.remove("active");
+  });
+  choiceModal.addEventListener("click", e => {
+      if (e.target === choiceModal) {
+          choiceModal.style.display = "none";
+          choiceModal.classList.remove("active");
+      }
+  });
+
+  document.getElementById("choiceQuickBtn")?.addEventListener("click", () => {
+      choiceModal.style.display = "none";
+      choiceModal.classList.remove("active");
+      fillPreview("quick");
+      quickModal.style.display = "flex";
+      quickModal.classList.add("active");
+      if (phoneInput) phoneInput.focus();
+  });
+
+  document.getElementById("choiceCartBtn")?.addEventListener("click", () => {
+      choiceModal.style.display = "none";
+      choiceModal.classList.remove("active");
+      window.location.href = "cart.html#checkoutForm";
+  });
+
+  // Відправка швидкого замовлення (з fix hide)
+  document.getElementById("sendQuickOrder")?.addEventListener("click", async () => {
+      const phoneRaw = phoneInput?.value?.replace(/\D/g, "") || "";
+      if (phoneRaw.length < 10) {
+          alert("Введіть повний номер телефону");
+          phoneInput?.focus();
+          return;
+      }
+
+      const payload = {
+          type: "quick",
+          phone: "+" + phoneRaw,
+          product: document.getElementById("productTitle")?.textContent?.trim() || "Товар",
+          color: document.getElementById("selectedColorName")?.textContent?.replace("Обраний колір: ", "").trim() || "—",
+          height: heightInput?.value?.trim() || "—",
+          weight: weightInput?.value?.trim() || "—",
+          source: "product-quick"
+      };
+
+      try {
+          const res = await fetch("https://pleasework.skyron-ua.workers.dev", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+          });
+
+          if (res.ok) {
+              alert("Дякуємо! Ми зв'яжемося з вами протягом 5 хвилин.");
+              quickModal.style.display = "none";
+              quickModal.classList.remove("active");  // ← Fix для приховування
+              if (phoneInput) phoneInput.value = "";
+          } else {
+              alert("Помилка. Спробуйте ще раз або напишіть у Telegram.");
+              quickModal.style.display = "none";
+              quickModal.classList.remove("active");  // ← Ховаємо навіть при помилці
+          }
+      } catch (err) {
+          alert("Не вдалося відправити. Перевірте інтернет.");
+          console.error(err);
+          quickModal.style.display = "none";
+          quickModal.classList.remove("active");  // ← Ховаємо навіть при помилці
+      }
+  });
+
+  // Кнопка "Замовити накладеним платежем" → перехід на головну з параметром (з твого старого блоку)
   if (codBtn) {
     codBtn.addEventListener("click", () => {
       const productName = document.getElementById("productTitle")?.textContent?.trim() || "Товар";
@@ -883,186 +1052,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-// МОДАЛКИ: Швидке замовлення + Вибір після бронювання розміру (оновлено 2025)
-document.addEventListener("DOMContentLoaded", () => {
-  const quickBtn       = document.getElementById("quickOrderBtn");
-  const reserveBtn     = document.getElementById("reserveBtn");
-  const quickModal     = document.getElementById("quickOrderModal");
-  const choiceModal    = document.getElementById("choiceModal");
-  const heightInput    = document.getElementById("product-height");
-  const weightInput    = document.getElementById("product-weight");
-  const phoneInput     = document.getElementById("quickPhone");
-
-  if (!quickBtn || !reserveBtn || !quickModal || !choiceModal) return;
-
-  // Збереження / відновлення зріст + вага
-  if (heightInput && weightInput) {
-      heightInput.value = localStorage.getItem("userHeight") || "";
-      weightInput.value = localStorage.getItem("userWeight") || "";
-
-      const saveSize = () => {
-          localStorage.setItem("userHeight", heightInput.value.trim());
-          localStorage.setItem("userWeight", weightInput.value.trim());
-      };
-
-      heightInput.addEventListener("input", saveSize);
-      weightInput.addEventListener("input", saveSize);
-  }
-
-  // Функція заповнення прев’ю в модалках
-  function fillPreview(modalType = "choice") {
-      const prefix = modalType === "quick" ? "" : "Choice";
-
-      const imgEl   = document.getElementById(`previewImage${prefix}`);
-      const titleEl = document.getElementById(`previewTitle${prefix}`);
-      const priceEl = document.getElementById(`previewPrice${prefix}`);
-
-      if (!imgEl || !titleEl || !priceEl) return;
-
-      const mainImgSrc = document.getElementById("mainImage")?.src 
-          || "https://placehold.co/80x120?text=Product";
-
-      const titleText = document.getElementById("productTitle")?.textContent?.trim() 
-          || "Товар";
-
-      let priceText = "0 грн";
-      const priceBlock = document.getElementById("productPrice");
-      if (priceBlock) {
-          const newPrice = priceBlock.querySelector(".new-price");
-          priceText = newPrice 
-              ? newPrice.textContent.trim() + " грн"
-              : priceBlock.textContent.trim().replace(/\s+/g, " ");
-      }
-
-      imgEl.src = mainImgSrc;
-      titleEl.textContent = titleText;
-      priceEl.textContent = priceText;
-  }
-
-  // Маска телефону +38 (___) ___-__-__
-  if (phoneInput) {
-      phoneInput.addEventListener("input", (e) => {
-          let value = e.target.value.replace(/\D/g, "");
-
-          if (value.startsWith("38")) value = value.substring(2);
-          value = value.substring(0, 10);
-
-          let formatted = "+38";
-
-          if (value.length > 0) formatted += " (" + value.substring(0, 3);
-          if (value.length > 3) formatted += ") " + value.substring(3, 6);
-          if (value.length > 6) formatted += "-" + value.substring(6, 8);
-          if (value.length > 8) formatted += "-" + value.substring(8, 10);
-
-          e.target.value = formatted;
-
-          const len = formatted.length;
-          e.target.setSelectionRange(len, len);
-      });
-
-      phoneInput.addEventListener("focus", (e) => {
-          if (!e.target.value.trim() || e.target.value === "+38") {
-              e.target.value = "+38 ";
-              e.target.setSelectionRange(5, 5);
-          }
-      });
-
-      phoneInput.addEventListener("blur", (e) => {
-          if (e.target.value === "+38 " || e.target.value === "+38") {
-              e.target.value = "";
-          }
-      });
-  }
-
-  // Швидке замовлення
-  quickBtn.addEventListener("click", () => {
-      fillPreview("quick");
-      if (phoneInput) phoneInput.value = phoneInput.value || "";
-      quickModal.style.display = "flex";
-      if (phoneInput) phoneInput.focus();
-  });
-
-  document.getElementById("closeQuickModal")?.addEventListener("click", () => {
-      quickModal.style.display = "none";
-  });
-  quickModal.addEventListener("click", e => {
-      if (e.target === quickModal) quickModal.style.display = "none";
-  });
-
-  // Забронювати розмір
-  reserveBtn.addEventListener("click", () => {
-      const h = parseInt(heightInput?.value?.trim() || "0", 10);
-      const w = parseInt(weightInput?.value?.trim() || "0", 10);
-
-      if (isNaN(h) || isNaN(w) || h < 140 || h > 220 || w < 35 || w > 150) {
-          alert("Будь ласка, введіть коректний зріст (140–220 см) та вагу (35–150 кг)");
-          document.getElementById("product-size-selection")?.scrollIntoView({ behavior: "smooth", block: "center" });
-          return;
-      }
-
-      fillPreview("choice");
-      addToCartFromProductPage({ source: "reserve-btn" });
-      choiceModal.style.display = "flex";
-  });
-
-  document.getElementById("choiceClose")?.addEventListener("click", () => {
-      choiceModal.style.display = "none";
-  });
-  choiceModal.addEventListener("click", e => {
-      if (e.target === choiceModal) choiceModal.style.display = "none";
-  });
-
-  document.getElementById("choiceQuickBtn")?.addEventListener("click", () => {
-      choiceModal.style.display = "none";
-      fillPreview("quick");
-      quickModal.style.display = "flex";
-      if (phoneInput) phoneInput.focus();
-  });
-
-  document.getElementById("choiceCartBtn")?.addEventListener("click", () => {
-      choiceModal.style.display = "none";
-      window.location.href = "cart.html#checkoutForm";
-  });
-
-  // Відправка швидкого замовлення
-  document.getElementById("sendQuickOrder")?.addEventListener("click", async () => {
-      const phoneRaw = phoneInput?.value?.replace(/\D/g, "") || "";
-      if (phoneRaw.length < 10) {
-          alert("Введіть повний номер телефону");
-          phoneInput?.focus();
-          return;
-      }
-
-      const payload = {
-          type: "quick",
-          phone: "+" + phoneRaw,
-          product: document.getElementById("productTitle")?.textContent?.trim() || "Товар",
-          color: document.getElementById("selectedColorName")?.textContent?.replace("Обраний колір: ", "").trim() || "—",
-          height: heightInput?.value?.trim() || "—",
-          weight: weightInput?.value?.trim() || "—",
-          source: "product-quick"
-      };
-
-      try {
-          const res = await fetch("https://pleasework.skyron-ua.workers.dev", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(payload)
-          });
-
-          if (res.ok) {
-              alert("Дякуємо! Ми зв'яжемося з вами протягом 5 хвилин.");
-              quickModal.style.display = "none";
-              if (phoneInput) phoneInput.value = "";
-          } else {
-              alert("Помилка. Спробуйте ще раз або напишіть у Telegram.");
-          }
-      } catch (err) {
-          alert("Не вдалося відправити. Перевірте інтернет.");
-          console.error(err);
-      }
-  });
-});
 
 // Функція додавання в кошик (без змін, але з захистом)
 function addToCartFromProductPage({ source } = {}) {
@@ -1100,10 +1089,7 @@ addToCart({
     image: selectedImage   // ← це найголовніше!
 });
 
-  // Показуємо модалку "Додано в кошик" ТІЛЬКИ якщо НЕ бронювання
-  if (source !== "reserve-btn") {
-    showAddToCartModal();
-  }
+
 
   // Ефект польоту + тост + оновлення бейджа
   const mainImg = document.getElementById("mainImage");
@@ -1205,3 +1191,99 @@ function updateHeroPrice(price) {
 }
 // Викликати, наприклад:
 updateHeroPrice(1690); 
+
+// Функція, яка повертає товари згруповані за сезоном
+function getProductsBySeason() {
+  const grouped = {
+    "Літній гардероб": [],
+    "Весна/осінь": [],
+    "Зимова колекція": []
+  };
+
+  CONFIG.PRODUCTS.forEach(product => {
+    const season = product.seasonGroup;
+    if (season && grouped[season]) {
+      grouped[season].push(product);
+    } else {
+      // якщо seasonGroup не вказано — кидаємо в "Весна/осінь" або окрему групу
+      grouped["Весна/осінь"].push(product);
+    }
+  });
+
+  return grouped;
+}
+
+// Приклад використання (наприклад, для рендеру HTML)
+function renderCatalog() {
+  const grouped = getProductsBySeason();
+  
+  let html = '';
+  
+  for (const [season, products] of Object.entries(grouped)) {
+    if (products.length === 0) continue;
+    
+    html += `<h2>${season} (${products.length} товарів)</h2>`;
+    html += '<div class="products-grid">';
+    
+    products.forEach(p => {
+      html += `
+        <div class="product-card">
+          <h3>${p.name}</h3>
+          <p>${p.productType}</p>
+          <p class="price">${p.price} грн 
+            ${p.old_price ? `<s>${p.old_price} грн</s>` : ''}
+          </p>
+          <!-- тут можна додати фото, кольори тощо -->
+        </div>
+      `;
+    });
+    
+    html += '</div>';
+  }
+  
+  document.getElementById('catalog-container').innerHTML = html;
+}
+
+// Виклик при завантаженні сторінки
+// renderCatalog();
+
+// Новая функция для группированного каталога по сезонам
+function buildGroupedCatalog(grid) {
+  if (!grid) return;
+
+  // Очищаем грид перед рендером
+  grid.innerHTML = '';
+
+  // Проходим по группам из CONFIG.SEASON_GROUPS
+  for (const [groupName, productIds] of Object.entries(CONFIG.SEASON_GROUPS)) {
+    // Фильтруем продукты по id из группы (на случай, если id не найден)
+    const products = productIds
+      .map(id => CONFIG.PRODUCTS.find(p => p.id === id))
+      .filter(p => p); // Убираем undefined
+
+    if (products.length === 0) continue; // Пропускаем пустые группы
+
+    // Создаем контейнер для группы
+    const groupDiv = document.createElement('div');
+    groupDiv.className = 'season-group';
+
+    // Заголовок группы
+    const h2 = document.createElement('h2');
+    h2.textContent = `${groupName} (${products.length} товарів)`;
+    groupDiv.appendChild(h2);
+
+    // Подгрид для продуктов в группе
+    const subGrid = document.createElement('div');
+    subGrid.className = 'catalog-subgrid';
+    buildCatalog(products, subGrid); // Используем вашу функцию для карточек
+    groupDiv.appendChild(subGrid);
+
+    // Добавляем группу в основной грид
+    grid.appendChild(groupDiv);
+  }
+
+  // Если нет продуктов вообще
+  if (grid.children.length === 0) {
+    grid.innerHTML = '<p style="text-align: center; color: #777;">Каталог порожній. Перевірте конфігурацію.</p>';
+  }
+}
