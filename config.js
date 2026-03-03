@@ -241,6 +241,54 @@ const CONFIG = {
       "old_price": 2600
     },
     {
+      "id": "Praga",
+      "name": "Бомбер Praga",
+      "features": [
+        "🍂 Ідеальний сезон осінь/весна — комфорт від 0° до +20°",
+        "🧥 Нейлон преміум-якості — тримає форму та виглядає акуратно",
+        "🔥 Силіконова підкладка 150 — легкий, але по-справжньому теплий",
+        "👌 Є внутрішня кишеня + надійна чорна застібка — продумано до деталей",
+        "🎨 Кольори: чорний, сірий та глибокий синій — універсальна база",
+        "💭 Той варіант, який надягаєш і не думаєш — пасує завжди",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1290,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber-praga/1.png",
+            "images/img.bomber-praga/2.png",
+            "images/img.bomber-praga/3.png"
+
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.bomber-praga/4.png",
+            "images/img.bomber-praga/5.png",
+            "images/img.bomber-praga/6.png"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.bomber-praga/7.png",
+            "images/img.bomber-praga/8.png",
+            "images/img.bomber-praga/9.png"
+          ]
+        }
+      ],
+      "old_price": 2600
+    },
+    {
       "id": "Basic Premium",
       "name": "Костюм Basic Premium",
       "features": [
@@ -1414,6 +1462,7 @@ const CONFIG = {
       "A",
       "Velvet Jet",
       "Forge",
+      "Praga",
       "Axis",
       "zamsh-na-zmiyci",
       "Basic Premium",
@@ -1443,7 +1492,7 @@ const CONFIG = {
   TYPE_GROUPS: {
     "Бізнес комплекти": ["Classic Style", "A"],
     "Спортивні костюми": ["Axis", "zamsh-na-zmiyci", "Basic Premium"],
-    "Бомбери": ["Velvet Jet", "Forge"],
+    "Бомбери": ["Velvet Jet", "Forge", "Praga"],
     "Теплі флісові костюми": [
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
@@ -1454,3 +1503,4 @@ const CONFIG = {
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
+
