@@ -4,60 +4,395 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Каталог — Skyron.ua</title>
-<link rel="stylesheet" href="style.css" />
-<!-- TikTok Pixel Code -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=n,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-  ttq.load('D4OBCO3C77U7MI8IQKIG');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- End TikTok Pixel Code -->
+
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --card-bg: #fff;
+  --accent: #e63946;
+  --gray: #555;
+  --light: #f8f9fa;
+  --border: #ddd;
+  --shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+body.dark-mode {
+  --bg: #0d0d0d;
+  --text: #e5e5e5;
+  --card-bg: #1a1a1a;
+  --accent: #ff5252;
+  --gray: #aaa;
+  --light: #222;
+  --border: #333;
+  --shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+.container { max-width:1240px; margin:0 auto; padding:0 16px; }
+
+/* Header */
+.site-header {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 54px;
+}
+.logo { font-size: 1.45rem; font-weight: 700; color: var(--text); text-decoration: none; }
+.header-actions { display: flex; align-items: center; gap: 16px; }
+.cart-link { font-size: 1.5rem; color: var(--text); position: relative; text-decoration: none; }
+.cart-badge {
+  position: absolute; top: -6px; right: -8px; background: var(--accent); color: white;
+  font-size: 0.68rem; font-weight: bold; min-width: 18px; height: 18px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+}
+.theme-toggle { background:none; border:none; font-size:1.4rem; cursor:pointer; }
+
+/* Фільтри – dropdown */
+.filters {
+  background: var(--light);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 54px;
+  z-index: 998;
+}
+.filter-controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+.dropdown-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.18s ease;
+}
+.dropdown-btn:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(230,57,70,0.12);
+}
+.dropdown-btn .arrow {
+  transition: transform 0.25s ease;
+}
+.dropdown.active .arrow { transform: rotate(180deg); }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 8px;
+  box-shadow: var(--shadow);
+  overflow-y: auto;
+  max-height: 340px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+.dropdown.active .dropdown-menu {
+  max-height: 340px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  overflow-y: auto;
+}
+.dropdown-menu::-webkit-scrollbar { width: 6px; }
+.dropdown-menu::-webkit-scrollbar-thumb { background: var(--gray); border-radius: 3px; }
+.dropdown-menu::-webkit-scrollbar-track { background: transparent; }
+.dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.dropdown-item:hover {
+  background: rgba(230,57,70,0.08);
+  color: var(--accent);
+}
+.dropdown-item.active {
+  background: rgba(230,57,70,0.12);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Товари */
+.catalog-section { padding: 32px 0 80px; }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 26px;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 16px 36px rgba(0,0,0,0.14); }
+.card img { width: 100%; height: 360px; object-fit: cover; }
+.meta { padding: 16px; text-align: center; }
+.name { font-size: 1.16rem; font-weight: 600; margin-bottom: 8px; min-height: 2.8em; line-height: 1.35; }
+.price-block { font-size: 1.32rem; font-weight: 700; color: var(--accent); }
+.old-price { color:#888; text-decoration:line-through; margin-right:10px; font-size:1.06rem; }
+
+@media (max-width: 768px) {
+  .filter-controls { flex-direction: column; align-items: center; }
+  .dropdown { max-width: 100%; }
+  .products-grid { gap: 20px; }
+  .card img { height: 320px; }
+}
+</style>
 </head>
 <body>
+
 <header class="site-header">
-<div class="container header-inner">
-<a class="logo" href="index.html">Skyron.ua</a>
-<nav class="nav">
-<a href="index.html#advantages">Переваги</a>
-<a href="catalog.html">Каталог</a>
-<a href="contacts.html">Контакти</a>
-</nav>
-<div class="header-actions">
-<a href="cart.html" class="cart-link">🛒 <span id="cartBadge" class="cart-badge" style="display:none;">0</span></a>
-<button id="themeToggle" class="theme-toggle">☀️</button>
-</div>
-</div>
+  <div class="container header-inner">
+    <a class="logo" href="index.html">Skyron.ua</a>
+    <div class="header-actions">
+      <a href="cart.html" class="cart-link">🛒 <span id="cartBadge" class="cart-badge" style="display:none;">0</span></a>
+      <button id="themeToggle" class="theme-toggle">☀️</button>
+    </div>
+  </div>
 </header>
 
-<main>
-<section class="container fade-in" style="padding: 40px 0;">
-<h1>Каталог товарів</h1>
-<div class="catalog-grid" id="catalogGrid"></div>
-</section>
+<div class="filters">
+  <div class="container">
+    <div class="filter-controls">
+      <!-- Сезон -->
+      <div class="dropdown" id="seasonDropdown">
+        <button class="dropdown-btn">
+          <span>Сезон</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu" id="seasonMenu"></div>
+      </div>
+
+      <!-- Тип одягу -->
+      <div class="dropdown" id="typeDropdown">
+        <button class="dropdown-btn">
+          <span>Тип одягу</span>
+          <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu" id="typeMenu"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main class="catalog-section">
+  <div class="container">
+    <div class="products-grid" id="catalogGrid"></div>
+  </div>
 </main>
 
-<footer class="site-footer fade-in">
-<div class="container footer-grid">
-<div>
-<h4>Skyron.ua</h4>
-<p>Теплий костюм — швидко, якісно, надійно. © <span id="year"></span></p>
-</div>
-<div>
-<h4>Контакти</h4>
-<p>Telegram: <a href="https://t.me/Skyron_ua">@Skyron_ua</a></p>
-<p>Viber: <a href="https://invite.viber.com/?g2=AQBeex4BIEUJJlW4bdj1yeAO7w846m1dQ6AzkdYO2N%2Bt6FAv7rl5TWDkjrKKKt7t">Viber спільнота</a></p>
-<p>Телефон: +380 73 333 72 78</p>
-</div>
-<div>
-<h4>Доставка</h4>
-<p>Нова Пошта — 1–3 дні.</p>
-</div>
-</div>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><h4>Skyron.ua</h4><p>© <span id="year"></span></p></div>
+    <div><h4>Контакти</h4><p>Telegram: <a href="https://t.me/Skyron_ua">@Skyron_ua</a></p><p>Тел: +380 73 333 72 78</p></div>
+    <div><h4>Доставка</h4><p>Нова Пошта 1–3 дні • Накладений платіж</p></div>
+  </div>
 </footer>
 
 <script src="config.js"></script>
 <script src="script.js"></script>
+
+<script>
+  // === DROPDOWN LOGIC ===
+  let currentSeason = "all";
+  let currentType   = "all";
+  
+  function initDropdown(dropdownId, menuId, items, titlePrefix) {
+    const dropdown = document.getElementById(dropdownId);
+    const btn = dropdown.querySelector(".dropdown-btn");
+    const menu = document.getElementById(menuId);
+    const arrow = btn.querySelector(".arrow");
+    const label = btn.querySelector("span");
+  
+    // Початковий текст
+    label.textContent = titlePrefix;
+  
+    // Заповнюємо меню
+    menu.innerHTML = `<div class="dropdown-item active" data-id="all">${titlePrefix}</div>`;
+    items.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "dropdown-item";
+      div.textContent = item;
+      div.dataset.id = item;
+      menu.appendChild(div);
+    });
+  
+    // Клік по кнопці — відкрити/закрити
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isActive = dropdown.classList.contains("active");
+      closeAllDropdowns();
+      if (!isActive) dropdown.classList.add("active");
+    });
+  
+    // Клік по пункту
+    menu.addEventListener("click", (e) => {
+      if (e.target.classList.contains("dropdown-item")) {
+        const id = e.target.dataset.id;
+  
+        // Оновлюємо текст кнопки
+        label.textContent = id === "all" 
+          ? titlePrefix 
+          : `${titlePrefix}: ${id}`;
+  
+        // Активний пункт
+        menu.querySelectorAll(".dropdown-item").forEach(el => el.classList.remove("active"));
+        e.target.classList.add("active");
+  
+        // Зберігаємо вибір і скидаємо протилежний фільтр
+        if (dropdownId === "seasonDropdown") {
+          currentSeason = id;                    // ← зберігаємо новий сезон
+          resetOtherFilter("typeDropdown", "Тип одягу");   // тип одягу → дефолт
+        } else {
+          currentType = id;                      // ← зберігаємо новий тип
+          resetOtherFilter("seasonDropdown", "Сезон");     // сезон → дефолт
+        }
+  
+        renderProducts();
+        dropdown.classList.remove("active");
+      }
+    });
+  }
+  
+  function resetOtherFilter(otherDropdownId, defaultText) {
+    const otherBtn = document.querySelector(`#${otherDropdownId} .dropdown-btn span`);
+    if (otherBtn) otherBtn.textContent = defaultText;
+  
+    const otherMenu = document.querySelector(`#${otherDropdownId.replace("Dropdown", "Menu")}`);
+    if (otherMenu) {
+      otherMenu.querySelectorAll(".dropdown-item").forEach(el => {
+        el.classList.toggle("active", el.dataset.id === "all");
+      });
+    }
+  
+    // Важливо: скидаємо значення глобальної змінної
+    if (otherDropdownId === "seasonDropdown") {
+      currentSeason = "all";
+    } else if (otherDropdownId === "typeDropdown") {
+      currentType = "all";
+    }
+  
+    // Оновлюємо товари після скидання
+    renderProducts();
+  }
+  
+  function closeAllDropdowns() {
+    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
+  }
+  
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".dropdown")) closeAllDropdowns();
+  });
+  
+  // === Рендер товарів ===
+  function renderProducts() {
+    const grid = document.getElementById("catalogGrid");
+    grid.innerHTML = "";
+  
+    let filtered = CONFIG.PRODUCTS;
+  
+    // Якщо сезон НЕ "all" — фільтруємо
+    if (currentSeason !== "all") {
+      const ids = CONFIG.SEASON_GROUPS?.[currentSeason] || [];
+      filtered = filtered.filter(p => ids.includes(p.id));
+    }
+  
+    // Якщо тип НЕ "all" — фільтруємо
+    if (currentType !== "all") {
+      const ids = CONFIG.TYPE_GROUPS?.[currentType] || [];
+      filtered = filtered.filter(p => ids.includes(p.id));
+    }
+  
+    filtered.forEach(p => {
+      const imgSrc = p.colors?.[0]?.images?.[0] || "https://via.placeholder.com/300x360?text=Фото+відсутнє";
+      const card = document.createElement("div");
+      card.className = "card fade-in";
+      card.innerHTML = `
+        <img src="${imgSrc}" alt="${p.name}" loading="lazy">
+        <div class="meta">
+          <div class="name">${p.name}</div>
+          <div class="price-block">
+            ${p.old_price ? `<span class="old-price">${p.old_price} грн</span>` : ''}
+            ${p.price} грн
+          </div>
+        </div>
+      `;
+      card.addEventListener("click", () => window.location.href = `product.html?id=${p.id}`);
+      grid.appendChild(card);
+    });
+  
+    if (filtered.length === 0) {
+      grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; padding:120px 20px; color:var(--gray);">
+        Товарів за обраними параметрами не знайдено
+      </p>`;
+    }
+  }
+  
+  // Ініціалізація
+  document.addEventListener("DOMContentLoaded", () => {
+    initDropdown(
+      "seasonDropdown",
+      "seasonMenu",
+      Object.keys(CONFIG.SEASON_GROUPS || {}),
+      "Сезон"
+    );
+  
+    initDropdown(
+      "typeDropdown",
+      "typeMenu",
+      Object.keys(CONFIG.TYPE_GROUPS || {}),
+      "Тип одягу"
+    );
+  
+    renderProducts();
+  
+    document.getElementById("year").textContent = new Date().getFullYear();
+  
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      document.getElementById("themeToggle").textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
+    });
+  
+    // Фікс скролу коліщатком у меню
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+      menu.addEventListener('wheel', e => e.stopPropagation(), { passive: true });
+    });
+  });
+  </script>
 </body>
 </html>
