@@ -167,10 +167,63 @@ body {
 .old-price { color:#888; text-decoration:line-through; margin-right:10px; font-size:1.06rem; }
 
 @media (max-width: 768px) {
-  .filter-controls { flex-direction: column; align-items: center; }
-  .dropdown { max-width: 100%; }
+  .filter-controls {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 12px;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: pan-x; /* дозволяє скролити контейнер пальцем, але не блокує кліки */
+  }
+
+  .dropdown {
+    min-width: 45%;
+    max-width: 48%;
+    flex: 1 1 auto;
+    position: relative;
+    z-index: 20; /* піднімаємо вище */
+  }
+
+  .dropdown-btn {
+    font-size: 0.94rem;
+    padding: 10px 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none; /* не виділяється текст при тапі */
+  }
+
+  .dropdown-menu {
+    z-index: 9999 !important; /* максимально високо */
+    position: fixed; /* фіксуємо меню відносно екрану, а не контейнера */
+    top: auto;
+    left: 0;
+    right: 0;
+    margin-top: 4px; /* трохи нижче кнопки */
+    max-height: 60vh; /* не більше 60% екрану */
+    overflow-y: auto;
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  }
+
   .products-grid { gap: 20px; }
   .card img { height: 320px; }
+}
+
+/* Прибираємо hover на мобілках */
+@media (hover: none) {
+  .dropdown-btn:hover,
+  .dropdown-btn:active {
+    border-color: var(--border);
+    box-shadow: none;
+    transform: none;
+  }
 }
 </style>
 </head>
