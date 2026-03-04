@@ -1287,3 +1287,24 @@ function buildGroupedCatalog(grid) {
     grid.innerHTML = '<p style="text-align: center; color: #777;">Каталог порожній. Перевірте конфігурацію.</p>';
   }
 }
+
+// Фікс для мобілки: тап точно відкриває меню
+if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+  document.querySelectorAll('.dropdown-btn').forEach(btn => {
+    btn.addEventListener('touchend', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const dropdown = this.closest('.dropdown');
+      const isActive = dropdown.classList.contains('active');
+
+      // Закриваємо всі інші дропдауни
+      document.querySelectorAll('.dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('active');
+      });
+
+      // Тогглимо цей
+      dropdown.classList.toggle('active', !isActive);
+    }, { passive: false });
+  });
+}
