@@ -59,7 +59,7 @@ body {
 }
 .theme-toggle { background:none; border:none; font-size:1.4rem; cursor:pointer; }
 
-/* Фільтри – dropdown */
+/* Фільтри */
 .filters {
   background: var(--light);
   padding: 16px 0;
@@ -97,9 +97,7 @@ body {
   border-color: var(--accent);
   box-shadow: 0 0 0 3px rgba(230,57,70,0.12);
 }
-.dropdown-btn .arrow {
-  transition: transform 0.25s ease;
-}
+.dropdown-btn .arrow { transition: transform 0.25s ease; }
 .dropdown.active .arrow { transform: rotate(180deg); }
 .dropdown-menu {
   position: absolute;
@@ -124,7 +122,6 @@ body {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
-  overflow-y: auto;
 }
 .dropdown-menu::-webkit-scrollbar { width: 6px; }
 .dropdown-menu::-webkit-scrollbar-thumb { background: var(--gray); border-radius: 3px; }
@@ -134,15 +131,8 @@ body {
   cursor: pointer;
   transition: background 0.15s;
 }
-.dropdown-item:hover {
-  background: rgba(230,57,70,0.08);
-  color: var(--accent);
-}
-.dropdown-item.active {
-  background: rgba(230,57,70,0.12);
-  color: var(--accent);
-  font-weight: 600;
-}
+.dropdown-item:hover { background: rgba(230,57,70,0.08); color: var(--accent); }
+.dropdown-item.active { background: rgba(230,57,70,0.12); color: var(--accent); font-weight: 600; }
 
 /* Товари */
 .catalog-section { padding: 32px 0 80px; }
@@ -166,64 +156,35 @@ body {
 .price-block { font-size: 1.32rem; font-weight: 700; color: var(--accent); }
 .old-price { color:#888; text-decoration:line-through; margin-right:10px; font-size:1.06rem; }
 
+/* Мобільна версія — фільтри поруч без багів */
 @media (max-width: 768px) {
   .filter-controls {
     flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding: 0 12px;
-    -webkit-overflow-scrolling: touch;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: pan-x; /* дозволяє скролити контейнер пальцем, але не блокує кліки */
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 0 10px;
   }
-
   .dropdown {
+    flex: 1 1 45%;
     min-width: 45%;
     max-width: 48%;
-    flex: 1 1 auto;
-    position: relative;
-    z-index: 20; /* піднімаємо вище */
   }
-
   .dropdown-btn {
-    font-size: 0.94rem;
-    padding: 10px 12px;
+    font-size: 0.95rem;
+    padding: 12px 14px;
+    text-align: center;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
-    user-select: none; /* не виділяється текст при тапі */
   }
-
   .dropdown-menu {
-    z-index: 9999 !important; /* максимально високо */
-    position: fixed; /* фіксуємо меню відносно екрану, а не контейнера */
-    top: auto;
-    left: 0;
-    right: 0;
-    margin-top: 4px; /* трохи нижче кнопки */
-    max-height: 60vh; /* не більше 60% екрану */
-    overflow-y: auto;
-    border-radius: 12px;
-    background: var(--card-bg);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    z-index: 9999;
   }
-
   .products-grid { gap: 20px; }
   .card img { height: 320px; }
-}
-
-/* Прибираємо hover на мобілках */
-@media (hover: none) {
-  .dropdown-btn:hover,
-  .dropdown-btn:active {
-    border-color: var(--border);
-    box-shadow: none;
-    transform: none;
-  }
 }
 </style>
 </head>
@@ -281,171 +242,152 @@ body {
 <script src="script.js"></script>
 
 <script>
-  // === DROPDOWN LOGIC ===
-  let currentSeason = "all";
-  let currentType   = "all";
-  
-  function initDropdown(dropdownId, menuId, items, titlePrefix) {
-    const dropdown = document.getElementById(dropdownId);
-    const btn = dropdown.querySelector(".dropdown-btn");
-    const menu = document.getElementById(menuId);
-    const arrow = btn.querySelector(".arrow");
-    const label = btn.querySelector("span");
-  
-    // Початковий текст
-    label.textContent = titlePrefix;
-  
-    // Заповнюємо меню
-    menu.innerHTML = `<div class="dropdown-item active" data-id="all">${titlePrefix}</div>`;
-    items.forEach(item => {
-      const div = document.createElement("div");
-      div.className = "dropdown-item";
-      div.textContent = item;
-      div.dataset.id = item;
-      menu.appendChild(div);
+// === DROPDOWN LOGIC ===
+let currentSeason = "all";
+let currentType   = "all";
+
+function initDropdown(dropdownId, menuId, items, titlePrefix) {
+  const dropdown = document.getElementById(dropdownId);
+  const btn = dropdown.querySelector(".dropdown-btn");
+  const menu = document.getElementById(menuId);
+  const arrow = btn.querySelector(".arrow");
+  const label = btn.querySelector("span");
+
+  label.textContent = titlePrefix;
+
+  menu.innerHTML = `<div class="dropdown-item active" data-id="all">${titlePrefix}</div>`;
+  (items || []).forEach(item => {
+    const div = document.createElement("div");
+    div.className = "dropdown-item";
+    div.textContent = item;
+    div.dataset.id = item;
+    menu.appendChild(div);
+  });
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isActive = dropdown.classList.contains("active");
+    document.querySelectorAll(".dropdown").forEach(d => {
+      if (d !== dropdown) d.classList.remove("active");
     });
-  
-    // Клік по кнопці — відкрити/закрити
-    btn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isActive = dropdown.classList.contains("active");
-      closeAllDropdowns();
-      if (!isActive) dropdown.classList.add("active");
-    });
-  
-    // Клік по пункту
-    menu.addEventListener("click", (e) => {
-      if (e.target.classList.contains("dropdown-item")) {
-        const id = e.target.dataset.id;
-  
-        // Оновлюємо текст кнопки
-        label.textContent = id === "all" 
-          ? titlePrefix 
-          : `${titlePrefix}: ${id}`;
-  
-        // Активний пункт
-        menu.querySelectorAll(".dropdown-item").forEach(el => el.classList.remove("active"));
-        e.target.classList.add("active");
-  
-        // Зберігаємо вибір і скидаємо протилежний фільтр
-        if (dropdownId === "seasonDropdown") {
-          currentSeason = id;                    // ← зберігаємо новий сезон
-          resetOtherFilter("typeDropdown", "Тип одягу");   // тип одягу → дефолт
-        } else {
-          currentType = id;                      // ← зберігаємо новий тип
-          resetOtherFilter("seasonDropdown", "Сезон");     // сезон → дефолт
-        }
-  
-        renderProducts();
-        dropdown.classList.remove("active");
+    dropdown.classList.toggle("active", !isActive);
+  });
+
+  menu.addEventListener("click", (e) => {
+    if (e.target.classList.contains("dropdown-item")) {
+      const id = e.target.dataset.id;
+      label.textContent = id === "all" ? titlePrefix : `${titlePrefix}: ${id}`;
+      menu.querySelectorAll(".dropdown-item").forEach(el => el.classList.remove("active"));
+      e.target.classList.add("active");
+
+      if (dropdownId === "seasonDropdown") {
+        currentSeason = id;
+        resetOtherFilter("typeDropdown", "Тип одягу");
+      } else {
+        currentType = id;
+        resetOtherFilter("seasonDropdown", "Сезон");
       }
+
+      renderProducts();
+      dropdown.classList.remove("active");
+    }
+  });
+}
+
+function resetOtherFilter(otherDropdownId, defaultText) {
+  const otherBtn = document.querySelector(`#${otherDropdownId} .dropdown-btn span`);
+  if (otherBtn) otherBtn.textContent = defaultText;
+
+  const otherMenu = document.querySelector(`#${otherDropdownId.replace("Dropdown", "Menu")}`);
+  if (otherMenu) {
+    otherMenu.querySelectorAll(".dropdown-item").forEach(el => {
+      el.classList.toggle("active", el.dataset.id === "all");
     });
   }
-  
-  function resetOtherFilter(otherDropdownId, defaultText) {
-    const otherBtn = document.querySelector(`#${otherDropdownId} .dropdown-btn span`);
-    if (otherBtn) otherBtn.textContent = defaultText;
-  
-    const otherMenu = document.querySelector(`#${otherDropdownId.replace("Dropdown", "Menu")}`);
-    if (otherMenu) {
-      otherMenu.querySelectorAll(".dropdown-item").forEach(el => {
-        el.classList.toggle("active", el.dataset.id === "all");
-      });
-    }
-  
-    // Важливо: скидаємо значення глобальної змінної
-    if (otherDropdownId === "seasonDropdown") {
-      currentSeason = "all";
-    } else if (otherDropdownId === "typeDropdown") {
-      currentType = "all";
-    }
-  
-    // Оновлюємо товари після скидання
-    renderProducts();
+
+  if (otherDropdownId === "seasonDropdown") currentSeason = "all";
+  if (otherDropdownId === "typeDropdown") currentType = "all";
+
+  renderProducts();
+}
+
+function closeAllDropdowns() {
+  document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
+}
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown")) closeAllDropdowns();
+});
+
+// === Рендер товарів ===
+function renderProducts() {
+  const grid = document.getElementById("catalogGrid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+
+  let filtered = CONFIG.PRODUCTS;
+
+  if (currentSeason !== "all") {
+    const ids = CONFIG.SEASON_GROUPS?.[currentSeason] || [];
+    filtered = filtered.filter(p => ids.includes(p.id));
   }
-  
-  function closeAllDropdowns() {
-    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
+
+  if (currentType !== "all") {
+    const ids = CONFIG.TYPE_GROUPS?.[currentType] || [];
+    filtered = filtered.filter(p => ids.includes(p.id));
   }
-  
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".dropdown")) closeAllDropdowns();
-  });
-  
-  // === Рендер товарів ===
-  function renderProducts() {
-    const grid = document.getElementById("catalogGrid");
-    grid.innerHTML = "";
-  
-    let filtered = CONFIG.PRODUCTS;
-  
-    // Якщо сезон НЕ "all" — фільтруємо
-    if (currentSeason !== "all") {
-      const ids = CONFIG.SEASON_GROUPS?.[currentSeason] || [];
-      filtered = filtered.filter(p => ids.includes(p.id));
-    }
-  
-    // Якщо тип НЕ "all" — фільтруємо
-    if (currentType !== "all") {
-      const ids = CONFIG.TYPE_GROUPS?.[currentType] || [];
-      filtered = filtered.filter(p => ids.includes(p.id));
-    }
-  
-    filtered.forEach(p => {
-      const imgSrc = p.colors?.[0]?.images?.[0] || "https://via.placeholder.com/300x360?text=Фото+відсутнє";
-      const card = document.createElement("div");
-      card.className = "card fade-in";
-      card.innerHTML = `
-        <img src="${imgSrc}" alt="${p.name}" loading="lazy">
-        <div class="meta">
-          <div class="name">${p.name}</div>
-          <div class="price-block">
-            ${p.old_price ? `<span class="old-price">${p.old_price} грн</span>` : ''}
-            ${p.price} грн
-          </div>
+
+  filtered.forEach(p => {
+    const imgSrc = p.colors?.[0]?.images?.[0] || "https://via.placeholder.com/300x360?text=Фото+відсутнє";
+    const card = document.createElement("div");
+    card.className = "card fade-in";
+    card.innerHTML = `
+      <img src="${imgSrc}" alt="${p.name}" loading="lazy">
+      <div class="meta">
+        <div class="name">${p.name}</div>
+        <div class="price-block">
+          ${p.old_price ? `<span class="old-price">${p.old_price} грн</span>` : ''}
+          ${p.price} грн
         </div>
-      `;
-      card.addEventListener("click", () => window.location.href = `product.html?id=${p.id}`);
-      grid.appendChild(card);
-    });
-  
-    if (filtered.length === 0) {
-      grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; padding:120px 20px; color:var(--gray);">
-        Товарів за обраними параметрами не знайдено
-      </p>`;
-    }
-  }
-  
-  // Ініціалізація
-  document.addEventListener("DOMContentLoaded", () => {
-    initDropdown(
-      "seasonDropdown",
-      "seasonMenu",
-      Object.keys(CONFIG.SEASON_GROUPS || {}),
-      "Сезон"
-    );
-  
-    initDropdown(
-      "typeDropdown",
-      "typeMenu",
-      Object.keys(CONFIG.TYPE_GROUPS || {}),
-      "Тип одягу"
-    );
-  
-    renderProducts();
-  
-    document.getElementById("year").textContent = new Date().getFullYear();
-  
-    document.getElementById("themeToggle").addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-      document.getElementById("themeToggle").textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
-    });
-  
-    // Фікс скролу коліщатком у меню
-    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-      menu.addEventListener('wheel', e => e.stopPropagation(), { passive: true });
-    });
+      </div>
+    `;
+    card.addEventListener("click", () => window.location.href = `product.html?id=${p.id}`);
+    grid.appendChild(card);
   });
-  </script>
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<p style="grid-column:1/-1; text-align:center; padding:120px 20px; color:var(--gray);">
+      Товарів за обраними параметрами не знайдено
+    </p>`;
+  }
+}
+
+// Ініціалізація
+document.addEventListener("DOMContentLoaded", () => {
+  initDropdown(
+    "seasonDropdown",
+    "seasonMenu",
+    Object.keys(CONFIG.SEASON_GROUPS || {}),
+    "Сезон"
+  );
+
+  initDropdown(
+    "typeDropdown",
+    "typeMenu",
+    Object.keys(CONFIG.TYPE_GROUPS || {}),
+    "Тип одягу"
+  );
+
+  renderProducts();
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  document.getElementById("themeToggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    document.getElementById("themeToggle").textContent = document.body.classList.contains("dark-mode") ? "🌙" : "☀️";
+  });
+});
+</script>
 </body>
 </html>
