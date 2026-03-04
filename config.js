@@ -289,6 +289,37 @@ const CONFIG = {
       "old_price": 2600
     },
     {
+      "id": "Patriot UA",
+      "name": "Костюм Patriot UA",
+      "features": [
+        "🍂 Сезон весна/осінь — ідеальний баланс комфорту та практичності",
+        "🇺🇦 Тризуб — якісна вишивка, що додає характеру та стилю",
+        "👌 Матеріал двунитка — щільний, тримає форму та не розтягується",
+        "🌿 Бавовна + поліестер — приємний до тіла та зносостійкий",
+        "🏃 Підійде для повсякденного носіння та занять спортом",
+        "💪 Зручний крій — комфорт на кожен день",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1249,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.kostium-trisub/1.png",
+            "images/img.kostium-trisub/2.png",
+            "images/img.kostium-trisub/3.png",
+            "images/img.kostium-trisub/4.png",
+            "images/img.kostium-trisub/5.png",
+            "images/img.kostium-trisub/6.png",
+            "images/img.kostium-trisub/7.png"
+          ]
+        }
+      ],
+      "old_price": 2600
+    },
+    {
       "id": "Basic Premium",
       "name": "Костюм Basic Premium",
       "features": [
@@ -1465,6 +1496,7 @@ const CONFIG = {
       "Praga",
       "Axis",
       "zamsh-na-zmiyci",
+      "Patriot UA",
       "Basic Premium",
       "Mono",
       "sweater"
@@ -1491,7 +1523,7 @@ const CONFIG = {
 
   TYPE_GROUPS: {
     "Бізнес комплекти": ["Classic Style", "A"],
-    "Спортивні костюми": ["Axis", "zamsh-na-zmiyci", "Basic Premium"],
+    "Спортивні костюми": ["Axis", "zamsh-na-zmiyci", "Patriot UA", "Basic Premium"],
     "Бомбери": ["Velvet Jet", "Forge", "Praga"],
     "Теплі флісові костюми": [
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
@@ -1503,5 +1535,3 @@ const CONFIG = {
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
-
-
