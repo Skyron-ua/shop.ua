@@ -255,14 +255,13 @@ const CONFIG = {
       "price": 1290,
       "colors": [
         {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
           "images": [
-            "images/img.bomber-praga/1.png",
-            "images/img.bomber-praga/2.png",
-            "images/img.bomber-praga/3.png"
-
+            "images/img.bomber-praga/7.png",
+            "images/img.bomber-praga/8.png",
+            "images/img.bomber-praga/9.png"
           ]
         },
         {
@@ -276,13 +275,14 @@ const CONFIG = {
           ]
         },
         {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#bbbbbb",
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
           "images": [
-            "images/img.bomber-praga/7.png",
-            "images/img.bomber-praga/8.png",
-            "images/img.bomber-praga/9.png"
+            "images/img.bomber-praga/1.png",
+            "images/img.bomber-praga/2.png",
+            "images/img.bomber-praga/3.png"
+
           ]
         }
       ],
@@ -1503,4 +1503,5 @@ const CONFIG = {
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
+
 
