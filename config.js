@@ -289,6 +289,32 @@ const CONFIG = {
       "old_price": 2600
     },
     {
+      "id": "Snake",
+      "name": "Бомбер Snake",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Глибокий матовий чорний — виглядає дорого і статусно",
+        "👌 Ідеальний крій бомбера — сидить акуратно на будь-якій фігурі",
+        "🛋️ Зручні кишені + манжети на резинці — комфорт щодня",
+        "🌧️ Легко чиститься, не боїться дощу",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1349,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber-snake/1.png",
+            "images/img.bomber-snake/2.png",
+            "images/img.bomber-snake/3.png"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
+    {
       "id": "Patriot UA",
       "name": "Костюм Patriot UA",
       "features": [
@@ -1494,6 +1520,8 @@ const CONFIG = {
       "Velvet Jet",
       "Forge",
       "Praga",
+      "Snake",
+      "Prestige",
       "Axis",
       "zamsh-na-zmiyci",
       "Patriot UA",
@@ -1509,7 +1537,6 @@ const CONFIG = {
       "gudzik",
       "zefir",
       "plashovka",
-      "Prestige",
       "puhovik",
       "chelsi",
       "polar-premium",
@@ -1522,14 +1549,14 @@ const CONFIG = {
   },
 
   TYPE_GROUPS: {
-    "Бізнес комплекти": ["Classic Style", "A"],
-    "Спортивні костюми": ["Axis", "zamsh-na-zmiyci", "Patriot UA", "Basic Premium"],
-    "Бомбери": ["Velvet Jet", "Forge", "Praga"],
+    "Бізнес комплекти": ["Classic Style", "zamsh-na-zmiyci", "A", "Axis"],
+    "Спортивні костюми": [ "Patriot UA", "Basic Premium", "plashovka"],
+    "Бомбери": ["Velvet Jet", "Forge", "Snake", "Praga"],
     "Теплі флісові костюми": [
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
-    "Верхній одяг/куртки": ["plashovka", "Prestige", "puhovik"],
+    "Верхній одяг/куртки": ["Prestige", "puhovik"],
     "Сорочки/футболки/брюки": ["Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
