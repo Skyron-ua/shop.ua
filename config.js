@@ -414,6 +414,58 @@ const CONFIG = {
       "old_price": 4200
     },
     {
+      "id": "Air",
+      "name": "Куртка Air",
+      "features": [
+        "✨ Стильна демісезонна куртка для щоденного комфорту, яка поєднує практичність, комфорт та стильний мінімалістичний дизайн. Ідеально підходить для прохолодної погоди та легко доповнює будь-який повсякденний образ",
+        "🔹 Легка та водночас тепла — комфорт у прохолодні дні",
+        "💧 Стійка до вологи — матеріал не боїться дощу та сирої погоди",
+        "🧥 Стильна посадка — гарно виглядає на фігурі та не сковує рухів",
+        "👌 4 практичні кишені — для телефону, ключів та інших дрібниць",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1350,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.air/1.png",
+            "images/img.air/2.png"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.air/3.png",
+            "images/img.air/4.png"
+          ]
+        },
+        {
+          "id": "emerald",
+          "name": "Зелений",
+          "hex": "#175a43",
+          "images": [
+            "images/img.air/5.png",
+            "images/img.air/6.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.air/7.png",
+            "images/img.air/8.png"
+          ]
+        }
+      ],
+      "old_price": 2750
+    },
+    {
       "id": "Axis",
       "name": "Замшевий костюм Axis",
       "features": [
@@ -1522,6 +1574,7 @@ const CONFIG = {
       "Praga",
       "Snake",
       "Prestige",
+      "Air",
       "Axis",
       "zamsh-na-zmiyci",
       "Patriot UA",
@@ -1556,7 +1609,7 @@ const CONFIG = {
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
-    "Верхній одяг/куртки": ["Prestige", "puhovik"],
+    "Верхній одяг/куртки": ["Prestige", "Air", "puhovik"],
     "Сорочки/футболки/брюки": ["Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
