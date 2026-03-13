@@ -315,6 +315,32 @@ const CONFIG = {
       "old_price": 2800
     },
     {
+      "id": "Aero",
+      "name": "Замшева куртка Aero",
+      "features": [
+        "✨ Якісна та приємна на дотик тканина",
+        "🧥 Підходить на весну / осінь",
+        "😎 Стильний сучасний крій — виглядає дорого",
+        "🔥 Трендовий дизайн, який легко поєднати з будь-яким образом",
+        "✂️ Розміри: S M L XL",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.aero/1.png",
+            "images/img.aero/2.png",
+            "images/img.aero/3.png"
+          ]
+        }
+      ],
+      "old_price": 2900
+    },
+    {
       "id": "Patriot UA",
       "name": "Костюм Patriot UA",
       "features": [
@@ -1573,6 +1599,7 @@ const CONFIG = {
       "Forge",
       "Praga",
       "Snake",
+      "Aero",
       "Prestige",
       "Air",
       "Axis",
@@ -1609,7 +1636,7 @@ const CONFIG = {
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
-    "Верхній одяг/куртки": ["Prestige", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/футболки/брюки": ["Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
