@@ -312,6 +312,16 @@ const CONFIG = {
             "images/img.bomber-snake/2.png",
             "images/img.bomber-snake/3.png"
           ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.bomber-snake/4.png",
+            "images/img.bomber-snake/5.png",
+            "images/img.bomber-snake/6.png"
+          ]
         }
       ],
       "old_price": 2800
