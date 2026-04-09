@@ -1308,3 +1308,121 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     }, { passive: false });
   });
 }
+console.log("Nova Poshta Key exists:", !!CONFIG.NOVA_POSHTA_API_KEY);
+console.log("Key length:", CONFIG.NOVA_POSHTA_API_KEY ? CONFIG.NOVA_POSHTA_API_KEY.length : 0);
+// =============================================
+// НОВА ПОШТА — ПОШУК МІСТ І ВІДДІЛЕНЬ
+// =============================================
+
+let currentCityRef = null;
+
+// Пошук міст
+async function searchCities(query) {
+  if (!query || query.length < 2) return [];
+
+  try {
+    const res = await fetch("https://api.novaposhta.ua/v2.0/json/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        apiKey: CONFIG.NOVA_POSHTA_API_KEY,
+        modelName: "Address",
+        calledMethod: "getCities",
+        methodProperties: {
+          FindByString: query,
+          Limit: 20,
+          Language: "ua"
+        }
+      })
+    });
+
+    const data = await res.json();
+    return data.data || [];
+  } catch (e) {
+    console.error("Помилка пошуку міст:", e);
+    return [];
+  }
+}
+
+// Отримання відділень
+async function getWarehouses(cityRef) {
+  if (!cityRef) return [];
+
+  try {
+    const res = await fetch("https://api.novaposhta.ua/v2.0/json/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        apiKey: CONFIG.NOVA_POSHTA_API_KEY,
+        modelName: "AddressGeneral",
+        calledMethod: "getWarehouses",
+        methodProperties: {
+          CityRef: cityRef,
+          Limit: 300,
+          Language: "ua"
+        }
+      })
+    });
+
+    const data = await res.json();
+    return data.data || [];
+  } catch (e) {
+    console.error("Помилка отримання відділень:", e);
+    return [];
+  }
+}
+
+// Ініціалізація
+function initNovaPoshta() {
+  const cityInput = document.getElementById('city');
+  const postOfficeSelect = document.getElementById('postOffice');
+
+  if (!cityInput || !postOfficeSelect) return;
+
+  let timeout = null;
+
+  cityInput.addEventListener('input', () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(async () => {
+      const cities = await searchCities(cityInput.value);
+
+      const datalist = document.getElementById('cityList');
+      datalist.innerHTML = '';
+
+      cities.forEach(city => {
+        const option = document.createElement('option');
+        option.value = city.Description;
+        option.dataset.ref = city.Ref;
+        datalist.appendChild(option);
+      });
+    }, 350);
+  });
+
+  // Коли користувач обрав місто
+  cityInput.addEventListener('change', async () => {
+    const datalist = document.getElementById('cityList');
+    const selected = Array.from(datalist.options).find(opt => opt.value === cityInput.value);
+
+    if (selected && selected.dataset.ref) {
+      currentCityRef = selected.dataset.ref;
+
+      const warehouses = await getWarehouses(currentCityRef);
+
+      postOfficeSelect.innerHTML = '<option value="">Оберіть відділення</option>';
+
+      warehouses.forEach(wh => {
+        const opt = document.createElement('option');
+        opt.value = wh.Description;
+        opt.textContent = wh.Description;
+        postOfficeSelect.appendChild(opt);
+      });
+    }
+  });
+}
+
+// Запускаємо при завантаженні сторінки
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.includes("cart.html") || document.getElementById("city")) {
+    initNovaPoshta();
+  }
+});
