@@ -1,5 +1,7 @@
 /* CONFIG */
 const CONFIG = {
+  // === API Нової Пошти ===
+  NOVA_POSHTA_API_KEY: "881fe4619feabce7a31a5acee8e4d63e",
   CONTACT: {
     TG_USERNAME: "Skyron_ua",
     VIBER_INVITE: "https://invite.viber.com/?g2=AQBeex4BIEUJJlW4bdj1yeAO7w846m1dQ6AzkdYO2N%2Bt6FAv7rl5TWDkjrKKKt7t",
