@@ -116,11 +116,7 @@ const CONFIG = {
           "hex": "#616267",
           "images": [
             "images/img.bomber-zamsh/4.png",
-            "images/img.bomber-zamsh/5.png",
-            "images/img.bomber-zamsh/6.png",
-            "images/img.bomber-zamsh/7.png",
-            "images/img.bomber-zamsh/8.png",
-            "images/img.bomber-zamsh/9.png"
+            "images/img.bomber-zamsh/5.png"
           ]
         },
         {
@@ -213,6 +209,73 @@ const CONFIG = {
         }
       ],
       "old_price": 2900
+    },
+    {
+      "id": "Flow",
+      "name": "Лляний комплект Flow",
+      "features": [
+        "🔥 В тренді цього сезону",
+        "😎 Стильно • Легко • Комфортно",
+        "✔️ Розміри: S M L XL XXL 3XL",
+        "✔️ Матеріал: натуральний льон",
+        "✔️ Висока якість пошиву, не просвічується",
+        "✔️ Стильний мінімалізм, який завжди актуальний",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1450,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.lyon2/1.png",
+            "images/img.lyon2/2.png",
+            "images/img.lyon2/3.png"
+          ]
+        },
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.lyon2/4.png",
+            "images/img.lyon2/5.png",
+            "images/img.lyon2/6.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.lyon2/9.png",
+            "images/img.lyon2/8.png",
+            "images/img.lyon2/7.png"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.lyon2/10.png",
+            "images/img.lyon2/11.png",
+            "images/img.lyon2/12.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.lyon2/13.png",
+            "images/img.lyon2/14.png",
+            "images/img.lyon2/15.png"
+          ]
+        },
+      ],
+      "old_price": 2700
     },
     {
       "id": "Forge",
@@ -1603,7 +1666,7 @@ const CONFIG = {
   },
 
   SEASON_GROUPS: {
-    "Літній гардероб": ["Linen Cloud"],
+    "Літній гардероб": ["Flow","Linen Cloud"],
     "Весна/осінь": [
       "Classic Style",
       "A",
@@ -1649,7 +1712,7 @@ const CONFIG = {
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
     "Верхній одяг/куртки": ["Prestige", "Aero", "Air", "puhovik"],
-    "Сорочки/футболки/брюки": ["Linen Cloud"],
+    "Сорочки/футболки/брюки": ["Flow","Classic Style","Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
