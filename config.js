@@ -278,6 +278,90 @@ const CONFIG = {
       "old_price": 2700
     },
     {
+      "id": "Pulse",
+      "name": "Куртка Pulse",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1699,
+      "colors": [
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "images": [
+            "images/img.korich1699/1.png",
+            "images/img.korich1699/2.png",
+            "images/img.korich1699/3.png",
+            "images/img.korich1699/4.png",
+            "images/img.korich1699/5.png",
+            "images/img.korich1699/6.png",
+            "images/img.korich1699/7.png",
+            "images/img.korich1699/8.png",
+            "images/img.korich1699/9.png",
+            "images/img.korich1699/10.png",
+            "images/img.korich1699/11.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.chorn1699/1.png",
+            "images/img.chorn1699/2.png",
+            "images/img.chorn1699/3.png",
+            "images/img.chorn1699/4.png",
+            "images/img.chorn1699/5.png",
+            "images/img.chorn1699/6.png"
+          ]
+        }
+      ],
+      "old_price": 3200
+    },
+        {
+      "id": "Blade",
+      "name": "Куртка Blade",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Приталена модель, виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені на застібках",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1799,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.chorn1799/1.png",
+            "images/img.chorn1799/2.png",
+            "images/img.chorn1799/3.png",
+            "images/img.chorn1799/4.png",
+            "images/img.chorn1799/5.png",
+            "images/img.chorn1799/6.png",
+            "images/img.chorn1799/7.png",
+            "images/img.chorn1799/8.png",
+            "images/img.chorn1799/9.png",
+            "images/img.chorn1799/10.png",
+            "images/img.chorn1799/11.png",
+            "images/img.chorn1799/12.png"
+          ]
+        }
+      ],
+      "old_price": 3400
+    },
+    {
       "id": "Forge",
       "name": "Бомбер Forge",
       "features": [
@@ -1671,6 +1755,8 @@ const CONFIG = {
       "Classic Style",
       "A",
       "Velvet Jet",
+      "Pulse",
+      "Blade",
       "Forge",
       "Praga",
       "Snake",
@@ -1711,7 +1797,7 @@ const CONFIG = {
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
-    "Верхній одяг/куртки": ["Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Pulse", "Blade", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/футболки/брюки": ["Flow","Classic Style","Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
