@@ -298,15 +298,7 @@ const CONFIG = {
           "images": [
             "images/img.korich1699/1.png",
             "images/img.korich1699/2.png",
-            "images/img.korich1699/3.png",
-            "images/img.korich1699/4.png",
-            "images/img.korich1699/5.png",
-            "images/img.korich1699/6.png",
-            "images/img.korich1699/7.png",
-            "images/img.korich1699/8.png",
-            "images/img.korich1699/9.png",
-            "images/img.korich1699/10.png",
-            "images/img.korich1699/11.png"
+            "images/img.korich1699/3.png"
           ]
         },
         {
