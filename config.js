@@ -278,6 +278,33 @@ const CONFIG = {
       "old_price": 2700
     },
     {
+      "id": "Imperial",
+      "name": "Куртка Imperial",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1699,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.chorn1699/1.png",
+            "images/img.chorn1699/2.png",
+            "images/img.chorn1699/3.png"
+          ]
+        }
+      ],
+      "old_price": 3250
+    },
+    {
       "id": "Pulse",
       "name": "Куртка Pulse",
       "features": [
@@ -314,7 +341,7 @@ const CONFIG = {
       ],
       "old_price": 3200
     },
-        {
+    {
       "id": "Blade",
       "name": "Куртка Blade",
       "features": [
@@ -1744,6 +1771,7 @@ const CONFIG = {
       "Classic Style",
       "A",
       "Velvet Jet",
+      "Imperial",
       "Pulse",
       "Blade",
       "Forge",
@@ -1786,7 +1814,7 @@ const CONFIG = {
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
-    "Верхній одяг/куртки": ["Pulse", "Blade", "Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/футболки/брюки": ["Flow","Classic Style","Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
