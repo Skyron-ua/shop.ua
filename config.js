@@ -377,6 +377,42 @@ const CONFIG = {
       ],
       "old_price": 3400
     },
+     {
+      "id": "Griffin",
+      "name": "Куртка Griffin",
+      "features": [
+        "🔥 Косуха, яка формує твій стиль",
+        "😎 Преміум еко-шкіра — м’яка та приємна на дотик",
+        "🧥 Комфортна підкладка на кожен день",
+        "🔒 Кишені на застібках + 2 внутрішні",
+        "✔️ Ідеальна посадка по фігурі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1799,
+      "colors": [
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "images": [
+            "images/img.kosuha/1.png",
+            "images/img.kosuha/2.png",
+            "images/img.kosuha/3.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.kosuha/4.png",
+            "images/img.kosuha/5.png",
+            "images/img.kosuha/6.png"
+          ]
+        }
+      ],
+      "old_price": 3400
+    },
     {
       "id": "Forge",
       "name": "Бомбер Forge",
@@ -1774,6 +1810,7 @@ const CONFIG = {
       "Imperial",
       "Pulse",
       "Blade",
+      "Griffin",
       "Forge",
       "Praga",
       "Snake",
@@ -1814,7 +1851,7 @@ const CONFIG = {
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
-    "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade", "Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin" ,"Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/футболки/брюки": ["Flow","Classic Style","Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
