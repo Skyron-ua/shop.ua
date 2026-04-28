@@ -376,7 +376,7 @@ const CONFIG = {
         }
       ],
       "old_price": 3400
-    },
+     },
      {
       "id": "Griffin",
       "name": "Куртка Griffin",
@@ -412,6 +412,34 @@ const CONFIG = {
         }
       ],
       "old_price": 3400
+    },
+    {
+      "id": "Falcon",
+      "name": "Куртка Falcon",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Приталена модель, виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені на застібках",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1749,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.chorn1749/1.png",
+            "images/img.chorn1749/2.png",
+            "images/img.chorn1749/3.png",
+            "images/img.chorn1749/4.png"
+          ]
+        }
+      ],
+      "old_price": 3350
     },
     {
       "id": "Forge",
@@ -500,7 +528,7 @@ const CONFIG = {
         "🌧️ Легко чиститься, не боїться дощу",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1390,
+      "price": 1349,
       "colors": [
         {
           "id": "black",
@@ -1788,6 +1816,56 @@ const CONFIG = {
         }
       ],
       "old_price": 2149
+    },
+    {
+      "id": "Muri",
+      "name": "Косуха Muri",
+      "features": [
+        "🔥 Стильна базова куртка, яка додає характеру будь-якому образу",
+        "😎 Преміум еко-шкіра — м’яка та приємна на дотик",
+        "✔️ Ідеальна посадка по фігурі",
+        "🧥 М’яка підкладка для щоденного використання",
+        "🔒 Кишені на застібках",
+        "📱 2 внутрішні кишені",
+        "🧷 Нагрудна кишеня — декоративна (обманка)",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1449,
+      "colors": [
+        {
+         "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.muri/1.png",
+            "images/img.muri/2.png",
+            "images/img.muri/3.png",
+            "images/img.muri/4.png",
+            "images/img.muri/5.png",
+            "images/img.muri/6.png",
+            "images/img.muri/7.png",
+            "images/img.muri/8.png",
+            "images/img.muri/9.png"
+          ]
+        },
+        {
+        "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "images": [
+            "images/img.muri/10.png",
+            "images/img.muri/11.png",
+            "images/img.muri/12.png",
+            "images/img.muri/13.png",
+            "images/img.muri/14.png",
+            "images/img.muri/15png",
+            "images/img.muri/16.png",
+            "images/img.muri/17.png",
+            "images/img.muri/18.png"
+          ]
+        }
+      ],
+      "old_price": 3400
     }
   ],
 
@@ -1811,6 +1889,7 @@ const CONFIG = {
       "Pulse",
       "Blade",
       "Griffin",
+      "Falcon",
       "Forge",
       "Praga",
       "Snake",
@@ -1851,7 +1930,7 @@ const CONFIG = {
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
-    "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin" ,"Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/футболки/брюки": ["Flow","Classic Style","Linen Cloud"],
     "Светри / Лонгсліви": ["Mono", "sweater"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
