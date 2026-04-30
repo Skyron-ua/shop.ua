@@ -441,6 +441,37 @@ const CONFIG = {
       ],
       "old_price": 3350
     },
+     {
+      "id": "Hunter",
+      "name": "Бомбер Hunter",
+      "features": [
+        "💥 Чоловіча шкіряна куртка бомбер",
+        "🌤 Ідеально підходить на теплу пору року",
+        "🖤 Легко комбінується з будь-яким гардеробом",
+        "🧥 Якісна еко-шкіра",
+        "⚡️ Застібка на блискавку",
+        "🎒 Функціональні кишені: на блискавках + 2 бічні + на рукаві",
+        "🔒 1 внутрішня кишеня",
+        "✨ Манжетна резинка на поясі та рукавах",
+        "🪶 Легка тканинна з підкладкою",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1449,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.hunter/1.png",
+            "images/img.hunter/2.png",
+            "images/img.hunter/3.png",
+            "images/img.hunter/4.png"
+          ]
+        }
+      ],
+      "old_price": 3150
+    },
     {
       "id": "Forge",
       "name": "Бомбер Forge",
@@ -1817,57 +1848,7 @@ const CONFIG = {
       ],
       "old_price": 2149
     },
-    {
-      "id": "Muri",
-      "name": "Косуха Muri",
-      "features": [
-        "🔥 Стильна базова куртка, яка додає характеру будь-якому образу",
-        "😎 Преміум еко-шкіра — м’яка та приємна на дотик",
-        "✔️ Ідеальна посадка по фігурі",
-        "🧥 М’яка підкладка для щоденного використання",
-        "🔒 Кишені на застібках",
-        "📱 2 внутрішні кишені",
-        "🧷 Нагрудна кишеня — декоративна (обманка)",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1449,
-      "colors": [
-        {
-         "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.muri/1.png",
-            "images/img.muri/2.png",
-            "images/img.muri/3.png",
-            "images/img.muri/4.png",
-            "images/img.muri/5.png",
-            "images/img.muri/6.png",
-            "images/img.muri/7.png",
-            "images/img.muri/8.png",
-            "images/img.muri/9.png"
-          ]
-        },
-        {
-        "id": "brown",
-          "name": "Коричневий",
-          "hex": "#654321",
-          "images": [
-            "images/img.muri/10.png",
-            "images/img.muri/11.png",
-            "images/img.muri/12.png",
-            "images/img.muri/13.png",
-            "images/img.muri/14.png",
-            "images/img.muri/15png",
-            "images/img.muri/16.png",
-            "images/img.muri/17.png",
-            "images/img.muri/18.png"
-          ]
-        }
-      ],
-      "old_price": 3400
-    }
-  ],
+   ],
 
   CLIENT_PHOTOS: {
     "Forge": [
@@ -1890,6 +1871,7 @@ const CONFIG = {
       "Blade",
       "Griffin",
       "Falcon",
+      "Hunter",
       "Forge",
       "Praga",
       "Snake",
@@ -1925,7 +1907,7 @@ const CONFIG = {
   TYPE_GROUPS: {
     "Бізнес комплекти": ["Classic Style", "zamsh-na-zmiyci", "A", "Axis"],
     "Спортивні костюми": [ "Patriot UA", "Basic Premium", "plashovka"],
-    "Бомбери": ["Velvet Jet", "Forge", "Snake", "Praga"],
+    "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Теплі флісові костюми": [
       "plush", "sale", "polar", "bayer", "gudzik", "zefir",
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
