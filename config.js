@@ -87,6 +87,158 @@ const CONFIG = {
       "old_price": 2400
     },
     {
+      "id": "LinenSet",
+      "name": "Комплект LinenSet",
+      "features": [
+        "🔥 Льняний комплект: сорочка + шорти",
+        "☁️ Легкий, дихаючий льон — ідеально в спеку",
+        "🚀 Сідає по фігурі",
+        "✔️ Максимальний комфорт на кожен день",
+        "👌 Сорочка з кишенеюі",
+        "✨ Шорти на шнурку + 2 кишені",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1449,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.linenset/1.png",
+            "images/img.linenset/2.png",
+            "images/img.linenset/3.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.linenset/4.png",
+            "images/img.linenset/5.png",
+            "images/img.linenset/6.png"
+          ]
+        },
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.linenset/7.png",
+            "images/img.linenset/8.png",
+            "images/img.linenset/9.png"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
+    {
+      "id": "Musair",
+      "name": "Комплект Musair",
+      "features": [
+        "🔥 Мусліновий комплект: сорочка + шорти",
+        "💯 100% котон — дихає і не парить",
+        "☁️ Легкий та супер приємний до тіла",
+        "✔️ Максимальний комфорт на кожен день",
+        "👌 Сідає на будь-яку статуру ",
+        "✨ Шорти на шнурку — комфорт на максимум",
+        "🔝 1 нагрудна кишеня + 2 на шортах",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1349,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.musair/1.png",
+            "images/img.musair/2.png",
+            "images/img.musair/3.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.musair/4.png",
+            "images/img.musair/5.png",
+            "images/img.musair/6.png"
+          ]
+        },
+        {
+          "id": "mint",
+          "name": "М'ятний",
+          "hex": "#AAF0D1",
+          "images": [
+            "images/img.musair/7.png",
+            "images/img.musair/8.png",
+            "images/img.musair/9.png"
+          ]
+        },
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.musair/10.png",
+            "images/img.musair/11.png",
+            "images/img.musair/12.png"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
+      "id": "Cordy",
+      "name": "Комплект Cordy",
+      "features": [
+        "🔥 Літній комплект: сорочка + шорти ",
+        "☁️ Вельвет — м’який, приємний до тіла",
+        "🔝 Трендові рубчики виглядають дорого",
+        "✔️ Ідеально сідає по фігурі",
+        "✨ Шорти на шнурку — максимум зручності",
+        "👌 1 кишеня на сорочці + 2 на шортах",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1349,
+      "colors": [
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.cordy/1.png",
+            "images/img.cordy/2.png",
+            "images/img.cordy/3.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.cordy/4.png",
+            "images/img.cordy/5.png",
+            "images/img.cordy/6.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.cordy/7.png",
+            "images/img.cordy/8.png",
+            "images/img.cordy/9.png"
+          ]
+        },
+      ],
+      "old_price": 2750
+    },
+    {
       "id": "Velvet Jet",
       "name": "Бомбер Velvet Jet",
       "features": [
@@ -1861,7 +2013,13 @@ const CONFIG = {
   },
 
   SEASON_GROUPS: {
-    "Літній гардероб": ["Flow","Linen Cloud"],
+    "Літній гардероб": [
+      "Flow",
+      "LinenSet",
+      "Musair",
+      "Cordy",
+      "Linen Cloud"
+    ],
     "Весна/осінь": [
       "Classic Style",
       "A",
@@ -1913,8 +2071,9 @@ const CONFIG = {
       "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
     ],
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
-    "Сорочки/футболки/брюки": ["Flow","Classic Style","Linen Cloud"],
-    "Светри / Лонгсліви": ["Mono", "sweater"],
+    "Сорочки/брюки": ["Flow","Classic Style","Linen Cloud"],
+    "Светри/Лонгсліви": ["Mono", "sweater"],
+    "Футболки/Шорти": ["LinenSet", "Musair", "Cordy"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
