@@ -429,6 +429,61 @@ const CONFIG = {
       ],
       "old_price": 2700
     },
+        {
+      "id": "Matrix",
+      "name": "Жилетка Matrix",
+      "features": [
+        "🥼 Чоловіча жилетка — ідеальний вибір на кожен день",
+        "✔️ Легка, але добре зберігає тепло (утеплювач: синтепон)",
+        "✔️ Матеріал: 100% поліестер — м’яка та приємна на дотик",
+        "✔️ Ідеально сідає по фігурі",
+        "✔️ Кишені на застібках + 2 внутрішні",
+        "✔️ Манжети та пояс на резинці — зручно та практично",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1090,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.matrix/1.png",
+            "images/img.matrix/2.png",
+            "images/img.matrix/3.png",
+            "images/img.matrix/4.png",
+            "images/img.matrix/5.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.matrix/6.png",
+            "images/img.matrix/7.png",
+            "images/img.matrix/8.png",
+            "images/img.matrix/9.png",
+            "images/img.matrix/10.png",
+            "images/img.matrix/11.png",
+            "images/img.matrix/12.png"
+          ]
+        },
+        {
+          "id": "haki",
+          "name": "Хакі",
+          "hex": "#78866b",
+          "images": [
+            "images/img.matrix/13.png",
+            "images/img.matrix/14.png",
+            "images/img.matrix/15.png",
+            "images/img.matrix/16.png",
+            "images/img.matrix/17.png"
+          ]
+        },
+      ],
+      "old_price": 2750
+    },
     {
       "id": "Imperial",
       "name": "Куртка Imperial",
@@ -2023,6 +2078,7 @@ const CONFIG = {
     "Весна/осінь": [
       "Classic Style",
       "A",
+      "Matrix",
       "Velvet Jet",
       "Imperial",
       "Pulse",
@@ -2066,10 +2122,8 @@ const CONFIG = {
     "Бізнес комплекти": ["Classic Style", "zamsh-na-zmiyci", "A", "Axis"],
     "Спортивні костюми": [ "Patriot UA", "Basic Premium", "plashovka"],
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
-    "Теплі флісові костюми": [
-      "plush", "sale", "polar", "bayer", "gudzik", "zefir",
-      "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"
-    ],
+    "Жилетки": ["Matrix"],
+    "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow","Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
