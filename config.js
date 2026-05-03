@@ -430,6 +430,55 @@ const CONFIG = {
       "old_price": 2700
     },
         {
+      "id": "Twilline",
+      "name": "Комплект Twilline",
+      "features": [
+        "🔥 Образ, який закриває питання «що вдягнути»",
+        "✨ Комплект: сорочка + штани",
+        "✔️ Матеріал: тіар — приємний до тіла, тримає форму і виглядає охайно",
+        "✔️ Легкий і зручний на кожен день",
+        "✔️ Ідеально сідає та не сковує рухів",
+        "✔️ Можна носити разом або комбінувати окремо",
+        "💣 Виглядає стильно без зайвих зусиль",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.twilline/1.png",
+            "images/img.twilline/2.png",
+            "images/img.twilline/3.png"
+
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.twilline/4.png",
+            "images/img.twilline/5.png",
+            "images/img.twilline/6.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.twilline/7.png",
+            "images/img.twilline/8.png",
+            "images/img.twilline/9.png"
+          ]
+        }
+      ],
+      "old_price": 2900
+    },
+    {
       "id": "Matrix",
       "name": "Жилетка Matrix",
       "features": [
@@ -482,7 +531,7 @@ const CONFIG = {
           ]
         },
       ],
-      "old_price": 2750
+      "old_price": 2250
     },
     {
       "id": "Imperial",
@@ -2070,6 +2119,7 @@ const CONFIG = {
   SEASON_GROUPS: {
     "Літній гардероб": [
       "Flow",
+      "Twilline",
       "LinenSet",
       "Musair",
       "Cordy",
@@ -2125,7 +2175,7 @@ const CONFIG = {
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
-    "Сорочки/брюки": ["Flow","Classic Style","Linen Cloud"],
+    "Сорочки/брюки": ["Flow", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
     "Футболки/Шорти": ["LinenSet", "Musair", "Cordy"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
