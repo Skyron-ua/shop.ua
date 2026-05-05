@@ -133,6 +133,62 @@ const CONFIG = {
       ],
       "old_price": 2800
     },
+        {
+      "id": "Aura",
+      "name": "Комплект Aura",
+      "features": [
+        "🔝 Хіт літнього сезону",
+        "🔥 Oversize комплект: сорочка + шорти",
+        "👌 Виглядає дорого — без зайвих зусиль",
+        "✔️ Фактурний матеріал (рубчик) — приємний до тіла, тримає форму",
+        "✔️ Вільний крій — максимум комфорту в спеку",
+        "✔️ Легкий, дихаючий — ідеально на кожен день",
+        "✔️ Стиль, який привертає увагу з першого погляду",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1190,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.aura/1.png",
+            "images/img.aura/2.png",
+            "images/img.aura/3.png"
+          ]
+        },
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.aura/4.png",
+            "images/img.aura/5.png",
+            "images/img.aura/6.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.aura/7.png",
+            "images/img.aura/8.png"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.aura/9.png",
+            "images/img.aura/10.png"
+          ]
+        }
+      ],
+      "old_price": 2600
+    },
     {
       "id": "Musair",
       "name": "Комплект Musair",
@@ -2121,6 +2177,7 @@ const CONFIG = {
       "Flow",
       "Twilline",
       "LinenSet",
+      "Aura",
       "Musair",
       "Cordy",
       "Linen Cloud"
@@ -2177,7 +2234,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Musair", "Cordy"],
+    "Футболки/Шорти": ["LinenSet", "Aura", "Musair", "Cordy"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
