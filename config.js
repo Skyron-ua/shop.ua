@@ -7,7 +7,6 @@ const CONFIG = {
     VIBER_INVITE: "https://invite.viber.com/?g2=AQBeex4BIEUJJlW4bdj1yeAO7w846m1dQ6AzkdYO2N%2Bt6FAv7rl5TWDkjrKKKt7t",
     SUPPORT_PHONE: "+380733337278"
   },
-
   PRODUCTS: [
     {
       "id": "Classic Style",
@@ -128,6 +127,16 @@ const CONFIG = {
             "images/img.linenset/7.png",
             "images/img.linenset/8.png",
             "images/img.linenset/9.png"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.linenset/11.png",
+            "images/img.linenset/10.png",
+            "images/img.linenset/12.png"
           ]
         }
       ],
