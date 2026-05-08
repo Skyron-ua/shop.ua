@@ -304,6 +304,63 @@ const CONFIG = {
       "old_price": 2750
     },
     {
+      "id": "Onyx",
+      "name": "Комплект Onyx",
+      "features": [
+        "🔥 Літній комплект: футболка + шорти ",
+        "👌 Стильний готовий образ на кожен день",
+        "✔️ Приємний до тіла матеріал — двунитка",
+        "✔️ Добре тягнеться та тримає форму",
+        "✔️ Комфортна посадка та сучасний крій",
+        "✔️ Ідеально для міста, відпочинку та подорожей",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1090,
+      "colors": [
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.onyx/1.png",
+            "images/img.onyx/2.png",
+            "images/img.onyx/3.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.onyx/5.png",
+            "images/img.onyx/4.png",
+            "images/img.onyx/6.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.onyx/10.png",
+            "images/img.onyx/11.png",
+            "images/img.onyx/12.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.onyx/7.png",
+            "images/img.onyx/8.png",
+            "images/img.onyx/9.png"
+          ]
+        }
+      ],
+      "old_price": 2250
+    },
+    {
       "id": "Velvet Jet",
       "name": "Бомбер Velvet Jet",
       "features": [
@@ -2192,6 +2249,7 @@ const CONFIG = {
       "Aura",
       "Musair",
       "Cordy",
+      "Onyx",
       "Linen Cloud"
     ],
     "Весна/осінь": [
@@ -2246,7 +2304,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Aura", "Musair", "Cordy"],
+    "Футболки/Шорти": ["LinenSet", "Aura", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
