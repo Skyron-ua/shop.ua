@@ -332,9 +332,9 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
+            "images/img.onyx/6.png",
             "images/img.onyx/5.png",
-            "images/img.onyx/4.png",
-            "images/img.onyx/6.png"
+            "images/img.onyx/4.png"
           ]
         },
         {
@@ -342,9 +342,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.onyx/10.png",
             "images/img.onyx/11.png",
-            "images/img.onyx/12.png"
+            "images/img.onyx/12.png",
+            "images/img.onyx/10.png"
           ]
         },
         {
@@ -352,9 +352,9 @@ const CONFIG = {
           "name": "Синій",
           "hex": "#000080",
           "images": [
+            "images/img.onyx/9.png",
             "images/img.onyx/7.png",
-            "images/img.onyx/8.png",
-            "images/img.onyx/9.png"
+            "images/img.onyx/8.png"
           ]
         }
       ],
