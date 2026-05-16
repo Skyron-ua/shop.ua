@@ -199,6 +199,74 @@ const CONFIG = {
       "old_price": 2600
     },
     {
+      "id": "Breeze",
+      "name": "Комплект Breeze",
+      "features": [
+        "🔝 Хіт літнього сезону",
+        "🔥 Oversize комплект: сорочка + шорти",
+        "👌 Виглядає дорого — без зайвих зусиль",
+        "✔️ Фактурний матеріал (рубчик) — приємний до тіла, тримає форму",
+        "✔️ Вільний крій — максимум комфорту в спеку",
+        "✔️ Легкий, дихаючий — ідеально на кожен день",
+        "✔️ Стиль, який привертає увагу з першого погляду",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1249,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.breeze/1.png",
+            "images/img.breeze/2.png",
+            "images/img.breeze/3.png"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.breeze/4.png",
+            "images/img.breeze/5.png",
+            "images/img.breeze/6.png"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.breeze/7.png",
+            "images/img.breeze/8.png",
+            "images/img.breeze/9.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.breeze/10.png",
+            "images/img.breeze/11.png",
+            "images/img.breeze/12.png"
+          ]
+        },
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.breeze/13.png",
+            "images/img.breeze/14.png",
+            "images/img.breeze/15.png"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
       "id": "Musair",
       "name": "Комплект Musair",
       "features": [
@@ -2247,6 +2315,7 @@ const CONFIG = {
       "Twilline",
       "LinenSet",
       "Aura",
+      "Breeze",
       "Musair",
       "Cordy",
       "Onyx",
@@ -2304,7 +2373,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Aura", "Musair", "Cordy", "Onyx"],
+    "Футболки/Шорти": ["LinenSet", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
