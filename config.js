@@ -142,7 +142,119 @@ const CONFIG = {
       ],
       "old_price": 2800
     },
+    {
+      "id": "Vibe",
+      "name": "Комплект Vibe",
+      "features": [
+        "🔥 Льняний комплект: футболка + шорти",
+        "☁️ 100% натуральний льон — легкий та дихаючий",
+        "🌡 Ідеальний варіант на літо та спеку",
+        "👌 Футболка з V-подібним вирізом",
+        "✨ Шорти на резинці + шнурок для ідеальної посадки",
+        "👜 2 зручні бічні кишені",
+        "🚀 Комфортна посадка по фігурі",
+        "✔️ Стильний мінімалістичний look на кожен день",
+        "📏 Розміри: S, M, L, XL, XXL",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+            "price": 1390,
+      "colors": [
         {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.vibe/1.png",
+            "images/img.vibe/2.png"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.vibe/3.png",
+            "images/img.vibe/4.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.vibe/5.png",
+            "images/img.vibe/6.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.vibe/7.png",
+            "images/img.vibe/8.png"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
+     {
+      "id": "Carvelo",
+      "name": "Комплект Carvelo",
+      "features": [
+        "🔥 Льняний комплект: сорочка + шорти",
+        "☁️ 100% натуральний льон — легкий та дихаючий",
+        "🌡 Ідеальний варіант на літо та спеку",
+        "👌 Стильна сорочка на ґудзиках",
+        "✨ Шорти на резинці + шнурок для ідеальної посадки",
+        "👜 2 зручні бічні кишені",
+        "🚀 Комфортна посадка по фігурі",
+        "✔️ Стильний мінімалістичний look на кожен день",
+        "📏 Розміри: S, M, L, XL, XXL",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+            "price": 1490,
+      "colors": [
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.carvelo/1.png",
+            "images/img.carvelo/2.png"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.carvelo/3.png",
+            "images/img.carvelo/4.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.carvelo/5.png",
+            "images/img.carvelo/6.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.carvelo/7.png",
+            "images/img.carvelo/8.png"
+          ]
+        }
+      ],
+      "old_price": 2900
+    },
+    {
       "id": "Aura",
       "name": "Комплект Aura",
       "features": [
@@ -2314,6 +2426,8 @@ const CONFIG = {
       "Flow",
       "Twilline",
       "LinenSet",
+      "Vibe",
+      "Carvelo",
       "Aura",
       "Breeze",
       "Musair",
@@ -2373,7 +2487,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
+    "Футболки/Шорти": ["LinenSet", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
