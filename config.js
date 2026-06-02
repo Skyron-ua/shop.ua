@@ -676,26 +676,16 @@ const CONFIG = {
         "✔️ Стильний мінімалізм, який завжди актуальний",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1450,
+      "price": 1590,
       "colors": [
         {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
           "images": [
-            "images/img.lyon2/1.png",
-            "images/img.lyon2/2.png",
-            "images/img.lyon2/3.png"
-          ]
-        },
-        {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.lyon2/4.png",
-            "images/img.lyon2/5.png",
-            "images/img.lyon2/6.png"
+            "images/img.lyon2/13.png",
+            "images/img.lyon2/14.png",
+            "images/img.lyon2/15.png"
           ]
         },
         {
@@ -719,15 +709,25 @@ const CONFIG = {
           ]
         },
         {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
           "images": [
-            "images/img.lyon2/13.png",
-            "images/img.lyon2/14.png",
-            "images/img.lyon2/15.png"
+            "images/img.lyon2/4.png",
+            "images/img.lyon2/5.png",
+            "images/img.lyon2/6.png"
           ]
         },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.lyon2/1.png",
+            "images/img.lyon2/3.png",
+            "images/img.lyon2/2.png"
+          ]
+        }
       ],
       "old_price": 2700
     },
