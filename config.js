@@ -86,6 +86,73 @@ const CONFIG = {
       "old_price": 2400
     },
     {
+      "id": "Flow",
+      "name": "Лляний комплект Flow",
+      "features": [
+        "🔥 В тренді цього сезону",
+        "😎 Стильно • Легко • Комфортно",
+        "✔️ Розміри: S M L XL XXL 3XL",
+        "✔️ Матеріал: льон",
+        "✔️ Висока якість пошиву, не просвічується",
+        "✔️ Стильний мінімалізм, який завжди актуальний",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1590,
+      "colors": [
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.lyon2/13.webp",
+            "images/img.lyon2/14.webp",
+            "images/img.lyon2/15.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.lyon2/9.webp",
+            "images/img.lyon2/8.webp",
+            "images/img.lyon2/7.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.lyon2/10.webp",
+            "images/img.lyon2/11.webp",
+            "images/img.lyon2/12.webp"
+          ]
+        },
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.lyon2/4.webp",
+            "images/img.lyon2/5.webp",
+            "images/img.lyon2/6.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.lyon2/1.webp",
+            "images/img.lyon2/3.webp",
+            "images/img.lyon2/2.webp"
+          ]
+        }
+      ],
+      "old_price": 2900
+    },
+    {
       "id": "LinenSet",
       "name": "Комплект LinenSet",
       "features": [
@@ -665,73 +732,6 @@ const CONFIG = {
       "old_price": 2900
     },
     {
-      "id": "Flow",
-      "name": "Лляний комплект Flow",
-      "features": [
-        "🔥 В тренді цього сезону",
-        "😎 Стильно • Легко • Комфортно",
-        "✔️ Розміри: S M L XL XXL 3XL",
-        "✔️ Матеріал: льон",
-        "✔️ Висока якість пошиву, не просвічується",
-        "✔️ Стильний мінімалізм, який завжди актуальний",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1590,
-      "colors": [
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.lyon2/13.png",
-            "images/img.lyon2/14.png",
-            "images/img.lyon2/15.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.lyon2/9.png",
-            "images/img.lyon2/8.png",
-            "images/img.lyon2/7.png"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.lyon2/10.png",
-            "images/img.lyon2/11.png",
-            "images/img.lyon2/12.png"
-          ]
-        },
-        {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.lyon2/4.png",
-            "images/img.lyon2/5.png",
-            "images/img.lyon2/6.png"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.lyon2/1.png",
-            "images/img.lyon2/3.png",
-            "images/img.lyon2/2.png"
-          ]
-        }
-      ],
-      "old_price": 2700
-    },
-        {
       "id": "Twilline",
       "name": "Комплект Twilline",
       "features": [
