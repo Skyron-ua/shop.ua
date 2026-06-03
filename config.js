@@ -167,13 +167,14 @@ const CONFIG = {
       "price": 1390,
       "colors": [
         {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
           "images": [
-            "images/img.linenset/1.png",
-            "images/img.linenset/2.png",
-            "images/img.linenset/3.png"
+            "images/img.linenset/1.webp",
+            "images/img.linenset/2.webp",
+            "images/img.linenset/3.webp",
+            "images/img.linenset/4.webp"
           ]
         },
         {
@@ -181,19 +182,10 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.linenset/4.png",
-            "images/img.linenset/5.png",
-            "images/img.linenset/6.png"
-          ]
-        },
-        {
-         "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.linenset/7.png",
-            "images/img.linenset/8.png",
-            "images/img.linenset/9.png"
+            "images/img.linenset/5.webp",
+            "images/img.linenset/6.webp",
+            "images/img.linenset/7.webp",
+            "images/img.linenset/8.webp"
           ]
         },
         {
@@ -201,9 +193,21 @@ const CONFIG = {
           "name": "Білий",
           "hex": "#ffffff",
           "images": [
-            "images/img.linenset/11.png",
-            "images/img.linenset/10.png",
-            "images/img.linenset/12.png"
+            "images/img.linenset/9.webp",
+            "images/img.linenset/10.webp",
+            "images/img.linenset/11.webp",
+            "images/img.linenset/12.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.linenset/13.webp",
+            "images/img.linenset/14.webp",
+            "images/img.linenset/15.webp",
+            "images/img.linenset/16.webp"
           ]
         }
       ],
