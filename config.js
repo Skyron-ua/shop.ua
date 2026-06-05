@@ -235,8 +235,8 @@ const CONFIG = {
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
-            "images/img.vibe/1.png",
-            "images/img.vibe/2.png"
+            "images/img.vibe/1.webp",
+            "images/img.vibe/2.webp"
           ]
         },
         {
@@ -244,8 +244,8 @@ const CONFIG = {
           "name": "Білий",
           "hex": "#ffffff",
           "images": [
-            "images/img.vibe/3.png",
-            "images/img.vibe/4.png"
+            "images/img.vibe/3.webp",
+            "images/img.vibe/4.webp"
           ]
         },
         {
@@ -253,8 +253,8 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.vibe/5.png",
-            "images/img.vibe/6.png"
+            "images/img.vibe/5.webp",
+            "images/img.vibe/6.webp"
           ]
         },
         {
@@ -262,8 +262,8 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.vibe/7.png",
-            "images/img.vibe/8.png"
+            "images/img.vibe/7.webp",
+            "images/img.vibe/8.webp"
           ]
         }
       ],
@@ -1404,7 +1404,7 @@ const CONFIG = {
         "✔️ Ідеально підходить для весни та літа до будь-якої пори року",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1649,
+      "price": 1690,
       "colors": [
         {
           "id": "white",
