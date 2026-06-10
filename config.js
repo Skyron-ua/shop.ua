@@ -153,6 +153,63 @@ const CONFIG = {
       "old_price": 2900
     },
     {
+      "id": "Dune",
+      "name": "Комплект Dune",
+      "features": [
+        "🔥 В тренді цього сезону: Лляний комплект сорочка та штани",
+        "😎 Стильно • Легко • Комфортно",
+        "✔️ Розміри: S M L XL XXL",
+        "✔️ Матеріал: льон",
+        "✔️ Висока якість пошиву, не просвічується",
+        "✔️ Стильний мінімалізм, який завжди актуальний",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+            "price": 1690,
+      "colors": [
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.dune/1.webp",
+            "images/img.dune/2.webp",
+            "images/img.dune/3.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.dune/4.webp",
+            "images/img.dune/5.webp",
+            "images/img.dune/6.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.dune/7.webp",
+            "images/img.dune/8.webp",
+            "images/img.dune/9.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.dune/10.webp",
+            "images/img.dune/11.webp",
+            "images/img.dune/12.webp"
+          ]
+        }
+      ],
+      "old_price": 2900
+    },
+    {
       "id": "LinenSet",
       "name": "Комплект LinenSet",
       "features": [
@@ -2428,6 +2485,7 @@ const CONFIG = {
   SEASON_GROUPS: {
     "Літній гардероб": [
       "Flow",
+      "Dune",
       "Twilline",
       "LinenSet",
       "Vibe",
@@ -2489,7 +2547,7 @@ const CONFIG = {
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
-    "Сорочки/брюки": ["Flow", "Twilline", "Classic Style","Linen Cloud"],
+    "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
     "Футболки/Шорти": ["LinenSet", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
