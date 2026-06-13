@@ -100,6 +100,16 @@ const CONFIG = {
       "price": 1590,
       "colors": [
         {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.lyon2/1.webp",
+            "images/img.lyon2/3.webp",
+            "images/img.lyon2/2.webp"
+          ]
+        },
+        {
           "id": "blue",
           "name": "Синій",
           "hex": "#000080",
@@ -137,16 +147,6 @@ const CONFIG = {
             "images/img.lyon2/4.webp",
             "images/img.lyon2/5.webp",
             "images/img.lyon2/6.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.lyon2/1.webp",
-            "images/img.lyon2/3.webp",
-            "images/img.lyon2/2.webp"
           ]
         }
       ],
@@ -224,17 +224,6 @@ const CONFIG = {
       "price": 1390,
       "colors": [
         {
-         "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.linenset/1.webp",
-            "images/img.linenset/2.webp",
-            "images/img.linenset/3.webp",
-            "images/img.linenset/4.webp"
-          ]
-        },
-        {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
@@ -246,14 +235,13 @@ const CONFIG = {
           ]
         },
         {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
           "images": [
-            "images/img.linenset/9.webp",
-            "images/img.linenset/10.webp",
-            "images/img.linenset/11.webp",
-            "images/img.linenset/12.webp"
+            "images/img.linenset/14.webp",
+            "images/img.linenset/13.webp",
+            "images/img.linenset/16.webp"
           ]
         },
         {
@@ -261,10 +249,41 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.linenset/13.webp",
-            "images/img.linenset/14.webp",
-            "images/img.linenset/15.webp",
-            "images/img.linenset/16.webp"
+            "images/img.linenset/19.webp",
+            "images/img.linenset/18.webp",
+            "images/img.linenset/17.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.linenset/20.webp",
+            "images/img.linenset/21.webp",
+            "images/img.linenset/22.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.linenset/10.webp",
+            "images/img.linenset/9.webp",
+            "images/img.linenset/11.webp",
+            "images/img.linenset/12.webp"
+          ]
+        },
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.linenset/1.webp",
+            "images/img.linenset/2.webp",
+            "images/img.linenset/3.webp",
+            "images/img.linenset/4.webp"
           ]
         }
       ],
