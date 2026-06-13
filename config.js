@@ -145,8 +145,7 @@ const CONFIG = {
           "hex": "#d6c7b1",
           "images": [
             "images/img.lyon2/4.webp",
-            "images/img.lyon2/5.webp",
-            "images/img.lyon2/6.webp"
+            "images/img.lyon2/5.webp"
           ]
         }
       ],
