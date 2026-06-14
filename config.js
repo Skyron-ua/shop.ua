@@ -401,6 +401,56 @@ const CONFIG = {
       "old_price": 2900
     },
     {
+      "id": "Divento",
+      "name": "Комплект Divento",
+      "features": [
+        "🔝 Хіт літнього сезону",
+        "✨ Преміальний матеріал мустанг у рубчик",
+        "👌 Комфортна посадка на кожен день",
+        "🧵 Якісне пошиття та акуратні шви",
+        "💨 Приємна до тіла та дихаюча тканина",
+        "🔄 Добре тримає форму після прання",
+        "🎯 Легко поєднується з будь-яким взуттям",
+        "🔥 Універсальний образ для міста та відпочинку",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1290,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.divento/1.webp",
+            "images/img.divento/2.webp",
+            "images/img.divento/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.divento/4.webp",
+            "images/img.divento/5.webp",
+            "images/img.divento/6.webp"
+
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.divento/7.webp",
+            "images/img.divento/8.webp",
+            "images/img.divento/9.webp"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
       "id": "Aura",
       "name": "Комплект Aura",
       "features": [
@@ -2508,6 +2558,7 @@ const CONFIG = {
       "LinenSet",
       "Vibe",
       "Carvelo",
+      "Divento",
       "Aura",
       "Breeze",
       "Musair",
