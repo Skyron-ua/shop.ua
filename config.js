@@ -691,36 +691,16 @@ const CONFIG = {
         "✔️ Ідеально для міста, відпочинку та подорожей",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1090,
+      "price": 1190,
       "colors": [
-        {
-         "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.onyx/1.png",
-            "images/img.onyx/2.png",
-            "images/img.onyx/3.png"
-          ]
-        },
         {
           "id": "graphite",
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.onyx/6.png",
-            "images/img.onyx/5.png",
-            "images/img.onyx/4.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.onyx/11.png",
-            "images/img.onyx/12.png",
-            "images/img.onyx/10.png"
+            "images/img.onyx/1.webp",
+            "images/img.onyx/2.webp",
+            "images/img.onyx/3.webp"
           ]
         },
         {
@@ -728,9 +708,29 @@ const CONFIG = {
           "name": "Синій",
           "hex": "#000080",
           "images": [
-            "images/img.onyx/9.png",
-            "images/img.onyx/7.png",
-            "images/img.onyx/8.png"
+            "images/img.onyx/4.webp",
+            "images/img.onyx/5.webp",
+            "images/img.onyx/6.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.onyx/7.webp",
+            "images/img.onyx/8.webp",
+            "images/img.onyx/9.webp"
+          ]
+        },
+        {
+         "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.onyx/10.webp",
+            "images/img.onyx/11.webp",
+            "images/img.onyx/12.webp"
           ]
         }
       ],
