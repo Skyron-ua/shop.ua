@@ -1314,10 +1314,12 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
 console.log("Nova Poshta Key exists:", !!CONFIG.NOVA_POSHTA_API_KEY);
 console.log("Key length:", CONFIG.NOVA_POSHTA_API_KEY ? CONFIG.NOVA_POSHTA_API_KEY.length : 0);
 // =============================================
-// НОВА ПОШТА — ПОШУК МІСТ І ВІДДІЛЕНЬ (ФІНАЛЬНА ВЕРСІЯ)
+// НОВА ПОШТА — ФІНАЛЬНИЙ ЧИСТИЙ ВАРІАНТ
 // =============================================
 
-// Пошук міст (українською + російською)
+let currentCityRef = null;
+
+// Пошук міст (UA + RU)
 async function searchCities(query) {
   if (!query || query.trim().length < 2) return [];
 
@@ -1330,11 +1332,7 @@ async function searchCities(query) {
           apiKey: CONFIG.NOVA_POSHTA_API_KEY,
           modelName: "Address",
           calledMethod: "getCities",
-          methodProperties: {
-            FindByString: query,
-            Limit: 20,
-            Language: "ua"
-          }
+          methodProperties: { FindByString: query, Limit: 20, Language: "ua" }
         })
       }),
       fetch("https://api.novaposhta.ua/v2.0/json/", {
@@ -1344,26 +1342,15 @@ async function searchCities(query) {
           apiKey: CONFIG.NOVA_POSHTA_API_KEY,
           modelName: "Address",
           calledMethod: "getCities",
-          methodProperties: {
-            FindByString: query,
-            Limit: 20,
-            Language: "ru"
-          }
+          methodProperties: { FindByString: query, Limit: 20, Language: "ru" }
         })
       })
     ]);
 
     const uaData = await uaRes.json();
     const ruData = await ruRes.json();
-
-    const allCities = [...(uaData.data || []), ...(ruData.data || [])];
-    
-    // Видаляємо дублікати за Ref
-    const uniqueCities = Array.from(
-      new Map(allCities.map(city => [city.Ref, city])).values()
-    );
-
-    return uniqueCities;
+    const all = [...(uaData.data || []), ...(ruData.data || [])];
+    return Array.from(new Map(all.map(c => [c.Ref, c])).values());
   } catch (e) {
     console.error("Помилка пошуку міст:", e);
     return [];
@@ -1382,43 +1369,31 @@ async function getWarehouses(cityRef) {
         apiKey: CONFIG.NOVA_POSHTA_API_KEY,
         modelName: "Address",
         calledMethod: "getWarehouses",
-        methodProperties: {
-          CityRef: cityRef,
-          Limit: 1000,
-          Language: "ua"
-        }
+        methodProperties: { CityRef: cityRef, Limit: 800, Language: "ua" }
       })
     });
 
     const data = await res.json();
     if (!data.success || !data.data) return [];
-
-    // Сортуємо за номером відділення
-    return data.data.sort((a, b) => {
-      const numA = parseInt(a.Number) || 9999;
-      const numB = parseInt(b.Number) || 9999;
-      return numA - numB;
-    });
+    return data.data.sort((a, b) => parseInt(a.Number) - parseInt(b.Number));
   } catch (e) {
     console.error("Помилка отримання відділень:", e);
     return [];
   }
 }
 
-// Кастомний dropdown (аккуратний список завжди знизу)
+// Кастомний dropdown
 function createCustomDatalist(input, id) {
   const container = document.createElement('div');
   container.className = 'custom-datalist';
   container.id = id;
   container.style.display = 'none';
-  
-  // Робимо батьківський контейнер відносним
+
   input.parentNode.style.position = 'relative';
   input.parentNode.appendChild(container);
 
-  // Закриваємо при кліку поза полем
   input.addEventListener('blur', () => {
-    setTimeout(() => { container.style.display = 'none'; }, 180);
+    setTimeout(() => container.style.display = 'none', 220);
   });
 
   return container;
@@ -1429,7 +1404,12 @@ function showSuggestions(input, items, containerId) {
   if (!container) return;
 
   container.innerHTML = '';
-  container.style.display = items.length ? 'block' : 'none';
+  if (items.length === 0) {
+    container.style.display = 'none';
+    return;
+  }
+
+  container.style.display = 'block';
 
   items.slice(0, 25).forEach(item => {
     const div = document.createElement('div');
@@ -1441,12 +1421,7 @@ function showSuggestions(input, items, containerId) {
     div.addEventListener('mousedown', (e) => {
       e.preventDefault();
       input.value = item.value;
-      
-      if (item.ref) {
-        const event = new Event('change', { bubbles: true });
-        input.dispatchEvent(event);
-      }
-      
+      if (item.ref) input.dispatchEvent(new Event('change', { bubbles: true }));
       container.style.display = 'none';
     });
 
@@ -1454,7 +1429,7 @@ function showSuggestions(input, items, containerId) {
   });
 }
 
-// Основна ініціалізація
+// Ініціалізація
 function initNovaPoshta() {
   const cityInput = document.getElementById('city');
   const postOfficeInput = document.getElementById('postOffice');
@@ -1464,7 +1439,6 @@ function initNovaPoshta() {
   let currentCityRef = null;
   let cityTimeout, warehouseTimeout;
 
-  // Створюємо кастомні списки
   createCustomDatalist(cityInput, 'citySuggestions');
   createCustomDatalist(postOfficeInput, 'warehouseSuggestions');
 
@@ -1472,72 +1446,54 @@ function initNovaPoshta() {
   cityInput.addEventListener('input', () => {
     clearTimeout(cityTimeout);
     const query = cityInput.value.trim();
-
     cityTimeout = setTimeout(async () => {
       const cities = await searchCities(query);
-      
-      const suggestions = cities.map(city => ({
-        text: city.Description,
-        value: city.Description,
-        ref: city.Ref
-      }));
-
-      showSuggestions(cityInput, suggestions, 'citySuggestions');
-    }, 280);
+      showSuggestions(cityInput, cities.map(c => ({
+        text: c.Description,
+        value: c.Description,
+        ref: c.Ref
+      })), 'citySuggestions');
+    }, 250);
   });
 
-  // При виборі міста — завантажуємо відділення
-  cityInput.addEventListener('change', async () => {
+  // Вибір міста
+  cityInput.addEventListener('change', () => {
     const container = document.getElementById('citySuggestions');
-    const selected = Array.from(container?.children || []).find(el => 
-      el.textContent === cityInput.value
-    );
-
+    const selected = Array.from(container.children).find(el => el.textContent === cityInput.value);
     if (selected && selected.dataset.ref) {
       currentCityRef = selected.dataset.ref;
       postOfficeInput.value = '';
-      
-      // Попереднє завантаження відділень (опціонально)
-      console.log(`Вибрано місто: ${cityInput.value}, Ref: ${currentCityRef}`);
     }
   });
 
-  // Пошук по відділеннях
+  // Пошук відділень
   postOfficeInput.addEventListener('input', () => {
     if (!currentCityRef) return;
     clearTimeout(warehouseTimeout);
 
     warehouseTimeout = setTimeout(async () => {
-      const warehouses = await getWarehouses(currentCityRef);
       const query = postOfficeInput.value.trim().toLowerCase();
+      const warehouses = await getWarehouses(currentCityRef);
 
       let filtered = warehouses;
-
-      if (query.length > 0) {
+      if (query.length >= 1) {
         filtered = warehouses.filter(wh =>
           wh.Number.toString().includes(query) ||
-          wh.Description.toLowerCase().includes(query)
+          (wh.Description && wh.Description.toLowerCase().includes(query))
         );
+      } else {
+        filtered = warehouses.slice(0, 25);
       }
 
-      const suggestions = filtered.map(wh => ({
+      showSuggestions(postOfficeInput, filtered.map(wh => ({
         text: `№${wh.Number} — ${wh.Description}`,
         value: `№${wh.Number} — ${wh.Description}`
-      }));
-
-      showSuggestions(postOfficeInput, suggestions, 'warehouseSuggestions');
-    }, 250);
+      })), 'warehouseSuggestions');
+    }, 180);
   });
 }
 
-// Автозапуск
-document.addEventListener("DOMContentLoaded", () => {
-  if (window.location.pathname.includes("cart.html") || document.getElementById("city")) {
-    initNovaPoshta();
-  }
-});
-
-// Запускаємо при завантаженні сторінки
+// Запуск
 document.addEventListener("DOMContentLoaded", () => {
   if (window.location.pathname.includes("cart.html") || document.getElementById("city")) {
     initNovaPoshta();
