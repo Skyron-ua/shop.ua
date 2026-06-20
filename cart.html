@@ -274,19 +274,40 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
         </div>
 
         <!-- Місто -->
-        <div class="form-group">
-          <label for="city">Місто</label>
-          <input type="text" id="city" name="city" required placeholder="Почніть вводити місто..." autocomplete="off" list="cityList">
-          <datalist id="cityList"></datalist>
-        </div>
+<div class="form-group">
+  <label for="city">Місто</label>
 
-        <!-- Відділення Нової Пошти -->
-        <div class="form-group">
-          <label for="postOffice">Відділення Нової Пошти</label>
-          <select id="postOffice" name="postOffice" required class="np-select">
-            <option value="">Спочатку оберіть місто</option>
-          </select>
-        </div>
+  <input
+    type="text"
+    id="city"
+    name="city"
+    required
+    autocomplete="off"
+    placeholder="Почніть вводити місто..."
+    list="cityList"
+  >
+
+  <datalist id="cityList"></datalist>
+</div>
+
+<!-- Відділення / Поштомат -->
+<div class="form-group">
+  <label for="postOffice">
+    Відділення або поштомат Нової Пошти
+  </label>
+
+  <input
+    type="text"
+    id="postOffice"
+    name="postOffice"
+    required
+    autocomplete="off"
+    placeholder="Почніть вводити номер відділення..."
+    list="postOfficeList"
+  >
+
+  <datalist id="postOfficeList"></datalist>
+</div>
 
         <div class="button-group">
           <button type="submit" class="main-order-btn">
