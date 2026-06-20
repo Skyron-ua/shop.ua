@@ -1314,7 +1314,7 @@ if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
 console.log("Nova Poshta Key exists:", !!CONFIG.NOVA_POSHTA_API_KEY);
 console.log("Key length:", CONFIG.NOVA_POSHTA_API_KEY ? CONFIG.NOVA_POSHTA_API_KEY.length : 0);
 // =============================================
-// НОВА ПОШТА — ФІНАЛЬНИЙ ЧИСТИЙ ВАРІАНТ
+// НОВА ПОШТА — ФІНАЛЬНИЙ ВАРІАНТ З КРАЩИМ СОРТУВАННЯМ
 // =============================================
 
 let currentCityRef = null;
@@ -1411,7 +1411,7 @@ function showSuggestions(input, items, containerId) {
 
   container.style.display = 'block';
 
-  items.slice(0, 25).forEach(item => {
+  items.slice(0, 30).forEach(item => {
     const div = document.createElement('div');
     div.className = 'suggestion-item';
     div.textContent = item.text;
@@ -1466,21 +1466,35 @@ function initNovaPoshta() {
     }
   });
 
-  // Пошук відділень
+  // Пошук відділень з покращеним сортуванням
   postOfficeInput.addEventListener('input', () => {
     if (!currentCityRef) return;
     clearTimeout(warehouseTimeout);
 
     warehouseTimeout = setTimeout(async () => {
-      const query = postOfficeInput.value.trim().toLowerCase();
+      const query = postOfficeInput.value.trim();
       const warehouses = await getWarehouses(currentCityRef);
 
       let filtered = warehouses;
+
       if (query.length >= 1) {
-        filtered = warehouses.filter(wh =>
-          wh.Number.toString().includes(query) ||
-          (wh.Description && wh.Description.toLowerCase().includes(query))
-        );
+        const numQuery = query.replace(/\D/g, '');
+
+        filtered = warehouses
+          .filter(wh => {
+            const numStr = wh.Number.toString();
+            const desc = (wh.Description || '').toLowerCase();
+            return numStr.includes(numQuery) || desc.includes(query.toLowerCase());
+          })
+          .sort((a, b) => {
+            const numA = a.Number.toString();
+            const numB = b.Number.toString();
+            const startsA = numA.startsWith(numQuery);
+            const startsB = numB.startsWith(numQuery);
+            if (startsA && !startsB) return -1;
+            if (!startsA && startsB) return 1;
+            return parseInt(numA) - parseInt(numB);
+          });
       } else {
         filtered = warehouses.slice(0, 25);
       }
