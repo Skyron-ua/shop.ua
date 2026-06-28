@@ -518,7 +518,7 @@ const CONFIG = {
         "✔️ Стиль, який привертає увагу з першого погляду",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1249,
+      "price": 1290,
       "colors": [
         {
           "id": "graphite",
@@ -541,16 +541,6 @@ const CONFIG = {
           ]
         },
         {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#bbbbbb",
-          "images": [
-            "images/img.breeze/7.png",
-            "images/img.breeze/8.png",
-            "images/img.breeze/9.png"
-          ]
-        },
-        {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
@@ -561,13 +551,23 @@ const CONFIG = {
           ]
         },
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
             "images/img.breeze/13.png",
             "images/img.breeze/14.png",
             "images/img.breeze/15.png"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.breeze/7.png",
+            "images/img.breeze/9.png",
+            "images/img.breeze/8.png"
           ]
         }
       ],
