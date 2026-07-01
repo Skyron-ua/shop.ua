@@ -736,6 +736,42 @@ const CONFIG = {
       "old_price": 2250
     },
     {
+      "id": "Base",
+      "name": "Футболка Base",
+      "features": [
+        "👕 Базова футболка преміум якості",
+        "• Щільна преміальна бавовна виробництва Туреччини",
+        "• Об'ємний (Oversize) крій для комфортної посадки",
+        "• ТОП-якість пошиття та акуратні шви",
+        "• Матеріал не кошлатиться та добре тримає форму",
+        "• Приємна до тіла, дихаюча тканина",
+        "• Ідеально підходить для щоденного носіння",
+        "📏 Розміри: S, M, L, XL, 2XL,3XL,4XL",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 580,
+      "colors": [
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.base/1.webp",
+            "images/img.base/2.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.base/3.webp"
+          ]
+        }
+      ],
+      "old_price": 950
+    },
+    {
       "id": "Velvet Jet",
       "name": "Бомбер Velvet Jet",
       "features": [
@@ -2552,6 +2588,7 @@ const CONFIG = {
   SEASON_GROUPS: {
     "Літній гардероб": [
       "Flow",
+      "Base",
       "Dune",
       "Twilline",
       "LinenSet",
@@ -2617,7 +2654,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
+    "Футболки/Шорти": ["LinenSet", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
