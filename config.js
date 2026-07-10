@@ -9,85 +9,9 @@ const CONFIG = {
   },
   PRODUCTS: [
     {
-      "id": "Classic Style",
-      "name": "Комплект Classic Style",
-      "features": [
-        "🔥 Класична сорочка та брюки — ідеальний вибір для створення елегантного та стильного образу. Комплект виготовлений з якісної турецької тканини, що складається на 97% з бавовни та на 3% зі стрейчу. Такий склад забезпечує комфорт під час носіння, м’якість на дотик і легку еластичність, яка не сковує рухів.",
-        "💎 Стриманий та універсальний дизайн",
-        "🌿 Натуральна бавовняна основа — дихає та приємна до тіла",
-        "🔄 Легка еластичність завдяки стрейчу",
-        "🔝 Ідеально підходить для роботи, ділових зустрічей або щоденного використання",
-        "👌 Акуратний крій, який підкреслює фігуру",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1749,
-      "colors": [
-        {
-          "id": "Біла сорочка+чорні брюки",
-          "name": "Біла сорочка+чорні брюки",
-          "hex": "#f5f6fc",
-          "images": [
-            "images/img.classik-sorochka-bryuki/1.png",
-            "images/img.classik-sorochka-bryuki/7.png",
-            "images/img.classik-sorochka-bryuki/8.png"
-          ]
-        },
-        {
-          "id": "Чорна сорочка+чорні брюки",
-          "name": "Чорна сорочка+чорні брюки",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.classik-sorochka-bryuki/2.png",
-            "images/img.classik-sorochka-bryuki/9.png",
-            "images/img.classik-sorochka-bryuki/10.png"
-          ]
-        },
-        {
-          "id": "Біла сорочка+графітові брюки",
-          "name": "Біла сорочка+графітові брюки",
-          "hex": "#616267",
-          "images": [
-            "images/img.classik-sorochka-bryuki/3.png",
-            "images/img.classik-sorochka-bryuki/11.png",
-            "images/img.classik-sorochka-bryuki/12.png"
-          ]
-        },
-        {
-          "id": "Чорна сорочка+графітові брюки",
-          "name": "Чорна сорочка+графітові брюки",
-          "hex": "#333232",
-          "images": [
-            "images/img.classik-sorochka-bryuki/4.png",
-            "images/img.classik-sorochka-bryuki/13.png",
-            "images/img.classik-sorochka-bryuki/14.png"
-          ]
-        },
-        {
-          "id": "Біла сорочка+сірі брюки",
-          "name": "Біла сорочка+сірі брюки",
-          "hex": "#aeb9b5",
-          "images": [
-            "images/img.classik-sorochka-bryuki/5.png",
-            "images/img.classik-sorochka-bryuki/15.png",
-            "images/img.classik-sorochka-bryuki/16.png"
-          ]
-        },
-        {
-          "id": "Чорна сорочка+сірі брюки",
-          "name": "Чорна сорочка+сірі брюки",
-          "hex": "#727473",
-          "images": [
-            "images/img.classik-sorochka-bryuki/6.png",
-            "images/img.classik-sorochka-bryuki/17.png",
-            "images/img.classik-sorochka-bryuki/18.png"
-          ]
-        }
-      ],
-      "old_price": 2400
-    },
-    {
       "id": "Flow",
       "name": "Лляний комплект Flow",
+      "description": "Натуральний дихаючий льон преміум-якості",
       "features": [
         "🔥 В тренді цього сезону",
         "😎 Стильно • Легко • Комфортно",
@@ -152,65 +76,9 @@ const CONFIG = {
       "old_price": 2900
     },
     {
-      "id": "Dune",
-      "name": "Комплект Dune",
-      "features": [
-        "🔥 В тренді цього сезону: Лляний комплект сорочка та штани",
-        "😎 Стильно • Легко • Комфортно",
-        "✔️ Розміри: S M L XL XXL",
-        "✔️ Матеріал: льон",
-        "✔️ Висока якість пошиву, не просвічується",
-        "✔️ Стильний мінімалізм, який завжди актуальний",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-            "price": 1690,
-      "colors": [
-        {
-         "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.dune/1.webp",
-            "images/img.dune/2.webp",
-            "images/img.dune/3.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.dune/4.webp",
-            "images/img.dune/5.webp",
-            "images/img.dune/6.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.dune/7.webp",
-            "images/img.dune/8.webp",
-            "images/img.dune/9.webp"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.dune/10.webp",
-            "images/img.dune/11.webp",
-            "images/img.dune/12.webp"
-          ]
-        }
-      ],
-      "old_price": 2900
-    },
-    {
       "id": "LinenSet",
       "name": "Комплект LinenSet",
+      "description": "Легкий літній комплект з льону",
       "features": [
         "🔥 Льняний комплект: сорочка + шорти",
         "☁️ Легкий, дихаючий льон — ідеально в спеку",
@@ -274,7 +142,7 @@ const CONFIG = {
           ]
         },
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
@@ -286,6 +154,114 @@ const CONFIG = {
         }
       ],
       "old_price": 2800
+    },
+    {
+      "id": "Divento",
+      "name": "Комплект Divento",
+      "description": "Легкий літній комплект преміальної якості",
+      "features": [
+        "🔝 Хіт літнього сезону",
+        "✨ Преміальний матеріал мустанг у рубчик",
+        "👌 Комфортна посадка на кожен день",
+        "🧵 Якісне пошиття та акуратні шви",
+        "💨 Приємна до тіла та дихаюча тканина",
+        "🔄 Добре тримає форму після прання",
+        "🎯 Легко поєднується з будь-яким взуттям",
+        "🔥 Універсальний образ для міста та відпочинку",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1290,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.divento/1.webp",
+            "images/img.divento/2.webp",
+            "images/img.divento/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.divento/4.webp",
+            "images/img.divento/5.webp",
+            "images/img.divento/6.webp"
+            
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.divento/7.webp",
+            "images/img.divento/8.webp",
+            "images/img.divento/9.webp"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
+      "id": "Dune",
+      "name": "Комплект Dune",
+      "features": [
+        "🔥 В тренді цього сезону: Лляний комплект сорочка та штани",
+        "😎 Стильно • Легко • Комфортно",
+        "✔️ Розміри: S M L XL XXL",
+        "✔️ Матеріал: льон",
+        "✔️ Висока якість пошиву, не просвічується",
+        "✔️ Стильний мінімалізм, який завжди актуальний",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.dune/1.webp",
+            "images/img.dune/2.webp",
+            "images/img.dune/3.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.dune/4.webp",
+            "images/img.dune/5.webp",
+            "images/img.dune/6.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.dune/7.webp",
+            "images/img.dune/8.webp",
+            "images/img.dune/9.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.dune/10.webp",
+            "images/img.dune/11.webp",
+            "images/img.dune/12.webp"
+          ]
+        }
+      ],
+      "old_price": 2900
     },
     {
       "id": "Vibe",
@@ -302,10 +278,10 @@ const CONFIG = {
         "📏 Розміри: S, M, L, XL, XXL",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-            "price": 1390,
+      "price": 1390,
       "colors": [
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
@@ -343,7 +319,7 @@ const CONFIG = {
       ],
       "old_price": 2800
     },
-     {
+    {
       "id": "Carvelo",
       "name": "Комплект Carvelo",
       "features": [
@@ -358,10 +334,10 @@ const CONFIG = {
         "📏 Розміри: S, M, L, XL, XXL",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-            "price": 1490,
+      "price": 1490,
       "colors": [
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
@@ -400,56 +376,6 @@ const CONFIG = {
       "old_price": 2900
     },
     {
-      "id": "Divento",
-      "name": "Комплект Divento",
-      "features": [
-        "🔝 Хіт літнього сезону",
-        "✨ Преміальний матеріал мустанг у рубчик",
-        "👌 Комфортна посадка на кожен день",
-        "🧵 Якісне пошиття та акуратні шви",
-        "💨 Приємна до тіла та дихаюча тканина",
-        "🔄 Добре тримає форму після прання",
-        "🎯 Легко поєднується з будь-яким взуттям",
-        "🔥 Універсальний образ для міста та відпочинку",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1290,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.divento/1.webp",
-            "images/img.divento/2.webp",
-            "images/img.divento/3.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.divento/4.webp",
-            "images/img.divento/5.webp",
-            "images/img.divento/6.webp"
-
-          ]
-        },
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.divento/7.webp",
-            "images/img.divento/8.webp",
-            "images/img.divento/9.webp"
-          ]
-        }
-      ],
-      "old_price": 2700
-    },
-    {
       "id": "Aura",
       "name": "Комплект Aura",
       "features": [
@@ -475,7 +401,7 @@ const CONFIG = {
           ]
         },
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
@@ -619,7 +545,7 @@ const CONFIG = {
           ]
         },
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
@@ -646,7 +572,7 @@ const CONFIG = {
       "price": 1349,
       "colors": [
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
@@ -723,7 +649,7 @@ const CONFIG = {
           ]
         },
         {
-         "id": "beige",
+          "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
@@ -770,6 +696,83 @@ const CONFIG = {
         }
       ],
       "old_price": 950
+    },
+    {
+      "id": "Classic Style",
+      "name": "Комплект Classic Style",
+      "features": [
+        "🔥 Класична сорочка та брюки — ідеальний вибір для створення елегантного та стильного образу. Комплект виготовлений з якісної турецької тканини, що складається на 97% з бавовни та на 3% зі стрейчу. Такий склад забезпечує комфорт під час носіння, м’якість на дотик і легку еластичність, яка не сковує рухів.",
+        "💎 Стриманий та універсальний дизайн",
+        "🌿 Натуральна бавовняна основа — дихає та приємна до тіла",
+        "🔄 Легка еластичність завдяки стрейчу",
+        "🔝 Ідеально підходить для роботи, ділових зустрічей або щоденного використання",
+        "👌 Акуратний крій, який підкреслює фігуру",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1749,
+      "colors": [
+        {
+          "id": "Біла сорочка+чорні брюки",
+          "name": "Біла сорочка+чорні брюки",
+          "hex": "#f5f6fc",
+          "images": [
+            "images/img.classik-sorochka-bryuki/1.png",
+            "images/img.classik-sorochka-bryuki/7.png",
+            "images/img.classik-sorochka-bryuki/8.png"
+          ]
+        },
+        {
+          "id": "Чорна сорочка+чорні брюки",
+          "name": "Чорна сорочка+чорні брюки",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.classik-sorochka-bryuki/2.png",
+            "images/img.classik-sorochka-bryuki/9.png",
+            "images/img.classik-sorochka-bryuki/10.png"
+          ]
+        },
+        {
+          "id": "Біла сорочка+графітові брюки",
+          "name": "Біла сорочка+графітові брюки",
+          "hex": "#616267",
+          "images": [
+            "images/img.classik-sorochka-bryuki/3.png",
+            "images/img.classik-sorochka-bryuki/11.png",
+            "images/img.classik-sorochka-bryuki/12.png"
+          ]
+        },
+        {
+          "id": "Чорна сорочка+графітові брюки",
+          "name": "Чорна сорочка+графітові брюки",
+          "hex": "#333232",
+          "images": [
+            "images/img.classik-sorochka-bryuki/4.png",
+            "images/img.classik-sorochka-bryuki/13.png",
+            "images/img.classik-sorochka-bryuki/14.png"
+          ]
+        },
+        {
+          "id": "Біла сорочка+сірі брюки",
+          "name": "Біла сорочка+сірі брюки",
+          "hex": "#aeb9b5",
+          "images": [
+            "images/img.classik-sorochka-bryuki/5.png",
+            "images/img.classik-sorochka-bryuki/15.png",
+            "images/img.classik-sorochka-bryuki/16.png"
+          ]
+        },
+        {
+          "id": "Чорна сорочка+сірі брюки",
+          "name": "Чорна сорочка+сірі брюки",
+          "hex": "#727473",
+          "images": [
+            "images/img.classik-sorochka-bryuki/6.png",
+            "images/img.classik-sorochka-bryuki/17.png",
+            "images/img.classik-sorochka-bryuki/18.png"
+          ]
+        }
+      ],
+      "old_price": 2400
     },
     {
       "id": "Velvet Jet",
