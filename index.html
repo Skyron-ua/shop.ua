@@ -3,579 +3,897 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Skyron — Комплект Classic Style. Знижка -50% тільки зараз. Доставка 1–3 дні." />
-  <title>Skyron — Комплект Classic Style | -50%</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts for better typography -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Meta Pixel Base Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '922837707259752');   // ← твій Pixel ID
-fbq('track', 'PageView');
-</script>
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Base Code -->
-  <!-- TikTok Pixel Code -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=n,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-  ttq.load('D4OBCO3C77U7MI8IQKIG');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- End TikTok Pixel Code -->
+  <meta name="description" content="Skyron — сучасний український бренд стильного одягу. Преміальна якість, турецькі тканини та комфорт на кожен день." />
+  <title>Skyron.ua — Твій щоденний стиль та комфорт | Інтернет-магазин одягу</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+ 
   <style>
-    /* Improved typography */
+    :root {
+      --primary: #111113;
+      --accent: #e63939;
+      --gray-light: #f9f9f9;
+      --text-muted: #8e8e93;
+      --radius: 12px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    * { box-sizing: border-box; }
     body {
       font-family: 'Roboto', sans-serif;
-    }
-    h1, h2, h3 {
-      font-weight: 700;
-    }
-    p {
+      margin: 0; padding: 0;
+      color: #2c2c2e;
+      background: #fff;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .logo, .btn-brand, .season-btn, .current-price {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    
+    /* HEADER */
+    header {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+    .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); }
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+    .nav-menu a {
+      text-decoration: none;
+      color: #48484a;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .nav-menu a:hover { color: var(--primary); }
+    .cart-icon { font-size: 1.3rem; cursor: pointer; transition: var(--transition); }
+    .cart-icon:hover { transform: scale(1.1); }
+
+    /* HERO */
+    .brand-hero {
+      background: linear-gradient(135deg, #111113 0%, #2c2c2e 100%);
+      color: #fff;
+      padding: 90px 0 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 16px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .brand-subtitle { 
+      font-size: 1.2rem; 
+      color: #aeaeb2; 
+      margin-bottom: 32px; 
+      max-width: 600px; 
+      margin-left: auto; 
+      margin-right: auto;
+      font-weight: 400;
+    }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-brand {
+      padding: 14px 32px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-brand-primary {
+      background: white;
+      color: var(--primary);
+    }
+    .btn-brand-primary:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25); 
+    }
+    .btn-brand-secondary {
+      background: transparent;
+      color: white;
+      border: 1.5px solid rgba(255,255,255,0.4);
+    }
+    .btn-brand-secondary:hover {
+      background: white;
+      color: var(--primary);
+      border-color: white;
     }
 
-    /* Fix for text hugging edges: add padding to key text containers */
-    .container {
-      padding: 0 15px;
+    /* FILTERS */
+    .season-filters {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 24px 0;
+      flex-wrap: wrap;
+      background: var(--gray-light);
+      border-bottom: 1px solid #f2f2f7;
     }
-    .hero-subtitle,
-    .advantage-card p,
-    .price-note,
-    .social-proof,
-    .trust-badges span {
-      padding: 0 10px;
+    .season-btn {
+      padding: 10px 24px;
+      border: 1px solid #d1d1d6;
+      background: white;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+      color: #48484a;
+    }
+    .season-btn.active,
+    .season-btn:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    /* Carousel button fixes: positioning and centering vertically */
+    /* PRODUCTS GRID */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: 1024px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+      }
+    }
+
+    /* SIDEBAR FILTERS */
+    .filter-sidebar {
+      position: fixed;
+      top: 0;
+      left: -320px;
+      width: 300px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 4px 0 24px rgba(0,0,0,0.15);
+      z-index: 2000;
+      transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .filter-sidebar.open {
+      left: 0;
+    }
+    .sidebar-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid #f2f2f7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sidebar-header h3 { margin: 0; font-size: 1.2rem; font-weight: 700; }
+    .close-sidebar {
+      background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--text-muted);
+    }
+    .sidebar-content {
+      padding: 15px 0;
+      overflow-y: auto;
+    }
+    .category-link {
+      display: block;
+      padding: 12px 24px;
+      color: #2c2c2e;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      border-left: 3px solid transparent;
+    }
+    .category-link:hover, .category-link.active-cat {
+      background: var(--gray-light);
+      color: var(--accent);
+      border-left-color: var(--accent);
+    }
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1990;
+      display: none;
+      backdrop-filter: blur(2px);
+    }
+    .sidebar-overlay.show { display: block; }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 50px 0 35px;
+      color: var(--primary);
+    }
+    
+    .product-card {
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      transition: var(--transition);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border: 1px solid #f2f2f7;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.09);
+    }
     .img-wrap {
       position: relative;
-      max-width: 100%;
-      margin: 0 auto;
+      padding-top: 130%;
+      background: #f5f5f7;
+      overflow: hidden;
     }
+    .img-wrap img {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.15, 1, 0.3, 1);
+    }
+    .product-card:hover img { transform: scale(1.04); }
+
     .carousel-btn {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(4px);
+      color: var(--primary);
       border: none;
-      font-size: 2em;
-      cursor: pointer;
-      padding: 0 10px;
-      border-radius: 50%;
-      display: block; /* Ensure both are visible by default */
-    }
-    .prev {
-      left: 10px;
-    }
-    .next {
-      right: 10px;
-    }
-
-    /* Media query for mobile adjustments */
-    @media (max-width: 768px) {
-      .container {
-        padding: 0 10px;
-      }
-      .hero-subtitle {
-        padding: 0 5px;
-      }
-    }
-
-    /* New styles for improvements */
-    .btn-primary {
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .btn-primary:hover {
-      background-color: #0056b3; /* Darker shade for hover */
-      transform: scale(1.05);
-    }
-
-    .hero-wrapper {
+      width: 38px;
+      height: 38px;
+      font-size: 1.4rem;
       display: flex;
       align-items: center;
-      gap: 20px;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+      opacity: 0;
+      transition: var(--transition);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .product-card:hover .carousel-btn { opacity: 1; }
+    .carousel-btn.prev { left: 12px; }
+    .carousel-btn.next { right: 12px; }
+    .carousel-btn:hover { background: #fff; transform: translateY(-50%) scale(1.05); }
+
+    .discount-badge {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: var(--accent);
+      color: white;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      border-radius: 4px;
+      z-index: 5;
     }
 
-    @media (max-width: 768px) {
-      .hero-wrapper {
-        flex-direction: column;
-      }
+    .product-info {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .product-card-title { 
+      font-size: 1.15rem; 
+      font-weight: 600; 
+      margin: 0 0 6px 0; 
+      color: var(--primary);
+    }
+    .product-desc { 
+      font-size: 0.85rem; 
+      color: var(--text-muted); 
+      margin: 0 0 12px 0; 
     }
 
-    /* Hero section enhancements */
-    .hero {
-      background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Subtle gradient background */
-      padding: 60px 0;
+    .color-picker {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .color-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px #d1d1d6;
+      transition: var(--transition);
+    }
+    .color-dot.active {
+      box-shadow: 0 0 0 2px var(--primary);
     }
 
-    .hero-title {
-      font-size: 2.5em;
-      margin-bottom: 20px;
+    .price-rating-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid #f2f2f7;
     }
+    .old-price { text-decoration: line-through; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 2px; }
+    .current-price { font-size: 1.35rem; font-weight: 700; color: var(--primary); line-height: 1; }
+    .rating { font-size: 0.9rem; font-weight: 600; color: #ff9500; display: flex; align-items: center; gap: 4px; }
 
-    .hero-subtitle {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    /* Advantages section enhancements */
+    /* ADVANTAGES */
+    .advantages-section { background: var(--gray-light); padding: 20px 0 60px; }
     .advantages-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
     }
     .advantage-card {
       background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 40px 30px;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: var(--transition);
+      border: 1px solid #f2f2f7;
     }
-    .advantage-card:hover {
-      transform: translateY(-5px);
+    .advantage-card:hover { transform: translateY(-4px); box-shadow: 0 12px 25px rgba(0,0,0,0.05); }
+    
+    .adv-icon-svg { 
+      width: 48px; 
+      height: 48px; 
+      margin-bottom: 20px; 
     }
+    .icon-stroke {
+      fill: none;
+      stroke: var(--primary);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .icon-fill {
+      fill: var(--primary);
+    }
+    .advantage-card h3 { font-size: 1.2rem; margin-bottom: 12px; font-weight: 600; color: var(--primary); }
+    .advantage-card p { color: #636366; font-size: 0.95rem; margin: 0; }
 
-    /* Mobile-specific fix for advantages grid */
-    @media (max-width: 768px) {
-      .advantages-grid {
-        grid-template-columns: 1fr; /* Single column on mobile for symmetry */
-        gap: 15px;
-      }
-      .advantage-card {
-        margin: 0 auto;
-        max-width: 300px; /* Center and limit width */
-      }
-    }
-
-    /* Order form enhancements */
-    .order-section {
-      background-color: #f8f9fa;
+    /* FOOTER */
+    footer {
+      background: var(--primary);
+      color: #8e8e93;
+      text-align: center;
       padding: 40px 0;
-    }
-    .form {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    input, select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 4px;
-      border: 1px solid #ced4da;
-    }
-    .btn-submit-order {
-      width: 100%;
-      padding: 12px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn-submit-order:hover {
-      background-color: #0056b3;
+      font-size: 0.9rem;
     }
 
-    /* Footer enhancements */
-    .site-footer {
-      background-color: #343a40;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+    /* АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ */
+    @media (max-width: 768px) {
+      .container { padding: 0 16px; }
+      .brand-hero { padding: 60px 0 50px; }
+      .brand-title { font-size: 2.6rem; letter-spacing: 2px; }
+      .brand-subtitle { font-size: 1.05rem; margin-bottom: 24px; padding: 0 10px; }
+    }
+
+    @media (max-width: 480px) {
+      .nav { padding: 12px 0; gap: 10px; }
+      .logo { font-size: 1.3rem; letter-spacing: 0.5px; }
+      .nav-menu { gap: 14px; }
+      .nav-menu a { font-size: 0.85rem; }
+      .cart-icon { font-size: 1.15rem; }
+
+      .brand-title { font-size: 2rem; letter-spacing: 1px; margin-bottom: 12px; }
+      .btn-brand { width: 100%; padding: 14px 20px; font-size: 0.85rem; }
+      .hero-buttons { gap: 10px; width: 100%; }
+      
+      .carousel-btn { opacity: 1; width: 34px; height: 34px; font-size: 1.2rem; }
+      .section-title { font-size: 1.6rem; margin: 35px 0 25px; }
     }
   </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href="index.html">Skyron</a>
-    <nav class="nav">
-      <a href="#advantages">Переваги</a>
-      <a href="catalog.html">Каталог</a>
-      <a href="contacts.html">Контакти</a>
-    </nav>
-    <div class="header-actions">
-      <a href="cart.html" class="cart-link">🛒 <span id="cartBadge" class="cart-badge" hidden>0</span></a>
-      <button id="themeToggle" class="theme-toggle" aria-label="Перемкнути тему">☀️</button>
-    </div>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero fade-in">
+  <header>
     <div class="container">
-      <div class="hero-wrapper">
-
-        <!-- Ліва частина – текст + ціна + кнопка (десктоп) -->
-        <div class="hero-left">
-          <h1 class="hero-title">Комплект Classic Style<br></h1>
-          
-          <p class="hero-subtitle">
-            Класична сорочка та брюки — ідеальний вибір для створення елегантного та стильного образу. Комплект виготовлений з якісної турецької тканини, що складається на 97% з бавовни та на 3% зі стрейчу. Такий склад забезпечує комфорт під час носіння, м’якість на дотик і легку еластичність, яка не сковує рухів<br>
-          </p>
-
-          <div class="price-cta-desktop">
-            <div class="price-block">
-              <div class="price-wrapper">
-               <!-- <div class="old-price">2400 грн</div> -->
-                <div id="heroPrice" class="price current-price">1749 грн</div>
-              </div>
-              <div class="social-proof">⭐ 4.9 / 5 • Понад 700 замовлень</div>
-              <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
-            </div>
-
-            <!-- ВИПРАВЛЕНИЙ БЛОК ДЛЯ ДЕСКТОПУ -->
-            <div class="hero-cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 38px; margin-top: 10px;">
-              <a href="#order-form" class="btn btn-primary btn-large pulse-animation" style="width: fit-content; min-width: 280px;">
-                Замовити зі знижкою -50% ↓
-              </a>
-              <div class="trust-badges" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 16px; max-width: 360px; font-size: 0.92em; line-height: 1.4; text-align: center; padding: 0 10px;">
-                <span>🚚 Доставка 1–3 дні</span>
-                <span>💳 Оплата після огляду</span>
-                <span>🔄 Обмін та повернення 14 днів</span>
-              </div>
-            </div>
-          </div>
+      <div class="nav">
+        <div class="logo">Skyron</div>
+        <div class="nav-menu">
+          <a href="catalog.html">Каталог</a>
+          <a href="#advantages">Переваги</a>
+          <a href="https://t.me/Skyron_ua" target="_blank">Telegram</a>
         </div>
-
-        <!-- Права частина – фото + мобільна ціна/кнопка -->
-        <div class="hero-right">
-          <div class="product-frame">
-            <div class="img-wrap">
-              <img src="images/1.png" alt="Skyron флісовий костюм" id="mainImage" loading="eager">
-              <button id="prevBtn" class="carousel-btn prev">‹</button>
-              <button id="nextBtn" class="carousel-btn next">›</button>
-            </div>
-            <div class="swatches" id="swatches"></div>
-          </div>
-
-          <!-- Мобільний блок -->
-          <div class="price-cta-mobile">
-            <div class="price-block">
-              <div class="price-wrapper">
-                <div class="old-price">2400 грн</div>
-                <div id="heroPriceMobile" class="price current-price">1690 грн</div>
-              </div>
-              <div class="social-proof">⭐ 4.9 / 5 • Понад 700 замовлень</div>
-              <div class="price-note">Ціна зі знижкою • Акція діє до кінця доби</div>
-            </div>
-
-            <!-- ВИПРАВЛЕНИЙ БЛОК ДЛЯ МОБІЛКИ -->
-            <div class="hero-cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 38px; margin-top: 16px;">
-              <a href="#order-form" class="btn btn-primary btn-large pulse-animation" style="width: fit-content; min-width: 260px;">
-                Замовити зі знижкою ↓
-              </a>
-              <div class="trust-badges" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 18px 14px; max-width: 300px; font-size: 0.89em; line-height: 1.35; text-align: center; padding: 0 8px;">
-                <span>🚚 Доставка 1–3 дні</span>
-                <span>💳 Оплата після огляду</span>
-                <span>🔄 Обмін та повернення 14 днів</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <div class="cart-icon">🛒</div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- Переваги -->
-  <section id="advantages" class="section fade-in">
-    <div class="container">
-      <h2 class="section-title">Чому обирають Skyron</h2>
-      <div class="advantages-grid">
-        <div class="adv advantage-card">
-          <div class="adv-emoji">💎</div>
-          <h3>Стриманий та універсальний дизайн</h3>
-          <p>Класична сорочка та брюки — завжди в тренді</p>
-        </div>
-        <div class="adv advantage-card">
-          <div class="adv-emoji">🧵</div>
-          <h3>Довговічність та комфорт</h3>
-          <p>Натуральна бавовняна основа — дихає та приємна до тіла</p>
-        </div>
-        <div class="adv advantage-card">
-          <div class="adv-emoji">🛡️</div>
-          <h3>Без ризику</h3>
-          <p>Оплата при отриманні + 14 днів примірки</p>
+  <main>
+    <section class="brand-hero">
+      <div class="container">
+        <h1 class="brand-title">Skyron.ua</h1>
+        <p class="brand-subtitle">Твій щоденний стиль та комфорт. Одяг із преміальних турецьких тканин.</p>
+        <div class="hero-buttons">
+          <a href="catalog.html" class="btn-brand btn-brand-primary">Дивитися каталог</a>
+          <a href="https://t.me/Skyron_ua" target="_blank" class="btn-brand btn-brand-secondary">Консультація</a>
         </div>
       </div>
+    </section>
+
+    <div class="season-filters">
+      <button class="season-btn" id="openFiltersBtn">📋 Категорії</button>
+      <div style="border-left: 1px solid #d1d1d6; height: 24px; margin: 0 4px;"></div>
+      <button class="season-btn active" data-season="summer">☀️ Літо</button>
+      <button class="season-btn" data-season="spring">🌿 Весна / Осінь</button>
+      <button class="season-btn" data-season="winter">❄️ Зима</button>
     </div>
-  </section>
 
-  <!-- Форма -->
-  <section id="order-form" class="order-section fade-in">
-    <div class="container">
-      <h2 class="section-title">Швидко оформити замовлення</h2>
-
-      <div id="prefilledProduct" class="prefilled-notice" hidden>
-        <strong>Ви обрали:</strong> <span id="prefilledProductName"></span>
+    <div id="filterSidebar" class="filter-sidebar">
+      <div class="sidebar-header">
+        <h3>Категорії одягу</h3>
+        <button id="closeFiltersBtn" class="close-sidebar">&times;</button>
       </div>
-
-      <form id="orderForm" class="form" novalidate>
-        <div id="size-selection" class="size-row">
-          <div class="size-field">
-            <label for="height">Зріст (см)</label>
-            <input type="number" id="height" name="height" min="150" max="210" placeholder="178" required>
-          </div>
-          <div class="size-field">
-            <label for="weight">Вага (кг)</label>
-            <input type="number" id="weight" name="weight" min="50" max="150" placeholder="80" required>
-          </div>
-        </div>
-
-        <label for="fullName">Ім'я та прізвище</label>
-        <input type="text" id="fullName" name="name" required>
-
-        <label for="phone">Номер телефону</label>
-        <input type="tel" id="phone" name="phone" pattern="\+?[\d\s()-]{10,}" required placeholder="+38 (___) ___-__-__">
-
-        <label for="city">Місто</label>
-        <input type="text" id="city" name="city" required>
-
-        <label for="postOffice">Відділення Нової Пошти</label>
-        <input type="text" id="postOffice" name="postOffice" required>
-
-        <label for="productSelect">Товар</label>
-        <select id="productSelect" name="product_id" required>
-          <option value="">Оберіть товар</option>
-        </select>
-
-        <label for="colorSelect">Колір</label>
-        <select id="colorSelect" name="color_id" required disabled>
-          <option value="">Спочатку оберіть товар</option>
-        </select>
-
-        <label for="qty">Кількість</label>
-        <input type="number" id="qty" name="quantity" min="1" max="10" value="1" required>
-
-        <div class="form-buttons-wrapper">
-          <button type="submit" class="btn-submit-order">Відправити замовлення</button>
-
-          <div class="telegram-viber-row">
-            <a href="https://t.me/Skyron_ua" target="_blank" class="btn-consult telegram">Питання в Telegram</a>
-            <a href="https://invite.viber.com/?g2=AQBeex4BIEUJJlW4bdj1yeAO7w846m1dQ6AzkdYO2N%2Bt6FAv7rl5TWDkjrKKKt7t" target="_blank" class="btn-consult viber">Питання в Viber</a>
-          </div>
-        </div>
-      </form>
+      <div class="sidebar-content">
+        <a href="#" class="category-link active-cat" data-type="all">✨ Показати все по сезону</a>
+        <div id="dynamicCategoriesContainer"></div>
+      </div>
     </div>
-  </section>
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
 
-</main>
+    <section id="catalog" class="products-section">
+      <div class="container">
+        <h2 class="section-title" id="sectionTitle">Хіти продажу — Літо</h2>
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
 
-<footer class="site-footer fade-in">
-  <div class="container">
-    <p>© <span id="year"></span> Skyron.ua — Всі права захищені</p>
-  </div>
-</footer>
+    <section id="advantages" class="advantages-section">
+      <div class="container">
+        <h2 class="section-title">Чому обирають Skyron</h2>
+        <div class="advantages-grid">
+          <div class="advantage-card">
+            <svg class="adv-icon-svg" viewBox="0 0 24 24">
+              <circle class="icon-stroke" cx="6" cy="7" r="3" />
+              <circle class="icon-stroke" cx="6" cy="17" r="3" />
+              <path class="icon-stroke" d="M8.5 8.5L19 19M8.5 15.5L19 5" />
+            </svg>
+            <h3>Стриманий дизайн</h3>
+            <p>Класичні поєднання, які залишаються актуальними багато сезонів.</p>
+          </div>
+          <div class="advantage-card">
+            <svg class="adv-icon-svg" viewBox="0 0 24 24">
+              <path class="icon-stroke" d="M6 3h12l4 6-10 12L2 9z" />
+              <path class="icon-stroke" d="M2 9h20M12 3v18M6 3l6 6 6-6" />
+            </svg>
+            <h3>Преміум комфорт</h3>
+            <p>Дихаючі турецькі тканини преміум-класу.</p>
+          </div>
+          <div class="advantage-card">
+            <svg class="adv-icon-svg" viewBox="0 0 24 24">
+              <path class="icon-fill" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+            </svg>
+            <h3>Безпечна покупка</h3>
+            <p>Оплата после примірки + 14 днів на повернення.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<script src="config.js"></script>
-<script src="script.js"></script>
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Skyron.ua — Всі права захищені</p>
+    </div>
+  </footer>
 
-<script>
-// =============================================================================
-// Основний скрипт (без змін у логіці)
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <script>
+    const productsData = {
+      "Flow": { name: "Лляний комплект Flow", description: "Натуральний дихаючий льон преміум-якості", price: 1590, old: 2900, season: "summer",
+        colors: [{hex:"#616267", images:["images/img.lyon2/1.webp","images/img.lyon2/3.webp","images/img.lyon2/2.webp"]},
+                 {hex:"#000080", images:["images/img.lyon2/13.webp","images/img.lyon2/14.webp","images/img.lyon2/15.webp"]},
+                 {hex:"#111113ff", images:["images/img.lyon2/9.webp","images/img.lyon2/8.webp","images/img.lyon2/7.webp"]},
+                 {hex:"#ffffff", images:["images/img.lyon2/10.webp","images/img.lyon2/11.webp","images/img.lyon2/12.webp"]},
+                 {hex:"#d6c7b1", images:["images/img.lyon2/4.webp","images/img.lyon2/5.webp"]}] },
+      "LinenSet": { name: "Комплект LinenSet", description: "Легкий літній комплект з льону", price: 1390, old: 2800, season: "summer",
+        colors: [{hex:"#111113ff", images:["images/img.linenset/5.webp","images/img.linenset/6.webp"]},
+                 {hex:"#d6c7b1", images:["images/img.linenset/1.webp","images/img.linenset/2.webp"]},
+                 {hex:"#616267", images:["images/img.linenset/19.webp","images/img.linenset/18.webp"]}] },
+      "Onyx": { name: "Комплект Onyx", price: 1190, old: 2250, season: "summer",
+        colors: [{hex:"#616267", images:["images/img.onyx/1.webp","images/img.onyx/2.webp"]},
+                 {hex:"#111113ff", images:["images/img.onyx/7.webp","images/img.onyx/8.webp"]},
+                 {hex:"#d6c7b1", images:["images/img.onyx/10.webp","images/img.onyx/11.webp"]}] },
+      "Divento": { name: "Комплект Divento", description: "Легкий літній комплект преміальної якості", price: 1290, old: 2700, season: "summer",
+        colors: [{hex:"#616267", images:["images/img.divento/1.webp","images/img.divento/2.webp"]},
+                 {hex:"#111113ff", images:["images/img.divento/4.webp","images/img.divento/5.webp"]},
+                 {hex:"#ffffff", images:["images/img.divento/7.webp","images/img.divento/8.webp"]}] },
+      "Velvet Jet": { name: "Бомбер Velvet Jet", price: 1090, old: 2700, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.bomber-zamsh/1.png","images/img.bomber-zamsh/2.png"]},
+                 {hex:"#616267", images:["images/img.bomber-zamsh/4.png","images/img.bomber-zamsh/5.png"]}] },
+      "Forge": { name: "Бомбер Forge", price: 1290, old: 2600, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.bomber/1.png","images/img.bomber/2.png"]}] },
+      "Imperial": { name: "Куртка Imperial", price: 1699, old: 3250, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.chorn1699/1.png","images/img.chorn1699/2.png"]}] },
+      "Pulse": { name: "Куртка Pulse", price: 1699, old: 3200, season: "spring",
+        colors: [{hex:"#654321", images:["images/img.korich1699/1.png","images/img.korich1699/2.png"]},
+                 {hex:"#111113ff", images:["images/img.chorn1699/1.png","images/img.chorn1699/2.png"]}] },
+      "plush": { name: "Костюм Royal Prime", price: 1249, old: 1899, season: "winter",
+        colors: [{hex:"#616267", images:["images/img.plush/1.png"]}, {hex:"#111113ff", images:["images/img.plush/6.png"]}, {hex:"#d6c7b1", images:["images/img.plush/16.png"]}] },
+      "sale": { name: "Флісовий костюм TNF", price: 1649, old: 3300, season: "winter",
+        colors: [{hex:"#616267", images:["images/img.north/gr1.png"]}, {hex:"#111113ff", images:["images/img.north/ch1.png"]}] },
+      "gudzik": { name: "Urban Winter", price: 1349, old: 1749, season: "winter",
+        colors: [{hex:"#111113ff", images:["images/img.gudzik/4.png"]}, {hex:"#616267", images:["images/img.gudzik/5.png"]}] },
+      "puhovik": { name: "Пуховик Puff", price: 1849, old: 2199, season: "winter",
+        colors: [{hex:"#111113ff", images:["images/img.puhovik/1.png"]}, {hex:"#616267", images:["images/img.puhovik/9.png"]}] },
 
-  // Prefill з product.html
-  const product = localStorage.getItem("orderProduct");
-  const color   = localStorage.getItem("orderColor");
+      "Classic Style": { name: "Комплект Classic Style", price: 1749, old: 2400, season: "spring",
+        colors: [{hex:"#f5f6fc", images:["images/img.classik-sorochka-bryuki/1.png","images/img.classik-sorochka-bryuki/7.png","images/img.classik-sorochka-bryuki/8.png"]},{hex:"#111113ff", images:["images/img.classik-sorochka-bryuki/2.png","images/img.classik-sorochka-bryuki/9.png","images/img.classik-sorochka-bryuki/10.png"]},{hex:"#616267", images:["images/img.classik-sorochka-bryuki/3.png","images/img.classik-sorochka-bryuki/11.png","images/img.classik-sorochka-bryuki/12.png"]},{hex:"#333232", images:["images/img.classik-sorochka-bryuki/4.png","images/img.classik-sorochka-bryuki/13.png","images/img.classik-sorochka-bryuki/14.png"]},{hex:"#aeb9b5", images:["images/img.classik-sorochka-bryuki/5.png","images/img.classik-sorochka-bryuki/15.png","images/img.classik-sorochka-bryuki/16.png"]},{hex:"#727473", images:["images/img.classik-sorochka-bryuki/6.png","images/img.classik-sorochka-bryuki/17.png","images/img.classik-sorochka-bryuki/18.png"]}] },
+      "zamsh-na-zmiyci": { name: "Замшевий костюм Velvet", price: 1649, old: 2460, season: "spring",
+        colors: [{hex:"#616267", images:["images/img.zamsh/3.png","images/img.zamsh/4.png","images/img.zamsh/5.png"]},{hex:"#111113ff", images:["images/img.zamsh/1.png","images/img.zamsh/9.png","images/img.zamsh/2.png"]},{hex:"#000080", images:["images/img.zamsh/6.png","images/img.zamsh/7.png","images/img.zamsh/8.png"]}] },
+      "A": { name: "Костюм Casual Business", price: 1649, old: 2900, season: "spring",
+        colors: [{hex:"#616267", images:["images/img.pidzhak-A/grey1.png","images/img.pidzhak-A/grey2.png","images/img.pidzhak-A/grey3.png"]},{hex:"#111113ff", images:["images/img.pidzhak-A/black1.png","images/img.pidzhak-A/black2.png","images/img.pidzhak-A/black3.png"]},{hex:"#000080", images:["images/img.pidzhak-A/blue1.png","images/img.pidzhak-A/blue2.png","images/img.pidzhak-A/blue3.png"]},{hex:"#654321", images:["images/img.pidzhak-A/brown1.png","images/img.pidzhak-A/brown2.png"]},{hex:"#175a43", images:["images/img.pidzhak-A/green1.png","images/img.pidzhak-A/green2.png"]}] },
+      "Axis": { name: "Замшевий костюм Axis", price: 1499, old: 2700, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.zamsh-baza/1.png","images/img.zamsh-baza/2.png","images/img.zamsh-baza/3.png"]},{hex:"#616267", images:["images/img.zamsh-baza/4.png","images/img.zamsh-baza/5.png","images/img.zamsh-baza/6.png"]},{hex:"#654321", images:["images/img.zamsh-baza/7.png","images/img.zamsh-baza/8.png","images/img.zamsh-baza/9.png"]},{hex:"#000080", images:["images/img.zamsh-baza/10.png","images/img.zamsh-baza/11.png","images/img.zamsh-baza/12.png"]},{hex:"#175a43", images:["images/img.zamsh-baza/13.png","images/img.zamsh-baza/14.png","images/img.zamsh-baza/15.png"]}] },
+      "Patriot UA": { name: "Костюм Patriot UA", price: 1249, old: 2600, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.kostium-trisub/1.png","images/img.kostium-trisub/2.png","images/img.kostium-trisub/3.png","images/img.kostium-trisub/4.png","images/img.kostium-trisub/5.png","images/img.kostium-trisub/6.png","images/img.kostium-trisub/7.png"]}] },
+      "Basic Premium": { name: "Костюм Basic Premium", price: 1299, old: 3200, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.major/1.png","images/img.major/2.png","images/img.major/3.png","images/img.major/4.png","images/img.major/5.png","images/img.major/6.png","images/img.major/7.png","images/img.major/8.png","images/img.major/9.png","images/img.major/10.png","images/img.major/11.png","images/img.major/12.png","images/img.major/13.png","images/img.major/14.png","images/img.major/15.png"]}] },
+      "plashovka": { name: "Костюм Nowind", price: 1249, old: 1599, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.plashovka/1.png","images/img.plashovka/2.png","images/img.plashovka/3.png","images/img.plashovka/4.png","images/img.plashovka/5.png","images/img.plashovka/6.png"]},{hex:"#78866b", images:["images/img.plashovka/7.png","images/img.plashovka/8.png","images/img.plashovka/9.png","images/img.plashovka/10.png","images/img.plashovka/11.png","images/img.plashovka/12.png"]},{hex:"#616267", images:["images/img.plashovka/13.png","images/img.plashovka/14.png","images/img.plashovka/15.png","images/img.plashovka/16.png"]},{hex:"#bbbbbb", images:["images/img.plashovka/17.png","images/img.plashovka/18.png"]}] },
+      "Hunter": { name: "Бомбер Hunter", price: 1449, old: 3150, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.hunter/1.png","images/img.hunter/2.png","images/img.hunter/3.png","images/img.hunter/4.png"]}] },
+      "Snake": { name: "Бомбер Snake", price: 1349, old: 2800, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.bomber-snake/1.png","images/img.bomber-snake/2.png","images/img.bomber-snake/3.png"]},{hex:"#000080", images:["images/img.bomber-snake/4.png","images/img.bomber-snake/5.png","images/img.bomber-snake/6.png"]}] },
+      "Praga": { name: "Бомбер Praga", price: 1290, old: 2600, season: "spring",
+        colors: [{hex:"#bbbbbb", images:["images/img.bomber-praga/7.png","images/img.bomber-praga/8.png","images/img.bomber-praga/9.png"]},{hex:"#000080", images:["images/img.bomber-praga/4.png","images/img.bomber-praga/5.png","images/img.bomber-praga/6.png"]},{hex:"#111113ff", images:["images/img.bomber-praga/1.png","images/img.bomber-praga/2.png","images/img.bomber-praga/3.png"]}] },
+      "Matrix": { name: "Жилетка Matrix", price: 1090, old: 2250, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.matrix/1.png","images/img.matrix/2.png","images/img.matrix/3.png","images/img.matrix/4.png","images/img.matrix/5.png"]},{hex:"#000080", images:["images/img.matrix/6.png","images/img.matrix/7.png","images/img.matrix/8.png","images/img.matrix/9.png","images/img.matrix/10.png","images/img.matrix/11.png","images/img.matrix/12.png"]},{hex:"#78866b", images:["images/img.matrix/13.png","images/img.matrix/14.png","images/img.matrix/15.png","images/img.matrix/16.png","images/img.matrix/17.png"]}] },
+      "polar": { name: "PolarFleece — тепллий флісовий костюм", price: 1099, old: 1799, season: "winter",
+        colors: [{hex:"#0b0b0b", images:["images/fleece/1.png","images/fleece/2.png"]},{hex:"#616267", images:["images/fleece/10.png","images/fleece/11.png"]},{hex:"#d6c7b1", images:["images/fleece/20.png","images/fleece/21.png"]},{hex:"#00a86b", images:["images/fleece/50.png"]}] },
+      "bayer": { name: "Теплий зимовий костюм Nordic", price: 1149, old: 1549, season: "winter",
+        colors: [{hex:"#616267", images:["images/img.bayer/1.png","images/img.bayer/2.png","images/img.bayer/3.png","images/img.bayer/4.png","images/img.bayer/5.png","images/img.bayer/6.png"]},{hex:"#111113ff", images:["images/img.bayer/7.png","images/img.bayer/8.png","images/img.bayer/9.png"]},{hex:"#d6c7b1", images:["images/img.bayer/10.png","images/img.bayer/11.png","images/img.bayer/12.png"]}] },
+      "zefir": { name: "Зимовий костюм Shift", price: 1349, old: 1749, season: "winter",
+        colors: [{hex:"#111113ff", images:["images/img.zefir/1.png","images/img.zefir/2.png","images/img.zefir/3.png","images/img.zefir/4.png","images/img.zefir/5.png"]},{hex:"#616267", images:["images/img.zefir/6.png","images/img.zefir/7.png","images/img.zefir/8.png","images/img.zefir/9.png","images/img.zefir/10.png"]},{hex:"#00a86b", images:["images/img.zefir/11.png","images/img.zefir/12.png","images/img.zefir/13.png","images/img.zefir/14.png","images/img.zefir/15.png"]}] },
+      "chelsi": { name: "Теплий костюм Apex", price: 1529, old: 1829, season: "winter",
+        colors: [{hex:"#616267", images:["images/img.chelsi/6.png","images/img.chelsi/7.png","images/img.chelsi/8.png","images/img.chelsi/9.png","images/img.chelsi/10.png"]},{hex:"#d6c7b1", images:["images/img.chelsi/11.png","images/img.chelsi/12.png","images/img.chelsi/13.png","images/img.chelsi/14.png","images/img.chelsi/15.png"]},{hex:"#84B067", images:["images/img.chelsi/1.png","images/img.chelsi/2.png","images/img.chelsi/3.png","images/img.chelsi/4.png","images/img.chelsi/5.png"]},{hex:"#78866b", images:["images/img.chelsi/16.png","images/img.chelsi/17.png","images/img.chelsi/18.png","images/img.chelsi/19.png","images/img.chelsi/20.png"]}] },
+      "polar-premium": { name: "Теплий костюм Fortress", price: 1729, old: 2129, season: "winter",
+        colors: [{hex:"#616267", images:["images/img.polarpremium/7.png","images/img.polarpremium/5.png","images/img.polarpremium/6.png","images/img.polarpremium/4.png"]},{hex:"#111113ff", images:["images/img.polarpremium/2.png","images/img.polarpremium/1.png","images/img.polarpremium/3.png"]}] },
+      "plush-kapyshon": { name: "Зимовий костюм Titan", price: 1349, old: 1699, season: "winter",
+        colors: [{hex:"#616267", images:["images/img.plush.kapyshon/10.png","images/img.plush.kapyshon/11.png","images/img.plush.kapyshon/12.png","images/img.plush.kapyshon/9.png","images/img.plush.kapyshon/8.png","images/img.plush.kapyshon/7.png"]},{hex:"#111113ff", images:["images/img.plush.kapyshon/1.png","images/img.plush.kapyshon/2.png","images/img.plush.kapyshon/3.png","images/img.plush.kapyshon/4.png","images/img.plush.kapyshon/5.png","images/img.plush.kapyshon/6.png"]},{hex:"#4B5320", images:["images/img.plush.kapyshon/19.png","images/img.plush.kapyshon/21.png","images/img.plush.kapyshon/20.png"]},{hex:"#d6c7b1", images:["images/img.plush.kapyshon/13.png","images/img.plush.kapyshon/14.png","images/img.plush.kapyshon/15.png","images/img.plush.kapyshon/16.png","images/img.plush.kapyshon/17.png","images/img.plush.kapyshon/18.png"]}] },
+      "zmeyka": { name: "Зимовий костюм Vortex", price: 1129, old: 1479, season: "winter",
+        colors: [{hex:"#111113ff", images:["images/img.zmeyka/1.png","images/img.zmeyka/2.png","images/img.zmeyka/3.png","images/img.zmeyka/4.png"]},{hex:"#4B5320", images:["images/img.zmeyka/9.png","images/img.zmeyka/10.png","images/img.zmeyka/11.png"]},{hex:"#616267", images:["images/img.zmeyka/5.png","images/img.zmeyka/7.png","images/img.zmeyka/6.png","images/img.zmeyka/8.png"]}] },
+      "oversize-premium": { name: "Теплий костюм OverSize Premium", price: 1849, old: 2149, season: "winter",
+        colors: [{hex:"#d6c7b1", images:["images/img.oversize/20.png","images/img.oversize/18.png","images/img.oversize/19.png","images/img.oversize/21.png"]},{hex:"#111113ff", images:["images/img.oversize/1.png","images/img.oversize/2.png","images/img.oversize/3.png","images/img.oversize/4.png","images/img.oversize/5.png","images/img.oversize/6.png"]},{hex:"#5b7194", images:["images/img.oversize/7.png","images/img.oversize/8.png","images/img.oversize/9.png","images/img.oversize/10.png","images/img.oversize/11.png","images/img.oversize/12.png","images/img.oversize/13.png"]},{hex:"#45464c", images:["images/img.oversize/14.png","images/img.oversize/15.png","images/img.oversize/16.png","images/img.oversize/17.png"]},{hex:"#654321", images:["images/img.oversize/22.png","images/img.oversize/23.png","images/img.oversize/24.png","images/img.oversize/25.png","images/img.oversize/26.png"]}] },
+      "Blade": { name: "Куртка Blade", price: 1799, old: 3400, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.chorn1799/1.png","images/img.chorn1799/2.png","images/img.chorn1799/3.png","images/img.chorn1799/4.png","images/img.chorn1799/5.png","images/img.chorn1799/6.png","images/img.chorn1799/7.png","images/img.chorn1799/8.png","images/img.chorn1799/9.png","images/img.chorn1799/10.png","images/img.chorn1799/11.png","images/img.chorn1799/12.png"]}] },
+      "Griffin": { name: "Куртка Griffin", price: 1799, old: 3400, season: "spring",
+        colors: [{hex:"#654321", images:["images/img.kosuha/1.png","images/img.kosuha/2.png","images/img.kosuha/3.png"]},{hex:"#616267", images:["images/img.kosuha/4.png","images/img.kosuha/5.png","images/img.kosuha/6.png"]}] },
+      "Falcon": { name: "Куртка Falcon", price: 1749, old: 3350, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.chorn1749/1.png","images/img.chorn1749/2.png","images/img.chorn1749/3.png","images/img.chorn1749/4.png"]}] },
+      "Prestige": { name: "Преміальна куртка Prestige", price: 1850, old: 4200, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.kozhanka/1.png","images/img.kozhanka/2.png","images/img.kozhanka/3.png","images/img.kozhanka/4.png"]}] },
+      "Aero": { name: "Замшева куртка Aero", price: 1490, old: 2900, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.aero/1.png","images/img.aero/2.png","images/img.aero/3.png"]}] },
+      "Air": { name: "Куртка Air", price: 1350, old: 2750, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.air/1.png","images/img.air/2.png"]},{hex:"#bbbbbb", images:["images/img.air/3.png","images/img.air/4.png"]},{hex:"#175a43", images:["images/img.air/5.png","images/img.air/6.png"]},{hex:"#000080", images:["images/img.air/7.png","images/img.air/8.png"]}] },
+      "Dune": { name: "Комплект Dune", price: 1690, old: 2900, season: "summer",
+        colors: [{hex:"#d6c7b1", images:["images/img.dune/1.webp","images/img.dune/2.webp","images/img.dune/3.webp"]},{hex:"#616267", images:["images/img.dune/4.webp","images/img.dune/5.webp","images/img.dune/6.webp"]},{hex:"#111113ff", images:["images/img.dune/7.webp","images/img.dune/8.webp","images/img.dune/9.webp"]},{hex:"#ffffff", images:["images/img.dune/10.webp","images/img.dune/11.webp","images/img.dune/12.webp"]}] },
+      "Twilline": { name: "Комплект Twilline", price: 1490, old: 2900, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.twilline/1.png","images/img.twilline/2.png","images/img.twilline/3.png"]},{hex:"#bbbbbb", images:["images/img.twilline/4.png","images/img.twilline/5.png","images/img.twilline/6.png"]},{hex:"#000080", images:["images/img.twilline/7.png","images/img.twilline/8.png","images/img.twilline/9.png"]}] },
+      "Linen Cloud": { name: "Комплект із льону Linen Cloud", price: 1690, old: 2790, season: "summer",
+        colors: [{hex:"#ffffff", images:["images/img.lyon3/1.png","images/img.lyon3/2.png"]},{hex:"#111113ff", images:["images/img.lyon3/3.png","images/img.lyon3/4.png"]},{hex:"#7C8DA4", images:["images/img.lyon3/5.png","images/img.lyon3/6.png"]},{hex:"#175a43", images:["images/img.lyon3/7.png","images/img.lyon3/8.png"]}] },
+      "Mono": { name: "Лонггслів Mono", price: 499, old: 850, season: "spring",
+        colors: [{hex:"#ffffff", images:["images/img.longsliv/1.png","images/img.longsliv/2.png","images/img.longsliv/3.png"]},{hex:"#111113ff", images:["images/img.longsliv/4.png","images/img.longsliv/5.png","images/img.longsliv/6.png"]}] },
+      "sweater": { name: "Светр Oslo Spirit", price: 1049, old: 1349, season: "spring",
+        colors: [{hex:"#616267", images:["images/img/3.png","images/img/4.png"]},{hex:"#111113ff", images:["images/img/1.png","images/img/2.png"]},{hex:"#d6c7b1", images:["images/img/5.png","images/img/6.png"]},{hex:"#a5aaa1dc", images:["images/img/7.png","images/img/8.png"]}] },
+      "Base": { name: "Футболка Base", price: 580, old: 950, season: "summer",
+        colors: [{hex:"#ffffff", images:["images/img.base/1.webp","images/img.base/2.webp"]},{hex:"#111113ff", images:["images/img.base/3.webp"]}] },
+      "Vibe": { name: "Комплект Vibe", price: 1390, old: 2800, season: "summer",
+        colors: [{hex:"#d6c7b1", images:["images/img.vibe/1.webp","images/img.vibe/2.webp"]},{hex:"#ffffff", images:["images/img.vibe/3.webp","images/img.vibe/4.webp"]},{hex:"#616267", images:["images/img.vibe/5.webp","images/img.vibe/6.webp"]},{hex:"#111113ff", images:["images/img.vibe/7.webp","images/img.vibe/8.webp"]}] },
+      "Carvelo": { name: "Комплект Carvelo", price: 1490, old: 2900, season: "summer",
+        colors: [{hex:"#d6c7b1", images:["images/img.carvelo/1.png","images/img.carvelo/2.png"]},{hex:"#ffffff", images:["images/img.carvelo/3.png","images/img.carvelo/4.png"]},{hex:"#616267", images:["images/img.carvelo/5.png","images/img.carvelo/6.png"]},{hex:"#111113ff", images:["images/img.carvelo/7.png","images/img.carvelo/8.png"]}] },
+      "Aura": { name: "Комплект Aura", price: 1190, old: 2600, season: "summer",
+        colors: [{hex:"#616267", images:["images/img.aura/1.png","images/img.aura/2.png","images/img.aura/3.png"]},{hex:"#d6c7b1", images:["images/img.aura/4.png","images/img.aura/5.png","images/img.aura/6.png"]},{hex:"#111113ff", images:["images/img.aura/7.png","images/img.aura/8.png"]},{hex:"#ffffff", images:["images/img.aura/9.png","images/img.aura/10.png"]}] },
+      "Breeze": { name: "Комплект Breeze", price: 1290, old: 2700, season: "summer",
+        colors: [{hex:"#616267", images:["images/img.breeze/1.png","images/img.breeze/2.png","images/img.breeze/3.png"]},{hex:"#ffffff", images:["images/img.breeze/4.png","images/img.breeze/5.png","images/img.breeze/6.png"]},{hex:"#111113ff", images:["images/img.breeze/10.png","images/img.breeze/11.png","images/img.breeze/12.png"]},{hex:"#d6c7b1", images:["images/img.breeze/13.png","images/img.breeze/14.png","images/img.breeze/15.png"]},{hex:"#bbbbbb", images:["images/img.breeze/7.png","images/img.breeze/9.png","images/img.breeze/8.png"]}] },
+      "Musair": { name: "Комплект Musair", price: 1349, old: 2700, season: "summer",
+        colors: [{hex:"#111113ff", images:["images/img.musair/1.png","images/img.musair/2.png","images/img.musair/3.png"]},{hex:"#616267", images:["images/img.musair/4.png","images/img.musair/5.png","images/img.musair/6.png"]},{hex:"#AAF0D1", images:["images/img.musair/7.png","images/img.musair/8.png","images/img.musair/9.png"]},{hex:"#d6c7b1", images:["images/img.musair/10.png","images/img.musair/11.png","images/img.musair/12.png"]}] },
+      "Cordy": { name: "Комплект Cordy", price: 1349, old: 2750, season: "summer",
+        colors: [{hex:"#d6c7b1", images:["images/img.cordy/1.png","images/img.cordy/2.png","images/img.cordy/3.png"]},{hex:"#111113ff", images:["images/img.cordy/4.png","images/img.cordy/5.png","images/img.cordy/6.png"]},{hex:"#616267", images:["images/img.cordy/7.png","images/img.cordy/8.png","images/img.cordy/9.png"]}] },
+      "balaklava": { name: "Зимова шапка Ghost", price: 549, old: 649, season: "winter",
+        colors: [{hex:"#4B5320", images:["images/img.balaklava/4.png","images/img.balaklava/3.png"]},{hex:"#111113ff", images:["images/img.balaklava/1.png","images/img.balaklava/2.png"]},{hex:"#78866b", images:["images/img.balaklava/7.png","images/img.balaklava/8.png","images/img.balaklava/5.png","images/img.balaklava/6.png"]},{hex:"#e4e3beff", images:["images/img.balaklava/13.png","images/img.balaklava/14.png","images/img.balaklava/15.png"]}] },
+      "shapka-baf": { name: "Зимова шапка+баф Duo", price: 499, old: 649, season: "winter",
+        colors: [{hex:"#d6c7b1", images:["images/img.baf/4.png","images/img.baf/3.png","images/img.baf/5.png"]},{hex:"#4B5320", images:["images/img.baf/10.png","images/img.baf/9.png","images/img.baf/12.png"]}] }
+    };
 
-  if (product && color) {
-    const block = document.getElementById("prefilledProduct");
-    const text  = document.getElementById("prefilledProductName");
-    if (block && text) {
-      block.hidden = false;
-      text.textContent = `${product} (${color})`;
+    const TYPE_GROUPS = {
+      "Бізнес комплекти": ["Classic Style", "zamsh-na-zmiyci", "A", "Axis"],
+      "Спортивні костюми": [ "Patriot UA", "Basic Premium", "plashovka"],
+      "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
+      "Жилетки": ["Matrix"],
+      "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
+      "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
+      "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
+      "Светри/Лонгсліви": ["Mono", "sweater"],
+      "Футболки/Шорти": ["LinenSet", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
+      "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
+    };
+
+    let currentActiveSeason = 'summer';
+    let currentActiveCategory = 'all';
+
+    function getRandomRating(id) {
+      if (id === "Flow") return "4.9"; 
+      const ratings = ["4.7", "4.8", "4.9", "5.0"];
+      return ratings[Math.floor(Math.random() * ratings.length)];
     }
 
-    const productSelect = document.getElementById("productSelect");
-    const colorSelect   = document.getElementById("colorSelect");
+    function createProductCard(id, data) {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.dataset.season = data.season;
+      
+      const discount = Math.round(((data.old - data.price) / data.old) * 100);
+      const productRating = getRandomRating(id);
 
-    if (productSelect && colorSelect) {
-      for (const opt of productSelect.options) {
-        if (opt.textContent.trim() === product.trim()) {
-          opt.selected = true;
-          break;
+      // Безопасное получение первой картинки первого доступного цвета
+      const firstColor = data.colors && data.colors[0];
+      const fallbackImage = (firstColor && firstColor.images && firstColor.images[0]) ? firstColor.images[0] : "images/placeholder.jpg";
+
+      card.innerHTML = `
+        <div class="img-wrap">
+          <div class="discount-badge">-${discount}%</div>
+          <img src="${fallbackImage}" alt="${data.name}" class="main-image" data-product="${id}">
+          <button class="carousel-btn prev">‹</button>
+          <button class="carousel-btn next">›</button>
+        </div>
+        <div class="product-info">
+          <h3 class="product-card-title">${data.name}</h3>
+          <p class="product-desc">${data.description || "Преміальна якість • Comfort"}</p>
+          <div class="color-picker" data-product="${id}"></div>
+          <div class="price-rating-row">
+            <div>
+              <div class="old-price">${data.old} грн</div>
+              <div class="current-price">${data.price} грн</div>
+            </div>
+            <div class="rating">★ <span>${productRating}</span></div>
+          </div>
+        </div>
+      `;
+
+      // Переход на карточку товара ТОЛЬКО при клике на текстовую информацию или саму карту, но не на кнопки карусели
+      card.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('carousel-btn') && !e.target.classList.contains('color-dot')) {
+          window.location.href = `product.html?id=${id}`;
         }
-      }
-      productSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      });
 
-      setTimeout(() => {
-        for (const opt of colorSelect.options) {
-          if (opt.textContent.trim() === color.trim()) {
-            opt.selected = true;
-            break;
+      return card;
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+      let count = 0;
+
+      Object.keys(productsData).forEach(id => {
+        const prod = productsData[id];
+        
+        let matchSeason = true;
+        if (currentActiveCategory === 'all') {
+          matchSeason = (prod.season === currentActiveSeason);
+        }
+        
+        let matchCategory = false;
+        if (currentActiveCategory === 'all') {
+          matchCategory = true;
+        } else {
+          const allowedIds = TYPE_GROUPS[currentActiveCategory] || [];
+          if (allowedIds.includes(id)) {
+            matchCategory = true;
           }
         }
-        if (typeof updateOrderSummary === "function") updateOrderSummary();
-      }, 200);
-    }
 
-    localStorage.removeItem("orderProduct");
-    localStorage.removeItem("orderColor");
-  }
-
-  // Обробник форми
-  const orderForm = document.getElementById("orderForm");
-  if (orderForm) {
-    let isSubmitting = false;
-
-    orderForm.addEventListener("submit", async function (e) {
-      e.preventDefault();
-
-      const requiredFields = orderForm.querySelectorAll('[required]');
-      let valid = true;
-      let firstInvalid = null;
-
-      requiredFields.forEach(field => {
-        if (!field.value.trim()) {
-          valid = false;
-          field.classList.add("invalid");
-          if (!firstInvalid) firstInvalid = field;
-        } else {
-          field.classList.remove("invalid");
+        if (matchSeason && matchCategory) {
+          // ИСПРАВЛЕНО: Лимит в 4 штуки применяется ТОЛЬКО если мы смотрим главную вкладку "Показати все" (Хіти продажу)
+          if (currentActiveCategory === 'all' && count >= 4) {
+            return; 
+          }
+          
+          grid.appendChild(createProductCard(id, prod));
+          count++;
         }
       });
 
-      if (!valid) {
-        alert("Заповніть усі обов'язкові поля!");
-        firstInvalid?.focus();
-        return;
+      if (count === 0) {
+        const catLabel = currentActiveCategory === 'all' ? '' : ` з категорії "${currentActiveCategory}"`;
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 60px 20px; color: var(--text-muted); font-size: 1.1rem; font-weight: 500;">Наразі немає товарів${catLabel}. Спробуйте обрати іншу категорію.</div>`;
       }
 
-      if (isSubmitting) return;
-      isSubmitting = true;
+      initCardFunctionality();
+    }
 
-      const formData = new FormData(orderForm);
-      const data = Object.fromEntries(formData.entries());
+    function initCardFunctionality() {
+      document.querySelectorAll('.product-card').forEach(card => {
+        const productId = card.querySelector('.main-image').dataset.product;
+        const data = productsData[productId];
+        if (!data) return;
 
-      data.height = (data.height || "").trim() || localStorage.getItem("userHeight") || "";
-      data.weight = (data.weight || "").trim() || localStorage.getItem("userWeight") || "";
-      data.user_height = data.height;
-      data.user_weight = data.weight;
+        const colorPicker = card.querySelector('.color-picker');
+        const mainImage = card.querySelector('.main-image');
+        let currentIndex = 0;
 
-      const productId = data.product_id;
-      const colorId = data.color_id;
-      if (productId && CONFIG?.PRODUCTS) {
-        const prod = CONFIG.PRODUCTS.find(p => p.id === productId);
-        if (prod) {
-          data.product_name = prod.name;
-          const col = prod.colors.find(c => c.id === colorId);
-          if (col) data.color_name = col.name;
-        }
-      }
-
-      data.timestamp = new Date().toISOString();
-      data.source = "Головна сторінка (index.html)";
-
-      console.log("=== Дані відправляються ===");
-      console.log(JSON.stringify(data, null, 2));
-
-      try {
-        const res = await fetch('https://pleasework.skyron-ua.workers.dev', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
+        colorPicker.innerHTML = '';
+        data.colors.forEach((color, i) => {
+          const dot = document.createElement('div');
+          dot.className = `color-dot ${i === 0 ? 'active' : ''}`;
+          dot.style.backgroundColor = color.hex;
+          
+          dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            colorPicker.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
+            dot.classList.add('active');
+            if (color.images && color.images[0]) {
+              mainImage.src = color.images[0];
+            }
+            currentIndex = 0;
+          });
+          colorPicker.appendChild(dot);
         });
 
-        if (res.ok) {
-          alert("Дякуємо за замовлення! Ми незабаром з вами звʼяжемось😊");
-          orderForm.reset();
-          localStorage.removeItem("userHeight");
-          localStorage.removeItem("userWeight");
-          document.querySelector('input[name="height"]').value = "";
-          document.querySelector('input[name="weight"]').value = "";
-        } else {
-          alert("Помилка відправки. Напишіть в Telegram або Viber.");
-        }
-      } catch (err) {
-        console.error("Помилка:", err);
-        alert("Щось пішло не так. Спробуйте ще раз.");
-      } finally {
-        isSubmitting = false;
-      }
-    });
-  }
+        const prevBtn = card.querySelector('.prev');
+        const nextBtn = card.querySelector('.next');
 
-  // Збереження зріст/вага
-  ["height", "weight"].forEach(field => {
-    const input = document.querySelector(`input[name="${field}"]`);
-    if (input) {
-      const key = "user" + field.charAt(0).toUpperCase() + field.slice(1);
-      const saved = localStorage.getItem(key);
-      if (saved) input.value = saved;
+        prevBtn.onclick = (e) => {
+          e.stopPropagation();
+          const activeDot = colorPicker.querySelector('.active');
+          const activeIndex = activeDot ? Array.from(colorPicker.children).indexOf(activeDot) : 0;
+          const activeColor = data.colors[activeIndex];
+          if (activeColor && activeColor.images && activeColor.images.length > 0) {
+            currentIndex = (currentIndex - 1 + activeColor.images.length) % activeColor.images.length;
+            mainImage.src = activeColor.images[currentIndex];
+          }
+        };
 
-      input.addEventListener("input", () => {
-        localStorage.setItem(key, input.value.trim());
+        nextBtn.onclick = (e) => {
+          e.stopPropagation();
+          const activeDot = colorPicker.querySelector('.active');
+          const activeIndex = activeDot ? Array.from(colorPicker.children).indexOf(activeDot) : 0;
+          const activeColor = data.colors[activeIndex];
+          if (activeColor && activeColor.images && activeColor.images.length > 0) {
+            currentIndex = (currentIndex + 1) % activeColor.images.length;
+            mainImage.src = activeColor.images[currentIndex];
+          }
+        };
       });
     }
-  });
 
-  // Carousel logic: assuming multiple images for the product (add your actual image paths here)
-  const images = [
-    'images/1.png',
-    'images/2.png', // Add more images as needed, e.g., 'images/3.png'
-    // 'images/3.png',
-  ];
-  let currentIndex = 0;
-  const mainImage = document.getElementById('mainImage');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+    function buildCategoriesSidebar() {
+      const container = document.getElementById('dynamicCategoriesContainer');
+      container.innerHTML = '';
 
-  function updateImage() {
-    if (mainImage) {
-      mainImage.src = images[currentIndex];
-    }
-    if (prevBtn) {
-      prevBtn.style.display = currentIndex > 0 ? 'block' : 'none';
-    }
-    if (nextBtn) {
-      nextBtn.style.display = currentIndex < images.length - 1 ? 'block' : 'none';
-    }
-  }
+      Object.keys(TYPE_GROUPS).forEach(catName => {
+        const link = document.createElement('a');
+        link.href = '#';
+        link.className = 'category-link';
+        link.dataset.type = catName;
+        link.textContent = catName;
 
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateImage();
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          document.querySelectorAll('.category-link').forEach(l => l.classList.remove('active-cat'));
+          link.classList.add('active-cat');
+          
+          document.querySelectorAll('.season-btn[data-season]').forEach(b => b.classList.remove('active'));
+          
+          currentActiveCategory = catName;
+          updateSectionTitle();
+          renderProducts();
+          closeSidebar();
+        });
+
+        container.appendChild(link);
+      });
+
+      document.querySelector('.category-link[data-type="all"]').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('.category-link').forEach(l => l.classList.remove('active-cat'));
+        e.target.classList.add('active-cat');
+        
+        const activeSeasonBtn = document.querySelector(`.season-btn[data-season="${currentActiveSeason}"]`);
+        if (activeSeasonBtn) activeSeasonBtn.classList.add('active');
+        
+        currentActiveCategory = 'all';
+        updateSectionTitle();
+        renderProducts();
+        closeSidebar();
+      });
+    }
+
+    function updateSectionTitle() {
+      if (currentActiveCategory === 'all') {
+        const activeSeasonBtn = document.querySelector('.season-btn[data-season].active');
+        const seasonText = activeSeasonBtn ? activeSeasonBtn.textContent : 'Літо';
+        document.getElementById('sectionTitle').textContent = `Хіти продажу — ${seasonText}`;
+      } else {
+        document.getElementById('sectionTitle').textContent = `${currentActiveCategory}`;
       }
+    }
+
+    const sidebar = document.getElementById('filterSidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+      sidebar.classList.add('open');
+      overlay.classList.add('show');
+    }
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    }
+
+    document.getElementById('openFiltersBtn').addEventListener('click', openSidebar);
+    document.getElementById('closeFiltersBtn').addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+
+    document.querySelectorAll('.season-btn[data-season]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.season-btn[data-season]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        document.querySelectorAll('.category-link').forEach(l => l.classList.remove('active-cat'));
+        document.querySelector('.category-link[data-type="all"]').classList.add('active-cat');
+
+        currentActiveSeason = btn.dataset.season;
+        currentActiveCategory = 'all';
+        updateSectionTitle();
+        renderProducts();
+      });
     });
-  }
 
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < images.length - 1) {
-        currentIndex++;
-        updateImage();
-      }
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("year").textContent = new Date().getFullYear();
+      buildCategoriesSidebar();
+      renderProducts();
     });
-  }
-
-  // Initial update
-  updateImage();
-});
-</script>
-
+  </script>
 </body>
 </html>
