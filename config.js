@@ -90,14 +90,25 @@ const CONFIG = {
       "price": 1390,
       "colors": [
         {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
           "images": [
-            "images/img.linenset/5.webp",
-            "images/img.linenset/6.webp",
-            "images/img.linenset/7.webp",
-            "images/img.linenset/8.webp"
+            "images/img.linenset/1.webp",
+            "images/img.linenset/2.webp",
+            "images/img.linenset/3.webp",
+            "images/img.linenset/4.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.linenset/10.webp",
+            "images/img.linenset/9.webp",
+            "images/img.linenset/11.webp",
+            "images/img.linenset/12.webp"
           ]
         },
         {
@@ -121,6 +132,17 @@ const CONFIG = {
           ]
         },
         {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.linenset/5.webp",
+            "images/img.linenset/6.webp",
+            "images/img.linenset/7.webp",
+            "images/img.linenset/8.webp"
+          ]
+        },
+        {
           "id": "blue",
           "name": "Синій",
           "hex": "#000080",
@@ -128,28 +150,6 @@ const CONFIG = {
             "images/img.linenset/20.webp",
             "images/img.linenset/21.webp",
             "images/img.linenset/22.webp"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.linenset/10.webp",
-            "images/img.linenset/9.webp",
-            "images/img.linenset/11.webp",
-            "images/img.linenset/12.webp"
-          ]
-        },
-        {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.linenset/1.webp",
-            "images/img.linenset/2.webp",
-            "images/img.linenset/3.webp",
-            "images/img.linenset/4.webp"
           ]
         }
       ],
