@@ -444,16 +444,26 @@ const CONFIG = {
         "✔️ Стиль, який привертає увагу з першого погляду",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1290,
+      "price": 1390,
       "colors": [
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.breeze/10.webp",
+            "images/img.breeze/11.webp",
+            "images/img.breeze/12.webp"
+          ]
+        },
         {
           "id": "graphite",
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.breeze/1.png",
-            "images/img.breeze/2.png",
-            "images/img.breeze/3.png"
+            "images/img.breeze/1.webp",
+            "images/img.breeze/2.webp",
+            "images/img.breeze/3.webp"
           ]
         },
         {
@@ -461,9 +471,9 @@ const CONFIG = {
           "name": "Білий",
           "hex": "#ffffff",
           "images": [
-            "images/img.breeze/4.png",
-            "images/img.breeze/5.png",
-            "images/img.breeze/6.png"
+            "images/img.breeze/4.webp",
+            "images/img.breeze/5.webp",
+            "images/img.breeze/6.webp"
           ]
         },
         {
@@ -471,19 +481,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.breeze/10.png",
-            "images/img.breeze/11.png",
-            "images/img.breeze/12.png"
-          ]
-        },
-        {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.breeze/13.png",
-            "images/img.breeze/14.png",
-            "images/img.breeze/15.png"
+            "images/img.breeze/7.webp",
+            "images/img.breeze/8.webp",
+            "images/img.breeze/9.webp"
           ]
         },
         {
@@ -491,9 +491,9 @@ const CONFIG = {
           "name": "Сірий",
           "hex": "#bbbbbb",
           "images": [
-            "images/img.breeze/7.png",
-            "images/img.breeze/9.png",
-            "images/img.breeze/8.png"
+            "images/img.breeze/13.webp",
+            "images/img.breeze/14.webp",
+            "images/img.breeze/15.webp"
           ]
         }
       ],
