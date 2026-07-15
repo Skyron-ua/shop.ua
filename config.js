@@ -569,26 +569,16 @@ const CONFIG = {
         "👌 1 кишеня на сорочці + 2 на шортах",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1349,
+      "price": 1390,
       "colors": [
         {
           "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
           "images": [
-            "images/img.cordy/1.png",
-            "images/img.cordy/2.png",
-            "images/img.cordy/3.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.cordy/4.png",
-            "images/img.cordy/5.png",
-            "images/img.cordy/6.png"
+            "images/img.cordy/1.webp",
+            "images/img.cordy/2.webp",
+            "images/img.cordy/3.webp"
           ]
         },
         {
@@ -596,11 +586,21 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.cordy/7.png",
-            "images/img.cordy/8.png",
-            "images/img.cordy/9.png"
+            "images/img.cordy/7.webp",
+            "images/img.cordy/8.webp",
+            "images/img.cordy/9.webp"
           ]
         },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.cordy/4.webp",
+            "images/img.cordy/5.webp",
+            "images/img.cordy/6.webp"
+          ]
+        }
       ],
       "old_price": 2750
     },
