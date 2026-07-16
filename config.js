@@ -34,23 +34,12 @@ const CONFIG = {
           ]
         },
         {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
           "images": [
-            "images/img.lyon2/13.webp",
-            "images/img.lyon2/14.webp",
-            "images/img.lyon2/15.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.lyon2/9.webp",
-            "images/img.lyon2/8.webp",
-            "images/img.lyon2/7.webp"
+            "images/img.lyon2/4.webp",
+            "images/img.lyon2/5.webp"
           ]
         },
         {
@@ -64,12 +53,43 @@ const CONFIG = {
           ]
         },
         {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
+          "id": "blue",
+          "name": "Блакитний",
+          "hex": "#B9C6F2",
           "images": [
-            "images/img.lyon2/4.webp",
-            "images/img.lyon2/5.webp"
+            "images/img.lyon2//19.webp",
+            "images/img.lyon2//20.webp",
+            "images/img.lyon2//21.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.lyon2/9.webp",
+            "images/img.lyon2/8.webp",
+            "images/img.lyon2/7.webp"
+          ]
+        },
+        {
+          "id": "haki",
+          "name": "Хакі",
+          "hex": "#78866b",
+          "images": [
+            "images/img.lyon2//18.webp",
+            "images/img.lyon2//17.webp",
+            "images/img.lyon2//16.webp"
+          ]
+        },
+        {
+          "id": "dark-blue",
+          "name": "Темно-синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.lyon2/13.webp",
+            "images/img.lyon2/14.webp",
+            "images/img.lyon2/15.webp"
           ]
         }
       ],
