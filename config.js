@@ -176,6 +176,53 @@ const CONFIG = {
       "old_price": 2800
     },
     {
+      "id": "Stamix",
+      "name": "Комплект Stamix",
+      "description": "Легкий літній комплект з льону",
+      "features": [
+        "🔥 Льняний комплект: сорочка + шорти",
+        "☁️ Легкий, дихаючий льон — ідеально в спеку",
+        "🚀 Сідає по фігурі",
+        "✔️ Максимальний комфорт на кожен день",
+        "✨ Шорти на шнурку + 2 кишені",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+            "images/img.stamix/1.webp",
+            "images/img.stamix/2.webp",
+            "images/img.stamix/3.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.stamix/4.webp",
+            "images/img.stamix/5.webp",
+            "images/img.stamix/6.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.stamix/7.webp",
+            "images/img.stamix/8.webp",
+            "images/img.stamix/9.webp"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
+    {
       "id": "Divento",
       "name": "Комплект Divento",
       "description": "Легкий літній комплект преміальної якості",
@@ -2611,6 +2658,7 @@ const CONFIG = {
   SEASON_GROUPS: {
     "Літній гардероб": [
       "Flow",
+      "Stamix",
       "Base",
       "Dune",
       "Twilline",
@@ -2677,7 +2725,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
+    "Футболки/Шорти": ["LinenSet", "Stamix", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
