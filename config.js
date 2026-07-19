@@ -853,16 +853,16 @@ const CONFIG = {
         "✨ Легко комбінується з іншим одягом",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1090,
+      "price": 1290,
       "colors": [
         {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.bomber-zamsh/1.png",
-            "images/img.bomber-zamsh/2.png",
-            "images/img.bomber-zamsh/3.png"
+            "images/img.bomber-zamsh/1.webp",
+            "images/img.bomber-zamsh/2.webp",
+            "images/img.bomber-zamsh/3.webp"
           ]
         },
         {
@@ -870,8 +870,19 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.bomber-zamsh/4.png",
-            "images/img.bomber-zamsh/5.png"
+            "images/img.bomber-zamsh/4.webp",
+            "images/img.bomber-zamsh/5.webp",
+            "images/img.bomber-zamsh/6.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.bomber-zamsh/7.webp",
+            "images/img.bomber-zamsh/8.webp",
+            "images/img.bomber-zamsh/9.webp"
           ]
         },
         {
@@ -879,13 +890,13 @@ const CONFIG = {
           "name": "Хакі",
           "hex": "#78866b",
           "images": [
-            "images/img.bomber-zamsh/10.png",
-            "images/img.bomber-zamsh/11.png",
-            "images/img.bomber-zamsh/12.png",
-            "images/img.bomber-zamsh/13.png",
-            "images/img.bomber-zamsh/14.png",
-            "images/img.bomber-zamsh/15.png",
-            "images/img.bomber-zamsh/16.png"
+            "images/img.bomber-zamsh/10.webp",
+            "images/img.bomber-zamsh/11.webp",
+            "images/img.bomber-zamsh/12.webp",
+            "images/img.bomber-zamsh/13.webp",
+            "images/img.bomber-zamsh/14.webp",
+            "images/img.bomber-zamsh/15.webp",
+            "images/img.bomber-zamsh/16.webp"
           ]
         },
         {
@@ -893,10 +904,10 @@ const CONFIG = {
           "name": "Бордо",
           "hex": "#790604",
           "images": [
-            "images/img.bomber-zamsh/17.png",
-            "images/img.bomber-zamsh/18.png",
-            "images/img.bomber-zamsh/19.png",
-            "images/img.bomber-zamsh/20.png"
+            "images/img.bomber-zamsh/17.webp",
+            "images/img.bomber-zamsh/18.webp",
+            "images/img.bomber-zamsh/19.webp",
+            "images/img.bomber-zamsh/20.webp"
           ]
         }
       ],
