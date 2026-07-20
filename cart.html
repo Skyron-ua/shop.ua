@@ -26,10 +26,10 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
   <!-- TikTok Pixel -->
   <script>
     !function (w, d, t) {
-      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._t=ttq._t||{},ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq._i[t].length;n++)ttq.setAndDefer(e,ttq._i[t][n]);return e},ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._t=ttq._t||{},ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
       ttq.load('D4OBCO3C77U7MI8IQKIG');
       ttq.page();
-    }(window, document, 'ttq');
+    (window, document, 'ttq');
   </script>
 
   <style>
@@ -108,9 +108,21 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
       box-shadow: 0 0 0 3px rgba(11,107,255,0.15);
     }
 
-    /* ──────────────────────────────
-       Нова акуратна група кнопок
-    ────────────────────────────── */
+    /* Подсказка для ввода телефона */
+    .phone-hint {
+      margin-top: 8px;
+      font-size: 0.88rem;
+      color: #b45309;
+      background: #fffbe3;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 1px solid #fef3c7;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Нова акуратна група кнопок */
     .button-group {
       display: flex;
       flex-direction: column;
@@ -260,7 +272,7 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
         </div>
       </div>
 
-            <form id="checkoutForm" class="checkout-form">
+      <form id="checkoutForm" class="checkout-form">
         <h2>Оформити замовлення</h2>
 
         <div class="form-group">
@@ -270,44 +282,47 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
 
         <div class="form-group">
           <label for="phone">Номер телефону</label>
-          <input type="tel" id="phone" name="phone" pattern="\+?[\d\s()-]{10,}" required placeholder="+380 XX XXX XX XX">
+          <input type="tel" id="phone" name="phone" required placeholder="+38(0XX) XXX-XX-XX">
+          <div class="phone-hint">
+            <span>⚠️</span> Будь ласка, перевірте правильність номера, щоб ми змогли підтвердити замовлення.
+          </div>
         </div>
 
         <!-- Місто -->
-<div class="form-group">
-  <label for="city">Місто</label>
+        <div class="form-group">
+          <label for="city">Місто</label>
 
-  <input
-    type="text"
-    id="city"
-    name="city"
-    required
-    autocomplete="off"
-    placeholder="Почніть вводити місто..."
-    list="cityList"
-  >
+          <input
+            type="text"
+            id="city"
+            name="city"
+            required
+            autocomplete="off"
+            placeholder="Почніть вводити місто..."
+            list="cityList"
+          >
 
-  <datalist id="cityList"></datalist>
-</div>
+          <datalist id="cityList"></datalist>
+        </div>
 
-<!-- Відділення / Поштомат -->
-<div class="form-group">
-  <label for="postOffice">
-    Відділення або поштомат Нової Пошти
-  </label>
+        <!-- Відділення / Поштомат -->
+        <div class="form-group">
+          <label for="postOffice">
+            Відділення або поштомат Нової Пошти
+          </label>
 
-  <input
-    type="text"
-    id="postOffice"
-    name="postOffice"
-    required
-    autocomplete="off"
-    placeholder="Почніть вводити номер відділення..."
-    list="postOfficeList"
-  >
+          <input
+            type="text"
+            id="postOffice"
+            name="postOffice"
+            required
+            autocomplete="off"
+            placeholder="Почніть вводити номер відділення..."
+            list="postOfficeList"
+          >
 
-  <datalist id="postOfficeList"></datalist>
-</div>
+          <datalist id="postOfficeList"></datalist>
+        </div>
 
         <div class="button-group">
           <button type="submit" class="main-order-btn">
@@ -362,6 +377,35 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
       </div>
     </div>
   </footer>
+
+  <!-- Бібліотека маски маскування вводу -->
+  <script src="https://unpkg.com/imask"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const phoneInput = document.getElementById('phone');
+
+      if (phoneInput) {
+        // Підключаємо маску з нулем у дужках: +38(0XX) XXX-XX-XX
+        const phoneMask = IMask(phoneInput, {
+          mask: '+{38}(000) 000-00-00',
+          lazy: false // Маска видна одразу
+        });
+
+        const checkoutForm = document.getElementById('checkoutForm');
+        if (checkoutForm) {
+          checkoutForm.addEventListener('submit', function (e) {
+            // Перевіряємо чи введено повні 12 цифр
+            if (phoneMask.unmaskedValue.length < 12) {
+              e.preventDefault();
+              alert('Будь ласка, введіть повний номер телефону!');
+              phoneInput.focus();
+            }
+          });
+        }
+      }
+    });
+  </script>
 
   <script src="config.js"></script>
   <script src="script.js"></script>
