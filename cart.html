@@ -394,14 +394,19 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
 
         const checkoutForm = document.getElementById('checkoutForm');
         if (checkoutForm) {
+          // Использование capture phase (флаг true) и stopImmediatePropagation() полностью блокирует отправку в script.js
           checkoutForm.addEventListener('submit', function (e) {
             // Перевіряємо чи введено повні 12 цифр
             if (phoneMask.unmaskedValue.length < 12) {
               e.preventDefault();
-              alert('Будь ласка, введіть повний номер телефону!');
+              e.stopPropagation();
+              e.stopImmediatePropagation(); // Жестко блокирует выполнение любых других скриптов на форме!
+              
+              alert('Будь ласка, введіть правильний і повний номер телефону!');
               phoneInput.focus();
+              return false;
             }
-          });
+          }, true); // Флаг true перехватывает событие ДО отправки формы
         }
       }
     });
