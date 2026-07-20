@@ -26,17 +26,13 @@ fbq('track', 'PageView');
 </noscript>
 <!-- End Meta Pixel Base Code -->
 
+<!-- TikTok Pixel (Исправлен) -->
 <script>
-        !function (w, d, t) {
-w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || [];
-ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],
-ttq.setAndDefer = function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};
-for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
-ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},
-ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._t=ttq._t||{},ttq._t[e]=+new Date;ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-ttq.load('D4OBCO3C77U7MI8IQKIG');
-ttq.page();
-        }(window, document, 'ttq');
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq._i[t].length;n++)ttq.setAndDefer(e,ttq._i[t][n]);return e},ttq.load=function(e){var n="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._t=ttq._t||{},ttq._o=ttq._o||{},ttq._o[e]={};var o=d.createElement("script");o.type="text/javascript",o.async=!0,o.src=n+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+    ttq.load('D4OBCO3C77U7MI8IQKIG');
+    ttq.page();
+  (window, document, 'ttq');
 </script>
 
 <style>
@@ -82,7 +78,6 @@ padding: 20px 0;
 }
 
 /* --- СТИЛИ ДЛЯ ФОТО --- */
-/* Фото */
 .img-wrap {
     position: relative;
     border-radius: 24px;
@@ -111,16 +106,16 @@ padding: 20px 0;
 /* --- ПК МОНИТОРЫ (МЕДИА-ЗАПРОСЫ) --- */
 @media (min-width: 992px) {
     .img-wrap {
-        aspect-ratio: auto; /* Снимаем ограничение по высоте */
+        aspect-ratio: auto;
         max-width: 100%; 
-        max-height: 80vh; /* Фото не выше 80% высоты экрана */
-        background: transparent; /* Убираем фон, если фото не закрывает блок */
+        max-height: 80vh;
+        background: transparent;
     }
 
     #mainImage {
-        width: auto;      /* Позволяем ширине подстроиться */
-        max-width: 100%;  /* Но не шире колонки */
-        max-height: 80vh; /* Максимальная высота */
+        width: auto;
+        max-width: 100%;
+        max-height: 80vh;
         object-fit: contain;
     }
 }
@@ -281,14 +276,32 @@ margin: 0 12px;
 #quickOrderModal input[type="tel"] {
 width: 100%;
 padding: 14px;
-font-size: 1.25rem;
+font-size: 1.15rem;
 background: #f4f5f7;
 border: 1px solid #ddd;
 border-radius: 10px;
 text-align: center;
-margin: 14px 0;
+margin-top: 10px;
 color: #222;
+box-sizing: border-box;
 }
+
+/* СТИЛИ ДЛЯ ПЛАШКИ-ПОДСКАЗКИ */
+.phone-hint {
+margin-top: 8px;
+margin-bottom: 14px;
+font-size: 0.85rem;
+color: #b45309;
+background: #fffbe3;
+padding: 8px 12px;
+border-radius: 8px;
+border: 1px solid #fef3c7;
+display: flex;
+align-items: center;
+gap: 6px;
+text-align: left;
+}
+
 #quickOrderModal .send-btn {
 width: 100%;
 padding: 14px;
@@ -432,8 +445,11 @@ cursor: pointer;
 <div class="price" id="previewPrice">0 грн</div>
 </div>
 </div>
-<p>Введіть номер телефону:</p>
-<input type="tel" id="quickPhone" placeholder="+38 (0__) ___-__-__" maxlength="19" />
+<p style="margin-bottom: 0;">Введіть номер телефону:</p>
+<input type="tel" id="quickPhone" placeholder="+38(0XX) XXX-XX-XX" />
+<div class="phone-hint">
+  <span>⚠️</span> Будь ласка, перевірте правильність номера, щоб ми змогли підтвердити замовлення.
+</div>
 <div class="trust-triggers">
 <div><i class="fas fa-shield-alt"></i> Без передоплати</div>
 <div><i class="fas fa-truck"></i> Швидка відправка</div>
@@ -457,8 +473,39 @@ cursor: pointer;
 </div>
 </footer>
 
+<!-- Подключение библиотеки IMask -->
+<script src="https://unpkg.com/imask"></script>
+
 <script src="config.js"></script>
 <script src="script.js"></script>
+
+<!-- Подключение маски и валидации к quickPhone -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const phoneInput = document.getElementById('quickPhone');
+
+  if (phoneInput) {
+    // Подключаем правильную маску +38(0XX) XXX-XX-XX
+    const phoneMask = IMask(phoneInput, {
+      mask: '+{38}(000) 000-00-00',
+      lazy: false
+    });
+
+    const sendBtn = document.getElementById('sendQuickOrder');
+    if (sendBtn) {
+      sendBtn.addEventListener('click', function (e) {
+        // Проверка на полные 12 цифр
+        if (phoneMask.unmaskedValue.length < 12) {
+          e.preventDefault();
+          e.stopPropagation();
+          alert('Будь ласка, введіть повний номер телефону!');
+          phoneInput.focus();
+        }
+      }, true); // перехватываем клик перед обработчиками в script.js
+    }
+  }
+});
+</script>
 
 <!-- Розрахунок відсотка знижки -->
 <script>
