@@ -442,6 +442,53 @@ const CONFIG = {
       ],
       "old_price": 2900
     },
+        {
+      "id": "Nox",
+      "name": "Комплект Nox",
+      "features": [
+        "🔥 Літній комплект: футболка + шорти ",
+        "👌 Стильний готовий образ на кожен день",
+        "✔️ Приємний до тіла матеріал — двунитка",
+        "✔️ Добре тягнеться та тримає форму",
+        "✔️ Комфортна посадка та сучасний крій",
+        "✔️ Ідеально для міста, відпочинку та подорожей",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 990,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.nox/1.webp",
+            "images/img.nox/2.webp",
+            "images/img.nox/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.nox/4.webp",
+            "images/img.nox/5.webp",
+            "images/img.nox/6.webp"
+          ]
+        },
+        {
+          "id": "emerald",
+          "name": "Зелений",
+          "hex": "#175a43",
+          "images": [
+            "images/img.nox/7.webp",
+            "images/img.nox/8.webp",
+            "images/img.nox/9.webp"
+          ]
+        }
+      ],
+      "old_price": 1650
+    },
     {
       "id": "Aura",
       "name": "Комплект Aura",
@@ -1645,7 +1692,7 @@ const CONFIG = {
         "✔️ Ідеально підходить для весни та літа до будь-якої пори року",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1690,
+      "price": 1890,
       "colors": [
         {
           "id": "white",
@@ -2670,6 +2717,7 @@ const CONFIG = {
     "Літній гардероб": [
       "Flow",
       "Stamix",
+      "Nox",
       "Base",
       "Dune",
       "Twilline",
@@ -2736,7 +2784,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Stamix", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
+    "Футболки/Шорти": ["LinenSet", "Stamix", "Nox", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
