@@ -176,6 +176,112 @@ const CONFIG = {
       "old_price": 2800
     },
     {
+      "id": "Tenor",
+      "name": "Лляний комплект Tenor",
+      "description": "Легкий літній комплект з льону",
+      "features": [
+        "‼️ Фінальний розпродаж останніх розмірів",
+        "🔥 Льняний комплект: сорочка + шорти",
+        "☁️ Легкий, дихаючий льон — ідеально в спеку",
+        "🚀 Сідає по фігурі",
+        "✔️ Максимальний комфорт на кожен день",
+        "✨ Шорти на шнурку + 2 кишені",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1190,
+      "colors": [
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+            "images/img.tenor/1.webp",
+            "images/img.tenor/2.webp",
+            "images/img.tenor/3.webp"
+          ]
+        },
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.tenor/4.webp",
+            "images/img.tenor/5.webp",
+            "images/img.tenor/6.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.tenor/7.webp",
+            "images/img.tenor/8.webp",
+            "images/img.tenor/9.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.tenor/10.webp",
+            "images/img.tenor/11.webp",
+            "images/img.tenor/12.webp"
+          ]
+        }
+      ],
+      "old_price": 2600
+    },
+    {
+      "id": "Benton",
+      "name": "Лляний комплект Benton",
+      "description": "Легкий літній комплект з льону",
+      "features": [
+        "‼️ Фінальний розпродаж останніх розмірів",
+        "🔥 Льняний комплект: сорочка + шорти",
+        "☁️ Легкий, дихаючий льон-жатка",
+        "🚀 Сідає по фігурі",
+        "✔️ Максимальний комфорт на кожен день",
+        "✨ Шорти на шнурку + 2 кишені",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1090,
+      "colors": [
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+            "images/img.benton/1.webp",
+            "images/img.benton/2.webp",
+            "images/img.benton/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.benton/4.webp",
+            "images/img.benton/5.webp",
+            "images/img.benton/6.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.benton/7.webp",
+            "images/img.benton/8.webp",
+            "images/img.benton/9.webp"
+          ]
+        }
+      ],
+      "old_price": 2500
+    },
+    {
       "id": "Stamix",
       "name": "Комплект Stamix",
       "description": "Легкий літній комплект з льону",
@@ -2716,6 +2822,8 @@ const CONFIG = {
   SEASON_GROUPS: {
     "Літній гардероб": [
       "Flow",
+      "Tenor",
+      "Benton",
       "Stamix",
       "Nox",
       "Base",
@@ -2784,7 +2892,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти": ["LinenSet", "Stamix", "Nox", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
+    "Футболки/Шорти/Сорочки": ["LinenSet", "Tenor", "Benton", "Stamix", "Nox", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
