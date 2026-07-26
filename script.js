@@ -1,5 +1,23 @@
 // script.js
 // config.js уже подключен в HTML
+// =========================================================================
+// Единая защищенная функция отправки событий для Meta и TikTok
+// =========================================================================
+function trackPixelEvent(eventName, metaParams = {}, ttParams = {}) {
+  // Meta Pixel
+  if (typeof window.fbq === 'function') {
+    let metaEvent = eventName;
+    if (eventName === 'CompletePayment') metaEvent = 'Purchase';
+    window.fbq('track', metaEvent, metaParams);
+  }
+  
+  // TikTok Pixel
+  if (window.ttq && typeof window.ttq.track === 'function') {
+    let ttEvent = eventName;
+    if (eventName === 'Purchase') ttEvent = 'CompletePayment';
+    window.ttq.track(ttEvent, ttParams);
+  }
+}
 const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -122,25 +140,37 @@ function addToCart(newItem) {
     i.weight === newItem.weight
   );
   if (existing) {
-    existing.quantity = (existing.quantity || 1) + 1;
+    existing.quantity = (existing.quantity || 1) + (newItem.quantity || 1);
   } else {
-    newItem.quantity = 1;
+    newItem.quantity = newItem.quantity || 1;
     newItem.uniqueId = Date.now();
     cart.push(newItem);
   }
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartBadge();
-  if (window.ttq) {
-    const product = CONFIG.PRODUCTS.find(p => p.id === newItem.productId);
-    ttq.track('AddToCart', {
+
+  // ✅ AddToCart для Meta и TikTok
+  const product = CONFIG.PRODUCTS.find(p => p.id === newItem.productId);
+  const price = product ? Number(product.price) : 0;
+  const qty = newItem.quantity || 1;
+  
+  trackPixelEvent('AddToCart', 
+    {
+      content_ids: [newItem.productId],
+      content_name: product ? product.name : 'Товар',
+      content_type: 'product',
+      value: price * qty,
+      currency: 'UAH'
+    },
+    {
       content_id: newItem.productId,
       content_name: product ? product.name : 'Товар',
       content_type: 'product',
-      quantity: 1,
-      value: product ? Number(product.price) : 0,
+      quantity: qty,
+      value: price * qty,
       currency: 'UAH'
-    });
-  }
+    }
+  );
 }
 function removeFromCart(uniqueId) {
   cart = cart.filter(i => i.uniqueId !== parseInt(uniqueId));
@@ -240,6 +270,9 @@ function initCart() {
 }
 // DOMContentLoaded — без orderForm
 document.addEventListener("DOMContentLoaded", () => {
+  // ✅ 1. Фиксация просмотров страниц
+  if (typeof window.fbq === 'function') window.fbq('track', 'PageView');
+  if (window.ttq && typeof window.ttq.page === 'function') window.ttq.page();
   // Збереження зріст/вага для product.html
   const heightInput = document.getElementById("product-height");
   const weightInput = document.getElementById("product-weight");
@@ -281,8 +314,29 @@ document.addEventListener("DOMContentLoaded", () => {
     if (catalogGrid) buildCatalog(CONFIG.PRODUCTS, catalogGrid);
   } else if (page === 'product.html') {
     initProduct();
-  } else if (page === 'cart.html') {
+   } else if (page === 'cart.html') {
     initCart();
+
+    // ✅ InitiateCheckout для Meta и TikTok
+    const totalSum = cart.reduce((sum, item) => {
+      const p = CONFIG.PRODUCTS.find(prod => prod.id === item.productId);
+      return sum + (p ? p.price * (item.quantity || 1) : 0);
+    }, 0);
+
+    trackPixelEvent('InitiateCheckout', 
+      {
+        content_ids: cart.map(i => i.productId),
+        value: totalSum,
+        currency: 'UAH',
+        num_items: cart.reduce((sum, item) => sum + (item.quantity || 1), 0)
+      },
+      {
+        content_type: 'product',
+        value: totalSum,
+        currency: 'UAH',
+        quantity: cart.reduce((sum, item) => sum + (item.quantity || 1), 0)
+      }
+    );
   }
   const themeToggle = $("#themeToggle");
   if (themeToggle) {
@@ -350,6 +404,24 @@ function initProduct() {
   if (!productId) return;
   const product = CONFIG.PRODUCTS.find(p => p.id === productId);
   if (!product) return;
+
+  // ✅ ViewContent для Meta и TikTok
+  trackPixelEvent('ViewContent',
+    {
+      content_ids: [product.id],
+      content_name: product.name,
+      content_type: 'product',
+      value: Number(product.price),
+      currency: 'UAH'
+    },
+    {
+      content_id: product.id,
+      content_name: product.name,
+      content_type: 'product',
+      value: Number(product.price),
+      currency: 'UAH'
+    }
+  );
   /* =========================
     Основна інформація
   ========================= */
@@ -934,8 +1006,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
           if (res.ok) {
               alert("Дякуємо! Ми зв'яжемося з вами протягом 5 хвилин.");
+              
+              // ✅ Purchase / CompletePayment при быстром заказе
+              const params = new URLSearchParams(window.location.search);
+              const pId = params.get("id");
+              const pObj = CONFIG.PRODUCTS.find(p => p.id === pId);
+              const pPrice = pObj ? Number(pObj.price) : 0;
+
+              trackPixelEvent('Purchase',
+                {
+                  content_ids: [pId],
+                  value: pPrice,
+                  currency: 'UAH',
+                  num_items: 1
+                },
+                {
+                  content_type: 'product',
+                  value: pPrice,
+                  currency: 'UAH',
+                  quantity: 1
+                }
+              );
+
               quickModal.style.display = "none";
-              quickModal.classList.remove("active");  // ← Fix для приховування
+              quickModal.classList.remove("active");
               if (phoneInput) phoneInput.value = "";
           } else {
               alert("Помилка. Спробуйте ще раз або напишіть у Telegram.");
@@ -1038,6 +1132,28 @@ document.addEventListener("DOMContentLoaded", function () {
               console.error('Worker error:', errorText);
               throw new Error(errorText);
           }
+
+          // Расчет итоговой суммы перед отправкой пикселя
+          const totalCartSum = cart.reduce((sum, item) => {
+              const p = CONFIG.PRODUCTS.find(prod => prod.id === item.productId);
+              return sum + (p ? p.price * (item.quantity || 1) : 0);
+          }, 0);
+
+          // ✅ Purchase / CompletePayment при заказе через корзину
+          trackPixelEvent('Purchase',
+            {
+              content_ids: cart.map(i => i.productId),
+              value: totalCartSum,
+              currency: 'UAH',
+              num_items: cart.reduce((sum, item) => sum + (item.quantity || 1), 0)
+            },
+            {
+              content_type: 'product',
+              value: totalCartSum,
+              currency: 'UAH',
+              quantity: cart.reduce((sum, item) => sum + (item.quantity || 1), 0)
+            }
+          );
 
           alert('Дякуємо за замовлення! Ми незабаром з вами звʼяжемось😊');
 
