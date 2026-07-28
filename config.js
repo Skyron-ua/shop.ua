@@ -380,6 +380,116 @@ const CONFIG = {
       "old_price": 2700
     },
     {
+      "id": "Kayro",
+      "name": "Комплект Kayro",
+      "features": [
+        "‼️ Фінальний розпродаж останніх розмірів",
+        "🔥 Літній комплект: футболка + шорти ",
+        "👌 Стильний готовий образ на кожен день",
+        "✔️ Приємний до тіла матеріал — бавовна",
+        "✔️ Добре тримає форму",
+        "✔️ Комфортна посадка та сучасний крій",
+        "✔️ Ідеально для міста, відпочинку та подорожей",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1190,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.kayro/1.webp",
+            "images/img.kayro/2.webp",
+            "images/img.kayro/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.kayro/4.webp",
+            "images/img.kayro/5.webp",
+            "images/img.kayro/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2050
+    },
+    {
+      "id": "Eterno",
+      "name": "Комплект Eterno",
+      "description": "Легкий літній комплект преміальної якості",
+      "features": [
+        "‼️ Фінальний розпродаж останніх розмірів",
+        "🔝 Хіт літнього сезону",
+        "✨ Преміальний матеріал мустанг у рубчик",
+        "👌 Комфортна посадка на кожен день",
+        "🧵 Якісне пошиття та акуратні шви",
+        "💨 Приємна до тіла та дихаюча тканина",
+        "🔄 Добре тримає форму після прання",
+        "🎯 Легко поєднується з будь-яким взуттям",
+        "🔥 Універсальний образ для міста та відпочинку",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1190,
+      "colors": [
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.eterno/1.webp",
+            "images/img.eterno/2.webp",
+            "images/img.eterno/3.webp"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+            "images/img.eterno/4.webp",
+            "images/img.eterno/5.webp",
+            "images/img.eterno/6.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.eterno/7.webp",
+            "images/img.eterno/8.webp",
+            "images/img.eterno/9.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.eterno/10.webp",
+            "images/img.eterno/11.webp",
+            "images/img.eterno/12.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.eterno/13.webp",
+            "images/img.eterno/14.webp",
+            "images/img.eterno/15.webp"
+            
+          ]
+        }
+      ],
+      "old_price": 2500
+    },
+    {
       "id": "Dune",
       "name": "Комплект Dune",
       "features": [
@@ -2825,6 +2935,8 @@ const CONFIG = {
       "Tenor",
       "Benton",
       "Stamix",
+      "Eterno",
+      "Kayro",
       "Nox",
       "Base",
       "Dune",
@@ -2892,7 +3004,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
-    "Футболки/Шорти/Сорочки": ["LinenSet", "Tenor", "Benton", "Stamix", "Nox", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
+    "Футболки/Шорти/Сорочки": ["LinenSet", "Tenor", "Benton", "Stamix", "Kayro", "Eterno", "Nox", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
 };
