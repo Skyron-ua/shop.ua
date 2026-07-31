@@ -110,6 +110,16 @@ const CONFIG = {
       "price": 1390,
       "colors": [
         {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.linenset/19.webp",
+            "images/img.linenset/18.webp",
+            "images/img.linenset/17.webp"
+          ]
+        },
+        {
           "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
@@ -118,37 +128,6 @@ const CONFIG = {
             "images/img.linenset/2.webp",
             "images/img.linenset/3.webp",
             "images/img.linenset/4.webp"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.linenset/10.webp",
-            "images/img.linenset/9.webp",
-            "images/img.linenset/11.webp",
-            "images/img.linenset/12.webp"
-          ]
-        },
-        {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#BCC6CC",
-          "images": [
-            "images/img.linenset/14.webp",
-            "images/img.linenset/13.webp",
-            "images/img.linenset/16.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.linenset/19.webp",
-            "images/img.linenset/18.webp",
-            "images/img.linenset/17.webp"
           ]
         },
         {
@@ -170,6 +149,27 @@ const CONFIG = {
             "images/img.linenset/20.webp",
             "images/img.linenset/21.webp",
             "images/img.linenset/22.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.linenset/10.webp",
+            "images/img.linenset/9.webp",
+            "images/img.linenset/11.webp",
+            "images/img.linenset/12.webp"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+            "images/img.linenset/14.webp",
+            "images/img.linenset/13.webp",
+            "images/img.linenset/16.webp"
           ]
         }
       ],
