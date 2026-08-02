@@ -1176,6 +1176,47 @@ const CONFIG = {
       ],
       "old_price": 2700
     },
+        {
+      "id": "TNF",
+      "name": "Костюм TNF",
+      "features": [
+        "🔥 Стильний костюм: вітровка + штани — ідеальний варіант на кожен день 💣",
+        "✔️ Преміум матеріал  — не продувається та відштовхує воду 💧🌬",
+        "✔️ Підкладка з нейлону — комфорт навіть при активному русі 🏃‍♂️",
+        "✔️ Логотип спереду та ззаду — виглядає дорого та помітно 🔥",
+        "✔️ Фіксатори знизу та біля капюшона — підлаштовуєш під себе 🎯",
+        "✔️ Штани на резинці + шнурок — ідеальна посадка 👌",
+        "✔️ Розміри: S / M / L / XL / XXL",
+        "💯 Підійде як для міста, так і для активного відпочинку",
+        "⚡ Легкий, зручний та тримає форму",
+        "🔝 Кількість обмежена — розбирають дуже швидко",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.TNFvesna/1.webp",
+            "images/img.TNFvesna//2.webp",
+            "images/img.TNFvesna//3.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.TNFvesna/4.webp",
+            "images/img.TNFvesna/5.webp",
+            "images/img.TNFvesna/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
     {
       "id": "A",
       "name": "Костюм Casual Business",
@@ -2953,6 +2994,7 @@ const CONFIG = {
       "Linen Cloud"
     ],
     "Весна/осінь": [
+      "TNF",
       "Classic Style",
       "A",
       "Matrix",
@@ -2997,7 +3039,7 @@ const CONFIG = {
 
   TYPE_GROUPS: {
     "Бізнес комплекти": ["Classic Style", "zamsh-na-zmiyci", "A", "Axis"],
-    "Спортивні костюми": [ "Patriot UA", "Basic Premium", "plashovka"],
+    "Спортивні костюми": ["TNF", "Patriot UA", "Basic Premium", "plashovka"],
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
