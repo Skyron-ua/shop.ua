@@ -2474,7 +2474,7 @@ const CONFIG = {
     },
     {
       "id": "zamsh-na-zmiyci",
-      "name": "Замшевий костюм Velvet — стиль, комфорт і бездоганний вигляд",
+      "name": "Замшевий костюм Velvet",
       "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
       "features": [
         "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
@@ -2483,16 +2483,16 @@ const CONFIG = {
         "👕 Універсальний стиль — для свят та повсякдення",
         "📦 Швидка відправка Новою Поштою"
       ],
-      "price": 1649,
+      "price": 1690,
       "colors": [
         {
           "id": "graphite",
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.zamsh/3.png",
-            "images/img.zamsh/4.png",
-            "images/img.zamsh/5.png"
+            "images/img.zamsh/1.webp",
+            "images/img.zamsh/2.webp",
+            "images/img.zamsh/3.webp"
           ]
         },
         {
@@ -2500,23 +2500,13 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.zamsh/1.png",
-            "images/img.zamsh/9.png",
-            "images/img.zamsh/2.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.zamsh/6.png",
-            "images/img.zamsh/7.png",
-            "images/img.zamsh/8.png"
+            "images/img.zamsh/4.webp",
+            "images/img.zamsh/5.webp",
+            "images/img.zamsh/6.webp"
           ]
         }
       ],
-      "old_price": 2460
+      "old_price": 2600
     },
     {
       "id": "chelsi",
