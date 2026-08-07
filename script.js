@@ -516,7 +516,7 @@ if (productId === "plush") {
 }
   /* =========================
     ZAMSH
-  ========================= */
+  ========================= 
   if (productId === "zamsh-na-zmiyci") {
     if (sellingBlock) {
       sellingBlock.innerHTML = `
@@ -528,7 +528,7 @@ if (productId === "plush") {
           <li>🚀 Швидка доставка + гарантія повернення</li>
           <li>🏆 Перевірено сотнями клієнтів</li>
         </ul>
-        <div class="urgency-badge">🔥 Акція: −33% • Обмежена кількість</div>
+        <div class="urgency-badge">🔥 Акція: −35% • Обмежена кількість</div>
       `;
       sellingBlock.style.display = "block";
       sellingBlock.style.marginBottom = "120px";
@@ -547,7 +547,7 @@ if (productId === "plush") {
       `;
       sizeTable.style.display = "block";
     }
-  }
+  } */
   /* =========================
     Кольори та фото
   ========================= */
