@@ -1177,6 +1177,81 @@ const CONFIG = {
       "old_price": 2700
     },
         {
+      "id": "Jeans",
+      "name": "Чоловічі Джинси",
+      "features": [
+        "🔥 Стиль та комфорт на кожен день",
+        "👖 Сучасний та універсальний крій",
+        "💪 Якісний денім — міцний та зносостійкий",
+        "🔝 Стильно виглядають як у базових, так і в більш трендових образах",
+        "👌 Дорогий вигляд за адекватні гроші",
+        "🧵 Акуратне пошиття та якісна фурнітура",
+        "🎯 Легко комбінуються з будь-яким гардеробом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1590,
+      "colors": [
+        {
+          "id": "jeans",
+          "name": "Джинс",
+          "hex": "#173D65",
+          "images": [
+            "images/img.jeans/1.webp",
+            "images/img.jeans/2.webp",
+            "images/img.jeans/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.jeans/4.webp",
+            "images/img.jeans/5.webp",
+            "images/img.jeans/6.webp"
+          ]
+        },
+        {
+          "id": "light-blue",
+          "name": "Блакитно-синій",
+          "hex": "#274F78",
+          "images": [
+            "images/img.jeans/7.webp",
+            "images/img.jeans/8.webp",
+            "images/img.jeans/9.webp"
+          ]
+        },
+        {
+          "id": "dark-blue",
+          "name": "Темно-синій",
+          "hex": "#192032",
+          "images": [
+            "images/img.jeans/10.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.jeans/11.webp",
+            "images/img.jeans/12.webp",
+            "images/img.jeans/13.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Блакитний",
+          "hex": "#7795AD",
+          "images": [
+            "images/img.jeans/14.webp",
+            "images/img.jeans/15.webp"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
+    {
       "id": "TNF",
       "name": "Костюм TNF",
       "features": [
@@ -1764,32 +1839,30 @@ const CONFIG = {
         "🔥 Ідеальний варіант для щоденного носіння — комфорт + стиль в одному комплекті",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1299,
+      "price": 1390,
       "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.major/1.webp",
+            "images/img.major/2.webp",
+            "images/img.major/3.webp"
+          ]
+        },
         {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.major/1.png",
-            "images/img.major/2.png",
-            "images/img.major/3.png",
-            "images/img.major/4.png",
-            "images/img.major/5.png",
-            "images/img.major/6.png",
-            "images/img.major/7.png",
-            "images/img.major/8.png",
-            "images/img.major/9.png",
-            "images/img.major/10.png",
-            "images/img.major/11.png",
-            "images/img.major/12.png",
-            "images/img.major/13.png",
-            "images/img.major/14.png",
-            "images/img.major/15.png"
+            "images/img.major/4.webp",
+            "images/img.major/5.webp",
+            "images/img.major/6.webp"
           ]
         }
       ],
-      "old_price": 3200
+      "old_price": 2780
     },
     {
       "id": "Prestige",
@@ -2985,6 +3058,7 @@ const CONFIG = {
     ],
     "Весна/осінь": [
       "TNF",
+      "Jeans",
       "Classic Style",
       "A",
       "Matrix",
@@ -3036,6 +3110,7 @@ const CONFIG = {
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
+    "Джинси": ["Jeans"],
     "Футболки/Шорти/Сорочки": ["LinenSet", "Tenor", "Benton", "Stamix", "Kayro", "Eterno", "Nox", "Base", "Vibe", "Carvelo", "Aura", "Breeze", "Musair", "Cordy", "Onyx"],
     "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
   }
