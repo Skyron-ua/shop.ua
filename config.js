@@ -34,15 +34,6 @@ const CONFIG = {
           ]
         },
         {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.lyon2/4.webp",
-            "images/img.lyon2/5.webp"
-          ]
-        },
-        {
           "id": "white",
           "name": "Білий",
           "hex": "#ffffff",
@@ -90,6 +81,15 @@ const CONFIG = {
             "images/img.lyon2/13.webp",
             "images/img.lyon2/14.webp",
             "images/img.lyon2/15.webp"
+          ]
+        },
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.lyon2/4.webp",
+            "images/img.lyon2/5.webp"
           ]
         }
       ],
