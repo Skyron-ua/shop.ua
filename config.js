@@ -95,6 +95,501 @@ const CONFIG = {
       ],
       "old_price": 2900
     },
+        {
+      "id": "Linen Cloud",
+      "name": "Комплект трійка з льону",
+      "features": [
+        "🔥 Лляний комплект трійка — сорочка + штани + шорти",
+        "‼️ РОЗПРОДАЖ ОСТАННІХ РОЗМІРІВ",
+        "😎 Стильно • Легко • Комфортно",
+        "🌿 Льон — легкий, дихаючий та приємний до тіла",
+        "👌 Стильний мінімалізм, який легко поєднувати з базовими речами",
+        "✔️ Висока якість пошиву",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1790,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.lyon3/1.webp",
+            "images/img.lyon3/2.webp",
+            "images/img.lyon3/3.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.lyon3/4.webp",
+            "images/img.lyon3/5.webp",
+            "images/img.lyon3/6.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.lyon3/7.webp",
+            "images/img.lyon3/8.webp",
+            "images/img.lyon3/9.webp"
+          ]
+        }
+      ],
+      "old_price": 3000
+    },
+    {
+      "id": "Basic Premium",
+      "name": "Костюм Basic Premium",
+      "features": [
+        "✨ Стильний та зручний костюм на кожен день",
+        "📌 Матеріал: петля, компакт-пеньє",
+        "✔ Якісна та щільна рібана — добре тримає форму",
+        "🔒 Не кашлатиться навіть після багаторазового прання",
+        "💪 Довговічна тканина — служитиме не один сезон",
+        "⭐ Якість гарантуємо",
+        "🔥 Ідеальний варіант для щоденного носіння — комфорт + стиль в одному комплекті",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1390,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.major/1.webp",
+            "images/img.major/2.webp",
+            "images/img.major/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.major/4.webp",
+            "images/img.major/5.webp",
+            "images/img.major/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2780
+    },
+    {
+      "id": "zamsh-na-zmiyci",
+      "name": "Замшевий костюм Velvet",
+      "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
+      "features": [
+        "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
+        "👌 Мʼякий та приємний до тіла",
+        "✂️ Анатомічний крій — гарно сідає по фігурі",
+        "👕 Універсальний стиль — для свят та повсякдення",
+        "📦 Швидка відправка Новою Поштою"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.zamsh/1.webp",
+            "images/img.zamsh/2.webp",
+            "images/img.zamsh/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.zamsh/4.webp",
+            "images/img.zamsh/5.webp",
+            "images/img.zamsh/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2600
+    },
+    {
+      "id": "sweater",
+      "name": "Светр Oslo Spirit",
+      "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
+      "features": [
+        "Якісний матеріал: перевірений часом",
+        "Анатомічна посадка — розміри S–XXL",
+        "Швидка відправка Новою Поштою (1–3 дні)"
+      ],
+      "price": 1049,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img/3.png",
+            "images/img/4.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img/1.png",
+            "images/img/2.png"
+          ]
+        },
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img/5.png",
+            "images/img/6.png"
+          ]
+        },
+        {
+          "id": "gray",
+          "name": "Сірий",
+          "hex": "#a5aaa1dc",
+          "images": [
+            "images/img/7.png",
+            "images/img/8.png"
+          ]
+        }
+      ],
+      "old_price": 1349
+    },
+    {
+      "id": "Jeans",
+      "name": "Чоловічі Джинси",
+      "features": [
+        "🔥 Стиль та комфорт на кожен день",
+        "👖 Сучасний та універсальний крій",
+        "💪 Якісний денім — міцний та зносостійкий",
+        "🔝 Стильно виглядають як у базових, так і в більш трендових образах",
+        "👌 Дорогий вигляд за адекватні гроші",
+        "🧵 Акуратне пошиття та якісна фурнітура",
+        "🎯 Легко комбінуються з будь-яким гардеробом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1590,
+      "colors": [
+        {
+          "id": "jeans",
+          "name": "Джинс",
+          "hex": "#173D65",
+          "images": [
+            "images/img.jeans/1.webp",
+            "images/img.jeans/2.webp",
+            "images/img.jeans/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.jeans/4.webp",
+            "images/img.jeans/5.webp",
+            "images/img.jeans/6.webp"
+          ]
+        },
+        {
+          "id": "light-blue",
+          "name": "Блакитно-синій",
+          "hex": "#274F78",
+          "images": [
+            "images/img.jeans/7.webp",
+            "images/img.jeans/8.webp",
+            "images/img.jeans/9.webp"
+          ]
+        },
+        {
+          "id": "dark-blue",
+          "name": "Темно-синій",
+          "hex": "#192032",
+          "images": [
+            "images/img.jeans/10.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.jeans/11.webp",
+            "images/img.jeans/12.webp",
+            "images/img.jeans/13.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Блакитний",
+          "hex": "#7795AD",
+          "images": [
+            "images/img.jeans/14.webp",
+            "images/img.jeans/15.webp"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
+    {
+      "id": "Velvet Jet",
+      "name": "Бомбер Velvet Jet",
+      "features": [
+        "‼️ Розпродаж останніх розмірів ",
+        "🔥 Замшевий бомбер - бомба сезону",
+        "🧵 Якісне пошиття та акуратні шви",
+        "🚀 Приталений крій — виглядаєш струнко й круто",
+        "👌 Дорогий вигляд за адекватні гроші",
+        "✨ Легко комбінується з іншим одягом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1290,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber-zamsh/1.webp",
+            "images/img.bomber-zamsh/2.webp",
+            "images/img.bomber-zamsh/3.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.bomber-zamsh/4.webp",
+            "images/img.bomber-zamsh/5.webp",
+            "images/img.bomber-zamsh/6.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.bomber-zamsh/7.webp",
+            "images/img.bomber-zamsh/8.webp",
+            "images/img.bomber-zamsh/9.webp"
+          ]
+        },
+        {
+          "id": "haki",
+          "name": "Хакі",
+          "hex": "#78866b",
+          "images": [
+            "images/img.bomber-zamsh/10.webp",
+            "images/img.bomber-zamsh/11.webp",
+            "images/img.bomber-zamsh/12.webp",
+            "images/img.bomber-zamsh/13.webp",
+            "images/img.bomber-zamsh/14.webp",
+            "images/img.bomber-zamsh/15.webp",
+            "images/img.bomber-zamsh/16.webp"
+          ]
+        },
+        {
+          "id": "burgundy",
+          "name": "Бордо",
+          "hex": "#790604",
+          "images": [
+            "images/img.bomber-zamsh/17.webp",
+            "images/img.bomber-zamsh/18.webp",
+            "images/img.bomber-zamsh/19.webp",
+            "images/img.bomber-zamsh/20.webp"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
+      "id": "TNF",
+      "name": "Костюм TNF",
+      "features": [
+        "🔥 Стильний костюм: вітровка + штани — ідеальний варіант на кожен день 💣",
+        "✔️ Преміум матеріал  — не продувається та відштовхує воду 💧🌬",
+        "✔️ Підкладка з нейлону — комфорт навіть при активному русі 🏃‍♂️",
+        "✔️ Логотип спереду та ззаду — виглядає дорого та помітно 🔥",
+        "✔️ Фіксатори знизу та біля капюшона — підлаштовуєш під себе 🎯",
+        "✔️ Штани на резинці + шнурок — ідеальна посадка 👌",
+        "✔️ Розміри: S / M / L / XL / XXL",
+        "💯 Підійде як для міста, так і для активного відпочинку",
+        "⚡ Легкий, зручний та тримає форму",
+        "🔝 Кількість обмежена — розбирають дуже швидко",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.TNFvesna/1.webp",
+            "images/img.TNFvesna//2.webp",
+            "images/img.TNFvesna//3.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.TNFvesna/4.webp",
+            "images/img.TNFvesna/5.webp",
+            "images/img.TNFvesna/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
+      "id": "Base",
+      "name": "Футболка Base",
+      "features": [
+        "👕 Базова футболка преміум якості",
+        "• Щільна преміальна бавовна виробництва Туреччини",
+        "• Об'ємний (Oversize) крій для комфортної посадки",
+        "• ТОП-якість пошиття та акуратні шви",
+        "• Матеріал не кошлатиться та добре тримає форму",
+        "• Приємна до тіла, дихаюча тканина",
+        "• Ідеально підходить для щоденного носіння",
+        "📏 Розміри: S, M, L, XL, 2XL,3XL,4XL",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 580,
+      "colors": [
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.base/1.webp",
+            "images/img.base/2.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.base/3.webp"
+          ]
+        }
+      ],
+      "old_price": 950
+    },
+        {
+      "id": "Mono",
+      "name": "Лонггслів Mono",
+      "features": [
+        "☁️ Якісний трикотаж — м’яка та еластична тканина, що приємна до тіла та дозволяє шкірі дихати",
+        "📐 Анатомічний крій — ідеально підкреслює плечі та руки, не сковуючи рухів. Комфорт на весь день",
+        "✨ Зносостійкість — матеріал не кошлатиться і зберігає форму та насичений колір навіть після багатьох прань",
+        "✔️ Ідеальна посадка — забудь про сумніви з розміром. Підбираємо розмір індивідуально за твоїм зростом та вагою",
+        "👌 Легко комбінується з іншим одягом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 590,
+      "colors": [
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.longsliv/1.png",
+            "images/img.longsliv/2.png",
+            "images/img.longsliv/3.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.longsliv/4.png",
+            "images/img.longsliv/5.png",
+            "images/img.longsliv/6.png"
+          ]
+        }
+      ],
+      "old_price": 950
+    },
+    {
+      "id": "Forge",
+      "name": "Бомбер Forge",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Глибокий матовий чорний — виглядає дорого і статусно",
+        "👌 Ідеальний крій бомбера — сидить акуратно на будь-якій фігурі",
+        "🛋️ Зручні кишені + манжети на резинці — комфорт щодня",
+        "🌧️ Легко чиститься, не боїться дощу",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1290,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber/1.png",
+            "images/img.bomber/2.png",
+            "images/img.bomber/3.png",
+            "images/img.bomber/4.png",
+            "images/img.bomber/5.png"
+          ]
+        }
+      ],
+      "old_price": 2600
+    },
+        {
+      "id": "Snake",
+      "name": "Бомбер Snake",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Глибокий матовий чорний — виглядає дорого і статусно",
+        "👌 Ідеальний крій бомбера — сидить акуратно на будь-якій фігурі",
+        "🛋️ Зручні кишені + манжети на резинці — комфорт щодня",
+        "🌧️ Легко чиститься, не боїться дощу",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1349,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber-snake/1.png",
+            "images/img.bomber-snake/2.png",
+            "images/img.bomber-snake/3.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.bomber-snake/4.png",
+            "images/img.bomber-snake/5.png",
+            "images/img.bomber-snake/6.png"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
     {
       "id": "LinenSet",
       "name": "Комплект LinenSet",
@@ -992,42 +1487,6 @@ const CONFIG = {
       "old_price": 2250
     },
     {
-      "id": "Base",
-      "name": "Футболка Base",
-      "features": [
-        "👕 Базова футболка преміум якості",
-        "• Щільна преміальна бавовна виробництва Туреччини",
-        "• Об'ємний (Oversize) крій для комфортної посадки",
-        "• ТОП-якість пошиття та акуратні шви",
-        "• Матеріал не кошлатиться та добре тримає форму",
-        "• Приємна до тіла, дихаюча тканина",
-        "• Ідеально підходить для щоденного носіння",
-        "📏 Розміри: S, M, L, XL, 2XL,3XL,4XL",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 580,
-      "colors": [
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.base/1.webp",
-            "images/img.base/2.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.base/3.webp"
-          ]
-        }
-      ],
-      "old_price": 950
-    },
-    {
       "id": "Classic Style",
       "name": "Комплект Classic Style",
       "features": [
@@ -1103,194 +1562,6 @@ const CONFIG = {
         }
       ],
       "old_price": 2400
-    },
-    {
-      "id": "Velvet Jet",
-      "name": "Бомбер Velvet Jet",
-      "features": [
-        "‼️ Розпродаж останніх розмірів ",
-        "🔥 Замшевий бомбер - бомба сезону",
-        "🧵 Якісне пошиття та акуратні шви",
-        "🚀 Приталений крій — виглядаєш струнко й круто",
-        "👌 Дорогий вигляд за адекватні гроші",
-        "✨ Легко комбінується з іншим одягом",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1290,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.bomber-zamsh/1.webp",
-            "images/img.bomber-zamsh/2.webp",
-            "images/img.bomber-zamsh/3.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.bomber-zamsh/4.webp",
-            "images/img.bomber-zamsh/5.webp",
-            "images/img.bomber-zamsh/6.webp"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.bomber-zamsh/7.webp",
-            "images/img.bomber-zamsh/8.webp",
-            "images/img.bomber-zamsh/9.webp"
-          ]
-        },
-        {
-          "id": "haki",
-          "name": "Хакі",
-          "hex": "#78866b",
-          "images": [
-            "images/img.bomber-zamsh/10.webp",
-            "images/img.bomber-zamsh/11.webp",
-            "images/img.bomber-zamsh/12.webp",
-            "images/img.bomber-zamsh/13.webp",
-            "images/img.bomber-zamsh/14.webp",
-            "images/img.bomber-zamsh/15.webp",
-            "images/img.bomber-zamsh/16.webp"
-          ]
-        },
-        {
-          "id": "burgundy",
-          "name": "Бордо",
-          "hex": "#790604",
-          "images": [
-            "images/img.bomber-zamsh/17.webp",
-            "images/img.bomber-zamsh/18.webp",
-            "images/img.bomber-zamsh/19.webp",
-            "images/img.bomber-zamsh/20.webp"
-          ]
-        }
-      ],
-      "old_price": 2700
-    },
-        {
-      "id": "Jeans",
-      "name": "Чоловічі Джинси",
-      "features": [
-        "🔥 Стиль та комфорт на кожен день",
-        "👖 Сучасний та універсальний крій",
-        "💪 Якісний денім — міцний та зносостійкий",
-        "🔝 Стильно виглядають як у базових, так і в більш трендових образах",
-        "👌 Дорогий вигляд за адекватні гроші",
-        "🧵 Акуратне пошиття та якісна фурнітура",
-        "🎯 Легко комбінуються з будь-яким гардеробом",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1590,
-      "colors": [
-        {
-          "id": "jeans",
-          "name": "Джинс",
-          "hex": "#173D65",
-          "images": [
-            "images/img.jeans/1.webp",
-            "images/img.jeans/2.webp",
-            "images/img.jeans/3.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.jeans/4.webp",
-            "images/img.jeans/5.webp",
-            "images/img.jeans/6.webp"
-          ]
-        },
-        {
-          "id": "light-blue",
-          "name": "Блакитно-синій",
-          "hex": "#274F78",
-          "images": [
-            "images/img.jeans/7.webp",
-            "images/img.jeans/8.webp",
-            "images/img.jeans/9.webp"
-          ]
-        },
-        {
-          "id": "dark-blue",
-          "name": "Темно-синій",
-          "hex": "#192032",
-          "images": [
-            "images/img.jeans/10.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.jeans/11.webp",
-            "images/img.jeans/12.webp",
-            "images/img.jeans/13.webp"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Блакитний",
-          "hex": "#7795AD",
-          "images": [
-            "images/img.jeans/14.webp",
-            "images/img.jeans/15.webp"
-          ]
-        }
-      ],
-      "old_price": 2800
-    },
-    {
-      "id": "TNF",
-      "name": "Костюм TNF",
-      "features": [
-        "🔥 Стильний костюм: вітровка + штани — ідеальний варіант на кожен день 💣",
-        "✔️ Преміум матеріал  — не продувається та відштовхує воду 💧🌬",
-        "✔️ Підкладка з нейлону — комфорт навіть при активному русі 🏃‍♂️",
-        "✔️ Логотип спереду та ззаду — виглядає дорого та помітно 🔥",
-        "✔️ Фіксатори знизу та біля капюшона — підлаштовуєш під себе 🎯",
-        "✔️ Штани на резинці + шнурок — ідеальна посадка 👌",
-        "✔️ Розміри: S / M / L / XL / XXL",
-        "💯 Підійде як для міста, так і для активного відпочинку",
-        "⚡ Легкий, зручний та тримає форму",
-        "🔝 Кількість обмежена — розбирають дуже швидко",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1490,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.TNFvesna/1.webp",
-            "images/img.TNFvesna//2.webp",
-            "images/img.TNFvesna//3.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.TNFvesna/4.webp",
-            "images/img.TNFvesna/5.webp",
-            "images/img.TNFvesna/6.webp"
-          ]
-        }
-      ],
-      "old_price": 2700
     },
     {
       "id": "A",
@@ -1658,34 +1929,6 @@ const CONFIG = {
       "old_price": 3150
     },
     {
-      "id": "Forge",
-      "name": "Бомбер Forge",
-      "features": [
-        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
-        "😎 Глибокий матовий чорний — виглядає дорого і статусно",
-        "👌 Ідеальний крій бомбера — сидить акуратно на будь-якій фігурі",
-        "🛋️ Зручні кишені + манжети на резинці — комфорт щодня",
-        "🌧️ Легко чиститься, не боїться дощу",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1290,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.bomber/1.png",
-            "images/img.bomber/2.png",
-            "images/img.bomber/3.png",
-            "images/img.bomber/4.png",
-            "images/img.bomber/5.png"
-          ]
-        }
-      ],
-      "old_price": 2600
-    },
-    {
       "id": "Praga",
       "name": "Бомбер Praga",
       "features": [
@@ -1732,42 +1975,6 @@ const CONFIG = {
         }
       ],
       "old_price": 2600
-    },
-    {
-      "id": "Snake",
-      "name": "Бомбер Snake",
-      "features": [
-        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
-        "😎 Глибокий матовий чорний — виглядає дорого і статусно",
-        "👌 Ідеальний крій бомбера — сидить акуратно на будь-якій фігурі",
-        "🛋️ Зручні кишені + манжети на резинці — комфорт щодня",
-        "🌧️ Легко чиститься, не боїться дощу",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1349,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.bomber-snake/1.png",
-            "images/img.bomber-snake/2.png",
-            "images/img.bomber-snake/3.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.bomber-snake/4.png",
-            "images/img.bomber-snake/5.png",
-            "images/img.bomber-snake/6.png"
-          ]
-        }
-      ],
-      "old_price": 2800
     },
     {
       "id": "Aero",
@@ -1825,44 +2032,6 @@ const CONFIG = {
         }
       ],
       "old_price": 2600
-    },
-    {
-      "id": "Basic Premium",
-      "name": "Костюм Basic Premium",
-      "features": [
-        "✨ Стильний та зручний костюм на кожен день",
-        "📌 Матеріал: петля, компакт-пеньє",
-        "✔ Якісна та щільна рібана — добре тримає форму",
-        "🔒 Не кашлатиться навіть після багаторазового прання",
-        "💪 Довговічна тканина — служитиме не один сезон",
-        "⭐ Якість гарантуємо",
-        "🔥 Ідеальний варіант для щоденного носіння — комфорт + стиль в одному комплекті",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1390,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.major/1.webp",
-            "images/img.major/2.webp",
-            "images/img.major/3.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.major/4.webp",
-            "images/img.major/5.webp",
-            "images/img.major/6.webp"
-          ]
-        }
-      ],
-      "old_price": 2780
     },
     {
       "id": "Prestige",
@@ -2009,95 +2178,6 @@ const CONFIG = {
         }
       ],
       "old_price": 2700
-    },
-    {
-      "id": "Linen Cloud",
-      "name": "Комплект із льону Linen Cloud",
-      "features": [
-        "🔥 Лляний костюм: сорочка, штани та шорти — це ідеальне поєднання легкості, стилю та комфорту. Натуральна лляна тканина дозволяє тілу дихати, особливо в спекотну погоду.Вільний крій забезпечує свободу рухів, а універсальний дизайн пасує як для повсякденного образу, так і для літніх подорожей чи відпочинку",
-        "🌿 Натуральний льон",
-        "🔄 Дихаюча, приємна до тіла тканина",
-        "🔝 Сорочка на ґудзиках + штани + шорти",
-        "👌 Актуальний мінімалістичний стиль",
-        "✔️ Ідеально підходить для весни та літа до будь-якої пори року",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1890,
-      "colors": [
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.lyon3/1.png",
-            "images/img.lyon3/2.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.lyon3/3.png",
-            "images/img.lyon3/4.png"
-          ]
-        },
-        {
-          "id": "Niagara",
-          "name": "Ніагара",
-          "hex": "#7C8DA4",
-          "images": [
-            "images/img.lyon3/5.png",
-            "images/img.lyon3/6.png"
-          ]
-        },
-        {
-          "id": "emerald",
-          "name": "Зелений",
-          "hex": "#175a43",
-          "images": [
-            "images/img.lyon3/7.png",
-            "images/img.lyon3/8.png"
-          ]
-        }
-      ],
-      "old_price": 2790
-    },
-    {
-      "id": "Mono",
-      "name": "Лонггслів Mono",
-      "features": [
-        "☁️ Якісний трикотаж — м’яка та еластична тканина, що приємна до тіла та дозволяє шкірі дихати",
-        "📐 Анатомічний крій — ідеально підкреслює плечі та руки, не сковуючи рухів. Комфорт на весь день",
-        "✨ Зносостійкість — матеріал не кошлатиться і зберігає форму та насичений колір навіть після багатьох прань",
-        "✔️ Ідеальна посадка — забудь про сумніви з розміром. Підбираємо розмір індивідуально за твоїм зростом та вагою",
-        "👌 Легко комбінується з іншим одягом",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 499,
-      "colors": [
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.longsliv/1.png",
-            "images/img.longsliv/2.png",
-            "images/img.longsliv/3.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.longsliv/4.png",
-            "images/img.longsliv/5.png",
-            "images/img.longsliv/6.png"
-          ]
-        }
-      ],
-      "old_price": 850
     },
     {
       "id": "plush",
@@ -2349,56 +2429,6 @@ const CONFIG = {
       "old_price": 1549
     },
     {
-      "id": "sweater",
-      "name": "Светр Oslo Spirit",
-      "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
-      "features": [
-        "Якісний матеріал: перевірений часом",
-        "Анатомічна посадка — розміри S–XXL",
-        "Швидка відправка Новою Поштою (1–3 дні)"
-      ],
-      "price": 1049,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img/3.png",
-            "images/img/4.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img/1.png",
-            "images/img/2.png"
-          ]
-        },
-        {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img/5.png",
-            "images/img/6.png"
-          ]
-        },
-        {
-          "id": "gray",
-          "name": "Сірий",
-          "hex": "#a5aaa1dc",
-          "images": [
-            "images/img/7.png",
-            "images/img/8.png"
-          ]
-        }
-      ],
-      "old_price": 1349
-    },
-    {
       "id": "gudzik",
       "name": "Теплий флісовий костюм Urban Winter",
       "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
@@ -2544,42 +2574,6 @@ const CONFIG = {
         }
       ],
       "old_price": 1599
-    },
-    {
-      "id": "zamsh-na-zmiyci",
-      "name": "Замшевий костюм Velvet",
-      "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
-      "features": [
-        "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
-        "👌 Мʼякий та приємний до тіла",
-        "✂️ Анатомічний крій — гарно сідає по фігурі",
-        "👕 Універсальний стиль — для свят та повсякдення",
-        "📦 Швидка відправка Новою Поштою"
-      ],
-      "price": 1690,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.zamsh/1.webp",
-            "images/img.zamsh/2.webp",
-            "images/img.zamsh/3.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.zamsh/4.webp",
-            "images/img.zamsh/5.webp",
-            "images/img.zamsh/6.webp"
-          ]
-        }
-      ],
-      "old_price": 2600
     },
     {
       "id": "chelsi",
