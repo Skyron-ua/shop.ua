@@ -110,9 +110,9 @@ const CONFIG = {
       "price": 1790,
       "colors": [
         {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
           "images": [
             "images/img.lyon3/1.webp",
             "images/img.lyon3/2.webp",
