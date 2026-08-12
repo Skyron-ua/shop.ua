@@ -544,11 +544,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.bomber/1.png",
-            "images/img.bomber/2.png",
-            "images/img.bomber/3.png",
-            "images/img.bomber/4.png",
-            "images/img.bomber/5.png"
+            "images/img.bomber/1.webp",
+            "images/img.bomber/2.webp",
+            "images/img.bomber/3.webp"
           ]
         }
       ],
