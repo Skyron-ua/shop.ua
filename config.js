@@ -9,95 +9,179 @@ const CONFIG = {
   },
   PRODUCTS: [
     {
-      "id": "Flow",
-      "name": "Лляний комплект Flow",
-      "description": "Натуральний дихаючий льон преміум-якості",
-      "features": [
-        "🔥 В тренді цього сезону",
-        "😎 Стильно • Легко • Комфортно",
-        "✔️ Розміри: S M L XL XXL 3XL",
-        "✔️ Матеріал: льон",
-        "✔️ Висока якість пошиву, не просвічується",
-        "✔️ Стильний мінімалізм, який завжди актуальний",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1590,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.lyon2/1.webp",
-            "images/img.lyon2/3.webp",
-            "images/img.lyon2/2.webp"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.lyon2/10.webp",
-            "images/img.lyon2/11.webp",
-            "images/img.lyon2/12.webp"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Блакитний",
-          "hex": "#B9C6F2",
-          "images": [
-            "images/img.lyon2//19.webp",
-            "images/img.lyon2//20.webp",
-            "images/img.lyon2//21.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.lyon2/9.webp",
-            "images/img.lyon2/8.webp",
-            "images/img.lyon2/7.webp"
-          ]
-        },
-        {
-          "id": "haki",
-          "name": "Хакі",
-          "hex": "#78866b",
-          "images": [
-            "images/img.lyon2//18.webp",
-            "images/img.lyon2//17.webp",
-            "images/img.lyon2//16.webp"
-          ]
-        },
-        {
-          "id": "dark-blue",
-          "name": "Темно-синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.lyon2/13.webp",
-            "images/img.lyon2/14.webp",
-            "images/img.lyon2/15.webp"
-          ]
-        },
-        {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.lyon2/4.webp",
-            "images/img.lyon2/5.webp"
-          ]
-        }
-      ],
-      "old_price": 2900
+  "id": "Flow",
+  "name": "Лляний комплект Flow",
+  "sku": "BR Q0068",
+  "description": "Натуральний дихаючий льон преміум-якості",
+  "features": [
+    "🔥 В тренді цього сезону",
+    "😎 Стильно • Легко • Комфортно",
+    "✔️ Розміри: S M L XL XXL 3XL",
+    "✔️ Матеріал: льон",
+    "✔️ Висока якість пошиву, не просвічується",
+    "✔️ Стильний мінімалізм, який завжди актуальний",
+    "📦 Відправка новою поштою накладеним платежем"
+  ],
+  "price": 1590,
+  "old_price": 2900,
+  "relatedIds": ["Linen Cloud", "Base", "LinenSet"],
+  "colors": [
+    {
+      "id": "graphite",
+      "name": "Графіт",
+      "hex": "#616267",
+      "images": [
+        "images/img.lyon2/1.webp",
+        "images/img.lyon2/3.webp",
+        "images/img.lyon2/2.webp"
+      ]
     },
+    {
+      "id": "white",
+      "name": "Білий",
+      "hex": "#ffffff",
+      "images": [
+        "images/img.lyon2/10.webp",
+        "images/img.lyon2/11.webp",
+        "images/img.lyon2/12.webp"
+      ]
+    },
+    {
+      "id": "blue",
+      "name": "Блакитний",
+      "hex": "#B9C6F2",
+      "images": [
+        "images/img.lyon2//19.webp",
+        "images/img.lyon2//20.webp",
+        "images/img.lyon2//21.webp"
+      ]
+    },
+    {
+      "id": "black",
+      "name": "Чорний",
+      "hex": "#111113ff",
+      "images": [
+        "images/img.lyon2/9.webp",
+        "images/img.lyon2/8.webp",
+        "images/img.lyon2/7.webp"
+      ]
+    },
+    {
+      "id": "haki",
+      "name": "Хакі",
+      "hex": "#78866b",
+      "images": [
+        "images/img.lyon2//18.webp",
+        "images/img.lyon2//17.webp",
+        "images/img.lyon2//16.webp"
+      ]
+    },
+    {
+      "id": "dark-blue",
+      "name": "Темно-синій",
+      "hex": "#000080",
+      "images": [
+        "images/img.lyon2/13.webp",
+        "images/img.lyon2/14.webp",
+        "images/img.lyon2/15.webp"
+      ]
+    },
+    {
+      "id": "beige",
+      "name": "Беж",
+      "hex": "#d6c7b1",
+      "images": [
+        "images/img.lyon2/4.webp",
+        "images/img.lyon2/5.webp"
+      ]
+    }
+  ]
+},
+    {
+  id: "look-velvet-jeans",
+  name: "Стильний образ: Замшевий бомбер Velvet Jet + Джинси + Футболка",
+  "sku": "BR A0165, j0032, L0056",
+  type: "bundle",
+  description: "Готовий стильний образ — замшевий бомбер, джинси та базова футболка",
+  price: 3180,
+  "relatedIds": ["Velvet Jet", "Jeans", "Base"],
+  old_price: 5250,
+  features: [
+    "🔥 Готовий образ на кожен день",
+    "🔝 Замшевий бомбер - бомба сезону",
+    "👖 Джинси з якісного деніму - сучасні, міцні та зносостійкі",
+    "👕 Базова футболка преміум якості з щільної бавовни",
+    "🎨 Можна зібрати свій варіант і замовити повністю або окремо",
+    "📦 Відправка новою поштою накладеним платежем"
+  ],
+
+  // Потрібно для каталогу
+  colors: [
+    {
+      id: "default",
+      name: "Образ",
+      hex: "#111111",
+      images: ["images/img.bomber.jeans/1.webp"]
+    }
+  ],
+
+  buyOptions: [
+    { id: "full",        label: "Замовити весь комплект",   price: 3180, items: ["bomber", "jeans", "tshirt"] },
+    { id: "bomberJeans", label: "Замовити бомбер + джинси", price: 2690, items: ["bomber", "jeans"] },
+    { id: "bomber",      label: "Замовити тільки бомбер",   price: 1290, items: ["bomber"] },
+    { id: "jeans",       label: "Замовити тільки джинси",   price: 1590, items: ["jeans"] }
+  ],
+
+  items: {
+    bomber: {
+      name: "Бомбер Velvet Jet",
+      productId: "Velvet Jet",
+      colors: [
+        { id: "black",    name: "Чорний", hex: "#111113" },
+        { id: "graphite", name: "Графіт", hex: "#616267" },
+        { id: "blue",     name: "Синій",  hex: "#000080" }
+      ]
+    },
+    jeans: {
+      name: "Чоловічі Джинси",
+      productId: "Jeans",
+      colors: [
+        { id: "jeans",      name: "Джинс",          hex: "#173D65" },
+        { id: "black",      name: "Чорний",         hex: "#111113" },
+        { id: "light-blue", name: "Блакитно-синій", hex: "#274F78" },
+        { id: "dark-blue",  name: "Темно-синій",    hex: "#192032" },
+        { id: "graphite",   name: "Графіт",         hex: "#616267" },
+        { id: "blue",       name: "Блакитний",      hex: "#7795AD" }
+      ]
+    },
+    tshirt: {
+      name: "Футболка Base",
+      productId: "Base",
+      colors: [
+        { id: "white", name: "Білий",  hex: "#ffffff" },
+        { id: "black", name: "Чорний", hex: "#111113" }
+      ]
+    }
+  },
+
+  // Порядок кольорів (дуже важливо!)
+  colorOrder: {
+    bomber: ["black", "graphite", "blue"],
+    jeans:  ["jeans", "black", "light-blue", "dark-blue", "graphite", "blue"],
+    tshirt: ["white", "black"]
+  },
+
+  defaultCombination: {
+    bomber: "black",
+    jeans: "jeans",
+    tshirt: "white"
+  }
+},
         {
       "id": "Linen Cloud",
       "name": "Комплект трійка з льону",
+      "sku": "BR AQ0071",
+      "relatedIds": ["Flow", "Base", "LinenSet"],
       "features": [
         "🔥 Лляний комплект трійка — сорочка + штани + шорти",
         "‼️ РОЗПРОДАЖ ОСТАННІХ РОЗМІРІВ",
@@ -145,6 +229,8 @@ const CONFIG = {
     {
       "id": "Basic Premium",
       "name": "Костюм Basic Premium",
+      "sku": "BR A0114",
+      "relatedIds": ["zamsh-na-zmiyci","TNF", "Base"],
       "features": [
         "✨ Стильний та зручний костюм на кожен день",
         "📌 Матеріал: петля, компакт-пеньє",
@@ -183,6 +269,8 @@ const CONFIG = {
     {
       "id": "zamsh-na-zmiyci",
       "name": "Замшевий костюм Velvet",
+      "sku": "BR A0125",
+      "relatedIds": ["Basic Premium", "TNF", "Base"],
       "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
       "features": [
         "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
@@ -219,13 +307,15 @@ const CONFIG = {
     {
       "id": "sweater",
       "name": "Светр Oslo Spirit",
+      "sku": "BR C0043",
+      "relatedIds": ["Jeans", "Mono", "Base"],
       "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
       "features": [
         "Якісний матеріал: перевірений часом",
         "Анатомічна посадка — розміри S–XXL",
         "Швидка відправка Новою Поштою (1–3 дні)"
       ],
-      "price": 1049,
+      "price": 1090,
       "colors": [
         {
           "id": "graphite",
@@ -269,6 +359,8 @@ const CONFIG = {
     {
       "id": "Jeans",
       "name": "Чоловічі Джинси",
+      "sku": "BR j0032",
+      "relatedIds": ["Base", "Velvet Jet", "Mono"],
       "features": [
         "🔥 Стиль та комфорт на кожен день",
         "👖 Сучасний та універсальний крій",
@@ -344,6 +436,8 @@ const CONFIG = {
     {
       "id": "Velvet Jet",
       "name": "Бомбер Velvet Jet",
+      "sku": "BR A0165, F0004",
+      "relatedIds": ["Forge", "Base", "Aero"],
       "features": [
         "‼️ Розпродаж останніх розмірів ",
         "🔥 Замшевий бомбер - бомба сезону",
@@ -416,6 +510,8 @@ const CONFIG = {
     {
       "id": "TNF",
       "name": "Костюм TNF",
+      "sku": "BR A0150",
+      "relatedIds": ["Basic Premium", "Base", "zamsh-na-zmiyci"],
       "features": [
         "🔥 Стильний костюм: вітровка + штани — ідеальний варіант на кожен день 💣",
         "✔️ Преміум матеріал  — не продувається та відштовхує воду 💧🌬",
@@ -457,6 +553,8 @@ const CONFIG = {
     {
       "id": "Base",
       "name": "Футболка Base",
+      "sku": "BR L0056, A0170",
+      "relatedIds": ["Mono", "Jeans", "Velvet Jet"],
       "features": [
         "👕 Базова футболка преміум якості",
         "• Щільна преміальна бавовна виробництва Туреччини",
@@ -491,8 +589,67 @@ const CONFIG = {
       "old_price": 950
     },
         {
+      "id": "Air",
+      "name": "Куртка Air",
+      "relatedIds": ["TNF", "Snake", "Forge"],
+      "features": [
+        "✨ Стильна демісезонна куртка для щоденного комфорту, яка поєднує практичність, комфорт та стильний мінімалістичний дизайн. Ідеально підходить для прохолодної погоди та легко доповнює будь-який повсякденний образ",
+        "🔹 Легка та водночас тепла — комфорт у прохолодні дні",
+        "💧 Стійка до вологи — матеріал не боїться дощу та сирої погоди",
+        "🧥 Стильна посадка — гарно виглядає на фігурі та не сковує рухів",
+        "👌 4 практичні кишені — для телефону, ключів та інших дрібниць",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1390,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "RAM 1643632472",
+          "images": [
+            "images/img.air/1.png",
+            "images/img.air/2.png"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "sku": "RAM 1723456619",
+          "images": [
+            "images/img.air/3.png",
+            "images/img.air/4.png"
+          ]
+        },
+        {
+          "id": "emerald",
+          "name": "Зелений",
+          "hex": "#175a43",
+          "sku": "RAM 1692285964",
+          "images": [
+            "images/img.air/5.png",
+            "images/img.air/6.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "sku": "RAM 1692286333",
+          "images": [
+            "images/img.air/7.png",
+            "images/img.air/8.png"
+          ]
+        }
+      ],
+      "old_price": 2750
+    },
+    {
       "id": "Mono",
       "name": "Лонггслів Mono",
+      "sku": "BR A0142",
+      "relatedIds": ["Base", "Jeans", "Forge"],
       "features": [
         "☁️ Якісний трикотаж — м’яка та еластична тканина, що приємна до тіла та дозволяє шкірі дихати",
         "📐 Анатомічний крій — ідеально підкреслює плечі та руки, не сковуючи рухів. Комфорт на весь день",
@@ -529,11 +686,13 @@ const CONFIG = {
     {
       "id": "Forge",
       "name": "Бомбер Forge",
+      "sku": "BR F0029",
+      "relatedIds": ["Prestige", "Velvet Jet", "Base"],
       "features": [
         "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
         "😎 Глибокий матовий чорний — виглядає дорого і статусно",
         "👌 Ідеальний крій бомбера — сидить акуратно на будь-якій фігурі",
-        "🛋️ Зручні кишені на застібках + манжети на резинці — комфорт щодня",
+        "🛋️ Зручні кишені + манжети на резинці — комфорт щодня",
         "🌧️ Легко чиститься, не боїться дощу",
         "📦 Відправка новою поштою накладеним платежем"
       ],
@@ -555,6 +714,7 @@ const CONFIG = {
         {
       "id": "Snake",
       "name": "Бомбер Snake",
+      "relatedIds": ["Forge", "Prestige", "Velvet Jet"],
       "features": [
         "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
         "😎 Глибокий матовий чорний — виглядає дорого і статусно",
@@ -563,15 +723,16 @@ const CONFIG = {
         "🌧️ Легко чиститься, не боїться дощу",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1349,
+      "price": 1390,
       "colors": [
         {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
+          "sku": "RAM 1714376372",
           "images": [
             "images/img.bomber-snake/1.png",
-            "images/img.bomber-snake/2.png",
+            // "images/img.bomber-snake/2.png",
             "images/img.bomber-snake/3.png"
           ]
         },
@@ -579,6 +740,7 @@ const CONFIG = {
           "id": "blue",
           "name": "Синій",
           "hex": "#000080",
+          "sku": "RAM 1774860319",
           "images": [
             "images/img.bomber-snake/4.png",
             "images/img.bomber-snake/5.png",
@@ -587,6 +749,370 @@ const CONFIG = {
         }
       ],
       "old_price": 2800
+    },
+        {
+      "id": "Prestige",
+      "name": "Преміальна куртка Prestige",
+      "sku": "BR D0005",
+      "relatedIds": ["Forge", "Velvet Jet", "Base"],
+      "features": [
+        "🔥 Турецька шкіра — м’яка, щільна, зносостійка, не тріщить",
+        "😎 Глибокий матовий чорний — виглядає дорого і статусно",
+        "❄️ Утеплювач 150 г силікону — тепло без зайвого об’єму",
+        "👌 Сучасний крій — чудово сідає по фігурі",
+        "✋ Регульовані манжети на рукавах",
+        "🎒 2 бічні кишені + внутрішня на грудях",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1790,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.kozhanka/1.png",
+            "images/img.kozhanka/2.png",
+            "images/img.kozhanka/3.png",
+            "images/img.kozhanka/4.png"
+          ]
+        }
+      ],
+      "old_price": 4200
+    },
+        {
+      "id": "Aero",
+      "name": "Замшева куртка Aero",
+      "sku": "RAM 1745045936",
+      "relatedIds": ["Velvet Jet", "Forge", "Air"],
+      "features": [
+        "✨ Якісна та приємна на дотик тканина",
+        "🧥 Підходить на весну / осінь",
+        "😎 Стильний сучасний крій — виглядає дорого",
+        "🔥 Трендовий дизайн, який легко поєднати з будь-яким образом",
+        "✂️ Розміри: S M L XL",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.aero/1.png",
+            "images/img.aero/2.png",
+            "images/img.aero/3.png"
+          ]
+        }
+      ],
+      "old_price": 2900
+    },
+    {
+      "id": "Imperial",
+      "name": "Куртка Imperial",
+      "sku": "RA 2504",
+      "relatedIds": ["Pulse", "Prestige", "Forge"],
+      "features": [
+        "‼️ Розпродаж останніх розмірів",
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1799,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.chorn1699/1.png",
+            "images/img.chorn1699/2.png",
+            "images/img.chorn1699/3.png"
+          ]
+        }
+      ],
+      "old_price": 3250
+    },
+    {
+      "id": "Pulse",
+      "name": "Куртка Pulse",
+      "relatedIds": ["Imperial", "Prestige", "Forge"],
+      "features": [
+        "‼️ Розпродаж останніх розмірів",
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1799,
+      "colors": [
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "sku": "RA 2508",
+          "images": [
+            "images/img.korich1699/1.png",
+            "images/img.korich1699/2.png",
+            "images/img.korich1699/3.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "RA 2504",
+          "images": [
+            "images/img.chorn1699/1.png",
+            "images/img.chorn1699/2.png",
+            "images/img.chorn1699/3.png"
+          ]
+        }
+      ],
+      "old_price": 3200
+    },
+    {
+      "id": "Blade",
+      "name": "Куртка Blade",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Приталена модель, виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені на застібках",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1799,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.chorn1799/1.png",
+            "images/img.chorn1799/2.png",
+            "images/img.chorn1799/3.png",
+            "images/img.chorn1799/4.png",
+            "images/img.chorn1799/5.png",
+            "images/img.chorn1799/6.png",
+            "images/img.chorn1799/7.png",
+            "images/img.chorn1799/8.png",
+            "images/img.chorn1799/9.png",
+            "images/img.chorn1799/10.png",
+            "images/img.chorn1799/11.png",
+            "images/img.chorn1799/12.png"
+          ]
+        }
+      ],
+      "old_price": 3400
+     },
+     {
+      "id": "Griffin",
+      "name": "Куртка Griffin",
+      "features": [
+        "🔥 Косуха, яка формує твій стиль",
+        "😎 Преміум еко-шкіра — м’яка та приємна на дотик",
+        "🧥 Комфортна підкладка на кожен день",
+        "🔒 Кишені на застібках + 2 внутрішні",
+        "✔️ Ідеальна посадка по фігурі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1799,
+      "colors": [
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "images": [
+            "images/img.kosuha/1.png",
+            "images/img.kosuha/2.png",
+            "images/img.kosuha/3.png"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.kosuha/4.png",
+            "images/img.kosuha/5.png",
+            "images/img.kosuha/6.png"
+          ]
+        }
+      ],
+      "old_price": 3400
+    },
+    {
+      "id": "Falcon",
+      "name": "Куртка Falcon",
+      "features": [
+        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
+        "😎 Приталена модель, виглядає дорого і статусно",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "🔒 Стильні кишені на грудях із застібками",
+        "✔️ Дві зручні бокові кишені на застібках",
+        "📱 Внутрішня кишеня для найважливішого",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1749,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.chorn1749/1.png",
+            "images/img.chorn1749/2.png",
+            "images/img.chorn1749/3.png",
+            "images/img.chorn1749/4.png"
+          ]
+        }
+      ],
+      "old_price": 3350
+    },
+     {
+      "id": "Hunter",
+      "name": "Бомбер Hunter",
+      "features": [
+        "💥 Чоловіча шкіряна куртка бомбер",
+        "🌤 Ідеально підходить на теплу пору року",
+        "🖤 Легко комбінується з будь-яким гардеробом",
+        "🧥 Якісна еко-шкіра",
+        "⚡️ Застібка на блискавку",
+        "🎒 Функціональні кишені: на блискавках + 2 бічні + на рукаві",
+        "🔒 1 внутрішня кишеня",
+        "✨ Манжетна резинка на поясі та рукавах",
+        "🪶 Легка тканинна з підкладкою",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1449,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.hunter/1.png",
+            "images/img.hunter/2.png",
+            "images/img.hunter/3.png",
+            "images/img.hunter/4.png"
+          ]
+        }
+      ],
+      "old_price": 3150
+    },
+    {
+      "id": "Matrix",
+      "name": "Жилетка Matrix",
+      "features": [
+        "‼️ Розпродаж останніх розмірів",
+        "🥼 Чоловіча жилетка — ідеальний вибір на кожен день",
+        "✔️ Легка, але добре зберігає тепло (утеплювач: синтепон)",
+        "✔️ Матеріал: 100% поліестер — м’яка та приємна на дотик",
+        "✔️ Ідеально сідає по фігурі",
+        "✔️ Кишені на застібках + 2 внутрішні",
+        "✔️ Манжети та пояс на резинці — зручно та практично",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1090,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.matrix/1.png",
+            "images/img.matrix/2.png",
+            "images/img.matrix/3.png",
+            "images/img.matrix/4.png",
+            "images/img.matrix/5.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.matrix/6.png",
+            "images/img.matrix/7.png",
+            "images/img.matrix/8.png",
+            "images/img.matrix/9.png",
+            "images/img.matrix/10.png",
+            "images/img.matrix/11.png",
+            "images/img.matrix/12.png"
+          ]
+        },
+        {
+          "id": "haki",
+          "name": "Хакі",
+          "hex": "#78866b",
+          "images": [
+            "images/img.matrix/13.png",
+            "images/img.matrix/14.png",
+            "images/img.matrix/15.png",
+            "images/img.matrix/16.png",
+            "images/img.matrix/17.png"
+          ]
+        },
+      ],
+      "old_price": 2250
+    },
+    {
+      "id": "Praga",
+      "name": "Бомбер Praga",
+      "features": [
+        "🍂 Ідеальний сезон осінь/весна — комфорт від 0° до +20°",
+        "🧥 Нейлон преміум-якості — тримає форму та виглядає акуратно",
+        "🔥 Силіконова підкладка 150 — легкий, але по-справжньому теплий",
+        "👌 Є внутрішня кишеня + надійна чорна застібка — продумано до деталей",
+        "🎨 Кольори: чорний, сірий та глибокий синій — універсальна база",
+        "💭 Той варіант, який надягаєш і не думаєш — пасує завжди",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1290,
+      "colors": [
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.bomber-praga/7.png",
+            "images/img.bomber-praga/8.png",
+            "images/img.bomber-praga/9.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.bomber-praga/4.png",
+            "images/img.bomber-praga/5.png",
+            "images/img.bomber-praga/6.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber-praga/1.png",
+            "images/img.bomber-praga/2.png",
+            "images/img.bomber-praga/3.png"
+
+          ]
+        }
+      ],
+      "old_price": 2600
     },
     {
       "id": "LinenSet",
@@ -1571,7 +2097,7 @@ const CONFIG = {
         "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1649,
+      "price": 1690,
       "colors": [
         {
           "id": "graphite",
@@ -1674,333 +2200,6 @@ const CONFIG = {
       "old_price": 2900
     },
     {
-      "id": "Matrix",
-      "name": "Жилетка Matrix",
-      "features": [
-        "‼️ Розпродаж останніх розмірів",
-        "🥼 Чоловіча жилетка — ідеальний вибір на кожен день",
-        "✔️ Легка, але добре зберігає тепло (утеплювач: синтепон)",
-        "✔️ Матеріал: 100% поліестер — м’яка та приємна на дотик",
-        "✔️ Ідеально сідає по фігурі",
-        "✔️ Кишені на застібках + 2 внутрішні",
-        "✔️ Манжети та пояс на резинці — зручно та практично",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1090,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.matrix/1.png",
-            "images/img.matrix/2.png",
-            "images/img.matrix/3.png",
-            "images/img.matrix/4.png",
-            "images/img.matrix/5.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.matrix/6.png",
-            "images/img.matrix/7.png",
-            "images/img.matrix/8.png",
-            "images/img.matrix/9.png",
-            "images/img.matrix/10.png",
-            "images/img.matrix/11.png",
-            "images/img.matrix/12.png"
-          ]
-        },
-        {
-          "id": "haki",
-          "name": "Хакі",
-          "hex": "#78866b",
-          "images": [
-            "images/img.matrix/13.png",
-            "images/img.matrix/14.png",
-            "images/img.matrix/15.png",
-            "images/img.matrix/16.png",
-            "images/img.matrix/17.png"
-          ]
-        },
-      ],
-      "old_price": 2250
-    },
-    {
-      "id": "Imperial",
-      "name": "Куртка Imperial",
-      "features": [
-        "‼️ Розпродаж останніх розмірів",
-        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
-        "😎 Виглядає дорого і статусно",
-        "🧥 М’яка підкладка — комфорт на кожен день",
-        "🔒 Стильні кишені на грудях із застібками",
-        "✔️ Дві зручні бокові кишені",
-        "📱 Внутрішня кишеня для найважливішого",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1699,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.chorn1699/1.png",
-            "images/img.chorn1699/2.png",
-            "images/img.chorn1699/3.png"
-          ]
-        }
-      ],
-      "old_price": 3250
-    },
-    {
-      "id": "Pulse",
-      "name": "Куртка Pulse",
-      "features": [
-        "‼️ Розпродаж останніх розмірів",
-        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
-        "😎 Виглядає дорого і статусно",
-        "🧥 М’яка підкладка — комфорт на кожен день",
-        "🔒 Стильні кишені на грудях із застібками",
-        "✔️ Дві зручні бокові кишені",
-        "📱 Внутрішня кишеня для найважливішого",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1699,
-      "colors": [
-        {
-         "id": "brown",
-          "name": "Коричневий",
-          "hex": "#654321",
-          "images": [
-            "images/img.korich1699/1.png",
-            "images/img.korich1699/2.png",
-            "images/img.korich1699/3.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.chorn1699/1.png",
-            "images/img.chorn1699/2.png",
-            "images/img.chorn1699/3.png"
-          ]
-        }
-      ],
-      "old_price": 3200
-    },
-    {
-      "id": "Blade",
-      "name": "Куртка Blade",
-      "features": [
-        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
-        "😎 Приталена модель, виглядає дорого і статусно",
-        "🧥 М’яка підкладка — комфорт на кожен день",
-        "🔒 Стильні кишені на грудях із застібками",
-        "✔️ Дві зручні бокові кишені на застібках",
-        "📱 Внутрішня кишеня для найважливішого",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1799,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.chorn1799/1.png",
-            "images/img.chorn1799/2.png",
-            "images/img.chorn1799/3.png",
-            "images/img.chorn1799/4.png",
-            "images/img.chorn1799/5.png",
-            "images/img.chorn1799/6.png",
-            "images/img.chorn1799/7.png",
-            "images/img.chorn1799/8.png",
-            "images/img.chorn1799/9.png",
-            "images/img.chorn1799/10.png",
-            "images/img.chorn1799/11.png",
-            "images/img.chorn1799/12.png"
-          ]
-        }
-      ],
-      "old_price": 3400
-     },
-     {
-      "id": "Griffin",
-      "name": "Куртка Griffin",
-      "features": [
-        "🔥 Косуха, яка формує твій стиль",
-        "😎 Преміум еко-шкіра — м’яка та приємна на дотик",
-        "🧥 Комфортна підкладка на кожен день",
-        "🔒 Кишені на застібках + 2 внутрішні",
-        "✔️ Ідеальна посадка по фігурі",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1799,
-      "colors": [
-        {
-         "id": "brown",
-          "name": "Коричневий",
-          "hex": "#654321",
-          "images": [
-            "images/img.kosuha/1.png",
-            "images/img.kosuha/2.png",
-            "images/img.kosuha/3.png"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.kosuha/4.png",
-            "images/img.kosuha/5.png",
-            "images/img.kosuha/6.png"
-          ]
-        }
-      ],
-      "old_price": 3400
-    },
-    {
-      "id": "Falcon",
-      "name": "Куртка Falcon",
-      "features": [
-        "🔥 Еко-шкіра преміум-класу — м'яка, дихаюча, не тріщить",
-        "😎 Приталена модель, виглядає дорого і статусно",
-        "🧥 М’яка підкладка — комфорт на кожен день",
-        "🔒 Стильні кишені на грудях із застібками",
-        "✔️ Дві зручні бокові кишені на застібках",
-        "📱 Внутрішня кишеня для найважливішого",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1749,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.chorn1749/1.png",
-            "images/img.chorn1749/2.png",
-            "images/img.chorn1749/3.png",
-            "images/img.chorn1749/4.png"
-          ]
-        }
-      ],
-      "old_price": 3350
-    },
-     {
-      "id": "Hunter",
-      "name": "Бомбер Hunter",
-      "features": [
-        "💥 Чоловіча шкіряна куртка бомбер",
-        "🌤 Ідеально підходить на теплу пору року",
-        "🖤 Легко комбінується з будь-яким гардеробом",
-        "🧥 Якісна еко-шкіра",
-        "⚡️ Застібка на блискавку",
-        "🎒 Функціональні кишені: на блискавках + 2 бічні + на рукаві",
-        "🔒 1 внутрішня кишеня",
-        "✨ Манжетна резинка на поясі та рукавах",
-        "🪶 Легка тканинна з підкладкою",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1449,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.hunter/1.png",
-            "images/img.hunter/2.png",
-            "images/img.hunter/3.png",
-            "images/img.hunter/4.png"
-          ]
-        }
-      ],
-      "old_price": 3150
-    },
-    {
-      "id": "Praga",
-      "name": "Бомбер Praga",
-      "features": [
-        "🍂 Ідеальний сезон осінь/весна — комфорт від 0° до +20°",
-        "🧥 Нейлон преміум-якості — тримає форму та виглядає акуратно",
-        "🔥 Силіконова підкладка 150 — легкий, але по-справжньому теплий",
-        "👌 Є внутрішня кишеня + надійна чорна застібка — продумано до деталей",
-        "🎨 Кольори: чорний, сірий та глибокий синій — універсальна база",
-        "💭 Той варіант, який надягаєш і не думаєш — пасує завжди",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1290,
-      "colors": [
-        {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#bbbbbb",
-          "images": [
-            "images/img.bomber-praga/7.png",
-            "images/img.bomber-praga/8.png",
-            "images/img.bomber-praga/9.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.bomber-praga/4.png",
-            "images/img.bomber-praga/5.png",
-            "images/img.bomber-praga/6.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.bomber-praga/1.png",
-            "images/img.bomber-praga/2.png",
-            "images/img.bomber-praga/3.png"
-
-          ]
-        }
-      ],
-      "old_price": 2600
-    },
-    {
-      "id": "Aero",
-      "name": "Замшева куртка Aero",
-      "features": [
-        "✨ Якісна та приємна на дотик тканина",
-        "🧥 Підходить на весну / осінь",
-        "😎 Стильний сучасний крій — виглядає дорого",
-        "🔥 Трендовий дизайн, який легко поєднати з будь-яким образом",
-        "✂️ Розміри: S M L XL",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1490,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.aero/1.png",
-            "images/img.aero/2.png",
-            "images/img.aero/3.png"
-          ]
-        }
-      ],
-      "old_price": 2900
-    },
-    {
       "id": "Patriot UA",
       "name": "Костюм Patriot UA",
       "features": [
@@ -2030,86 +2229,6 @@ const CONFIG = {
         }
       ],
       "old_price": 2600
-    },
-    {
-      "id": "Prestige",
-      "name": "Преміальна куртка Prestige",
-      "features": [
-        "🔥 Турецька шкіра — м’яка, щільна, зносостійка, не тріщить",
-        "😎 Глибокий матовий чорний — виглядає дорого і статусно",
-        "❄️ Утеплювач 150 г силікону — тепло без зайвого об’єму",
-        "👌 Сучасний крій — чудово сідає по фігурі",
-        "✋ Регульовані манжети на рукавах",
-        "🎒 2 бічні кишені + внутрішня на грудях",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1850,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.kozhanka/1.png",
-            "images/img.kozhanka/2.png",
-            "images/img.kozhanka/3.png",
-            "images/img.kozhanka/4.png"
-          ]
-        }
-      ],
-      "old_price": 4200
-    },
-    {
-      "id": "Air",
-      "name": "Куртка Air",
-      "features": [
-        "✨ Стильна демісезонна куртка для щоденного комфорту, яка поєднує практичність, комфорт та стильний мінімалістичний дизайн. Ідеально підходить для прохолодної погоди та легко доповнює будь-який повсякденний образ",
-        "🔹 Легка та водночас тепла — комфорт у прохолодні дні",
-        "💧 Стійка до вологи — матеріал не боїться дощу та сирої погоди",
-        "🧥 Стильна посадка — гарно виглядає на фігурі та не сковує рухів",
-        "👌 4 практичні кишені — для телефону, ключів та інших дрібниць",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1350,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.air/1.png",
-            "images/img.air/2.png"
-          ]
-        },
-        {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#bbbbbb",
-          "images": [
-            "images/img.air/3.png",
-            "images/img.air/4.png"
-          ]
-        },
-        {
-          "id": "emerald",
-          "name": "Зелений",
-          "hex": "#175a43",
-          "images": [
-            "images/img.air/5.png",
-            "images/img.air/6.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.air/7.png",
-            "images/img.air/8.png"
-          ]
-        }
-      ],
-      "old_price": 2750
     },
     {
       "id": "Axis",
