@@ -36,6 +36,16 @@ const CONFIG = {
         "images/img.lyon2/2.webp"
       ]
     },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+          "images/img.lyon2/22.webp",
+          "images/img.lyon2/23.webp",
+          "images/img.lyon2/24.webp"
+          ]
+    },
     {
       "id": "white",
       "name": "Білий",
