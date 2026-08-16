@@ -36,7 +36,7 @@ const CONFIG = {
         "images/img.lyon2/2.webp"
       ]
     },
-        {
+    {
           "id": "grey",
           "name": "Сірий",
           "hex": "#BCC6CC",
@@ -733,7 +733,7 @@ const CONFIG = {
         "🌧️ Легко чиститься, не боїться дощу",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1390,
+      "price": 1490,
       "colors": [
         {
           "id": "black",
@@ -741,9 +741,8 @@ const CONFIG = {
           "hex": "#111113ff",
           "sku": "RAM 1714376372",
           "images": [
-            "images/img.bomber-snake/1.png",
-            // "images/img.bomber-snake/2.png",
-            "images/img.bomber-snake/3.png"
+            "images/img.bomber-snake/1.webp",
+            "images/img.bomber-snake/3.webp"
           ]
         },
         {
@@ -752,9 +751,9 @@ const CONFIG = {
           "hex": "#000080",
           "sku": "RAM 1774860319",
           "images": [
-            "images/img.bomber-snake/4.png",
-            "images/img.bomber-snake/5.png",
-            "images/img.bomber-snake/6.png"
+            "images/img.bomber-snake/4.webp",
+            "images/img.bomber-snake/5.webp",
+            "images/img.bomber-snake/6.webp"
           ]
         }
       ],
@@ -781,10 +780,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.kozhanka/1.png",
-            "images/img.kozhanka/2.png",
-            "images/img.kozhanka/3.png",
-            "images/img.kozhanka/4.png"
+            "images/img.kozhanka/1.webp",
+            "images/img.kozhanka/2.webp",
+            "images/img.kozhanka/3.webp"
           ]
         }
       ],
@@ -840,9 +838,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.chorn1699/1.png",
-            "images/img.chorn1699/2.png",
-            "images/img.chorn1699/3.png"
+            "images/img.chorn1699/1.webp",
+            "images/img.chorn1699/2.webp",
+            "images/img.chorn1699/3.webp"
           ]
         }
       ],
@@ -870,9 +868,9 @@ const CONFIG = {
           "hex": "#654321",
           "sku": "RA 2508",
           "images": [
-            "images/img.korich1699/1.png",
-            "images/img.korich1699/2.png",
-            "images/img.korich1699/3.png"
+            "images/img.korich1699/1.webp",
+            "images/img.korich1699/2.webp",
+            "images/img.korich1699/3.webp"
           ]
         },
         {
@@ -881,9 +879,9 @@ const CONFIG = {
           "hex": "#111113ff",
           "sku": "RA 2504",
           "images": [
-            "images/img.chorn1699/1.png",
-            "images/img.chorn1699/2.png",
-            "images/img.chorn1699/3.png"
+            "images/img.chorn1699/1.webp",
+            "images/img.chorn1699/2.webp",
+            "images/img.chorn1699/3.webp"
           ]
         }
       ],
