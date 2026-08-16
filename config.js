@@ -838,9 +838,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.chorn1699/1.webp",
-            "images/img.chorn1699/2.webp",
-            "images/img.chorn1699/3.webp"
+            "images/img.chorn1699/1.png",
+            "images/img.chorn1699/2.png",
+            "images/img.chorn1699/3.png"
           ]
         }
       ],
@@ -868,9 +868,9 @@ const CONFIG = {
           "hex": "#654321",
           "sku": "RA 2508",
           "images": [
-            "images/img.korich1699/1.webp",
-            "images/img.korich1699/2.webp",
-            "images/img.korich1699/3.webp"
+            "images/img.korich1699/1.png",
+            "images/img.korich1699/2.png",
+            "images/img.korich1699/3.png"
           ]
         },
         {
@@ -879,9 +879,9 @@ const CONFIG = {
           "hex": "#111113ff",
           "sku": "RA 2504",
           "images": [
-            "images/img.chorn1699/1.webp",
-            "images/img.chorn1699/2.webp",
-            "images/img.chorn1699/3.webp"
+            "images/img.chorn1699/1.png",
+            "images/img.chorn1699/2.png",
+            "images/img.chorn1699/3.png"
           ]
         }
       ],
