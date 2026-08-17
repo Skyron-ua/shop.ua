@@ -3142,7 +3142,7 @@ const CONFIG = {
     },
    ],
 
-  CLIENT_PHOTOS: {
+ /* CLIENT_PHOTOS: {
     "Forge": [
       "images/reviews.bomber/1.png",
       "images/reviews.bomber/2.png",
@@ -3150,7 +3150,7 @@ const CONFIG = {
       "images/reviews.bomber/4.png",
       "images/reviews.bomber/5.png"
     ]
-  },
+  },*/
 
   SEASON_GROUPS: {
     "Літній гардероб": [
