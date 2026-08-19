@@ -2490,15 +2490,3 @@ main,
 }
 
 
-
-/* Два поля в один ряд на десктопі */
-.name-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-@media (max-width: 600px) {
-  .name-row {
-    grid-template-columns: 1fr;
-  }
-}
