@@ -886,7 +886,7 @@ const CONFIG = {
           ]
         }
       ],
-      "old_price": 3200
+      "old_price": 3250
     },
     {
       "id": "Blade",
