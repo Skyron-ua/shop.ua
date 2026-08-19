@@ -18,7 +18,7 @@ function trackPixelEvent(eventName, metaParams = {}, ttParams = {}) {
     window.ttq.track(ttEvent, ttParams);
   }
 }
-const $ = window.$ || (sel => document.querySelector(sel));
+const $ = sel => document.querySelector(sel);
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // Модальне вікно "Додано в кошик"
@@ -1222,7 +1222,7 @@ const totalCartSum = cart.reduce((sum, item) => {
 }, 0);
 
 const payload = {
-    name: ((rawData.firstName || '') + ' ' + (rawData.lastName || '')).trim() || '',
+    name: rawData.name || '',
     phone: rawData.phone || '',
     city: rawData.city || '',
     postOffice: rawData.postOffice || '',
@@ -1988,3 +1988,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el) el.style.display = "none";
   });
 });
+
+
+
+
