@@ -237,8 +237,7 @@ function initCart() {
     if (!product) return;
     const color = product.colors.find(c => c.id === item.colorId) || { name: '—' };
     const qty = item.quantity || 1;
-    const itemPrice = item.customPrice || product.price;
-const itemTotal = itemPrice * qty;
+    const itemTotal = product.price * qty;
     total += itemTotal;
     const div = document.createElement('div');
     div.className = 'cart-item';
@@ -422,7 +421,6 @@ function initProduct() {
       value: Number(product.price),
       currency: 'UAH'
     }
-    
   );
   /* =========================
     Основна інформація
@@ -561,8 +559,8 @@ const photosBlock = document.getElementById('clientPhotosBlock');
 if (photosBlock) {
     photosBlock.innerHTML = ''; // завжди очищаємо спочатку
 
-if (product && CONFIG.CLIENT_PHOTOS && product.id in CONFIG.CLIENT_PHOTOS) {
-    const photos = CONFIG.CLIENT_PHOTOS[product.id];
+    if (product && CLIENT_PHOTOS && product.id in CLIENT_PHOTOS) {
+        const photos = CLIENT_PHOTOS[product.id];
 
         if (photos && photos.length > 0) {
             // Створюємо слайди
@@ -625,108 +623,6 @@ if (product && CONFIG.CLIENT_PHOTOS && product.id in CONFIG.CLIENT_PHOTOS) {
         }
     }
 }
-  // ===== Похожі товари =====
-  if (product.relatedIds && product.relatedIds.length > 0) {
-    const relatedProducts = product.relatedIds
-      .map(id => CONFIG.PRODUCTS.find(p => p.id === id))
-      .filter(p => p)
-      .slice(0, 3);
-
-    if (relatedProducts.length > 0) {
-      const section = document.createElement("div");
-      section.style.cssText = `
-        margin-top: 50px;
-        padding-top: 35px;
-        border-top: 1px solid #eee;
-        width: 100%;
-      `;
-
-      const title = document.createElement("h3");
-      title.textContent = "Схожі товари";
-      title.style.cssText = "font-size: 20px; margin-bottom: 20px; font-weight: 600; text-align: center;";
-      section.appendChild(title);
-
-      const grid = document.createElement("div");
-      grid.className = "related-products-grid";
-      grid.style.cssText = `
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 0 16px;
-      `;
-
-      // Стилі для мобілки
-      const style = document.createElement("style");
-      style.textContent = `
-        @media (max-width: 768px) {
-          .related-products-grid {
-            display: flex !important;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            gap: 14px;
-            padding-bottom: 10px;
-            max-width: 100% !important;
-            margin: 0 !important;
-            scrollbar-width: none;
-          }
-          .related-products-grid::-webkit-scrollbar {
-            display: none;
-          }
-          .related-product-card {
-            flex: 0 0 72% !important;
-            max-width: 280px;
-            scroll-snap-align: start;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-
-      relatedProducts.forEach(p => {
-        const firstColor = p.colors?.[0] || { images: ["images/placeholder.jpg"] };
-        
-        const card = document.createElement("div");
-        card.className = "related-product-card";
-        card.style.cssText = `
-          cursor: pointer;
-          border-radius: 14px;
-          overflow: hidden;
-          background: #fff;
-          border: 1px solid #eee;
-          transition: transform 0.2s, box-shadow 0.2s;
-        `;
-
-        card.innerHTML = `
-          <img src="${firstColor.images[0]}" alt="${p.name}" style="width:100%; aspect-ratio: 3/4; object-fit: cover; display:block;">
-          <div style="padding: 12px 14px;">
-            <div style="font-size: 14px; font-weight: 500; margin-bottom: 5px; line-height: 1.3; min-height: 36px;">${p.name}</div>
-            <div style="font-size: 15px; font-weight: 600; color: #e63939;">
-              ${p.price} грн
-              ${p.old_price ? `<span style="font-size:12px; color:#999; text-decoration:line-through; margin-left:6px;">${p.old_price}</span>` : ""}
-            </div>
-          </div>
-        `;
-
-        card.addEventListener("click", () => {
-          window.location.href = `product.html?id=${p.id}`;
-        });
-
-        grid.appendChild(card);
-      });
-
-      section.appendChild(grid);
-
-      // Вставляємо перед футером
-      const footer = document.querySelector("footer") || document.querySelector(".site-footer");
-      if (footer) {
-        footer.parentNode.insertBefore(section, footer);
-      } else {
-        document.body.appendChild(section);
-      }
-    }
-  }
 }
 // selectProduct & selectColor (единственная версия)
 let activeProduct, activeImages = [], currentIndex = 0;
@@ -1184,11 +1080,7 @@ document.addEventListener("DOMContentLoaded", function () {
               const name = product?.name || 'Товар';
               const color = product?.colors.find(c => c.id === item.colorId)?.name || '—';
 
-const colorObj = product?.colors.find(c => c.id === item.colorId);
-const sku = colorObj?.sku || product?.sku || '—';
-
-return `Товар: ${name}
-Артикул: ${sku}
+              return `Товар: ${name}
 Колір: ${color}
 Зріст: ${item.height || '—'} см
 Вага: ${item.weight || '—'} кг
@@ -1214,26 +1106,17 @@ return `Товар: ${name}
       finalComment = finalComment.trim();
 
       // 4. Формируем payload
-// Спочатку рахуємо суму
-const totalCartSum = cart.reduce((sum, item) => {
-    const p = CONFIG.PRODUCTS.find(prod => prod.id === item.productId);
-    const price = item.customPrice || (p ? p.price : 0);
-    return sum + (price * (item.quantity || 1));
-}, 0);
-
-const payload = {
-    name: rawData.name || '',
-    phone: rawData.phone || '',
-    city: rawData.city || '',
-    postOffice: rawData.postOffice || '',
-    comment: finalComment,
-    noContact: noContact,
-    cart_details: cartDetails,
-    price: totalCartSum,          // ← ось це головне
-    total: totalCartSum,
-    source: 'Кошик (cart.html)',
-    timestamp: new Date().toISOString()
-};
+      const payload = {
+          name: rawData.name || '',
+          phone: rawData.phone || '',
+          city: rawData.city || '',
+          postOffice: rawData.postOffice || '',
+          comment: finalComment,
+          noContact: noContact,
+          cart_details: cartDetails,
+          source: 'Кошик (cart.html)',
+          timestamp: new Date().toISOString()
+      };
 
       console.log('SENDING TO WORKER:', payload);
 
@@ -1746,249 +1629,3 @@ document.addEventListener("DOMContentLoaded", () => {
     initNovaPoshta();
   }
 });
-
-
-
-
-// =====================================================
-// BUNDLE CONSTRUCTOR: look-velvet-jeans (36 фото)
-// =====================================================
-
-document.addEventListener("DOMContentLoaded", () => {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get("id") !== "look-velvet-jeans") return;
-
-  const product = CONFIG.PRODUCTS.find(p => p.id === "look-velvet-jeans");
-  if (!product || product.type !== "bundle") return;
-
-  let combination = { ...product.defaultCombination };
-
-  // ===== Розрахунок номера фото (1–36) =====
-  function getImageNumber() {
-    const b = product.colorOrder.bomber.indexOf(combination.bomber);
-    const j = product.colorOrder.jeans.indexOf(combination.jeans);
-    const t = product.colorOrder.tshirt.indexOf(combination.tshirt);
-    if (b === -1 || j === -1 || t === -1) return 1;
-    return (b * 12) + (j * 2) + t + 1;
-  }
-
-  // ===== Шлях до фото =====
-  function getImagePath() {
-    const num = getImageNumber();
-    return `images/img.bomber.jeans/${num}.webp`;
-  }
-
-  // ===== Оновлення головного фото =====
-  function updateMainImage() {
-    const mainImg = document.getElementById("mainImage");
-    if (!mainImg) return;
-
-    const src = getImagePath();
-    mainImg.style.transition = "opacity 0.25s ease";
-    mainImg.style.opacity = "0.3";
-
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      mainImg.src = src;
-      mainImg.style.opacity = "1";
-    };
-    img.onerror = () => {
-      console.warn("Фото не знайдено:", src);
-    };
-  }
-
-  // ===== Свотчі (3 ряди) =====
-  function renderSwatches() {
-    const container = document.getElementById("swatches");
-    if (!container) return;
-
-    container.innerHTML = "";
-    container.style.cssText = "display:flex; flex-direction:column; gap:16px; margin:22px 0 12px;";
-
-    const rows = [
-      { key: "bomber", label: "Бомбер" },
-      { key: "jeans",  label: "Джинси" },
-      { key: "tshirt", label: "Футболка" }
-    ];
-
-    rows.forEach(row => {
-      const rowEl = document.createElement("div");
-      rowEl.style.cssText = "display:flex; align-items:center; gap:11px; flex-wrap:wrap;";
-
-      const label = document.createElement("div");
-      label.textContent = row.label + ":";
-      label.style.cssText = "min-width:78px; font-weight:600; font-size:14px;";
-      rowEl.appendChild(label);
-
-      product.items[row.key].colors.forEach(c => {
-        const sw = document.createElement("button");
-        sw.className = "swatch" + (combination[row.key] === c.id ? " active" : "");
-        sw.style.background = c.hex;
-        sw.title = c.name;
-        sw.addEventListener("click", () => {
-          combination[row.key] = c.id;
-          updateUI();
-        });
-        rowEl.appendChild(sw);
-      });
-
-      container.appendChild(rowEl);
-    });
-  }
-
-  // ===== Кнопки всередині блоку розмірів =====
-  function renderBuyButtons() {
-    const heightInput = document.getElementById("product-height");
-    const weightInput = document.getElementById("product-weight");
-    if (!heightInput || !weightInput) return;
-
-    const formRow = heightInput.closest(".form-row") || heightInput.parentElement?.parentElement;
-    if (!formRow) return;
-
-    document.getElementById("bundleBuyButtons")?.remove();
-
-    const wrapper = document.createElement("div");
-    wrapper.id = "bundleBuyButtons";
-    wrapper.style.cssText = `
-      margin-top: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      width: 100%;
-      grid-column: 1 / -1;
-    `;
-
-    // Верхній ряд (сірі кнопки)
-    const topRow = document.createElement("div");
-    topRow.style.cssText = "display: grid; grid-template-columns: 1fr 1fr; gap: 8px;";
-
-    [
-      { id: "bomber", label: "Тільки бомбер", price: 1290 },
-      { id: "jeans",  label: "Тільки джинси", price: 1590 }
-    ].forEach(opt => {
-      const btn = document.createElement("button");
-      btn.className = "btn-secondary";
-      btn.style.cssText = `
-        padding: 11px 6px;
-        font-size: 13px;
-        font-weight: 500;
-        border-radius: 10px;
-        line-height: 1.25;
-        text-align: center;
-      `;
-      btn.innerHTML = `${opt.label}<br><b style="font-size:13.5px">${opt.price} грн</b>`;
-      btn.addEventListener("click", () => tryAddBundle(opt.id));
-      topRow.appendChild(btn);
-    });
-    wrapper.appendChild(topRow);
-
-    // Кнопка Бомбер + Джинси (м’який зелений)
-    const midBtn = document.createElement("button");
-    midBtn.className = "btn-primary";
-    midBtn.style.cssText = `
-      width: 100%;
-      padding: 13px;
-      font-size: 14.5px;
-      font-weight: 600;
-      border-radius: 10px;
-      line-height: 1.3;
-      background: #16a34a;
-      border-color: #16a34a;
-    `;
-    midBtn.innerHTML = `Бомбер + Джинси — <b>2690 грн</b><br><span style="font-size:12.5px;">🔥 Додаткова знижка -200 грн</span>`;
-    midBtn.addEventListener("click", () => tryAddBundle("bomberJeans"));
-    wrapper.appendChild(midBtn);
-
-    // Головна кнопка (синя)
-    const mainBtn = document.createElement("button");
-    mainBtn.className = "btn-primary";
-    mainBtn.style.cssText = `
-      width: 100%;
-      padding: 14px;
-      font-size: 15.5px;
-      font-weight: 600;
-      border-radius: 11px;
-      line-height: 1.3;
-    `;
-    mainBtn.innerHTML = `Бомбер + джинси + футболка — <b>3180 грн</b><br><span style="font-size:13px;">🔥 Додаткова знижка -300 грн</span>`;
-    mainBtn.addEventListener("click", () => tryAddBundle("full"));
-    wrapper.appendChild(mainBtn);
-
-    formRow.parentNode.insertBefore(wrapper, formRow.nextSibling);
-  }
-
-  // ===== Додавання в кошик зі знижкою =====
-  function tryAddBundle(optionId) {
-    const h = parseInt(document.getElementById("product-height")?.value || "0", 10);
-    const w = parseInt(document.getElementById("product-weight")?.value || "0", 10);
-
-    if (isNaN(h) || isNaN(w) || h < 140 || h > 220 || w < 35 || w > 150) {
-      alert("Спочатку введіть зріст (140–220 см) та вагу (35–150 кг)");
-      document.getElementById("product-height")?.focus();
-      return;
-    }
-
-    const option = product.buyOptions.find(o => o.id === optionId);
-    if (!option) return;
-
-    const currentImage = getImagePath();
-
-    // Знижки
-    const discounts = {
-      full: { bomber: 100, jeans: 100, tshirt: 100 },   // -300 грн
-      bomberJeans: { bomber: 100, jeans: 100 },         // -200 грн
-      bomber: {},
-      jeans: {}
-    };
-
-    option.items.forEach(key => {
-      const item = product.items[key];
-      const discount = discounts[optionId]?.[key] || 0;
-
-      const originalPrice = CONFIG.PRODUCTS.find(p => p.id === item.productId)?.price || 0;
-      const customPrice = originalPrice - discount;
-
-      addToCart({
-        productId: item.productId,
-        colorId: combination[key],
-        height: h,
-        weight: w,
-        quantity: 1,
-        image: currentImage,
-        fromBundle: "look-velvet-jeans",
-        customPrice: customPrice
-      });
-    });
-
-    if (typeof showAddToCartModal === "function") showAddToCartModal();
-    else if (typeof showToast === "function") showToast("Додано в кошик!");
-    else alert("Додано в кошик!");
-  }
-
-  function updateUI() {
-    renderSwatches();
-    updateMainImage();
-  }
-
-  // ===== Запуск =====
-  updateUI();
-
-  // Очищаємо поля зросту і ваги
-  const heightInput = document.getElementById("product-height");
-  const weightInput = document.getElementById("product-weight");
-  if (heightInput) heightInput.value = "";
-  if (weightInput) weightInput.value = "";
-
-  setTimeout(renderBuyButtons, 150);
-
-  // Ховаємо старі кнопки
-  ["reserveBtn", "quickOrderBtn", "buyButtonsContainer"].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.style.display = "none";
-  });
-});
-
-
-
-
