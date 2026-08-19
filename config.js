@@ -18,7 +18,7 @@ function trackPixelEvent(eventName, metaParams = {}, ttParams = {}) {
     window.ttq.track(ttEvent, ttParams);
   }
 }
-const $ = sel => document.querySelector(sel);
+const $ = window.$ || (sel => document.querySelector(sel));
 const $$ = sel => Array.from(document.querySelectorAll(sel));
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // Модальне вікно "Додано в кошик"
