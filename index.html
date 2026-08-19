@@ -489,8 +489,8 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
     <div class="season-filters">
       <button class="season-btn" id="openFiltersBtn">📋 Категорії</button>
       <div style="border-left: 1px solid #d1d1d6; height: 24px; margin: 0 4px;"></div>
-      <button class="season-btn active" data-season="summer">☀️ Літо</button>
-      <button class="season-btn" data-season="spring">🌿 Весна / Осінь</button>
+      <button class="season-btn" data-season="summer">☀️ Літо</button>
+      <button class="season-btn active" data-season="spring">🌿 Весна / Осінь</button>
       <button class="season-btn" data-season="winter">❄️ Зима</button>
     </div>
 
@@ -572,19 +572,23 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
         colors: [{hex:"#616267", images:["images/img.divento/1.webp","images/img.divento/2.webp"]},
                  {hex:"#111113ff", images:["images/img.divento/4.webp","images/img.divento/5.webp"]},
                  {hex:"#ffffff", images:["images/img.divento/7.webp","images/img.divento/8.webp"]}] },
-      "Velvet Jet": { name: "Бомбер Velvet Jet", price: 1090, old: 2700, season: "spring",
+      "Forge": { name: "Бомбер Forge", price: 1390, old: 2600, season: "spring",
+                   colors: [{hex:"#111113ff", images:["images/img.bomber/3.webp","images/img.bomber/1.webp","images/img.bomber/2.webp"]}] },
+      
+      "Basic Premium": { name: "Костюм Basic Premium", description: "Стильний та зручний костюм на кожен день", price: 1390, old: 2780, season: "spring",
+        colors: [{hex:"#616267", images:["images/img.major/1.webp","images/img.major/2.webp","images/img.major/3.webp"]},{hex:"#111113ff", images:["images/img.major/4.webp","images/img.major/5.webp","images/img.major/6.webp"]}] },             "Imperial": { name: "Куртка Imperial", price: 1799, old: 3250, season: "spring",
+                   colors: [{hex:"#111113ff", images:["images/img.chorn1699/1.webp","images/img.chorn1699/2.webp","images/img.chorn1699/3.webp"]}] },
+      "Pulse": { name: "Куртка Pulse", description: "Виглядає дорого і статусно", price: 1799, old: 3250, season: "spring",
+                   colors: [{hex:"#654321", images:["images/img.korich1699/1.webp","images/img.korich1699/2.webp","images/img.korich1699/3.webp"]},
+                            {hex:"#111113ff", images:["images/img.chorn1699/1.png","images/img.chorn1699/2.png"]}] },
+      "Prestige": { name: "Преміальна куртка Prestige", price: 1850, old: 4200, season: "spring",
+        colors: [{hex:"#111113ff", images:["images/img.kozhanka/1.webp","images/img.kozhanka/2.webp","images/img.kozhanka/3.webp"]}] },
+      "Velvet Jet": { name: "Бомбер Velvet Jet", description: "Замшевий бомбер - бомба сезону", price: 1090, old: 2700, season: "spring",
         colors: [{hex:"#111113ff", images:["images/img.bomber-zamsh/1.webp","images/img.bomber-zamsh/2.webp","images/img.bomber-zamsh/3.webp"]},
                  {hex:"#616267", images:["images/img.bomber-zamsh/4.webp","images/img.bomber-zamsh/5.webp","images/img.bomber-zamsh/6.webp"]},
                  {hex:"#000080", images:["images/img.bomber-zamsh/7.webp","images/img.bomber-zamsh/8.webp","images/img.bomber-zamsh/9.webp"]},
                  {hex:"#78866b", images:["images/img.bomber-zamsh/10.webp","images/img.bomber-zamsh/11.webp","images/img.bomber-zamsh/12.webp","images/img.bomber-zamsh/13.webp","images/img.bomber-zamsh/14.webp","images/img.bomber-zamsh/15.webp","images/img.bomber-zamsh/16.webp"]},
                  {hex:"#790604", images:["images/img.bomber-zamsh/17.webp","images/img.bomber-zamsh/18.webp","images/img.bomber-zamsh/19.webp","images/img.bomber-zamsh/20.webp"]}] },
-      "Forge": { name: "Бомбер Forge", price: 1290, old: 2600, season: "spring",
-        colors: [{hex:"#111113ff", images:["images/img.bomber/1.png","images/img.bomber/2.png"]}] },
-      "Imperial": { name: "Куртка Imperial", price: 1699, old: 3250, season: "spring",
-        colors: [{hex:"#111113ff", images:["images/img.chorn1699/1.png","images/img.chorn1699/2.png"]}] },
-      "Pulse": { name: "Куртка Pulse", price: 1699, old: 3200, season: "spring",
-        colors: [{hex:"#654321", images:["images/img.korich1699/1.png","images/img.korich1699/2.png"]},
-                 {hex:"#111113ff", images:["images/img.chorn1699/1.png","images/img.chorn1699/2.png"]}] },
       "plush": { name: "Костюм Royal Prime", price: 1249, old: 1899, season: "winter",
         colors: [{hex:"#616267", images:["images/img.plush/1.png"]}, {hex:"#111113ff", images:["images/img.plush/6.png"]}, {hex:"#d6c7b1", images:["images/img.plush/16.png"]}] },
       "sale": { name: "Флісовий костюм TNF", price: 1649, old: 3300, season: "winter",
@@ -604,14 +608,12 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
         colors: [{hex:"#111113ff", images:["images/img.zamsh-baza/1.png","images/img.zamsh-baza/2.png","images/img.zamsh-baza/3.png"]},{hex:"#616267", images:["images/img.zamsh-baza/4.png","images/img.zamsh-baza/5.png","images/img.zamsh-baza/6.png"]},{hex:"#654321", images:["images/img.zamsh-baza/7.png","images/img.zamsh-baza/8.png","images/img.zamsh-baza/9.png"]},{hex:"#000080", images:["images/img.zamsh-baza/10.png","images/img.zamsh-baza/11.png","images/img.zamsh-baza/12.png"]},{hex:"#175a43", images:["images/img.zamsh-baza/13.png","images/img.zamsh-baza/14.png","images/img.zamsh-baza/15.png"]}] },
       "Patriot UA": { name: "Костюм Patriot UA", price: 1249, old: 2600, season: "spring",
         colors: [{hex:"#111113ff", images:["images/img.kostium-trisub/1.png","images/img.kostium-trisub/2.png","images/img.kostium-trisub/3.png","images/img.kostium-trisub/4.png","images/img.kostium-trisub/5.png","images/img.kostium-trisub/6.png","images/img.kostium-trisub/7.png"]}] },
-      "Basic Premium": { name: "Костюм Basic Premium", price: 1390, old: 2780, season: "spring",
-        colors: [{hex:"#616267", images:["images/img.major/1.webp","images/img.major/2.webp","images/img.major/3.webp"]},{hex:"#111113ff", images:["images/img.major/4.webp","images/img.major/5.webp","images/img.major/6.webp"]}] },
       "plashovka": { name: "Костюм Nowind", price: 1249, old: 1599, season: "spring",
         colors: [{hex:"#111113ff", images:["images/img.plashovka/1.png","images/img.plashovka/2.png","images/img.plashovka/3.png","images/img.plashovka/4.png","images/img.plashovka/5.png","images/img.plashovka/6.png"]},{hex:"#78866b", images:["images/img.plashovka/7.png","images/img.plashovka/8.png","images/img.plashovka/9.png","images/img.plashovka/10.png","images/img.plashovka/11.png","images/img.plashovka/12.png"]},{hex:"#616267", images:["images/img.plashovka/13.png","images/img.plashovka/14.png","images/img.plashovka/15.png","images/img.plashovka/16.png"]},{hex:"#bbbbbb", images:["images/img.plashovka/17.png","images/img.plashovka/18.png"]}] },
       "Hunter": { name: "Бомбер Hunter", price: 1449, old: 3150, season: "spring",
         colors: [{hex:"#111113ff", images:["images/img.hunter/1.png","images/img.hunter/2.png","images/img.hunter/3.png","images/img.hunter/4.png"]}] },
       "Snake": { name: "Бомбер Snake", price: 1349, old: 2800, season: "spring",
-        colors: [{hex:"#111113ff", images:["images/img.bomber-snake/1.png","images/img.bomber-snake/2.png","images/img.bomber-snake/3.png"]},{hex:"#000080", images:["images/img.bomber-snake/4.png","images/img.bomber-snake/5.png","images/img.bomber-snake/6.png"]}] },
+        colors: [{hex:"#111113ff", images:["images/img.bomber-snake/1.webp","images/img.bomber-snake/3.webp"]},{hex:"#000080", images:["images/img.bomber-snake/4.webp","images/img.bomber-snake/5.webp","images/img.bomber-snake/6.webp"]}] },
       "Praga": { name: "Бомбер Praga", price: 1290, old: 2600, season: "spring",
         colors: [{hex:"#bbbbbb", images:["images/img.bomber-praga/7.png","images/img.bomber-praga/8.png","images/img.bomber-praga/9.png"]},{hex:"#000080", images:["images/img.bomber-praga/4.png","images/img.bomber-praga/5.png","images/img.bomber-praga/6.png"]},{hex:"#111113ff", images:["images/img.bomber-praga/1.png","images/img.bomber-praga/2.png","images/img.bomber-praga/3.png"]}] },
       "Matrix": { name: "Жилетка Matrix", price: 1090, old: 2250, season: "spring",
@@ -638,8 +640,6 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
         colors: [{hex:"#654321", images:["images/img.kosuha/1.png","images/img.kosuha/2.png","images/img.kosuha/3.png"]},{hex:"#616267", images:["images/img.kosuha/4.png","images/img.kosuha/5.png","images/img.kosuha/6.png"]}] },
       "Falcon": { name: "Куртка Falcon", price: 1749, old: 3350, season: "spring",
         colors: [{hex:"#111113ff", images:["images/img.chorn1749/1.png","images/img.chorn1749/2.png","images/img.chorn1749/3.png","images/img.chorn1749/4.png"]}] },
-      "Prestige": { name: "Преміальна куртка Prestige", price: 1850, old: 4200, season: "spring",
-        colors: [{hex:"#111113ff", images:["images/img.kozhanka/1.png","images/img.kozhanka/2.png","images/img.kozhanka/3.png","images/img.kozhanka/4.png"]}] },
       "Aero": { name: "Замшева куртка Aero", price: 1490, old: 2900, season: "spring",
         colors: [{hex:"#111113ff", images:["images/img.aero/1.png","images/img.aero/2.png","images/img.aero/3.png"]}] },
       "Air": { name: "Куртка Air", price: 1350, old: 2750, season: "spring",
@@ -704,7 +704,7 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
       "Аксесуари/Головні убори": ["balaklava", "shapka-baf"]
     };
 
-    let currentActiveSeason = 'summer';
+    let currentActiveSeason = 'spring';
     let currentActiveCategory = 'all';
 
     function getRandomRating(id) {
@@ -781,9 +781,18 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
 
         if (matchSeason && matchCategory) {
           // ИСПРАВЛЕНО: Лимит в 4 штуки применяется ТОЛЬКО если мы смотрим главную вкладку "Показати все" (Хіти продажу)
-          if (currentActiveCategory === 'all' && count >= 4) {
-            return; 
-          }
+          // Ліміти карток для кожного сезону (в режимі "Хіти продажу")
+          const seasonLimits = {
+          summer: 4,   // Літо
+          spring: 6,   // Весна / Осінь
+          winter: 4    // Зима
+        };
+
+         const maxCards = seasonLimits[currentActiveSeason] || 4;
+
+         if (currentActiveCategory === 'all' && count >= maxCards) {
+         return;
+        }
           
           grid.appendChild(createProductCard(id, prod));
           count++;
@@ -936,11 +945,12 @@ src="https://www.facebook.com/tr?id=922837707259752&ev=PageView&noscript=1"/>
       });
     });
 
-    document.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("year").textContent = new Date().getFullYear();
-      buildCategoriesSidebar();
-      renderProducts();
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("year").textContent = new Date().getFullYear();
+  buildCategoriesSidebar();
+  updateSectionTitle();   // ← додай цей рядок
+  renderProducts();
+});
   </script>
 </body>
 </html>
