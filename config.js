@@ -477,7 +477,7 @@ const CONFIG = {
           "images": [
             "images/img.rayford/4.webp",
             "images/img.rayford/5.webp",
-            "images/img.rayford/5.webp"
+            "images/img.rayford/6.webp"
           ]
         }
       ],
