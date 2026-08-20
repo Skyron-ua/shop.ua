@@ -443,6 +443,45 @@ const CONFIG = {
         }
       ],
       "old_price": 2800
+    },    {
+      "id": "Rayford",
+      "name": "Замшева куртка Rayford",
+      "relatedIds": ["Aero", "Velvet Jet", "Forge"],
+      "features": [
+        "🔥 Топова якість та стильний дизайн",
+        "🍂 Сезон: весна–осінь",
+        "🔝 Преміальна фурнітура",
+        "🧸 Тепла підкладка з хутра — для додаткового комфорту в прохолодну погоду",
+        "🔒 3 місткі передні кишені на блискавці + 1 внутрішня кишеня",
+        "👌 Манжети на поясі та рукавах забезпечують комфортну посадку та допомагають куртці гарно сидіти на різній статурі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "sku": "RAM 1757422799",
+          "images": [
+            "images/img.rayford/1.webp",
+            "images/img.rayford/2.webp",
+            "images/img.rayford/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "RAM 1723535621",
+          "images": [
+            "images/img.rayford/4.webp",
+            "images/img.rayford/5.webp",
+            "images/img.rayford/5.webp"
+          ]
+        }
+      ],
+      "old_price": 3250
     },
     {
       "id": "Velvet Jet",
@@ -3187,6 +3226,7 @@ const CONFIG = {
       "A",
       "Matrix",
       "Velvet Jet",
+      "Rayford",
       "Imperial",
       "Pulse",
       "Blade",
@@ -3231,7 +3271,7 @@ const CONFIG = {
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
-    "Верхній одяг/куртки": ["Imperial", "Pulse", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial", "Pulse", "Rayford", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
     "Джинси": ["Jeans"],
