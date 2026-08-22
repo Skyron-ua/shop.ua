@@ -443,9 +443,10 @@ const CONFIG = {
         }
       ],
       "old_price": 2800
-    },    {
+    },    
+    {
       "id": "Rayford",
-      "name": "Замшева куртка Rayford",
+      "name": "Утеплена замшева куртка Rayford",
       "relatedIds": ["Aero", "Velvet Jet", "Forge"],
       "features": [
         "🔥 Топова якість та стильний дизайн",
@@ -459,25 +460,26 @@ const CONFIG = {
       "price": 1690,
       "colors": [
         {
-         "id": "brown",
-          "name": "Коричневий",
-          "hex": "#654321",
-          "sku": "RAM 1757422799",
-          "images": [
-            "images/img.rayford/1.webp",
-            "images/img.rayford/2.webp",
-            "images/img.rayford/3.webp"
-          ]
-        },
-        {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
           "sku": "RAM 1723535621",
           "images": [
-            "images/img.rayford/4.webp",
             "images/img.rayford/5.webp",
+            "images/img.rayford/7.webp",
+            "images/img.rayford/4.webp",
             "images/img.rayford/6.webp"
+          ]
+        },
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "sku": "RAM 1757422799",
+          "images": [
+            "images/img.rayford/2.webp",
+            "images/img.rayford/1.webp",
+            "images/img.rayford/3.webp"
           ]
         }
       ],
