@@ -1026,10 +1026,10 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.chorn1749/1.png",
-            "images/img.chorn1749/2.png",
-            "images/img.chorn1749/3.png",
-            "images/img.chorn1749/4.png"
+            "images/img.chorn1749/1.webp",
+            "images/img.chorn1749/2.webp",
+            "images/img.chorn1749/3.webp",
+            "images/img.chorn1749/4.webp"
           ]
         }
       ],
