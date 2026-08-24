@@ -954,18 +954,18 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.chorn1799/1.png",
-            "images/img.chorn1799/2.png",
-            "images/img.chorn1799/3.png",
-            "images/img.chorn1799/4.png",
-            "images/img.chorn1799/5.png",
-            "images/img.chorn1799/6.png",
-            "images/img.chorn1799/7.png",
-            "images/img.chorn1799/8.png",
-            "images/img.chorn1799/9.png",
-            "images/img.chorn1799/10.png",
-            "images/img.chorn1799/11.png",
-            "images/img.chorn1799/12.png"
+            "images/img.chorn1799/1.webp",
+            "images/img.chorn1799/2.webp",
+            "images/img.chorn1799/3.webp",
+            "images/img.chorn1799/4.webp",
+            "images/img.chorn1799/5.webp",
+            "images/img.chorn1799/6.webp",
+            "images/img.chorn1799/7.webp",
+            "images/img.chorn1799/8.webp",
+            "images/img.chorn1799/9.webp",
+            "images/img.chorn1799/10.webp",
+            "images/img.chorn1799/11.webp",
+            "images/img.chorn1799/12.webp"
           ]
         }
       ],
