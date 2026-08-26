@@ -2475,6 +2475,7 @@ const CONFIG = {
       "id": "sale",
       "name": "Теплий флісовий костюм TNF",
       "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
         "🔥 Реально теплий — комфорт навіть у холод до -20°C",
         "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
         "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
@@ -2488,10 +2489,10 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.north/gr1.png",
-            "images/img.north/gr2.png",
-            "images/img.north/gr3.png",
-            "images/img.north/gr4.png"
+            "images/img.north/gr1.webp",
+            "images/img.north/gr2.webp",
+            "images/img.north/gr3.webp",
+            "images/img.north/gr4.webp"
           ]
         },
         {
@@ -2499,11 +2500,11 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.north/ch1.png",
-            "images/img.north/ch2.png",
-            "images/img.north/ch3.png",
-            "images/img.north/ch4.png",
-            "images/img.north/ch5.png"
+            "images/img.north/ch1.webp",
+            "images/img.north/ch2.webp",
+            "images/img.north/ch3.webp",
+            "images/img.north/ch4.webp",
+            "images/img.north/ch5.webp"
           ]
         }
       ],
