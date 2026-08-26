@@ -2163,9 +2163,9 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.pidzhak-A/grey1.png",
-            "images/img.pidzhak-A/grey2.png",
-            "images/img.pidzhak-A/grey3.png"
+            "images/img.pidzhak-A/grey1.webp",
+            "images/img.pidzhak-A/grey2.webp",
+            "images/img.pidzhak-A/grey3.webp"
           ]
         },
         {
@@ -2173,9 +2173,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.pidzhak-A/black1.png",
-            "images/img.pidzhak-A/black2.png",
-            "images/img.pidzhak-A/black3.png"
+            "images/img.pidzhak-A/black1.webp",
+            "images/img.pidzhak-A/black2.webp",
+            "images/img.pidzhak-A/black3.webp"
           ]
         },
         {
@@ -2183,9 +2183,9 @@ const CONFIG = {
           "name": "Синій",
           "hex": "#000080",
           "images": [
-            "images/img.pidzhak-A/blue1.png",
-            "images/img.pidzhak-A/blue2.png",
-            "images/img.pidzhak-A/blue3.png"
+            "images/img.pidzhak-A/blue1.webp",
+            "images/img.pidzhak-A/blue2.webp",
+            "images/img.pidzhak-A/blue3.webp"
           ]
         },
         {
@@ -2193,17 +2193,17 @@ const CONFIG = {
           "name": "Коричневий",
           "hex": "#654321",
           "images": [
-            "images/img.pidzhak-A/brown1.png",
-            "images/img.pidzhak-A/brown2.png"
+            "images/img.pidzhak-A/brown1.webp",
+            "images/img.pidzhak-A/brown2.webp"
           ]
         },
         {
-          "id": "emerald",
+          "id": "green",
           "name": "Зелений",
           "hex": "#175a43",
           "images": [
-            "images/img.pidzhak-A/green1.png",
-            "images/img.pidzhak-A/green2.png"
+            "images/img.pidzhak-A/green1.webp",
+            "images/img.pidzhak-A/green2.webp"
           ]
         }
       ],
