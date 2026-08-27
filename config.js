@@ -2443,7 +2443,6 @@ const CONFIG = {
           "hex": "#790604",
           "images": [
             "images/img.plush/19.webp",
-            "images/img.plush/20.webp",
             "images/img.plush/21.webp"
           ]
         },
