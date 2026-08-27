@@ -2358,37 +2358,47 @@ const CONFIG = {
     },
     {
       "id": "plush",
-      "name": "Костюм Royal Prime",
+      "name": "Плюшевий костюм Royal Prime",
+      "sku": "BR A0068",
       "features": [
-        "🔥 Реально теплий — комфорт навіть у холод до -20°C",
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
+        "🔥 Теплий та комфортний — ідеальний для прохолодної погоди",
         "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
         "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
         "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
-        "📦 Швидка відправка Новою Поштою"
+        "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1490,
+      "price": 1249,
       "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.plush/1.png",
-            "images/img.plush/2.png",
-            "images/img.plush/3.png"
-          ]
-        },
         {
           "id": "black",
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.plush/6.png",
-            "images/img.plush/5.png",
-            "images/img.plush/4.png"
+            "images/img.plush/4.webp",
+            "images/img.plush/6.webp",
+            "images/img.plush/5.webp"
           ]
         },
         {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.plush/1.webp",
+            "images/img.plush/2.webp",
+            "images/img.plush/3.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.plush/28.webp"
+          ]
+        },
+        /*{
           "id": "white",
           "name": "Білий",
           "hex": "#f6f6f8ff",
@@ -2397,15 +2407,14 @@ const CONFIG = {
             "images/img.plush/8.png",
             "images/img.plush/9.png"
           ]
-        },
+        },*/
         {
           "id": "khaki",
           "name": "Хакі",
           "hex": "#78866b",
           "images": [
-            "images/img.plush/10.png",
-            "images/img.plush/11.png",
-            "images/img.plush/12.png"
+            "images/img.plush/10.webp",
+            "images/img.plush/11.webp"
           ]
         },
         {
@@ -2413,12 +2422,12 @@ const CONFIG = {
           "name": "Сірий",
           "hex": "#bbbbbb",
           "images": [
-            "images/img.plush/13.png",
-            "images/img.plush/14.png",
-            "images/img.plush/15.png"
+            "images/img.plush/13.webp",
+            "images/img.plush/14.webp",
+            "images/img.plush/15.webp"
           ]
         },
-        {
+        /*{
           "id": "beige",
           "name": "Беж",
           "hex": "#d6c7b1",
@@ -2427,18 +2436,18 @@ const CONFIG = {
             "images/img.plush/17.png",
             "images/img.plush/18.png"
           ]
-        },
+        },*/
         {
           "id": "burgundy",
           "name": "Бордо",
           "hex": "#790604",
           "images": [
-            "images/img.plush/19.png",
-            "images/img.plush/20.png",
-            "images/img.plush/21.png"
+            "images/img.plush/19.webp",
+            "images/img.plush/20.webp",
+            "images/img.plush/21.webp"
           ]
         },
-        {
+        /*{
           "id": "brown",
           "name": "Коричневий",
           "hex": "#654321",
@@ -2447,40 +2456,29 @@ const CONFIG = {
             "images/img.plush/23.png",
             "images/img.plush/24.png"
           ]
-        },
+        },*/
         {
-          "id": "emerald",
-          "name": "Смарагд",
+          "id": "green",
+          "name": "Зелений",
           "hex": "#00a86b",
           "images": [
-            "images/img.plush/25.png",
-            "images/img.plush/26.png",
-            "images/img.plush/27.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.plush/28.png",
-            "images/img.plush/29.png",
-            "images/img.plush/30.png"
+            "images/img.plush/25.webp",
+            "images/img.plush/26.webp"
           ]
         }
       ],
-      "old_price": 1899
+      "old_price": 2498
     },
     {
       "id": "sale",
       "name": "Теплий флісовий костюм TNF",
       "features": [
         "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
-        "🔥 Реально теплий — комфорт навіть у холод до -20°C",
+        "🔥 Теплий та комфортний — ідеальний для прохолодної погоди",
         "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
         "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
         "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
-        "📦 Швидка відправка Новою Поштою"
+        "📦 Відправка новою поштою накладеним платежем"
       ],
       "price": 1590,
       "colors": [
