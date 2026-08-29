@@ -954,7 +954,7 @@ const CONFIG = {
           ]
         }
       ],
-      "old_price": 2800
+      "old_price": 2980
     },
         {
       "id": "Prestige",
