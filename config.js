@@ -1006,9 +1006,9 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.aero/1.png",
-            "images/img.aero/2.png",
-            "images/img.aero/3.png"
+            "images/img.aero/1.webp",
+            "images/img.aero/2.webp",
+            "images/img.aero/3.webp"
           ]
         }
       ],
