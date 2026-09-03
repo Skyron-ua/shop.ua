@@ -496,26 +496,28 @@ const CONFIG = {
         "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1249,
+      "price": 1290,
       "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.plush/4.webp",
-            "images/img.plush/6.webp",
-            "images/img.plush/5.webp"
-          ]
-        },
         {
           "id": "graphite",
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.plush/1.webp",
+            "images/img.plush/11111.webp"
+            /*"images/img.plush/1.webp",
             "images/img.plush/2.webp",
-            "images/img.plush/3.webp"
+            "images/img.plush/3.webp"*/
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.plush/22222.webp"
+            /*"images/img.plush/4.webp",
+            "images/img.plush/6.webp",
+            "images/img.plush/5.webp"*/
           ]
         },
         {
@@ -523,7 +525,8 @@ const CONFIG = {
           "name": "Синій",
           "hex": "#000080",
           "images": [
-            "images/img.plush/28.webp"
+            "images/img.plush/33333.webp"
+            /*"images/img.plush/28.webp"*/
           ]
         },
         /*{
@@ -541,8 +544,9 @@ const CONFIG = {
           "name": "Хакі",
           "hex": "#78866b",
           "images": [
-            "images/img.plush/10.webp",
-            "images/img.plush/11.webp"
+            "images/img.plush/44444.webp"
+            /*"images/img.plush/10.webp",
+            "images/img.plush/11.webp"*/
           ]
         },
         {
@@ -550,9 +554,10 @@ const CONFIG = {
           "name": "Сірий",
           "hex": "#bbbbbb",
           "images": [
-            "images/img.plush/13.webp",
+            "images/img.plush/66666.webp"
+            /*"images/img.plush/13.webp",
             "images/img.plush/14.webp",
-            "images/img.plush/15.webp"
+            "images/img.plush/15.webp"*/
           ]
         },
         /*{
@@ -570,8 +575,9 @@ const CONFIG = {
           "name": "Бордо",
           "hex": "#790604",
           "images": [
-            "images/img.plush/19.webp",
-            "images/img.plush/21.webp"
+            "images/img.plush/77777.webp"
+            /*"images/img.plush/19.webp",
+            "images/img.plush/21.webp"*/
           ]
         },
         /*{
@@ -589,13 +595,14 @@ const CONFIG = {
           "name": "Зелений",
           "hex": "#00a86b",
           "images": [
-            "images/img.plush/25.webp",
-            "images/img.plush/26.webp"
+            "images/img.plush/55555.webp"
+            /*"images/img.plush/25.webp",
+            "images/img.plush/26.webp"*/
           ]
         }
       ],
-      "old_price": 2498
-    },    
+      "old_price": 2580
+    },   
     {
       "id": "Rayford",
       "name": "Утеплена замшева куртка Rayford",
