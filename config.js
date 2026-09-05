@@ -315,6 +315,46 @@ const CONFIG = {
       ],
       "old_price": 2600
     },
+        {
+      "id": "Winterwear",
+      "name": "Зимові куртки TNF/UA",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -60%",
+        "🍂 Ідеальна для осені та зими",
+        "☁️ Легкий і теплий наповнювач — біопух",
+        "💧 Водовідштовхувальний верх — захищає від вологи",
+        "💪 Міцний матеріал та якісне виконання",
+        "👌 Комфортна посадка та стильний вигляд",
+        "📏 Розміри S–XXL — повномірка",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1990,
+      "colors": [
+        {
+          "id": "TNF",
+          "name": "TNF",
+          "hex": "#000080",
+          "sku": "BR A0147",
+          "images": [
+            "images/img.winter.under.face/1.webp",
+            "images/img.winter.under.face/2.webp",
+            "images/img.winter.under.face/3.webp"
+          ]
+        },
+        {
+          "id": "UA",
+          "name": "UA",
+          "hex": "#111113ff",
+          "sku": "BR A0147",
+          "images": [
+            "images/img.winter.under.face/4.webp",
+            "images/img.winter.under.face/5.webp",
+            "images/img.winter.under.face/6.webp"
+          ]
+        }
+      ],
+      "old_price": 4975
+    },
     {
       "id": "sweater",
       "name": "Светр Oslo Spirit",
