@@ -315,7 +315,7 @@ const CONFIG = {
       ],
       "old_price": 2600
     },
-        {
+    {
       "id": "Winterwear",
       "name": "Зимові куртки TNF/UA",
       "features": [
@@ -334,7 +334,7 @@ const CONFIG = {
           "id": "TNF",
           "name": "TNF",
           "hex": "#000080",
-          "sku": "BR A0147",
+          "sku": "BR A0146",
           "images": [
             "images/img.winter.under.face/1.webp",
             "images/img.winter.under.face/2.webp",
@@ -642,7 +642,7 @@ const CONFIG = {
         }
       ],
       "old_price": 2580
-    },   
+    },    
     {
       "id": "Rayford",
       "name": "Утеплена замшева куртка Rayford",
@@ -1087,6 +1087,41 @@ const CONFIG = {
             "images/img.chorn1699/1.webp",
             "images/img.chorn1699/2.webp",
             "images/img.chorn1699/3.webp"
+          ]
+        }
+      ],
+      "old_price": 3250
+    },
+    {
+      "id": "Monarch",
+      "name": "Куртка Monarch",
+      "sku": "RA 2557",
+      "relatedIds": ["Pulse", "Prestige", "Forge"],
+      "features": [
+       "‼️ Розпродаж останніх розмірів",
+        "🔥 Преміальна фактура — м’яка, щільна та приємна на дотик, добре зберігає форму",
+        "😎 Дорогий та статусний вигляд — легко доповнює сучасні образи",
+        "🧥 М’яка підкладка — комфорт на кожен день",
+        "✔️ Дві зручні бокові кишені",
+        "📱 Внутрішня кишеня для найважливішого",
+        "🥼 Пояс на резинці рукава на манжетах",
+        "🧵 Якісна екошкіра — зносостійка та довго зберігає охайний вигляд",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1790,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.monarch/1.webp",
+            "images/img.monarch/2.webp",
+            "images/img.monarch/3.webp",
+            "images/img.monarch/4.webp",
+            "images/img.monarch/5.webp",
+            "images/img.monarch/6.webp",
+            "images/img.monarch/7.webp",
           ]
         }
       ],
@@ -3285,6 +3320,7 @@ const CONFIG = {
       "Rayford",
       "Imperial",
       "Pulse",
+      "Monarch",
       "Blade",
       "Griffin",
       "Falcon",
@@ -3306,6 +3342,7 @@ const CONFIG = {
       "plush",
       "sale",
       "polar",
+      "Winterwear",
       "bayer",
       "gudzik",
       "zefir",
@@ -3327,7 +3364,7 @@ const CONFIG = {
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
-    "Верхній одяг/куртки": ["Imperial", "Pulse", "Rayford", "Blade","Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
     "Джинси": ["Jeans"],
