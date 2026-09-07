@@ -642,6 +642,63 @@ const CONFIG = {
         }
       ],
       "old_price": 2580
+    },
+    {
+      "id": "Carbon",
+      "name": "Теплий флісовий костюм Carbon",
+      "sku": "BR A0189",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
+        "🔥 Теплий та комфортний — ідеальний для прохолодної погоди",
+        "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
+        "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
+        "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1590,
+      "colors": [
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.carbon/1.webp",
+            "images/img.carbon/2.webp",
+            "images/img.carbon/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.carbon/4.webp",
+            "images/img.carbon/5.webp",
+            "images/img.carbon/6.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.carbon/7.webp",
+            "images/img.carbon/8.webp",
+            "images/img.carbon/9.webp"
+          ]
+        },
+        {
+          "id": "khaki",
+          "name": "Хакі",
+          "hex": "#78866b",
+          "images": [
+            "images/img.carbon/10.webp",
+            "images/img.carbon/11.webp",
+            "images/img.carbon/12.webp"
+          ]
+        }
+      ],
+      "old_price": 3180
     },    
     {
       "id": "Rayford",
@@ -3342,6 +3399,7 @@ const CONFIG = {
       "plush",
       "sale",
       "polar",
+      "Carbon",
       "Winterwear",
       "bayer",
       "gudzik",
@@ -3363,7 +3421,7 @@ const CONFIG = {
     "Спортивні костюми": ["TNF", "Patriot UA", "Basic Premium", "plashovka"],
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
-    "Теплі флісові костюми": ["plush", "sale", "polar", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
+    "Теплі флісові костюми": ["plush", "sale", "polar", "Carbon", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
     "Верхній одяг/куртки": ["Imperial", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
