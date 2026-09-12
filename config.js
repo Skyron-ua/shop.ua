@@ -543,10 +543,8 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.plush/11111.webp"
-            /*"images/img.plush/1.webp",
-            "images/img.plush/2.webp",
-            "images/img.plush/3.webp"*/
+            "images/img.plush/111.webp",
+            "images/img.plush/1111.webp"
           ]
         },
         {
@@ -554,10 +552,8 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.plush/22222.webp"
-            /*"images/img.plush/4.webp",
-            "images/img.plush/6.webp",
-            "images/img.plush/5.webp"*/
+            "images/img.plush/222.webp",
+            "images/img.plush/2222.webp"
           ]
         },
         {
@@ -565,28 +561,17 @@ const CONFIG = {
           "name": "Синій",
           "hex": "#000080",
           "images": [
-            "images/img.plush/33333.webp"
-            /*"images/img.plush/28.webp"*/
+            "images/img.plush/333.webp",
+            "images/img.plush/3333.webp"
           ]
         },
-        /*{
-          "id": "white",
-          "name": "Білий",
-          "hex": "#f6f6f8ff",
-          "images": [
-            "images/img.plush/7.png",
-            "images/img.plush/8.png",
-            "images/img.plush/9.png"
-          ]
-        },*/
         {
           "id": "khaki",
           "name": "Хакі",
           "hex": "#78866b",
           "images": [
-            "images/img.plush/44444.webp"
-            /*"images/img.plush/10.webp",
-            "images/img.plush/11.webp"*/
+            "images/img.plush/444.webp",
+            "images/img.plush/4444.webp"
           ]
         },
         {
@@ -594,50 +579,26 @@ const CONFIG = {
           "name": "Сірий",
           "hex": "#bbbbbb",
           "images": [
-            "images/img.plush/66666.webp"
-            /*"images/img.plush/13.webp",
-            "images/img.plush/14.webp",
-            "images/img.plush/15.webp"*/
+            "images/img.plush/555.webp",
+            "images/img.plush/5555.webp"
           ]
         },
-        /*{
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.plush/16.png",
-            "images/img.plush/17.png",
-            "images/img.plush/18.png"
-          ]
-        },*/
         {
           "id": "burgundy",
           "name": "Бордо",
           "hex": "#790604",
           "images": [
-            "images/img.plush/77777.webp"
-            /*"images/img.plush/19.webp",
-            "images/img.plush/21.webp"*/
+            "images/img.plush/666.webp",
+            "images/img.plush/6666.webp"
           ]
         },
-        /*{
-          "id": "brown",
-          "name": "Коричневий",
-          "hex": "#654321",
-          "images": [
-            "images/img.plush/22.png",
-            "images/img.plush/23.png",
-            "images/img.plush/24.png"
-          ]
-        },*/
         {
           "id": "green",
           "name": "Зелений",
           "hex": "#00a86b",
           "images": [
-            "images/img.plush/55555.webp"
-            /*"images/img.plush/25.webp",
-            "images/img.plush/26.webp"*/
+            "images/img.plush/777.webp",
+            "images/img.plush/7777.webp"
           ]
         }
       ],
