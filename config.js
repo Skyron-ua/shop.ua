@@ -8,314 +8,7 @@ const CONFIG = {
     SUPPORT_PHONE: "+380733337278"
   },
   PRODUCTS: [
-    {
-  "id": "Flow",
-  "name": "Лляний комплект Flow",
-  "sku": "BR Q0068",
-  "description": "Натуральний дихаючий льон преміум-якості",
-  "features": [
-    "🔥 В тренді цього сезону",
-    "😎 Стильно • Легко • Комфортно",
-    "✔️ Розміри: S M L XL XXL 3XL",
-    "✔️ Матеріал: льон",
-    "✔️ Висока якість пошиву, не просвічується",
-    "✔️ Стильний мінімалізм, який завжди актуальний",
-    "📦 Відправка новою поштою накладеним платежем"
-  ],
-  "price": 1590,
-  "old_price": 2900,
-  "relatedIds": ["Linen Cloud", "Base", "LinenSet"],
-  "colors": [
-    {
-      "id": "graphite",
-      "name": "Графіт",
-      "hex": "#616267",
-      "images": [
-        "images/img.lyon2/1.webp",
-        "images/img.lyon2/3.webp",
-        "images/img.lyon2/2.webp"
-      ]
-    },
-    {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#BCC6CC",
-          "images": [
-          "images/img.lyon2/22.webp",
-          "images/img.lyon2/23.webp",
-          "images/img.lyon2/24.webp"
-          ]
-    },
-    {
-      "id": "white",
-      "name": "Білий",
-      "hex": "#ffffff",
-      "images": [
-        "images/img.lyon2/10.webp",
-        "images/img.lyon2/11.webp",
-        "images/img.lyon2/12.webp"
-      ]
-    },
-    {
-      "id": "blue",
-      "name": "Блакитний",
-      "hex": "#B9C6F2",
-      "images": [
-        "images/img.lyon2//19.webp",
-        "images/img.lyon2//20.webp",
-        "images/img.lyon2//21.webp"
-      ]
-    },
-    {
-      "id": "black",
-      "name": "Чорний",
-      "hex": "#111113ff",
-      "images": [
-        "images/img.lyon2/9.webp",
-        "images/img.lyon2/8.webp",
-        "images/img.lyon2/7.webp"
-      ]
-    },
-    {
-      "id": "haki",
-      "name": "Хакі",
-      "hex": "#78866b",
-      "images": [
-        "images/img.lyon2//18.webp",
-        "images/img.lyon2//17.webp",
-        "images/img.lyon2//16.webp"
-      ]
-    },
-    {
-      "id": "dark-blue",
-      "name": "Темно-синій",
-      "hex": "#000080",
-      "images": [
-        "images/img.lyon2/13.webp",
-        "images/img.lyon2/14.webp",
-        "images/img.lyon2/15.webp"
-      ]
-    },
-    {
-      "id": "beige",
-      "name": "Беж",
-      "hex": "#d6c7b1",
-      "images": [
-        "images/img.lyon2/4.webp",
-        "images/img.lyon2/5.webp"
-      ]
-    }
-  ]
-},
-    {
-  id: "look-velvet-jeans",
-  name: "Стильний образ: Замшевий бомбер Velvet Jet + Джинси + Футболка",
-  "sku": "BR A0165, j0032, L0056",
-  type: "bundle",
-  description: "Готовий стильний образ — замшевий бомбер, джинси та базова футболка",
-  price: 3180,
-  "relatedIds": ["Velvet Jet", "Jeans", "Base"],
-  old_price: 5250,
-  features: [
-    "🔥 Готовий образ на кожен день",
-    "🔝 Замшевий бомбер - бомба сезону",
-    "👖 Джинси з якісного деніму - сучасні, міцні та зносостійкі",
-    "👕 Базова футболка преміум якості з щільної бавовни",
-    "🎨 Можна зібрати свій варіант і замовити повністю або окремо",
-    "📦 Відправка новою поштою накладеним платежем"
-  ],
-
-  // Потрібно для каталогу
-  colors: [
-    {
-      id: "default",
-      name: "Образ",
-      hex: "#111111",
-      images: ["images/img.bomber.jeans/1.webp"]
-    }
-  ],
-
-  buyOptions: [
-    { id: "full",        label: "Замовити весь комплект",   price: 3180, items: ["bomber", "jeans", "tshirt"] },
-    { id: "bomberJeans", label: "Замовити бомбер + джинси", price: 2690, items: ["bomber", "jeans"] },
-    { id: "bomber",      label: "Замовити тільки бомбер",   price: 1290, items: ["bomber"] },
-    { id: "jeans",       label: "Замовити тільки джинси",   price: 1590, items: ["jeans"] }
-  ],
-
-  items: {
-    bomber: {
-      name: "Бомбер Velvet Jet",
-      productId: "Velvet Jet",
-      colors: [
-        { id: "black",    name: "Чорний", hex: "#111113" },
-        { id: "graphite", name: "Графіт", hex: "#616267" },
-        { id: "blue",     name: "Синій",  hex: "#000080" }
-      ]
-    },
-    jeans: {
-      name: "Чоловічі Джинси",
-      productId: "Jeans",
-      colors: [
-        { id: "jeans",      name: "Джинс",          hex: "#173D65" },
-        { id: "black",      name: "Чорний",         hex: "#111113" },
-        { id: "light-blue", name: "Блакитно-синій", hex: "#274F78" },
-        { id: "dark-blue",  name: "Темно-синій",    hex: "#192032" },
-        { id: "graphite",   name: "Графіт",         hex: "#616267" },
-        { id: "blue",       name: "Блакитний",      hex: "#7795AD" }
-      ]
-    },
-    tshirt: {
-      name: "Футболка Base",
-      productId: "Base",
-      colors: [
-        { id: "white", name: "Білий",  hex: "#ffffff" },
-        { id: "black", name: "Чорний", hex: "#111113" }
-      ]
-    }
-  },
-
-  // Порядок кольорів (дуже важливо!)
-  colorOrder: {
-    bomber: ["black", "graphite", "blue"],
-    jeans:  ["jeans", "black", "light-blue", "dark-blue", "graphite", "blue"],
-    tshirt: ["white", "black"]
-  },
-
-  defaultCombination: {
-    bomber: "black",
-    jeans: "jeans",
-    tshirt: "white"
-  }
-},
-        {
-      "id": "Linen Cloud",
-      "name": "Комплект трійка з льону",
-      "sku": "BR AQ0071",
-      "relatedIds": ["Flow", "Base", "LinenSet"],
-      "features": [
-        "🔥 Лляний комплект трійка — сорочка + штани + шорти",
-        "‼️ РОЗПРОДАЖ ОСТАННІХ РОЗМІРІВ",
-        "😎 Стильно • Легко • Комфортно",
-        "🌿 Льон — легкий, дихаючий та приємний до тіла",
-        "👌 Стильний мінімалізм, який легко поєднувати з базовими речами",
-        "✔️ Висока якість пошиву",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1790,
-      "colors": [
-        {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#BCC6CC",
-          "images": [
-            "images/img.lyon3/1.webp",
-            "images/img.lyon3/2.webp",
-            "images/img.lyon3/3.webp"
-          ]
-        },
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.lyon3/4.webp",
-            "images/img.lyon3/5.webp",
-            "images/img.lyon3/6.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.lyon3/7.webp",
-            "images/img.lyon3/8.webp",
-            "images/img.lyon3/9.webp"
-          ]
-        }
-      ],
-      "old_price": 3000
-    },
-    {
-      "id": "Basic Premium",
-      "name": "Костюм Basic Premium",
-      "sku": "BR A0114",
-      "relatedIds": ["zamsh-na-zmiyci","TNF", "Base"],
-      "description": "Стильний та зручний костюм на кожен день",
-      "features": [
-        "✨ Стильний та зручний костюм на кожен день",
-        "📌 Матеріал: петля, компакт-пеньє",
-        "✔ Якісна та щільна рібана — добре тримає форму",
-        "🔒 Не кашлатиться навіть після багаторазового прання",
-        "💪 Довговічна тканина — служитиме не один сезон",
-        "⭐ Якість гарантуємо",
-        "🔥 Ідеальний варіант для щоденного носіння — комфорт + стиль в одному комплекті",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1390,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.major/1.webp",
-            "images/img.major/2.webp",
-            "images/img.major/3.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.major/4.webp",
-            "images/img.major/5.webp",
-            "images/img.major/6.webp"
-          ]
-        }
-      ],
-      "old_price": 2780
-    },
-    {
-      "id": "zamsh-na-zmiyci",
-      "name": "Замшевий костюм Velvet",
-      "sku": "BR A0125",
-      "relatedIds": ["Basic Premium", "TNF", "Base"],
-      "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
-      "features": [
-        "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
-        "👌 Мʼякий та приємний до тіла",
-        "✂️ Анатомічний крій — гарно сідає по фігурі",
-        "👕 Універсальний стиль — для свят та повсякдення",
-        "📦 Швидка відправка Новою Поштою"
-      ],
-      "price": 1690,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.zamsh/1.webp",
-            "images/img.zamsh/2.webp",
-            "images/img.zamsh/3.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.zamsh/4.webp",
-            "images/img.zamsh/5.webp",
-            "images/img.zamsh/6.webp"
-          ]
-        }
-      ],
-      "old_price": 2600
-    },
-    {
+     {
       "id": "Winterwear",
       "name": "Зимові куртки TNF/UA",
       "features": [
@@ -354,175 +47,6 @@ const CONFIG = {
         }
       ],
       "old_price": 4975
-    },
-    {
-      "id": "sweater",
-      "name": "Светр Oslo Spirit",
-      "sku": "BR C0043",
-      "relatedIds": ["Jeans", "Mono", "Base"],
-      "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
-      "features": [
-        "Якісний матеріал: перевірений часом",
-        "Анатомічна посадка — розміри S–XXL",
-        "Швидка відправка Новою Поштою (1–3 дні)"
-      ],
-      "price": 1090,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img/3.png",
-            "images/img/4.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img/1.png",
-            "images/img/2.png"
-          ]
-        },
-        {
-          "id": "beige",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img/5.png",
-            "images/img/6.png"
-          ]
-        },
-        {
-          "id": "gray",
-          "name": "Сірий",
-          "hex": "#a5aaa1dc",
-          "images": [
-            "images/img/7.png",
-            "images/img/8.png"
-          ]
-        }
-      ],
-      "old_price": 1349
-    },
-    {
-      "id": "Jeans",
-      "name": "Чоловічі Джинси",
-      "sku": "BR j0032",
-      "relatedIds": ["Base", "Velvet Jet", "Mono"],
-      "features": [
-        "🔥 Стиль та комфорт на кожен день",
-        "👖 Сучасний та універсальний крій",
-        "💪 Якісний денім — міцний та зносостійкий",
-        "🔝 Стильно виглядають як у базових, так і в більш трендових образах",
-        "👌 Дорогий вигляд за адекватні гроші",
-        "🧵 Акуратне пошиття та якісна фурнітура",
-        "🎯 Легко комбінуються з будь-яким гардеробом",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1590,
-      "colors": [
-        {
-          "id": "jeans",
-          "name": "Джинс",
-          "hex": "#173D65",
-          "images": [
-            "images/img.jeans/1.webp",
-            "images/img.jeans/2.webp",
-            "images/img.jeans/3.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.jeans/4.webp",
-            "images/img.jeans/5.webp",
-            "images/img.jeans/6.webp"
-          ]
-        },
-        {
-          "id": "light-blue",
-          "name": "Блакитно-синій",
-          "hex": "#274F78",
-          "images": [
-            "images/img.jeans/7.webp",
-            "images/img.jeans/8.webp",
-            "images/img.jeans/9.webp"
-          ]
-        },
-        {
-          "id": "dark-blue",
-          "name": "Темно-синій",
-          "hex": "#192032",
-          "images": [
-            "images/img.jeans/10.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.jeans/11.webp",
-            "images/img.jeans/12.webp",
-            "images/img.jeans/13.webp"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Блакитний",
-          "hex": "#7795AD",
-          "images": [
-            "images/img.jeans/14.webp",
-            "images/img.jeans/15.webp"
-          ]
-        }
-      ],
-      "old_price": 2800
-    },
-     {
-      "id": "sale",
-      "name": "Теплий флісовий костюм TNF",
-      "sku": "BR A0090",
-      "features": [
-        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
-        "🔥 Теплий та комфортний — ідеальний для прохолодної погоди",
-        "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
-        "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
-        "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1590,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.north/gr1.webp",
-            "images/img.north/gr2.webp",
-            "images/img.north/gr3.webp",
-            "images/img.north/gr4.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.north/ch1.webp",
-            "images/img.north/ch2.webp",
-            "images/img.north/ch3.webp",
-            "images/img.north/ch4.webp",
-            "images/img.north/ch5.webp"
-          ]
-        }
-      ],
-      "old_price": 3180
     },
     {
       "id": "plush",
@@ -603,6 +127,126 @@ const CONFIG = {
         }
       ],
       "old_price": 2580
+    },   
+    {
+      "id": "Rayford",
+      "name": "Утеплена замшева куртка Rayford",
+      "relatedIds": ["Aero", "Velvet Jet", "Forge"],
+      "features": [
+        "🔥 Топова якість та стильний дизайн",
+        "🍂 Сезон: весна–осінь",
+        "🔝 Преміальна фурнітура",
+        "🧸 Тепла підкладка з хутра — для додаткового комфорту в прохолодну погоду",
+        "🔒 3 місткі передні кишені на блискавці + 1 внутрішня кишеня",
+        "👌 Манжети на поясі та рукавах забезпечують комфортну посадку та допомагають куртці гарно сидіти на різній статурі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "RAM 1723535621",
+          "images": [
+            "images/img.rayford/5.webp",
+            "images/img.rayford/7.webp",
+            "images/img.rayford/4.webp",
+            "images/img.rayford/6.webp"
+          ]
+        },
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "sku": "RAM 1757422799",
+          "images": [
+            "images/img.rayford/2.webp",
+            "images/img.rayford/1.webp",
+            "images/img.rayford/3.webp"
+          ]
+        }
+      ],
+      "old_price": 3250
+    },
+    {
+      "id": "sale",
+      "name": "Теплий флісовий костюм TNF",
+      "sku": "BR A0090",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
+        "🔥 Теплий та комфортний — ідеальний для прохолодної погоди",
+        "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
+        "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
+        "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1590,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.north/gr1.webp",
+            "images/img.north/gr2.webp",
+            "images/img.north/gr3.webp",
+            "images/img.north/gr4.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.north/ch1.webp",
+            "images/img.north/ch2.webp",
+            "images/img.north/ch3.webp",
+            "images/img.north/ch4.webp",
+            "images/img.north/ch5.webp"
+          ]
+        }
+      ],
+      "old_price": 3180
+    },
+    {
+      "id": "polar-premium",
+      "name": "Теплий костюм Fortress",
+      "sku": "BR A0191",
+      "description": "Плотний фліс, преміальний крій",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
+        "🔥 Теплий та комфортний — ідеальний для прохолодної погоди",
+        "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
+        "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
+        "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.polarpremium/7.webp",
+            "images/img.polarpremium/5.webp",
+            "images/img.polarpremium/6.webp",
+            "images/img.polarpremium/4.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.polarpremium/2.webp",
+            "images/img.polarpremium/1.webp",
+            "images/img.polarpremium/3.webp"
+          ]
+        }
+      ],
+      "old_price": 3380
     },
     {
       "id": "Carbon",
@@ -660,298 +304,7 @@ const CONFIG = {
         }
       ],
       "old_price": 3180
-    },    
-    {
-      "id": "Rayford",
-      "name": "Утеплена замшева куртка Rayford",
-      "relatedIds": ["Aero", "Velvet Jet", "Forge"],
-      "features": [
-        "🔥 Топова якість та стильний дизайн",
-        "🍂 Сезон: весна–осінь",
-        "🔝 Преміальна фурнітура",
-        "🧸 Тепла підкладка з хутра — для додаткового комфорту в прохолодну погоду",
-        "🔒 3 місткі передні кишені на блискавці + 1 внутрішня кишеня",
-        "👌 Манжети на поясі та рукавах забезпечують комфортну посадку та допомагають куртці гарно сидіти на різній статурі",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1690,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "sku": "RAM 1723535621",
-          "images": [
-            "images/img.rayford/5.webp",
-            "images/img.rayford/7.webp",
-            "images/img.rayford/4.webp",
-            "images/img.rayford/6.webp"
-          ]
-        },
-        {
-         "id": "brown",
-          "name": "Коричневий",
-          "hex": "#654321",
-          "sku": "RAM 1757422799",
-          "images": [
-            "images/img.rayford/2.webp",
-            "images/img.rayford/1.webp",
-            "images/img.rayford/3.webp"
-          ]
-        }
-      ],
-      "old_price": 3250
-    },
-    {
-      "id": "Velvet Jet",
-      "name": "Бомбер Velvet Jet",
-      "sku": "BR A0165, F0004",
-      "relatedIds": ["Forge", "Base", "Aero"],
-      "features": [
-        "‼️ Розпродаж останніх розмірів ",
-        "🔥 Замшевий бомбер - бомба сезону",
-        "🧵 Якісне пошиття та акуратні шви",
-        "🚀 Приталений крій — виглядаєш струнко й круто",
-        "👌 Дорогий вигляд за адекватні гроші",
-        "✨ Легко комбінується з іншим одягом",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1290,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.bomber-zamsh/1.webp",
-            "images/img.bomber-zamsh/2.webp",
-            "images/img.bomber-zamsh/3.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.bomber-zamsh/4.webp",
-            "images/img.bomber-zamsh/5.webp",
-            "images/img.bomber-zamsh/6.webp"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.bomber-zamsh/7.webp",
-            "images/img.bomber-zamsh/8.webp",
-            "images/img.bomber-zamsh/9.webp"
-          ]
-        },
-        {
-          "id": "haki",
-          "name": "Хакі",
-          "hex": "#78866b",
-          "images": [
-            "images/img.bomber-zamsh/10.webp",
-            "images/img.bomber-zamsh/11.webp",
-            "images/img.bomber-zamsh/12.webp",
-            "images/img.bomber-zamsh/13.webp",
-            "images/img.bomber-zamsh/14.webp",
-            "images/img.bomber-zamsh/15.webp",
-            "images/img.bomber-zamsh/16.webp"
-          ]
-        },
-        {
-          "id": "burgundy",
-          "name": "Бордо",
-          "hex": "#790604",
-          "images": [
-            "images/img.bomber-zamsh/17.webp",
-            "images/img.bomber-zamsh/18.webp",
-            "images/img.bomber-zamsh/19.webp",
-            "images/img.bomber-zamsh/20.webp"
-          ]
-        }
-      ],
-      "old_price": 2700
-    },
-    {
-      "id": "TNF",
-      "name": "Костюм TNF",
-      "sku": "BR A0150",
-      "relatedIds": ["Basic Premium", "Base", "zamsh-na-zmiyci"],
-      "features": [
-        "🔥 Стильний костюм: вітровка + штани — ідеальний варіант на кожен день 💣",
-        "✔️ Преміум матеріал  — не продувається та відштовхує воду 💧🌬",
-        "✔️ Підкладка з нейлону — комфорт навіть при активному русі 🏃‍♂️",
-        "✔️ Логотип спереду та ззаду — виглядає дорого та помітно 🔥",
-        "✔️ Фіксатори знизу та біля капюшона — підлаштовуєш під себе 🎯",
-        "✔️ Штани на резинці + шнурок — ідеальна посадка 👌",
-        "✔️ Розміри: S / M / L / XL / XXL",
-        "💯 Підійде як для міста, так і для активного відпочинку",
-        "⚡ Легкий, зручний та тримає форму",
-        "🔝 Кількість обмежена — розбирають дуже швидко",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1490,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.TNFvesna/1.webp",
-            "images/img.TNFvesna//2.webp",
-            "images/img.TNFvesna//3.webp"
-          ]
-        },
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.TNFvesna/4.webp",
-            "images/img.TNFvesna/5.webp",
-            "images/img.TNFvesna/6.webp"
-          ]
-        }
-      ],
-      "old_price": 2700
-    },
-    {
-      "id": "Base",
-      "name": "Футболка Base",
-      "sku": "BR L0056, A0170",
-      "relatedIds": ["Mono", "Jeans", "Velvet Jet"],
-      "features": [
-        "👕 Базова футболка преміум якості",
-        "• Щільна преміальна бавовна виробництва Туреччини",
-        "• Об'ємний (Oversize) крій для комфортної посадки",
-        "• ТОП-якість пошиття та акуратні шви",
-        "• Матеріал не кошлатиться та добре тримає форму",
-        "• Приємна до тіла, дихаюча тканина",
-        "• Ідеально підходить для щоденного носіння",
-        "📏 Розміри: S, M, L, XL, 2XL,3XL,4XL",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 580,
-      "colors": [
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.base/1.webp",
-            "images/img.base/2.webp"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.base/3.webp"
-          ]
-        }
-      ],
-      "old_price": 950
-    },
-        {
-      "id": "Air",
-      "name": "Куртка Air",
-      "relatedIds": ["TNF", "Snake", "Forge"],
-      "features": [
-        "✨ Стильна демісезонна куртка для щоденного комфорту, яка поєднує практичність, комфорт та стильний мінімалістичний дизайн. Ідеально підходить для прохолодної погоди та легко доповнює будь-який повсякденний образ",
-        "🔹 Легка та водночас тепла — комфорт у прохолодні дні",
-        "💧 Стійка до вологи — матеріал не боїться дощу та сирої погоди",
-        "🧥 Стильна посадка — гарно виглядає на фігурі та не сковує рухів",
-        "👌 4 практичні кишені — для телефону, ключів та інших дрібниць",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1490,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "sku": "RAM 1643632472",
-          "images": [
-            "images/img.air/1.png",
-            "images/img.air/2.png"
-          ]
-        },
-        {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#bbbbbb",
-          "sku": "RAM 1723456619",
-          "images": [
-            "images/img.air/3.png",
-            "images/img.air/4.png"
-          ]
-        },
-        {
-          "id": "emerald",
-          "name": "Зелений",
-          "hex": "#175a43",
-          "sku": "RAM 1692285964",
-          "images": [
-            "images/img.air/5.png",
-            "images/img.air/6.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "sku": "RAM 1692286333",
-          "images": [
-            "images/img.air/7.png",
-            "images/img.air/8.png"
-          ]
-        }
-      ],
-      "old_price": 2750
-    },
-    {
-      "id": "Mono",
-      "name": "Лонггслів Mono",
-      "sku": "BR A0142",
-      "relatedIds": ["Base", "Jeans", "Forge"],
-      "features": [
-        "☁️ Якісний трикотаж — м’яка та еластична тканина, що приємна до тіла та дозволяє шкірі дихати",
-        "📐 Анатомічний крій — ідеально підкреслює плечі та руки, не сковуючи рухів. Комфорт на весь день",
-        "✨ Зносостійкість — матеріал не кошлатиться і зберігає форму та насичений колір навіть після багатьох прань",
-        "✔️ Ідеальна посадка — забудь про сумніви з розміром. Підбираємо розмір індивідуально за твоїм зростом та вагою",
-        "👌 Легко комбінується з іншим одягом",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 590,
-      "colors": [
-        {
-          "id": "white",
-          "name": "Білий",
-          "hex": "#ffffff",
-          "images": [
-            "images/img.longsliv/1.png",
-            "images/img.longsliv/2.png",
-            "images/img.longsliv/3.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.longsliv/4.png",
-            "images/img.longsliv/5.png",
-            "images/img.longsliv/6.png"
-          ]
-        }
-      ],
-      "old_price": 950
-    },
+    }, 
     {
       "id": "Forge",
       "name": "Бомбер Forge",
@@ -1078,6 +431,215 @@ const CONFIG = {
         }
       ],
       "old_price": 2900
+    },
+    {
+      "id": "Base",
+      "name": "Футболка Base",
+      "sku": "BR L0056, A0170",
+      "relatedIds": ["Mono", "Jeans", "Velvet Jet"],
+      "features": [
+        "👕 Базова футболка преміум якості",
+        "• Щільна преміальна бавовна виробництва Туреччини",
+        "• Об'ємний (Oversize) крій для комфортної посадки",
+        "• ТОП-якість пошиття та акуратні шви",
+        "• Матеріал не кошлатиться та добре тримає форму",
+        "• Приємна до тіла, дихаюча тканина",
+        "• Ідеально підходить для щоденного носіння",
+        "📏 Розміри: S, M, L, XL, 2XL,3XL,4XL",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 580,
+      "colors": [
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.base/1.webp",
+            "images/img.base/2.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.base/3.webp"
+          ]
+        }
+      ],
+      "old_price": 950
+    },
+        {
+      "id": "Air",
+      "name": "Куртка Air",
+      "relatedIds": ["TNF", "Snake", "Forge"],
+      "features": [
+        "✨ Стильна демісезонна куртка для щоденного комфорту, яка поєднує практичність, комфорт та стильний мінімалістичний дизайн. Ідеально підходить для прохолодної погоди та легко доповнює будь-який повсякденний образ",
+        "🔹 Легка та водночас тепла — комфорт у прохолодні дні",
+        "💧 Стійка до вологи — матеріал не боїться дощу та сирої погоди",
+        "🧥 Стильна посадка — гарно виглядає на фігурі та не сковує рухів",
+        "👌 4 практичні кишені — для телефону, ключів та інших дрібниць",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "RAM 1643632472",
+          "images": [
+            "images/img.air/1.png",
+            "images/img.air/2.png"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "sku": "RAM 1723456619",
+          "images": [
+            "images/img.air/3.png",
+            "images/img.air/4.png"
+          ]
+        },
+        {
+          "id": "emerald",
+          "name": "Зелений",
+          "hex": "#175a43",
+          "sku": "RAM 1692285964",
+          "images": [
+            "images/img.air/5.png",
+            "images/img.air/6.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "sku": "RAM 1692286333",
+          "images": [
+            "images/img.air/7.png",
+            "images/img.air/8.png"
+          ]
+        }
+      ],
+      "old_price": 2750
+    },
+        {
+      "id": "puhovik",
+      "name": "Зимовий пуховик Puff",
+      "sku": "BR D0043",
+      "description": "Теплий, легкий та універсальний.",
+      "features": [
+        "Якісний матеріал перевірений часом",
+        "Анатомічна посадка — розміри S–XXL",
+        "Швидка відправка Новою Поштою (1–3 дні)"
+      ],
+      "price": 2090,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.puhovik/9.png",
+            "images/img.puhovik/11.png",
+            "images/img.puhovik/12.png",
+            "images/img.puhovik/7.png",
+            "images/img.puhovik/8.png",
+            "images/img.puhovik/16.png",
+            "images/img.puhovik/14.png",
+            "images/img.puhovik/15.png",
+            "images/img.puhovik/10.png",
+            "images/img.puhovik/13.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.puhovik/1.png",
+            "images/img.puhovik/3.png",
+            "images/img.puhovik/4.png",
+            "images/img.puhovik/2.png",
+            "images/img.puhovik/5.png",
+            "images/img.puhovik/6.png"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.puhovik/17.png",
+            "images/img.puhovik/18.png",
+            "images/img.puhovik/19.png",
+            "images/img.puhovik/20.png",
+            "images/img.puhovik/21.png",
+            "images/img.puhovik/22.png",
+            "images/img.puhovik/23.png",
+            "images/img.puhovik/24.png",
+            "images/img.puhovik/25.png",
+            "images/img.puhovik/26.png",
+            "images/img.puhovik/27.png"
+          ]
+        },
+        {
+          "id": "emerald",
+          "name": "Смарагд",
+          "hex": "#00a86b",
+          "images": [
+            "images/img.puhovik/28.png",
+            "images/img.puhovik/29.png",
+            "images/img.puhovik/30.png",
+            "images/img.puhovik/31.png",
+            "images/img.puhovik/32.png",
+            "images/img.puhovik/33.png"
+          ]
+        }
+      ],
+      "old_price": 3900
+    },
+    {
+      "id": "Mono",
+      "name": "Лонггслів Mono",
+      "sku": "BR A0142",
+      "relatedIds": ["Base", "Jeans", "Forge"],
+      "features": [
+        "☁️ Якісний трикотаж — м’яка та еластична тканина, що приємна до тіла та дозволяє шкірі дихати",
+        "📐 Анатомічний крій — ідеально підкреслює плечі та руки, не сковуючи рухів. Комфорт на весь день",
+        "✨ Зносостійкість — матеріал не кошлатиться і зберігає форму та насичений колір навіть після багатьох прань",
+        "✔️ Ідеальна посадка — забудь про сумніви з розміром. Підбираємо розмір індивідуально за твоїм зростом та вагою",
+        "👌 Легко комбінується з іншим одягом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 590,
+      "colors": [
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.longsliv/1.png",
+            "images/img.longsliv/2.png",
+            "images/img.longsliv/3.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.longsliv/4.png",
+            "images/img.longsliv/5.png",
+            "images/img.longsliv/6.png"
+          ]
+        }
+      ],
+      "old_price": 950
     },
     {
       "id": "Imperial",
@@ -1291,6 +853,135 @@ const CONFIG = {
       ],
       "old_price": 3350
     },
+        {
+      "id": "sweater",
+      "name": "Светр Oslo Spirit",
+      "sku": "BR C0043",
+      "relatedIds": ["Jeans", "Mono", "Base"],
+      "description": "Преміальний крій — підходить для вечірок,свят, та для повсякденного носіння.",
+      "features": [
+        "Якісний матеріал: перевірений часом",
+        "Анатомічна посадка — розміри S–XXL",
+        "Швидка відправка Новою Поштою (1–3 дні)"
+      ],
+      "price": 1090,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img/3.png",
+            "images/img/4.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img/1.png",
+            "images/img/2.png"
+          ]
+        },
+        {
+          "id": "beige",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img/5.png",
+            "images/img/6.png"
+          ]
+        },
+        {
+          "id": "gray",
+          "name": "Сірий",
+          "hex": "#a5aaa1dc",
+          "images": [
+            "images/img/7.png",
+            "images/img/8.png"
+          ]
+        }
+      ],
+      "old_price": 1349
+    },
+    {
+      "id": "Jeans",
+      "name": "Чоловічі Джинси",
+      "sku": "BR j0032",
+      "relatedIds": ["Base", "Velvet Jet", "Mono"],
+      "features": [
+        "🔥 Стиль та комфорт на кожен день",
+        "👖 Сучасний та універсальний крій",
+        "💪 Якісний денім — міцний та зносостійкий",
+        "🔝 Стильно виглядають як у базових, так і в більш трендових образах",
+        "👌 Дорогий вигляд за адекватні гроші",
+        "🧵 Акуратне пошиття та якісна фурнітура",
+        "🎯 Легко комбінуються з будь-яким гардеробом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1590,
+      "colors": [
+        {
+          "id": "jeans",
+          "name": "Джинс",
+          "hex": "#173D65",
+          "images": [
+            "images/img.jeans/1.webp",
+            "images/img.jeans/2.webp",
+            "images/img.jeans/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.jeans/4.webp",
+            "images/img.jeans/5.webp",
+            "images/img.jeans/6.webp"
+          ]
+        },
+        {
+          "id": "light-blue",
+          "name": "Блакитно-синій",
+          "hex": "#274F78",
+          "images": [
+            "images/img.jeans/7.webp",
+            "images/img.jeans/8.webp",
+            "images/img.jeans/9.webp"
+          ]
+        },
+        {
+          "id": "dark-blue",
+          "name": "Темно-синій",
+          "hex": "#192032",
+          "images": [
+            "images/img.jeans/10.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.jeans/11.webp",
+            "images/img.jeans/12.webp",
+            "images/img.jeans/13.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Блакитний",
+          "hex": "#7795AD",
+          "images": [
+            "images/img.jeans/14.webp",
+            "images/img.jeans/15.webp"
+          ]
+        }
+      ],
+      "old_price": 2800
+    },
      {
       "id": "Hunter",
       "name": "Бомбер Hunter",
@@ -1379,6 +1070,123 @@ const CONFIG = {
       "old_price": 2250
     },
     {
+      "id": "Velvet Jet",
+      "name": "Бомбер Velvet Jet",
+      "sku": "BR A0165, F0004",
+      "relatedIds": ["Forge", "Base", "Aero"],
+      "features": [
+        "‼️ Розпродаж останніх розмірів ",
+        "🔥 Замшевий бомбер - бомба сезону",
+        "🧵 Якісне пошиття та акуратні шви",
+        "🚀 Приталений крій — виглядаєш струнко й круто",
+        "👌 Дорогий вигляд за адекватні гроші",
+        "✨ Легко комбінується з іншим одягом",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1290,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.bomber-zamsh/1.webp",
+            "images/img.bomber-zamsh/2.webp",
+            "images/img.bomber-zamsh/3.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.bomber-zamsh/4.webp",
+            "images/img.bomber-zamsh/5.webp",
+            "images/img.bomber-zamsh/6.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.bomber-zamsh/7.webp",
+            "images/img.bomber-zamsh/8.webp",
+            "images/img.bomber-zamsh/9.webp"
+          ]
+        },
+        {
+          "id": "haki",
+          "name": "Хакі",
+          "hex": "#78866b",
+          "images": [
+            "images/img.bomber-zamsh/10.webp",
+            "images/img.bomber-zamsh/11.webp",
+            "images/img.bomber-zamsh/12.webp",
+            "images/img.bomber-zamsh/13.webp",
+            "images/img.bomber-zamsh/14.webp",
+            "images/img.bomber-zamsh/15.webp",
+            "images/img.bomber-zamsh/16.webp"
+          ]
+        },
+        {
+          "id": "burgundy",
+          "name": "Бордо",
+          "hex": "#790604",
+          "images": [
+            "images/img.bomber-zamsh/17.webp",
+            "images/img.bomber-zamsh/18.webp",
+            "images/img.bomber-zamsh/19.webp",
+            "images/img.bomber-zamsh/20.webp"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
+      "id": "TNF",
+      "name": "Костюм TNF",
+      "sku": "BR A0150",
+      "relatedIds": ["Basic Premium", "Base", "zamsh-na-zmiyci"],
+      "features": [
+        "🔥 Стильний костюм: вітровка + штани — ідеальний варіант на кожен день 💣",
+        "✔️ Преміум матеріал  — не продувається та відштовхує воду 💧🌬",
+        "✔️ Підкладка з нейлону — комфорт навіть при активному русі 🏃‍♂️",
+        "✔️ Логотип спереду та ззаду — виглядає дорого та помітно 🔥",
+        "✔️ Фіксатори знизу та біля капюшона — підлаштовуєш під себе 🎯",
+        "✔️ Штани на резинці + шнурок — ідеальна посадка 👌",
+        "✔️ Розміри: S / M / L / XL / XXL",
+        "💯 Підійде як для міста, так і для активного відпочинку",
+        "⚡ Легкий, зручний та тримає форму",
+        "🔝 Кількість обмежена — розбирають дуже швидко",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1490,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.TNFvesna/1.webp",
+            "images/img.TNFvesna//2.webp",
+            "images/img.TNFvesna//3.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.TNFvesna/4.webp",
+            "images/img.TNFvesna/5.webp",
+            "images/img.TNFvesna/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2700
+    },
+    {
       "id": "Praga",
       "name": "Бомбер Praga",
       "sku": "BR D0041",
@@ -1427,6 +1235,250 @@ const CONFIG = {
       ],
       "old_price": 2600
     },
+        {
+      "id": "balaklava",
+      "name": "Зимова шапка Ghost",
+      "description": "Легка, тепла та універсальна.",
+      "features": [
+        "Якісний матеріал",
+        "Швидка відправка Новою Поштою (1–3 дні)"
+      ],
+      "price": 590,
+      "colors": [
+        {
+          "id": "khaki",
+          "name": "Хакі",
+          "hex": "#4B5320",
+          "images": [
+            "images/img.balaklava/4.png",
+            "images/img.balaklava/3.png"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.balaklava/1.png",
+            "images/img.balaklava/2.png"
+          ]
+        },
+        {
+          "id": "camouflage",
+          "name": "Камуфляж",
+          "hex": "#78866b",
+          "images": [
+            "images/img.balaklava/7.png",
+            "images/img.balaklava/8.png",
+            "images/img.balaklava/5.png",
+            "images/img.balaklava/6.png"
+          ]
+        },
+        {
+          "id": "camouflage biege",
+          "name": "Камуфляж Беж",
+          "hex": "#e4e3beff",
+          "images": [
+            "images/img.balaklava/13.png",
+            "images/img.balaklava/14.png",
+            "images/img.balaklava/15.png"
+          ]
+        }
+      ],
+      "old_price": 900
+    },
+    {
+      "id": "shapka-baf",
+      "name": "Зимова шапка+баф Duo",
+      "description": "Зимовий комлект.",
+      "features": [
+        "Якісний матеріал",
+        "Швидка відправка Новою Поштою (1–3 дні)"
+      ],
+      "price": 540,
+      "colors": [
+        {
+          "id": "biege",
+          "name": "Беж",
+          "hex": "#d6c7b1",
+          "images": [
+            "images/img.baf/4.png",
+            "images/img.baf/3.png",
+            "images/img.baf/5.png"
+          ]
+        },
+        {
+          "id": "khaki",
+          "name": "Хакі",
+          "hex": "#4B5320",
+          "images": [
+            "images/img.baf/10.png",
+            "images/img.baf/9.png",
+            "images/img.baf/12.png"
+          ]
+        }
+      ],
+      "old_price": 800
+    },
+    {
+      "id": "Basic Premium",
+      "name": "Костюм Basic Premium",
+      "sku": "BR A0114",
+      "relatedIds": ["zamsh-na-zmiyci","TNF", "Base"],
+      "description": "Стильний та зручний костюм на кожен день",
+      "features": [
+        "✨ Стильний та зручний костюм на кожен день",
+        "📌 Матеріал: петля, компакт-пеньє",
+        "✔ Якісна та щільна рібана — добре тримає форму",
+        "🔒 Не кашлатиться навіть після багаторазового прання",
+        "💪 Довговічна тканина — служитиме не один сезон",
+        "⭐ Якість гарантуємо",
+        "🔥 Ідеальний варіант для щоденного носіння — комфорт + стиль в одному комплекті",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1390,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.major/1.webp",
+            "images/img.major/2.webp",
+            "images/img.major/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.major/4.webp",
+            "images/img.major/5.webp",
+            "images/img.major/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2780
+    },
+    {
+      "id": "zamsh-na-zmiyci",
+      "name": "Замшевий костюм Velvet",
+      "sku": "BR A0125",
+      "relatedIds": ["Basic Premium", "TNF", "Base"],
+      "description": "Преміальний крій та м'який замшевий матеріал — ідеально для подій, вечірок, та повсякденних образів.",
+      "features": [
+        "⭐️ Замшевий матеріал преміум-класу — виглядає дорого",
+        "👌 Мʼякий та приємний до тіла",
+        "✂️ Анатомічний крій — гарно сідає по фігурі",
+        "👕 Універсальний стиль — для свят та повсякдення",
+        "📦 Швидка відправка Новою Поштою"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.zamsh/1.webp",
+            "images/img.zamsh/2.webp",
+            "images/img.zamsh/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.zamsh/4.webp",
+            "images/img.zamsh/5.webp",
+            "images/img.zamsh/6.webp"
+          ]
+        }
+      ],
+      "old_price": 2600
+    },
+    {
+  id: "look-velvet-jeans",
+  name: "Стильний образ: Замшевий бомбер Velvet Jet + Джинси + Футболка",
+  "sku": "BR A0165, j0032, L0056",
+  type: "bundle",
+  description: "Готовий стильний образ — замшевий бомбер, джинси та базова футболка",
+  price: 3180,
+  "relatedIds": ["Velvet Jet", "Jeans", "Base"],
+  old_price: 5250,
+  features: [
+    "🔥 Готовий образ на кожен день",
+    "🔝 Замшевий бомбер - бомба сезону",
+    "👖 Джинси з якісного деніму - сучасні, міцні та зносостійкі",
+    "👕 Базова футболка преміум якості з щільної бавовни",
+    "🎨 Можна зібрати свій варіант і замовити повністю або окремо",
+    "📦 Відправка новою поштою накладеним платежем"
+  ],
+
+  // Потрібно для каталогу
+  colors: [
+    {
+      id: "default",
+      name: "Образ",
+      hex: "#111111",
+      images: ["images/img.bomber.jeans/1.webp"]
+    }
+  ],
+
+  buyOptions: [
+    { id: "full",        label: "Замовити весь комплект",   price: 3180, items: ["bomber", "jeans", "tshirt"] },
+    { id: "bomberJeans", label: "Замовити бомбер + джинси", price: 2690, items: ["bomber", "jeans"] },
+    { id: "bomber",      label: "Замовити тільки бомбер",   price: 1290, items: ["bomber"] },
+    { id: "jeans",       label: "Замовити тільки джинси",   price: 1590, items: ["jeans"] }
+  ],
+
+  items: {
+    bomber: {
+      name: "Бомбер Velvet Jet",
+      productId: "Velvet Jet",
+      colors: [
+        { id: "black",    name: "Чорний", hex: "#111113" },
+        { id: "graphite", name: "Графіт", hex: "#616267" },
+        { id: "blue",     name: "Синій",  hex: "#000080" }
+      ]
+    },
+    jeans: {
+      name: "Чоловічі Джинси",
+      productId: "Jeans",
+      colors: [
+        { id: "jeans",      name: "Джинс",          hex: "#173D65" },
+        { id: "black",      name: "Чорний",         hex: "#111113" },
+        { id: "light-blue", name: "Блакитно-синій", hex: "#274F78" },
+        { id: "dark-blue",  name: "Темно-синій",    hex: "#192032" },
+        { id: "graphite",   name: "Графіт",         hex: "#616267" },
+        { id: "blue",       name: "Блакитний",      hex: "#7795AD" }
+      ]
+    },
+    tshirt: {
+      name: "Футболка Base",
+      productId: "Base",
+      colors: [
+        { id: "white", name: "Білий",  hex: "#ffffff" },
+        { id: "black", name: "Чорний", hex: "#111113" }
+      ]
+    }
+  },
+
+  // Порядок кольорів (дуже важливо!)
+  colorOrder: {
+    bomber: ["black", "graphite", "blue"],
+    jeans:  ["jeans", "black", "light-blue", "dark-blue", "graphite", "blue"],
+    tshirt: ["white", "black"]
+  },
+
+  defaultCombination: {
+    bomber: "black",
+    jeans: "jeans",
+    tshirt: "white"
+  }
+   },
     {
       "id": "LinenSet",
       "name": "Комплект LinenSet",
@@ -1506,6 +1558,154 @@ const CONFIG = {
         }
       ],
       "old_price": 2800
+    },
+    {
+  "id": "Flow",
+  "name": "Лляний комплект Flow",
+  "sku": "BR Q0068",
+  "description": "Натуральний дихаючий льон преміум-якості",
+  "features": [
+    "🔥 В тренді цього сезону",
+    "😎 Стильно • Легко • Комфортно",
+    "✔️ Розміри: S M L XL XXL 3XL",
+    "✔️ Матеріал: льон",
+    "✔️ Висока якість пошиву, не просвічується",
+    "✔️ Стильний мінімалізм, який завжди актуальний",
+    "📦 Відправка новою поштою накладеним платежем"
+  ],
+  "price": 1590,
+  "old_price": 2900,
+  "relatedIds": ["Linen Cloud", "Base", "LinenSet"],
+  "colors": [
+    {
+      "id": "graphite",
+      "name": "Графіт",
+      "hex": "#616267",
+      "images": [
+        "images/img.lyon2/1.webp",
+        "images/img.lyon2/3.webp",
+        "images/img.lyon2/2.webp"
+      ]
+    },
+    {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+          "images/img.lyon2/22.webp",
+          "images/img.lyon2/23.webp",
+          "images/img.lyon2/24.webp"
+          ]
+    },
+    {
+      "id": "white",
+      "name": "Білий",
+      "hex": "#ffffff",
+      "images": [
+        "images/img.lyon2/10.webp",
+        "images/img.lyon2/11.webp",
+        "images/img.lyon2/12.webp"
+      ]
+    },
+    {
+      "id": "blue",
+      "name": "Блакитний",
+      "hex": "#B9C6F2",
+      "images": [
+        "images/img.lyon2//19.webp",
+        "images/img.lyon2//20.webp",
+        "images/img.lyon2//21.webp"
+      ]
+    },
+    {
+      "id": "black",
+      "name": "Чорний",
+      "hex": "#111113ff",
+      "images": [
+        "images/img.lyon2/9.webp",
+        "images/img.lyon2/8.webp",
+        "images/img.lyon2/7.webp"
+      ]
+    },
+    {
+      "id": "haki",
+      "name": "Хакі",
+      "hex": "#78866b",
+      "images": [
+        "images/img.lyon2//18.webp",
+        "images/img.lyon2//17.webp",
+        "images/img.lyon2//16.webp"
+      ]
+    },
+    {
+      "id": "dark-blue",
+      "name": "Темно-синій",
+      "hex": "#000080",
+      "images": [
+        "images/img.lyon2/13.webp",
+        "images/img.lyon2/14.webp",
+        "images/img.lyon2/15.webp"
+      ]
+    },
+    {
+      "id": "beige",
+      "name": "Беж",
+      "hex": "#d6c7b1",
+      "images": [
+        "images/img.lyon2/4.webp",
+        "images/img.lyon2/5.webp"
+      ]
+    }
+  ]
+  },
+   {
+      "id": "Linen Cloud",
+      "name": "Комплект трійка з льону",
+      "sku": "BR AQ0071",
+      "relatedIds": ["Flow", "Base", "LinenSet"],
+      "features": [
+        "🔥 Лляний комплект трійка — сорочка + штани + шорти",
+        "‼️ РОЗПРОДАЖ ОСТАННІХ РОЗМІРІВ",
+        "😎 Стильно • Легко • Комфортно",
+        "🌿 Льон — легкий, дихаючий та приємний до тіла",
+        "👌 Стильний мінімалізм, який легко поєднувати з базовими речами",
+        "✔️ Висока якість пошиву",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1790,
+      "colors": [
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#BCC6CC",
+          "images": [
+            "images/img.lyon3/1.webp",
+            "images/img.lyon3/2.webp",
+            "images/img.lyon3/3.webp"
+          ]
+        },
+        {
+          "id": "white",
+          "name": "Білий",
+          "hex": "#ffffff",
+          "images": [
+            "images/img.lyon3/4.webp",
+            "images/img.lyon3/5.webp",
+            "images/img.lyon3/6.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.lyon3/7.webp",
+            "images/img.lyon3/8.webp",
+            "images/img.lyon3/9.webp"
+          ]
+        }
+      ],
+      "old_price": 3000
     },
     {
       "id": "Tenor",
@@ -2914,201 +3114,6 @@ const CONFIG = {
         }
       ],
       "old_price": 1829
-    },
-    {
-      "id": "polar-premium",
-      "name": "Теплий костюм Fortress",
-      "description": "Плотний фліс, преміальний крій — підходить і для вулиці, і для дому.",
-      "features": [
-        "Якісний матеріал перевірений часом",
-        "Анатомічна посадка — розміри S–XXL",
-        "Швидка відправка Новою Поштою (1–3 дні)"
-      ],
-      "price": 1690,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.polarpremium/7.png",
-            "images/img.polarpremium/5.png",
-            "images/img.polarpremium/6.png",
-            "images/img.polarpremium/4.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.polarpremium/2.png",
-            "images/img.polarpremium/1.png",
-            "images/img.polarpremium/3.png"
-          ]
-        }
-      ],
-      "old_price": 2129
-    },
-    {
-      "id": "puhovik",
-      "name": "Зимовий пуховик Puff",
-      "description": "Теплий, легкий та універсальний.",
-      "features": [
-        "Якісний матеріал перевірений часом",
-        "Анатомічна посадка — розміри S–XXL",
-        "Швидка відправка Новою Поштою (1–3 дні)"
-      ],
-      "price": 1849,
-      "colors": [
-        {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
-          "images": [
-            "images/img.puhovik/9.png",
-            "images/img.puhovik/11.png",
-            "images/img.puhovik/12.png",
-            "images/img.puhovik/7.png",
-            "images/img.puhovik/8.png",
-            "images/img.puhovik/16.png",
-            "images/img.puhovik/14.png",
-            "images/img.puhovik/15.png",
-            "images/img.puhovik/10.png",
-            "images/img.puhovik/13.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.puhovik/1.png",
-            "images/img.puhovik/3.png",
-            "images/img.puhovik/4.png",
-            "images/img.puhovik/2.png",
-            "images/img.puhovik/5.png",
-            "images/img.puhovik/6.png"
-          ]
-        },
-        {
-          "id": "blue",
-          "name": "Синій",
-          "hex": "#000080",
-          "images": [
-            "images/img.puhovik/17.png",
-            "images/img.puhovik/18.png",
-            "images/img.puhovik/19.png",
-            "images/img.puhovik/20.png",
-            "images/img.puhovik/21.png",
-            "images/img.puhovik/22.png",
-            "images/img.puhovik/23.png",
-            "images/img.puhovik/24.png",
-            "images/img.puhovik/25.png",
-            "images/img.puhovik/26.png",
-            "images/img.puhovik/27.png"
-          ]
-        },
-        {
-          "id": "emerald",
-          "name": "Смарагд",
-          "hex": "#00a86b",
-          "images": [
-            "images/img.puhovik/28.png",
-            "images/img.puhovik/29.png",
-            "images/img.puhovik/30.png",
-            "images/img.puhovik/31.png",
-            "images/img.puhovik/32.png",
-            "images/img.puhovik/33.png"
-          ]
-        }
-      ],
-      "old_price": 2199
-    },
-    {
-      "id": "balaklava",
-      "name": "Зимова шапка Ghost",
-      "description": "Легка, тепла та універсальна.",
-      "features": [
-        "Якісний матеріал",
-        "Швидка відправка Новою Поштою (1–3 дні)"
-      ],
-      "price": 549,
-      "colors": [
-        {
-          "id": "khaki",
-          "name": "Хакі",
-          "hex": "#4B5320",
-          "images": [
-            "images/img.balaklava/4.png",
-            "images/img.balaklava/3.png"
-          ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.balaklava/1.png",
-            "images/img.balaklava/2.png"
-          ]
-        },
-        {
-          "id": "camouflage",
-          "name": "Камуфляж",
-          "hex": "#78866b",
-          "images": [
-            "images/img.balaklava/7.png",
-            "images/img.balaklava/8.png",
-            "images/img.balaklava/5.png",
-            "images/img.balaklava/6.png"
-          ]
-        },
-        {
-          "id": "camouflage biege",
-          "name": "Камуфляж Беж",
-          "hex": "#e4e3beff",
-          "images": [
-            "images/img.balaklava/13.png",
-            "images/img.balaklava/14.png",
-            "images/img.balaklava/15.png"
-          ]
-        }
-      ],
-      "old_price": 649
-    },
-    {
-      "id": "shapka-baf",
-      "name": "Зимова шапка+баф Duo",
-      "description": "Зимовий комлект.",
-      "features": [
-        "Якісний матеріал",
-        "Швидка відправка Новою Поштою (1–3 дні)"
-      ],
-      "price": 499,
-      "colors": [
-        {
-          "id": "biege",
-          "name": "Беж",
-          "hex": "#d6c7b1",
-          "images": [
-            "images/img.baf/4.png",
-            "images/img.baf/3.png",
-            "images/img.baf/5.png"
-          ]
-        },
-        {
-          "id": "khaki",
-          "name": "Хакі",
-          "hex": "#4B5320",
-          "images": [
-            "images/img.baf/10.png",
-            "images/img.baf/9.png",
-            "images/img.baf/12.png"
-          ]
-        }
-      ],
-      "old_price": 649
     },
     {
       "id": "plush-kapyshon",
