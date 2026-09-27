@@ -1091,11 +1091,22 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
       }
 
+      const params = new URLSearchParams(window.location.search);
+      const pId = params.get("id");
+      const pObj = CONFIG.PRODUCTS.find(p => p.id === pId);
+      const activeSwatch = document.querySelector(".swatch.active");
+      const colorId = activeSwatch?.dataset.id || "";
+      const colorObj = pObj?.colors?.find(c => c.id === colorId);
+
       const payload = {
           type: "quick",
           phone: "+" + phoneRaw,
-          product: document.getElementById("productTitle")?.textContent?.trim() || "Товар",
-          color: document.getElementById("selectedColorName")?.textContent?.replace("Обраний колір: ", "").trim() || "—",
+          product: document.getElementById("productTitle")?.textContent?.trim() || pObj?.name || "Товар",
+          product_name: document.getElementById("productTitle")?.textContent?.trim() || pObj?.name || "Товар",
+          sku: colorObj?.sku || pObj?.sku || "",
+          price: pObj ? Number(pObj.price) : 0,
+          total: pObj ? Number(pObj.price) : 0,
+          color: document.getElementById("selectedColorName")?.textContent?.replace("Обраний колір: ", "").trim() || colorObj?.name || "—",
           height: heightInput?.value?.trim() || "—",
           weight: weightInput?.value?.trim() || "—",
           source: "product-quick"
