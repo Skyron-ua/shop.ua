@@ -1048,7 +1048,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Додаємо товар в кошик
-      addToCartFromProductPage({ source: "reserve-btn" });
+      const added = addToCartFromProductPage({ source: "reserve-btn" });
+      if (!added) return;
 
       // Невелика затримка для ефекту польоту
       setTimeout(() => {
@@ -1083,13 +1084,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Відправка швидкого замовлення (з fix hide)
-  document.getElementById("sendQuickOrder")?.addEventListener("click", async () => {
+  const sendQuickBtn = document.getElementById("sendQuickOrder");
+  sendQuickBtn?.addEventListener("click", async () => {
+      if (sendQuickBtn.dataset.sending === "1") return;
+
       const phoneRaw = phoneInput?.value?.replace(/\D/g, "") || "";
       if (phoneRaw.length < 10) {
           alert("Введіть повний номер телефону");
           phoneInput?.focus();
           return;
       }
+
+      sendQuickBtn.dataset.sending = "1";
+      sendQuickBtn.disabled = true;
 
       const params = new URLSearchParams(window.location.search);
       const pId = params.get("id");
@@ -1119,10 +1126,7 @@ document.addEventListener("DOMContentLoaded", () => {
               body: JSON.stringify(payload)
           });
 
-          if (res.ok) {
-              alert("Дякуємо! Ми зв'яжемося з вами протягом 5 хвилин.");
-              
-              // ✅ Purchase / CompletePayment при быстром заказе
+                    if (res.ok) {
               const params = new URLSearchParams(window.location.search);
               const pId = params.get("id");
               const pObj = CONFIG.PRODUCTS.find(p => p.id === pId);
@@ -1146,16 +1150,43 @@ document.addEventListener("DOMContentLoaded", () => {
               quickModal.style.display = "none";
               quickModal.classList.remove("active");
               if (phoneInput) phoneInput.value = "";
+              sendQuickBtn.dataset.sending = "0";
+              sendQuickBtn.disabled = false;
+
+              const cover = document.createElement("div");
+              cover.style.cssText = [
+                "position:fixed",
+                "inset:0",
+                "z-index:9999",
+                "background:#fff",
+                "display:flex",
+                "align-items:center",
+                "justify-content:center",
+                "text-align:center",
+                "padding:24px",
+                "font-size:20px",
+                "font-weight:600"
+              ].join(";");
+              cover.textContent = "Дякуємо за замовлення! Ми скоро з Вами звʼяжемось😊";
+              document.body.appendChild(cover);
+
+              setTimeout(() => {
+                  cover.remove();
+              }, 1800);
           } else {
               alert("Помилка. Спробуйте ще раз або напишіть у Telegram.");
               quickModal.style.display = "none";
-              quickModal.classList.remove("active");  // ← Ховаємо навіть при помилці
+              quickModal.classList.remove("active");
+              sendQuickBtn.dataset.sending = "0";
+              sendQuickBtn.disabled = false;
           }
       } catch (err) {
           alert("Не вдалося відправити. Перевірте інтернет.");
           console.error(err);
           quickModal.style.display = "none";
-          quickModal.classList.remove("active");  // ← Ховаємо навіть при помилці
+          quickModal.classList.remove("active");
+          sendQuickBtn.dataset.sending = "0";
+          sendQuickBtn.disabled = false;
       }
   });
 
@@ -1181,6 +1212,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkoutForm.addEventListener('submit', async function (e) {
       e.preventDefault();
+
+      if (checkoutForm.dataset.sending === "1") return;
+      checkoutForm.dataset.sending = "1";
+
+      const submitBtn = checkoutForm.querySelector('button[type="submit"], .main-order-btn');
+      if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Відправляємо...";
+      }
 
       // 1. Получаем данные формы
       const formData = new FormData(checkoutForm);
@@ -1283,18 +1323,40 @@ const payload = {
             }
           );
 
-          alert('Дякуємо за замовлення! Ми незабаром з вами звʼяжемось😊');
+            const cover = document.createElement("div");
+          cover.style.cssText = [
+            "position:fixed",
+            "inset:0",
+            "z-index:9999",
+            "background:#fff",
+            "display:flex",
+            "align-items:center",
+            "justify-content:center",
+            "text-align:center",
+            "padding:24px",
+            "font-size:20px",
+            "font-weight:600"
+          ].join(";");
+          cover.textContent = "Дякуємо за замовлення! Ми скоро з Вами звʼяжемось😊";
+          document.body.appendChild(cover);
 
-          // Очистка корзины
           cart = [];
-          localStorage.setItem('cart', JSON.stringify(cart));
+          localStorage.setItem("cart", JSON.stringify(cart));
           updateCartBadge();
-          initCart();
           checkoutForm.reset();
 
-      } catch (err) {
+          setTimeout(() => {
+              window.location.href = "catalog.html";
+          }, 1800);
+
+            } catch (err) {
           console.error('Помилка відправки кошика:', err);
           alert('Не вдалося відправити.\nПеревірте інтернет або напишіть в Telegram.');
+          checkoutForm.dataset.sending = "0";
+          if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = "Оформити замовлення";
+          }
       }
   });
 
@@ -1306,7 +1368,7 @@ function addToCartFromProductPage({ source } = {}) {
   const productId = urlParams.get("id");
   if (!productId) {
     console.log("Товар не знайдено. Оновіть сторінку.");
-    return;
+    return false;
   }
 
   const height = document.getElementById("product-height")?.value.trim();
@@ -1319,7 +1381,7 @@ function addToCartFromProductPage({ source } = {}) {
     if (source !== "sticky") alert("Будь ласка, оберіть колір товару");
     const swatches = document.getElementById("swatches");
     if (swatches) swatches.scrollIntoView({ behavior: "smooth", block: "center" });
-    return;
+    return false;
   }
 
 // Беремо поточне фото з головної картинки (саме те, яке зараз видно користувачу)
@@ -1349,11 +1411,12 @@ addToCart({
   const heightField = document.getElementById("product-height");
   const weightField = document.getElementById("product-weight");
   const qtyField = document.getElementById("qty");
-  if (heightField) heightField.value = "";
+    if (heightField) heightField.value = "";
   if (weightField) weightField.value = "";
   if (qtyField) qtyField.value = "1";
   localStorage.removeItem("userHeight");
   localStorage.removeItem("userWeight");
+  return true;
 }
 // ───────────────────────────────────────────────────────────────
 // TOAST-СПОВІЩЕННЯ
