@@ -8,45 +8,45 @@ const CONFIG = {
     SUPPORT_PHONE: "+380733337278"
   },
   PRODUCTS: [
-     {
-      "id": "Winterwear",
-      "name": "Зимові куртки TNF/UA",
+    {
+      "id": "Phantom",
+      "name": "Зимовий пуховик Phantom",
       "features": [
-        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -60%",
-        "🍂 Ідеальна для осені та зими",
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -40%",
+        "🍂 Ідеальний для осені та зими",
         "☁️ Легкий і теплий наповнювач — біопух",
         "💧 Водовідштовхувальний верх — захищає від вологи",
-        "💪 Міцний матеріал та якісне виконання",
+        "💎 Якісний матеріал та преміальна фурнітура",
         "👌 Комфортна посадка та стильний вигляд",
         "📏 Розміри S–XXL — повномірка",
         "📦 Відправка новою поштою накладеним платежем"
       ],
-      "price": 1990,
+      "price": 2390,
       "colors": [
         {
-          "id": "TNF",
-          "name": "TNF",
-          "hex": "#000080",
-          "sku": "BR A0146",
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "BR D0098",
           "images": [
-            "images/img.winter.under.face/1.webp",
-            "images/img.winter.under.face/2.webp",
-            "images/img.winter.under.face/3.webp"
+            "images/img.phantom/1.webp",
+            "images/img.phantom/2.webp",
+            "images/img.phantom/3.webp"
           ]
         },
         {
-          "id": "UA",
-          "name": "UA",
-          "hex": "#111113ff",
-          "sku": "BR A0147",
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "sku": "BR A0136",
           "images": [
-            "images/img.winter.under.face/4.webp",
-            "images/img.winter.under.face/5.webp",
-            "images/img.winter.under.face/6.webp"
+            "images/img.phantom/4.webp",
+            "images/img.phantom/5.webp",
+            "images/img.phantom/6.webp"
           ]
         }
       ],
-      "old_price": 4975
+      "old_price": 3980
     },
     {
       "id": "plush",
@@ -374,7 +374,47 @@ const CONFIG = {
       ],
       "old_price": 2980
     },
+    {
+      "id": "Winterwear",
+      "name": "Зимові куртки TNF/UA",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -60%",
+        "🍂 Ідеальна для осені та зими",
+        "☁️ Легкий і теплий наповнювач — біопух",
+        "💧 Водовідштовхувальний верх — захищає від вологи",
+        "💪 Міцний матеріал та якісне виконання",
+        "👌 Комфортна посадка та стильний вигляд",
+        "📏 Розміри S–XXL — повномірка",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1990,
+      "colors": [
         {
+          "id": "TNF",
+          "name": "TNF",
+          "hex": "#000080",
+          "sku": "BR A0146",
+          "images": [
+            "images/img.winter.under.face/1.webp",
+            "images/img.winter.under.face/2.webp",
+            "images/img.winter.under.face/3.webp"
+          ]
+        },
+        {
+          "id": "UA",
+          "name": "UA",
+          "hex": "#111113ff",
+          "sku": "BR A0147",
+          "images": [
+            "images/img.winter.under.face/4.webp",
+            "images/img.winter.under.face/5.webp",
+            "images/img.winter.under.face/6.webp"
+          ]
+        }
+      ],
+      "old_price": 4975
+    },
+    {
       "id": "Prestige",
       "name": "Преміальна куртка Prestige",
       "sku": "BR D0005",
