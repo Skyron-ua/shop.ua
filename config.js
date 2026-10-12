@@ -306,6 +306,48 @@ const CONFIG = {
       "old_price": 3180
     }, 
     {
+      "id": "Oskar",
+      "name": "Зимова куртка Oskar",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -40%",
+        "🍂 Ідеальний вибір для осені та зими",
+        "❄️ Тепло та комфорт навіть у мороз",
+        "☁️ Наповнювач холлофайбер — тепло без зайвої ваги",
+        "💧 Термопідкладка з фольгованим шаром спереду та щільний фліс ззаду — для додаткового збереження тепла.",
+        "🌬️ Внутрішні манжети захищають від проникнення холодного повітря",
+        "🧢 Знімний капюшон із м’яким флісом усередині",
+        "🔒 4 зручні кишені: 2 зовнішні на блискавках і 2 внутрішні",
+        "💎 Якісний матеріал та преміальна фурнітура",
+        "👌 Комфортна посадка та стильний вигляд",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1990,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "RAM 1757424633",
+          "images": [
+            "images/img.oskar/1.webp",
+            "images/img.oskar/2.webp",
+            "images/img.oskar/3.webp"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "sku": "RAM 1757424746",
+          "images": [
+            "images/img.oskar/4.webp",
+            "images/img.oskar/5.webp"
+          ]
+        }
+      ],
+      "old_price": 3320
+    },
+    {
       "id": "Forge",
       "name": "Бомбер Forge",
       "sku": "BR F0029",
@@ -3405,8 +3447,10 @@ const CONFIG = {
       "plush",
       "sale",
       "polar",
+      "Phantom",
       "Carbon",
       "Winterwear",
+      "Oskar",
       "bayer",
       "gudzik",
       "zefir",
@@ -3428,7 +3472,7 @@ const CONFIG = {
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "polar", "Carbon", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
-    "Верхній одяг/куртки": ["Imperial", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial", "Phantom", "Oskar", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
     "Джинси": ["Jeans"],
