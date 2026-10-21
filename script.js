@@ -1041,8 +1041,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const h = parseInt(heightInput?.value?.trim() || "0", 10);
       const w = parseInt(weightInput?.value?.trim() || "0", 10);
 
-      if (isNaN(h) || isNaN(w) || h < 140 || h > 220 || w < 35 || w > 150) {
-          alert("Будь ласка, введіть коректний зріст (140–220 см) та вагу (35–150 кг)");
+      if (isNaN(h) || isNaN(w) || h < 168 || h > 200 || w < 57 || w > 130) {
+          alert("Будь ласка, введіть коректний зріст (168–200 см) та вагу (57–130 кг)");
           document.getElementById("product-size-selection")?.scrollIntoView({ behavior: "smooth", block: "center" });
           return;
       }
@@ -1997,8 +1997,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const h = parseInt(document.getElementById("product-height")?.value || "0", 10);
     const w = parseInt(document.getElementById("product-weight")?.value || "0", 10);
 
-    if (isNaN(h) || isNaN(w) || h < 140 || h > 220 || w < 35 || w > 150) {
-      alert("Спочатку введіть зріст (140–220 см) та вагу (35–150 кг)");
+    if (isNaN(h) || isNaN(w) || h < 168 || h > 200 || w < 57 || w > 130) {
+      alert("Спочатку введіть зріст (168–200 см) та вагу (57–130 кг)");
       document.getElementById("product-height")?.focus();
       return;
     }
