@@ -348,6 +348,66 @@ const CONFIG = {
       "old_price": 3320
     },
     {
+      "id": "Softshell TNF",
+      "name": "Softshell на флісі TNF",
+      "sku": "RAM 2307",
+      "relatedIds": ["Rayford", "Base", "Oskar"],
+      "features": [
+        "‼️ Розпродаж останніх розмірів ",
+        "🔥 Щільний матеріал Soft Shell — практичний, зносостійкий і водовідштовхувальний",
+        "❄️ Флісова внутрішня поверхня для додаткового тепла та комфорту",
+        "💧 Водовідштовхувальні властивості допомагають захистити від вологи",
+        "🧥 3 функціональні кишені: 2 бічні та 1 нагрудна",
+        "👌 Капюшон з утяжкою для зручного регулювання посадки",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1990,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.softTNF/0.webp",
+            "images/img.softTNF/1.webp",
+            "images/img.softTNF/2.webp",
+            "images/img.softTNF/3.webp",
+            "images/img.softTNF/4.webp",
+            "images/img.softTNF/5.webp",
+            "images/img.softTNF/6.webp",
+            "images/img.softTNF/7.webp"
+          ]
+        },
+        {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.softTNF/8.webp",
+            "images/img.softTNF/9.webp",
+            "images/img.softTNF/10.webp",
+            "images/img.softTNF/11.webp",
+            "images/img.softTNF/12.webp"
+          ]
+        },
+        {
+          "id": "blue",
+          "name": "Синій",
+          "hex": "#000080",
+          "images": [
+            "images/img.softTNF/13.webp",
+            "images/img.softTNF/14.webp",
+            "images/img.softTNF/15.webp",
+            "images/img.softTNF/16.webp",
+            "images/img.softTNF/17.webp",
+            "images/img.softTNF/18.webp",
+            "images/img.softTNF/19.webp"
+          ]
+        },
+      ],
+      "old_price": 4500
+    },
+    {
       "id": "Forge",
       "name": "Бомбер Forge",
       "sku": "BR F0029",
@@ -3418,6 +3478,7 @@ const CONFIG = {
     "Весна/осінь": [
       "TNF",
       "Jeans",
+      "Softshell TNF",
       "Classic Style",
       "A",
       "Matrix",
@@ -3472,7 +3533,7 @@ const CONFIG = {
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "polar", "Carbon", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
-    "Верхній одяг/куртки": ["Imperial", "Phantom", "Oskar", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial","Softshell TNF", "Phantom", "Oskar", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
     "Джинси": ["Jeans"],
