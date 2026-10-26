@@ -262,7 +262,7 @@ const CONFIG = {
       ],
       "price": 1690,
       "colors": [
-        {
+        /*{
           "id": "grey",
           "name": "Сірий",
           "hex": "#bbbbbb",
@@ -271,7 +271,7 @@ const CONFIG = {
             "images/img.carbon/2.webp",
             "images/img.carbon/3.webp"
           ]
-        },
+        },*/
         {
           "id": "black",
           "name": "Чорний",
@@ -350,7 +350,7 @@ const CONFIG = {
     {
       "id": "Softshell TNF",
       "name": "Softshell на флісі TNF",
-      "sku": "RAM 2307",
+      "sku": "RA 2307",
       "relatedIds": ["Rayford", "Base", "Oskar"],
       "features": [
         "‼️ Розпродаж останніх розмірів ",
