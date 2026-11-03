@@ -126,7 +126,7 @@ const CONFIG = {
           ]
         }
       ],
-      "old_price": 2580
+      "old_price": 2780
     },   
     {
       "id": "Rayford",
