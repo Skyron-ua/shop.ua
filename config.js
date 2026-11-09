@@ -209,6 +209,42 @@ const CONFIG = {
       "old_price": 3180
     },
     {
+      "id": "Fjord",
+      "name": "Теплий флісовий костюм Fjord",
+      "sku": "BR A0194",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -50%",
+        "🔥 Теплий та комфортний — ідеальний на холодну пору року❄️",
+        "☁️ Мʼякий преміальний фліс — приємний до тіла, не колеться",
+        "📐 Анатомічний крій — не сковує рухи, зручно цілий день",
+        "✔️ Ідеальна посадка — підбираємо розмір по зросту і вазі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "images": [
+            "images/img.fjord/1.webp",
+            "images/img.fjord/2.webp",
+            "images/img.fjord/3.webp"
+          ]
+        },
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.fjord/4.webp",
+            "images/img.fjord/5.webp"
+          ]
+        }
+      ],
+      "old_price": 3380
+    },
+    {
       "id": "polar-premium",
       "name": "Теплий костюм Fortress",
       "sku": "BR A0191",
@@ -3506,6 +3542,7 @@ const CONFIG = {
     "Зимова колекція": [
       "plush",
       "sale",
+      "Fjord",
       "polar",
       "Phantom",
       "Carbon",
@@ -3531,7 +3568,7 @@ const CONFIG = {
     "Спортивні костюми": ["TNF", "Patriot UA", "Basic Premium", "plashovka"],
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
-    "Теплі флісові костюми": ["plush", "sale", "polar", "Carbon", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
+    "Теплі флісові костюми": ["plush", "sale", "Fjord", "polar", "Carbon", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
     "Верхній одяг/куртки": ["Imperial","Softshell TNF", "Phantom", "Oskar", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
