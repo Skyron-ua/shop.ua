@@ -202,8 +202,7 @@ const CONFIG = {
             "images/img.north/ch1.webp",
             "images/img.north/ch2.webp",
             "images/img.north/ch3.webp",
-            "images/img.north/ch4.webp",
-            "images/img.north/ch5.webp"
+            "images/img.north/ch4.webp"
           ]
         }
       ],
