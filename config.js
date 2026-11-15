@@ -297,7 +297,7 @@ const CONFIG = {
       ],
       "price": 1690,
       "colors": [
-        /*{
+        {
           "id": "grey",
           "name": "Сірий",
           "hex": "#bbbbbb",
@@ -306,7 +306,7 @@ const CONFIG = {
             "images/img.carbon/2.webp",
             "images/img.carbon/3.webp"
           ]
-        },*/
+        },
         {
           "id": "black",
           "name": "Чорний",
