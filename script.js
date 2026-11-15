@@ -1042,7 +1042,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const w = parseInt(weightInput?.value?.trim() || "0", 10);
 
       if (isNaN(h) || isNaN(w) || h < 168 || h > 200 || w < 57 || w > 130) {
-          alert("Будь ласка, введіть коректний зріст (168–200 см) та вагу (57–130 кг)");
+          alert("На жаль, модель розрахована на зріст (168–200 см) та вагу (57–130 кг)");
           document.getElementById("product-size-selection")?.scrollIntoView({ behavior: "smooth", block: "center" });
           return;
       }
