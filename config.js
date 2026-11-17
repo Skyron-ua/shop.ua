@@ -67,8 +67,8 @@ const CONFIG = {
           "name": "Графіт",
           "hex": "#616267",
           "images": [
-            "images/img.plush/111.webp",
-            "images/img.plush/1111.webp"
+            "images/img.plush/1111.webp",
+            "images/img.plush/111.webp"
           ]
         },
         {
@@ -76,8 +76,8 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.plush/222.webp",
-            "images/img.plush/2222.webp"
+            "images/img.plush/2222.webp",
+            "images/img.plush/222.webp"
           ]
         },
         {
@@ -85,8 +85,8 @@ const CONFIG = {
           "name": "Синій",
           "hex": "#000080",
           "images": [
-            "images/img.plush/333.webp",
-            "images/img.plush/3333.webp"
+            "images/img.plush/3333.webp",
+            "images/img.plush/333.webp"
           ]
         },
         {
@@ -94,8 +94,8 @@ const CONFIG = {
           "name": "Хакі",
           "hex": "#78866b",
           "images": [
-            "images/img.plush/444.webp",
-            "images/img.plush/4444.webp"
+            "images/img.plush/4444.webp",
+            "images/img.plush/444.webp"
           ]
         },
         {
@@ -103,8 +103,8 @@ const CONFIG = {
           "name": "Сірий",
           "hex": "#bbbbbb",
           "images": [
-            "images/img.plush/555.webp",
-            "images/img.plush/5555.webp"
+            "images/img.plush/5555.webp",
+            "images/img.plush/555.webp"
           ]
         },
         {
@@ -112,8 +112,8 @@ const CONFIG = {
           "name": "Бордо",
           "hex": "#790604",
           "images": [
-            "images/img.plush/666.webp",
-            "images/img.plush/6666.webp"
+            "images/img.plush/6666.webp",
+            "images/img.plush/666.webp"
           ]
         },
         {
@@ -121,12 +121,41 @@ const CONFIG = {
           "name": "Зелений",
           "hex": "#00a86b",
           "images": [
-            "images/img.plush/777.webp",
-            "images/img.plush/7777.webp"
+            "images/img.plush/7777.webp",
+            "images/img.plush/777.webp"
           ]
         }
       ],
       "old_price": 2780
+    },
+    {
+      "id": "Armour",
+      "name": "Зимовий пуховик Armour",
+      "features": [
+        "‼️ Фінальний розпродаж! Останні розміри зі знижкою -40%",
+        "🍂 Ідеальний вибір для осені та зими",
+        "☁️ Сучасний утеплювач біопух — легкий, м'який та теплий",
+        "💧 Міцний верхній матеріал із водовідштовхувальною обробкою",
+        "💎 Якісний матеріал та преміальна фурнітура",
+        "👌 Комфортна посадка, стильний дизайн та свобода рухів",
+        "📏 Розміри S–XXL — повномірка",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 2690,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "BR D0098",
+          "images": [
+            "images/img.armour/1.webp",
+            "images/img.armour/3.webp",
+            "images/img.armour/2.webp"
+          ]
+        }
+      ],
+      "old_price": 4480
     },   
     {
       "id": "Rayford",
@@ -3542,6 +3571,7 @@ const CONFIG = {
     "Зимова колекція": [
       "plush",
       "sale",
+      "Armour",
       "Fjord",
       "polar",
       "Phantom",
@@ -3569,7 +3599,7 @@ const CONFIG = {
     "Бомбери": ["Velvet Jet", "Hunter", "Forge", "Snake", "Praga"],
     "Жилетки": ["Matrix"],
     "Теплі флісові костюми": ["plush", "sale", "Fjord", "polar", "Carbon", "bayer", "gudzik", "zefir", "chelsi", "polar-premium", "plush-kapyshon", "zmeyka", "oversize-premium"],
-    "Верхній одяг/куртки": ["Imperial","Softshell TNF", "Phantom", "Oskar", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
+    "Верхній одяг/куртки": ["Imperial", "Armour", "Softshell TNF", "Phantom", "Oskar", "Pulse", "Rayford", "Blade", "Monarch", "Winterwear", "Griffin", "Falcon", "Prestige", "Aero", "Air", "puhovik"],
     "Сорочки/брюки": ["Flow", "Dune", "Twilline", "Classic Style","Linen Cloud"],
     "Светри/Лонгсліви": ["Mono", "sweater"],
     "Джинси": ["Jeans"],
