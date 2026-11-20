@@ -327,14 +327,14 @@ const CONFIG = {
       ],
       "price": 1690,
       "colors": [
-        {
-          "id": "grey",
-          "name": "Сірий",
-          "hex": "#bbbbbb",
+       {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
           "images": [
-            "images/img.carbon/1.webp",
-            "images/img.carbon/2.webp",
-            "images/img.carbon/3.webp"
+            "images/img.carbone/1.webp",
+            "images/img.carbone/2.webp",
+            "images/img.carbone/3.webp"
           ]
         },
         {
@@ -342,19 +342,19 @@ const CONFIG = {
           "name": "Чорний",
           "hex": "#111113ff",
           "images": [
-            "images/img.carbon/4.webp",
-            "images/img.carbon/5.webp",
-            "images/img.carbon/6.webp"
+            "images/img.carbone/4.webp",
+            "images/img.carbone/5.webp",
+            "images/img.carbone/6.webp"
           ]
         },
         {
-          "id": "graphite",
-          "name": "Графіт",
-          "hex": "#616267",
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
           "images": [
-            "images/img.carbon/7.webp",
-            "images/img.carbon/8.webp",
-            "images/img.carbon/9.webp"
+            "images/img.carbone/7.webp",
+            "images/img.carbone/8.webp",
+            "images/img.carbone/9.webp"
           ]
         },
         {
@@ -362,9 +362,9 @@ const CONFIG = {
           "name": "Хакі",
           "hex": "#78866b",
           "images": [
-            "images/img.carbon/10.webp",
-            "images/img.carbon/11.webp",
-            "images/img.carbon/12.webp"
+            "images/img.carbone/10.webp",
+            "images/img.carbone/11.webp",
+            "images/img.carbone/12.webp"
           ]
         }
       ],
