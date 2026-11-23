@@ -159,47 +159,6 @@ const CONFIG = {
       "old_price": 4480
     },   
     {
-      "id": "Rayford",
-      "name": "Утеплена замшева куртка Rayford",
-      "relatedIds": ["Aero", "Velvet Jet", "Forge"],
-      "features": [
-        "🔥 Топова якість та стильний дизайн",
-        "🍂 Сезон: весна–осінь",
-        "🔝 Преміальна фурнітура",
-        "🧸 Тепла підкладка з хутра — для додаткового комфорту в прохолодну погоду",
-        "🔒 3 місткі передні кишені на блискавці + 1 внутрішня кишеня",
-        "👌 Манжети на поясі та рукавах забезпечують комфортну посадку та допомагають куртці гарно сидіти на різній статурі",
-        "📦 Відправка новою поштою накладеним платежем"
-      ],
-      "price": 1690,
-      "colors": [
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "sku": "RAM 1723535621",
-          "images": [
-            "images/img.rayford/5.webp",
-            "images/img.rayford/7.webp",
-            "images/img.rayford/4.webp",
-            "images/img.rayford/6.webp"
-          ]
-        },
-        {
-         "id": "brown",
-          "name": "Коричневий",
-          "hex": "#654321",
-          "sku": "RAM 1757422799",
-          "images": [
-            "images/img.rayford/2.webp",
-            "images/img.rayford/1.webp",
-            "images/img.rayford/3.webp"
-          ]
-        }
-      ],
-      "old_price": 3250
-    },
-    {
       "id": "sale",
       "name": "Теплий флісовий костюм TNF",
       "sku": "BR A0090",
@@ -253,6 +212,16 @@ const CONFIG = {
       "price": 1690,
       "colors": [
         {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "images": [
+            "images/img.fjord/4.webp",
+            "images/img.fjord/5.webp",
+            "images/img.fjord/6.webp"
+          ]
+        },
+        {
          "id": "brown",
           "name": "Коричневий",
           "hex": "#654321",
@@ -261,20 +230,11 @@ const CONFIG = {
             "images/img.fjord/2.webp",
             "images/img.fjord/3.webp"
           ]
-        },
-        {
-          "id": "black",
-          "name": "Чорний",
-          "hex": "#111113ff",
-          "images": [
-            "images/img.fjord/4.webp",
-            "images/img.fjord/5.webp"
-          ]
         }
       ],
       "old_price": 3380
     },
-    {
+   {
       "id": "polar-premium",
       "name": "Теплий костюм Fortress",
       "sku": "BR A0191",
@@ -290,14 +250,23 @@ const CONFIG = {
       "price": 1690,
       "colors": [
         {
-          "id": "graphite",
-          "name": "Графіт",
+          "id": "anthracite",
+          "name": "Антрацит",
           "hex": "#616267",
           "images": [
-            "images/img.polarpremium/7.webp",
-            "images/img.polarpremium/5.webp",
-            "images/img.polarpremium/6.webp",
-            "images/img.polarpremium/4.webp"
+            "images/img.polarpremium/8.webp",
+            "images/img.polarpremium/9.webp",
+            "images/img.polarpremium/10.webp"
+          ]
+        },
+        {
+          "id": "grey",
+          "name": "Сірий",
+          "hex": "#bbbbbb",
+          "images": [
+            "images/img.polarpremium/11.webp",
+            "images/img.polarpremium/12.webp",
+            "images/img.polarpremium/13.webp"
           ]
         },
         {
@@ -310,6 +279,17 @@ const CONFIG = {
             "images/img.polarpremium/3.webp"
           ]
         }
+        /* {
+          "id": "graphite",
+          "name": "Графіт",
+          "hex": "#616267",
+          "images": [
+            "images/img.polarpremium/7.webp",
+            "images/img.polarpremium/5.webp",
+            "images/img.polarpremium/6.webp",
+            "images/img.polarpremium/4.webp"
+          ]
+        },*/
       ],
       "old_price": 3380
     },
@@ -471,6 +451,47 @@ const CONFIG = {
         },
       ],
       "old_price": 4500
+    },
+    {
+      "id": "Rayford",
+      "name": "Утеплена замшева куртка Rayford",
+      "relatedIds": ["Aero", "Velvet Jet", "Forge"],
+      "features": [
+        "🔥 Топова якість та стильний дизайн",
+        "🍂 Сезон: весна–осінь",
+        "🔝 Преміальна фурнітура",
+        "🧸 Тепла підкладка з хутра — для додаткового комфорту в прохолодну погоду",
+        "🔒 3 місткі передні кишені на блискавці + 1 внутрішня кишеня",
+        "👌 Манжети на поясі та рукавах забезпечують комфортну посадку та допомагають куртці гарно сидіти на різній статурі",
+        "📦 Відправка новою поштою накладеним платежем"
+      ],
+      "price": 1690,
+      "colors": [
+        {
+          "id": "black",
+          "name": "Чорний",
+          "hex": "#111113ff",
+          "sku": "RAM 1723535621",
+          "images": [
+            "images/img.rayford/5.webp",
+            "images/img.rayford/7.webp",
+            "images/img.rayford/4.webp",
+            "images/img.rayford/6.webp"
+          ]
+        },
+        {
+         "id": "brown",
+          "name": "Коричневий",
+          "hex": "#654321",
+          "sku": "RAM 1757422799",
+          "images": [
+            "images/img.rayford/2.webp",
+            "images/img.rayford/1.webp",
+            "images/img.rayford/3.webp"
+          ]
+        }
+      ],
+      "old_price": 3250
     },
     {
       "id": "Forge",
